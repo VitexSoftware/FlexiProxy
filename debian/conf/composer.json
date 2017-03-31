@@ -1,0 +1,42 @@
+{
+    "name": "vitxsoftware/flexiproxy",
+    "description": "Advanced Access privileges for FlexiBee",
+    "version": "0.1.0",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Vítězslav Dvořák",
+            "email": "info@vitexsoftware.cz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "config": {
+        "vendor-dir": "/var/lib/flexiproxy"
+    },
+    "require": {
+        "php": ">= 5.5.9",
+        "flexipeehp": "*",
+        "ease-framework": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "FlexiProxy\\": "FlexiProxy/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/usr/share/php/Ease",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/usr/share/php/FlexiPeeHP",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+}

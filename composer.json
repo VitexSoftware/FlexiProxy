@@ -1,0 +1,33 @@
+{
+    "name": "vitexsoftware/flexiproxy",
+    "description": "Advanced Access privileges for FlexiBee",
+    "license": "proprietary",
+    "version": "0.1",
+    "authors": [
+        {
+            "name": "vitex",
+            "email": "info@vitexsoftware.cz"
+        }
+    ],
+    "require": {
+        "spoje.net/flexipeehp": "dev-master",
+        "vitexsoftware/ease-framework": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.5.*"
+    },    
+    "autoload": {
+        "psr-4": {
+            "FlexiProxy\\": "src/FlexiProxy/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\FlexiProxy\\": "tests/src/FlexiProxy",
+            "Test\\Ease\\": "vendor/vitexsoftware/ease-framework/tests/src/Ease",
+            "Test\\FlexiPeeHP\\": "testing/src/FlexiPeeHP/",
+            "Test\\": "testing/",
+            "Test\\Ease\\Local\\": "vendor/vitexsoftware/ease-framework/tests/"
+        }
+    }
+}

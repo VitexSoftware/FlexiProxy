@@ -1,0 +1,17 @@
+Source: flexiproxy
+Build-Depends: debhelper (>= 7.0.50~),po-debconf
+Standards-Version: 3.8.4
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Uploaders: Vitex <info@vitexsoftware.cz>
+Priority: optional
+Homepage: https://github.com/VitexSoftware/FlexiProxy
+
+Package: flexiproxy
+Depends: ${misc:Depends},flexipeehp,composer,php5-intl | php7.0-intl
+Recommends: flexibee
+Architecture: all
+Section: web
+Priority: optional
+Description: Import ISDOC items to FlexiBee storage
+ Read all isdoc files in directory and already unknown invoice items import to
+ FlexiBee pricelist and storage.

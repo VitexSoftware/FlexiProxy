@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	sed -i '/vendor\/autoload.php/c\require_once "\/var\/lib\/flexiproxy\/autoload.php";' debian/flexiproxy/usr/share/flexiproxy/doit.php
+
+override_dh_clean:
+	debconf-updatepo
+	dh_clean

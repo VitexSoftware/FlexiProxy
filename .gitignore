@@ -1,0 +1,11 @@
+/input/PF17130063.isdoc
+/input/PF17133435.isdoc
+/input/PF17134317.isdoc
+/vendor/
+/composer.lock
+/debian/files
+/debian/flexiproxy.debhelper.log
+/debian/flexiproxy.postrm.debhelper
+/debian/flexiproxy.substvars
+/ubuntu-xenial-16.04-cloudimg-console.log
+/nbproject/private/

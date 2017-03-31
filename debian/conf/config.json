@@ -1,0 +1,9 @@
+{
+    "FLEXIBEE_URL": "",
+    "FLEXIBEE_LOGIN": "",
+    "FLEXIBEE_PASSWORD": "",
+    "FLEXIBEE_COMPANY": "",
+    "EASE_APPNAM": "FlexiProxy",
+    "EASE_LOGGER": "syslog|console",
+    "EMAIL_FROM": "flexiproxy@localhost"
+}

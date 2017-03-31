@@ -1,0 +1,17 @@
+#!/bin/sh
+# postrm script for flexiproxy
+
+set -e
+
+if [ -f /usr/share/flexiproxy/composer.lock ] ; then
+    rm -f /usr/share/flexiproxy/composer.lock
+fi
+
+if [ -f /var/lib/flexiproxy/autoload.php ] ; then
+    rm -rf /var/lib/flexiproxy/
+fi
+
+
+#DEBHELPER#
+
+exit 0

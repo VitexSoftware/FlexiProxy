@@ -1,0 +1,30 @@
+Template: flexiproxy/FLEXIBEE_URL
+Type: string
+_Default: https://demo.flexibee.eu
+_Description: FlexiBee API URL:
+ URL with protocol, hostname and optional port ( https://localhost:5434 )
+
+Template: flexiproxy/FLEXIBEE_LOGIN
+Type: string
+_Default: winstrom
+_Description: FlexiBee API Username:
+ User with prermisson to use REST API
+
+Template: flexiproxy/FLEXIBEE_PASSWORD
+Type: string
+_Default: winstrom
+_Description: FlexiBee API password:
+ Password for user with prermisson to use REST API
+
+Template: flexiproxy/FLEXIBEE_COMPANY
+Type: string
+_Default: adminit_s_r_o_
+_Description: Selected company:
+ First company opened by default
+
+Template: flexiproxy/URL
+Type: string
+_Default: http://flexiproxy.localhost/
+_Description: AppUrl
+ FlexiProxy Web Interface URL
+
