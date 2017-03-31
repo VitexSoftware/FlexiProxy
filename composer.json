@@ -11,7 +11,8 @@
     ],
     "require": {
         "spoje.net/flexipeehp": "dev-master",
-        "vitexsoftware/ease-framework": "dev-master"
+        "vitexsoftware/ease-framework": "dev-master",
+        "jenssegers/proxy": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "5.5.*"
