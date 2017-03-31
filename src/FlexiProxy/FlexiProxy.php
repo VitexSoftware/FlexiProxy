@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FlexiProxy.
  *
@@ -16,7 +15,6 @@ namespace FlexiProxy;
  */
 class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
 {
-
     /**
      * Configuration
      * @var array
@@ -58,6 +56,12 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     public $baseUrl = null;
 
     /**
+     * HTTP method used to invoke
+     * @var string PUT|GET|POST|... 
+     */
+    public $requestMethod = null;
+
+    /**
      * FelexiProxy worker
      *
      * @param mixed $init default record id or initial data
@@ -73,15 +77,16 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         $this->uriRequested = empty($_SERVER['REQUEST_URI']) ? '/' : $_SERVER['REQUEST_URI'];
 
         $parsed = parse_url(\Ease\Page::phpSelf());
-        $dest = $parsed['scheme'] . '://' . $parsed['host'];
+        $dest   = $parsed['scheme'].'://'.$parsed['host'];
         if (isset($parsed['port'])) {
-            $dest .= ':' . $parsed['port'];
+            $dest .= ':'.$parsed['port'];
         }
         $this->baseUrl = $dest;
+        $this->input();
     }
 
     /**
-     * Inicializace CURL
+     * Initialise CURL for Proxy
      * Return Headers
      */
     public function curlInit()
@@ -91,26 +96,40 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         curl_setopt($this->curl, CURLOPT_ACCEPT_ENCODING, 'identity');
     }
 
+    /**
+     * Obtain BODY from raw CurlResponse with Headers part
+     *
+     * @param string $response
+     * @return string
+     */
     static public function getCurlResponseBody($response)
     {
         $parts = explode("\r\n\r\n", $response);
         return end($parts);
     }
 
+    /**
+     * Take headers from Curl Response
+     *
+     * @param string $response
+     * @return array
+     */
     static public function getHeadersFromCurlResponse($response)
     {
-        $headers = array();
+        $headers  = array();
+        $response = str_replace("HTTP/1.1 100 Continue\r\n\r\n", '', $response);
 
         $header_text = substr($response, 0, strpos($response, "\r\n\r\n"));
 
-        foreach (explode("\r\n", $header_text) as $i => $line)
-            if ($i === 0)
+        foreach (explode("\r\n", $header_text) as $i => $line) {
+            if ($i === 0) {
                 $headers['http_code'] = $line;
-            else {
+            } else {
                 list ($key, $value) = explode(': ', $line);
 
                 $headers[$key] = $value;
             }
+        }
 
         return $headers;
     }
@@ -120,7 +139,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function loadConfig($configFile)
     {
-        $this->shared = \Ease\Shared::instanced();
+        $this->shared        = \Ease\Shared::instanced();
         $this->configuration = json_decode(file_get_contents($configFile), true);
         foreach ($this->configuration as $configKey => $configValue) {
             if ((strtoupper($configKey) == $configKey) && (!defined($configKey))) {
@@ -130,17 +149,28 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         $this->apiurl = $this->configuration['FLEXIBEE_URL'];
     }
 
+    /**
+     * Obtain known extension for URI
+     *
+     * @param string $uri
+     * @return string
+     */
     public function suffixToFormat($uri)
     {
-        $format = null;
-        $path_parts = pathinfo($uri);
+        $format     = null;
+        $url_parts  = parse_url($uri);
+        $path_parts = pathinfo($url_parts['path']);
         if (isset($path_parts['extension'])) {
             $extensions = self::reindexArrayBy(self::$formats, 'suffix');
-            $format = array_key_exists($path_parts['extension'], $extensions) ? $path_parts['extension'] : null;
+            $format     = array_key_exists($path_parts['extension'], $extensions)
+                    ? $path_parts['extension'] : null;
         }
         return $format;
     }
 
+    /**
+     * Recycle incoming HTTP Headers
+     */
     public function proxyHttpHeaders()
     {
         foreach (self::getHeadersFromCurlResponse($this->lastCurlResponse) as $hName => $hValue) {
@@ -152,22 +182,40 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
                     $hValue = $this->fixURLs($hValue);
                     break;
                 default:
-                    header($hName . ': ' . $hValue);
+                    header($hName.': '.$hValue);
                     break;
             }
         }
     }
 
+    /**
+     * Use URL of proxy instead of FlexiBee URL
+     *
+     * @param string $content
+     * @return string
+     */
     public function fixURLs($content)
     {
         return str_replace($this->url, $this->baseUrl, $content);
     }
 
+    /**
+     * Take Request
+     */
+    public function input()
+    {
+        $this->requestMethod = $_SERVER['REQUEST_METHOD'];
+        $this->postFields    = file_get_contents('php://input');
+    }
+
+    /**
+     * Output response
+     */
     public function output()
     {
-        $this->doCurlRequest($this->url . $this->uriRequested, 'GET', $this->suffixToFormat($this->uriRequested));
+        $this->doCurlRequest($this->url.$this->uriRequested,
+            $this->requestMethod, $this->suffixToFormat($this->uriRequested));
         $this->proxyHttpHeaders();
         echo $this->fixURLs(self::getCurlResponseBody($this->lastCurlResponse));
     }
-
 }
