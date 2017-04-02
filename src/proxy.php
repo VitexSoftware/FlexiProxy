@@ -13,7 +13,7 @@ require_once dirname(__DIR__).'/vendor/autoload.php';
 $flexi = new FlexiProxy(null, ['config' => 'config.json']);
 
 
-$version = 'development';
+ $version = 'development';
 if (file_exists('/usr/share/flexiproxy/composer.json')) {
     $composerInfo = json_decode(file_get_contents('/usr/share/flexiproxy/composer.json'));
     $version      = $composerInfo->version;

@@ -3,7 +3,7 @@
  * FlexiProxy.
  *
  * @author    Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright 2016-2017 VitexSoftwarec (G)
+ * @copyright 2016-2017 VitexSoftware (G)
  */
 
 namespace FlexiProxy;
@@ -202,10 +202,31 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     /**
      * Take Request
      */
-    public function input()
+    public function inputPrepare()
     {
         $this->requestMethod = $_SERVER['REQUEST_METHOD'];
-        $this->postFields    = file_get_contents('php://input');
+        $this->inputData     = file_get_contents('php://input');
+    }
+
+    /**
+     * Take Request
+     */
+    public function input()
+    {
+        $this->inputPrepare();
+        $this->applyPlugins('input');
+        $this->postFields = $this->inputData;
+    }
+
+    /**
+     * Output response
+     */
+    public function outputPrepare()
+    {
+        $this->doCurlRequest($this->url.$this->uriRequested,
+            $this->requestMethod, $this->suffixToFormat($this->uriRequested));
+        $this->proxyHttpHeaders();
+        $this->outputData = $this->fixURLs(self::getCurlResponseBody($this->lastCurlResponse));
     }
 
     /**
@@ -213,9 +234,23 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function output()
     {
-        $this->doCurlRequest($this->url.$this->uriRequested,
-            $this->requestMethod, $this->suffixToFormat($this->uriRequested));
-        $this->proxyHttpHeaders();
-        echo $this->fixURLs(self::getCurlResponseBody($this->lastCurlResponse));
+        $this->outputPrepare();
+        $this->applyPlugins('output');
+        echo $this->outputData;
+    }
+
+    public function applyPlugins()
+    {
+        $dir = __DIR__."/plugins/*";
+        foreach (glob($dir) as $file) {
+            if (!is_dir($file) && !strstr($file, 'Common')) {
+                $className = "FlexiProxy\\plugins\\".basename(str_replace('.php',
+                            '', $file));
+                $plugin    = new $className($this);
+                if ($plugin->isThisMyFormat($this->format) && $plugin->isThisMyPath($this->info['url'])) {
+                    $plugin->apply();
+                }
+            }
+        }
     }
 }

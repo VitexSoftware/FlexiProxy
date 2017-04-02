@@ -18,7 +18,8 @@
     },    
     "autoload": {
         "psr-4": {
-            "FlexiProxy\\": "src/FlexiProxy/"
+            "FlexiProxy\\": "src/FlexiProxy/",
+            "FlexiProxy\\plugins\\": "src/FlexiProxy/plugins/"
         }
     },
     "autoload-dev": {
