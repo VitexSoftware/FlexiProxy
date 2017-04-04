@@ -1,4 +1,5 @@
 <?php
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,17 +15,16 @@ namespace FlexiProxy\plugins;
  */
 class PricelistImages extends CommonHtml implements CommonPluginInterface
 {
-    public $myPathRegex = 'cenik';
+
+    public $myPathRegex = '(cenik|cenik.html)($|\?)';
     public $myDirection = 'output';
-
-
 
     public function process(&$documentData)
     {
-        $processed    = str_replace('a href', 'a title="link" href',
-            $documentData);
+        $processed = str_replace('a href', 'a title="link" href', $documentData);
         $this->includeJavaScript($processed, 'js/PricelistImages.js');
-        $this->addJavaScript($processed, 'alert("inline");');
+        $this->addJavaScript($processed, 'alert("listing images");');
         $documentData = $processed;
     }
+
 }
