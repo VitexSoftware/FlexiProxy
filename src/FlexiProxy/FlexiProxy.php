@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FlexiProxy.
  *
@@ -15,6 +16,7 @@ namespace FlexiProxy;
  */
 class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
 {
+
     /**
      * Configuration
      * @var array
@@ -57,7 +59,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
 
     /**
      * HTTP method used to invoke
-     * @var string PUT|GET|POST|... 
+     * @var string PUT|GET|POST|...
      */
     public $requestMethod = null;
 
@@ -77,9 +79,9 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         $this->uriRequested = empty($_SERVER['REQUEST_URI']) ? '/' : $_SERVER['REQUEST_URI'];
 
         $parsed = parse_url(\Ease\Page::phpSelf());
-        $dest   = $parsed['scheme'].'://'.$parsed['host'];
+        $dest = $parsed['scheme'] . '://' . $parsed['host'];
         if (isset($parsed['port'])) {
-            $dest .= ':'.$parsed['port'];
+            $dest .= ':' . $parsed['port'];
         }
         $this->baseUrl = $dest;
         $this->input();
@@ -116,7 +118,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     static public function getHeadersFromCurlResponse($response)
     {
-        $headers  = array();
+        $headers = array();
         $response = str_replace("HTTP/1.1 100 Continue\r\n\r\n", '', $response);
 
         $header_text = substr($response, 0, strpos($response, "\r\n\r\n"));
@@ -139,7 +141,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function loadConfig($configFile)
     {
-        $this->shared        = \Ease\Shared::instanced();
+        $this->shared = \Ease\Shared::instanced();
         $this->configuration = json_decode(file_get_contents($configFile), true);
         foreach ($this->configuration as $configKey => $configValue) {
             if ((strtoupper($configKey) == $configKey) && (!defined($configKey))) {
@@ -157,13 +159,12 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function suffixToFormat($uri)
     {
-        $format     = null;
-        $url_parts  = parse_url($uri);
+        $format = null;
+        $url_parts = parse_url($uri);
         $path_parts = pathinfo($url_parts['path']);
         if (isset($path_parts['extension'])) {
             $extensions = self::reindexArrayBy(self::$formats, 'suffix');
-            $format     = array_key_exists($path_parts['extension'], $extensions)
-                    ? $path_parts['extension'] : null;
+            $format = array_key_exists($path_parts['extension'], $extensions) ? $path_parts['extension'] : null;
         }
         return $format;
     }
@@ -182,7 +183,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
                     $hValue = $this->fixURLs($hValue);
                     break;
                 default:
-                    header($hName.': '.$hValue);
+                    header($hName . ': ' . $hValue);
                     break;
             }
         }
@@ -205,7 +206,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     public function inputPrepare()
     {
         $this->requestMethod = $_SERVER['REQUEST_METHOD'];
-        $this->inputData     = file_get_contents('php://input');
+        $this->inputData = file_get_contents('php://input');
     }
 
     /**
@@ -223,8 +224,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function outputPrepare()
     {
-        $this->doCurlRequest($this->url.$this->uriRequested,
-            $this->requestMethod, $this->suffixToFormat($this->uriRequested));
+        $this->doCurlRequest($this->url . $this->uriRequested, $this->requestMethod, $this->suffixToFormat($this->uriRequested));
         $this->proxyHttpHeaders();
         $this->outputData = $this->fixURLs(self::getCurlResponseBody($this->lastCurlResponse));
     }
@@ -239,18 +239,23 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         echo $this->outputData;
     }
 
-    public function applyPlugins()
+    /**
+     * Apply Plugins to content
+     * 
+     * @param string $direction input|output
+     */
+    public function applyPlugins($direction)
     {
-        $dir = __DIR__."/plugins/*";
+        $dir = __DIR__ . "/plugins/*";
         foreach (glob($dir) as $file) {
             if (!is_dir($file) && !strstr($file, 'Common')) {
-                $className = "FlexiProxy\\plugins\\".basename(str_replace('.php',
-                            '', $file));
-                $plugin    = new $className($this);
-                if ($plugin->isThisMyFormat($this->format) && $plugin->isThisMyPath($this->info['url'])) {
+                $className = "FlexiProxy\\plugins\\" . basename(str_replace('.php', '', $file));
+                $plugin = new $className($this);
+                if ($plugin->isThisMyDirection($direction) && $plugin->isThisMyFormat($this->format) && $plugin->isThisMyPath($this->uriRequested)) {
                     $plugin->apply();
                 }
             }
         }
     }
+
 }

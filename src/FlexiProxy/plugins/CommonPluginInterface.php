@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FlexiProxy.
  *
@@ -10,9 +11,10 @@ namespace FlexiProxy\plugins;
 
 interface CommonPluginInterface
 {
+
     public function isThisMyFormat($format);
 
     public function isThisMyPath($path);
 
-    public function process(&$documentData);
+    public function process();
 }

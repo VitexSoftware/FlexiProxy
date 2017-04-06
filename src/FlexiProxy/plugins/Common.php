@@ -1,8 +1,10 @@
 <?php
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+/**
+ * FlexiProxy.
+ *
+ * @author    Vítězslav Dvořák <info@vitexsoftware.cz>
+ * @copyright 2016-2017 VitexSoftware (G)
  */
 
 namespace FlexiProxy\plugins;
@@ -14,39 +16,117 @@ namespace FlexiProxy\plugins;
  */
 class Common
 {
-    public $myPathRegex = '.*';
-    public $myFormat    = '.*';
-    public $myDirection = '*';
-    public $flexiProxy  = null;
 
+    /**
+     * My URL path regex
+     * @var string
+     */
+    public $myPathRegex = '.*';
+
+    /**
+     * My Format type regex
+     * @var string
+     */
+    public $myFormat = '.*';
+
+    /**
+     * Request/Response direction
+     * @var string input|output|*
+     */
+    public $myDirection = '*';
+
+    /**
+     * Proxy Engine
+     * @var \FlexiProxy\FlexiProxy
+     */
+    public $flexiProxy = null;
+
+    /**
+     * Content to be modified
+     * @var string
+     */
+    public $content = null;
+
+    /**
+     * Response changer
+     *
+     * @param type $flexiProxy
+     */
     public function __construct($flexiProxy)
     {
         $this->flexiProxy = $flexiProxy;
     }
 
+    /**
+     * Is this direction my ?
+     *
+     * @param string $direction Request/Response URL
+     * @return boolean
+     */
+    public function isThisMyDirection($direction)
+    {
+        return preg_match('/' . $this->myDirection . '/', $direction);
+    }
+
+    /**
+     * Is this path my ?
+     *
+     * @param string $path Request/Response URL
+     * @return boolean
+     */
     public function isThisMyPath($path)
     {
-        return preg_match('/'.$this->myPathRegex.'/', $path);
+        return preg_match('/' . $this->myPathRegex . '/', $path);
     }
 
+    /**
+     * Is this format my own ?
+     *
+     * @param string $format
+     * @return boolean
+     */
     public function isThisMyFormat($format)
     {
-        return preg_match('/^'.$this->myFormat.'$/', $format);
+        return preg_match('/^' . $this->myFormat . '$/', $format);
     }
 
+    /**
+     * Find & Apply plugins related for current content
+     */
     public function apply()
     {
         switch ($this->myDirection) {
             case 'output':
-                $this->process($this->flexiProxy->outputData);
+                $this->content = $this->flexiProxy->outputData;
+                $this->process();
+                $this->flexiProxy->outputData = $this->content;
                 break;
             case 'input':
-                $this->process($this->flexiProxy->inputData);
+                $this->content = $this->flexiProxy->inputData;
+                $this->process();
+                $this->flexiProxy->inputData = $this->content;
                 break;
         }
     }
 
-    public function process(&$docData)
+    public function replaceContent($what, $to)
     {
+        $this->content = str_replace($what, $to, $this->content);
     }
+
+    public function preg_replaceContent($what, $to)
+    {
+        $replaced = preg_replace($what, $to, $this->content);
+        if (is_null($replaced)) {
+            $this->flexiProxy->addStatusMessage(get_class($this) . ': ' . sprintf(_('Replace %s to %s on %s failed'), $what, $to, $this->flexiProxy->uriRequested), 'warning');
+        } else {
+            $this->content = $replaced;
+        }
+    }
+
+    public function process()
+    {
+
+    }
+
 }
