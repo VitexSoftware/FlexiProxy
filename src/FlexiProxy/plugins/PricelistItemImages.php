@@ -30,13 +30,18 @@ class PricelistItemImages extends CommonHtml implements CommonPluginInterface
 
             $images = \FlexiPeeHP\Priloha::getAttachmentsList($pricelister);
 
-            $image = \FlexiPeeHP\Priloha::getFirstAttachment($pricelister);
-
-            $processed = str_replace('a href', 'a title="link" href', $documentData);
+//            $image = \FlexiPeeHP\Priloha::getFirstAttachment($pricelister);
             //$this->includeJavaScript($processed, 'js/PricelistImages.js');
             //            $this->addJavaScript($processed, 'alert("' . $image . '");');
 
-            $this->addToBodyEnd('<div style="border: 1px solid red"><img src="' . $image['url'] . '/content"></div>');
+
+            $gallery = '<div style="padding: 10px">';
+            foreach ($images as $image) {
+                $gallery .= '<img width="300" src="' . $this->flexiProxy->fixURLs($image['url']) . '/content">';
+            }
+            $gallery .= '</div>';
+
+            $this->addBefore('</div> <!-- flexibee-application-content -->', $gallery);
         }
     }
 

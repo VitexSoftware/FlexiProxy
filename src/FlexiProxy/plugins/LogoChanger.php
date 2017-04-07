@@ -23,7 +23,7 @@ class LogoChanger extends CommonHtml implements CommonPluginInterface
 
     public function process()
     {
-        $this->preg_replaceContent('\/flexibee-static\/\d{4}\.(\d|\d{2})\.(\d|\d{2})/img\/logo-abraflexibee.png/', '/images/logo-flexiproxy.png');
+        $this->preg_replaceContent('/\/flexibee-static\/\d{4}\.(\d|\d{2})\.(\d|\d{2})\/img\/logo-abraflexibee.png/', '/images/logo-flexiproxy.png');
     }
 
 }

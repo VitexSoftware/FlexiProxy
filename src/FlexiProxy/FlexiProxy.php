@@ -155,7 +155,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      * Obtain known extension for URI
      *
      * @param string $uri
-     * @return string
+     * @return string extension
      */
     public function suffixToFormat($uri)
     {
@@ -166,6 +166,23 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
             $extensions = self::reindexArrayBy(self::$formats, 'suffix');
             $format = array_key_exists($path_parts['extension'], $extensions) ? $path_parts['extension'] : null;
         }
+        return $format;
+    }
+
+    /**
+     * Obtain known format for Content-Type
+     *
+     * @param string $contentType
+     * @return string format
+     */
+    public function contentTypeToFormat($contentType)
+    {
+        $format = null;
+        if (strstr($contentType, ';')) {
+            $contentType = current(explode(';', $contentType));
+        }
+        $contentTypes = self::reindexArrayBy(self::$formats, 'content-type');
+        $format = array_key_exists($contentType, $contentTypes) ? $contentTypes[$contentType]['suffix'] : null;
         return $format;
     }
 
@@ -182,6 +199,8 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
                 case 'Location':
                     $hValue = $this->fixURLs($hValue);
                     break;
+                case 'Content-Type':
+                    $this->format = $this->contentTypeToFormat($hValue);
                 default:
                     header($hName . ': ' . $hValue);
                     break;
@@ -227,6 +246,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         $this->doCurlRequest($this->url . $this->uriRequested, $this->requestMethod, $this->suffixToFormat($this->uriRequested));
         $this->proxyHttpHeaders();
         $this->outputData = $this->fixURLs(self::getCurlResponseBody($this->lastCurlResponse));
+        $this->addStatusMessage(sprintf(_('Serving URL: %s'), $this->url . $this->uriRequested));
     }
 
     /**
@@ -241,7 +261,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
 
     /**
      * Apply Plugins to content
-     * 
+     *
      * @param string $direction input|output
      */
     public function applyPlugins($direction)

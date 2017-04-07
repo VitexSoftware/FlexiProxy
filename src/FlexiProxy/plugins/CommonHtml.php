@@ -19,28 +19,34 @@ class CommonHtml extends Common
 
     public $myFormat = 'html';
 
-    public function addJavaScript(&$document, $code)
+    public function addJavaScript($code)
     {
-        $parts = explode('</body>', $document);
-        $document = $parts[0] . "\n<script type=\"text/javascript\">\n$code\n</script>\n" . '</body>' . $parts['1'];
+        $parts = explode('</body>', $this->content);
+        $this->content = $parts[0] . "\n<script type=\"text/javascript\">\n$code\n</script>\n" . '</body>' . $parts['1'];
     }
 
-    public function includeJavaScript(&$document, $url)
+    public function includeJavaScript($url)
     {
-        $parts = explode('</body>', $document);
-        $document = $parts[0] . "\n<script type=\"text/javascript\" src=\"$url\" ></script>\n" . '</body>' . $parts['1'];
+        $parts = explode('</body>', $this->content);
+        $this->content = $parts[0] . "\n<script type=\"text/javascript\" src=\"$url\" ></script>\n" . '</body>' . $parts['1'];
     }
 
-    public function addToBodyEnd(&$document, $content)
+    public function addToBodyEnd($content)
     {
-        $parts = explode('</body>', $document);
-        $document = $parts[0] . "\n$content\n</body>" . $parts['1'];
+        $parts = explode('</body>', $this->content);
+        $this->content = $parts[0] . "\n$content\n</body>" . $parts['1'];
     }
 
-    public function addAfter(&$document, $after, $content)
+    public function addBefore($before, $content)
     {
-        $parts = explode($after, $document);
-        $document = $parts[0] . "\n$content\n$after" . $parts['1'];
+        $parts = explode($before, $this->content);
+        $this->content = $parts[0] . "\n$content\n$before\n" . $parts['1'];
+    }
+
+    public function addAfter($after, $content)
+    {
+        $parts = explode($after, $this->content);
+        $this->content = $parts[0] . "\n$content\n$after" . $parts['1'];
     }
 
 }
