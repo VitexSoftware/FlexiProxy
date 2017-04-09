@@ -22,11 +22,13 @@ class PricelistItemImages extends CommonHtml implements CommonPluginInterface
 
     public function process()
     {
-        if (preg_match('/cenik\/(\d)/', $this->flexiProxy->uriRequested, $matches)) {
+
+        if (preg_match('/cenik\/(\d+)/', $this->flexiProxy->uriRequested,
+                $matches)) {
+            $gallery  = '';
             $recordID = intval($matches[1]);
 
             $pricelister = new \FlexiPeeHP\Cenik($recordID);
-
 
             $images = \FlexiPeeHP\Priloha::getAttachmentsList($pricelister);
 
@@ -34,13 +36,13 @@ class PricelistItemImages extends CommonHtml implements CommonPluginInterface
             //$this->includeJavaScript($processed, 'js/PricelistImages.js');
             //            $this->addJavaScript($processed, 'alert("' . $image . '");');
 
-
-            $gallery = '<div style="padding: 10px">';
-            foreach ($images as $image) {
+            if (count($images) && ($pricelister->lastResponseCode == 200)) {
+                $gallery .= '<div style="padding: 10px">';
+                foreach ($images as $image) {
                 $gallery .= '<img width="300" src="' . $this->flexiProxy->fixURLs($image['url']) . '/content">';
             }
             $gallery .= '</div>';
-
+            }
             $this->addBefore('</div> <!-- flexibee-application-content -->', $gallery);
         }
     }

@@ -23,8 +23,8 @@ class PricelistImages extends CommonHtml implements CommonPluginInterface
     public function process()
     {
         $this->replaceContent('a href', 'a title="link" href');
-        $this->includeJavaScript($processed, 'js/PricelistImages.js');
-        $this->addJavaScript($processed, 'alert("listing images");');
+        $this->includeJavaScript('js/PricelistImages.js');
+        $this->addJavaScript('alert("listing images");');
     }
 
 }
