@@ -1,13 +1,13 @@
 .\"Created with GNOME Manpages Editor Wizard
 .\"http://sourceforge.net/projects/gmanedit2
-.TH flexiproxy 1 "November 18, 2016" "" "FlexiProxy"
+.TH flexiproxy 1 "November 18, 2017" "" "FlexiProxy"
 
 .SH NAME
-flexiproxy \- program for Import isdoc invoice items to FlexiBee
+flexiproxy \- framework for FlexiBee input/output modification
 
 .SH SYNOPSIS
 .B flexiproxy
-.RI [ /path/to/dir/or/invoice.isdoc(x) ]
+.RI [ /path/to/dir/or/config.json ]
 .br
 
 .SH CONFIGURATION
@@ -16,9 +16,10 @@ You can change app configuration in /etc/flexiproxy/config.json file
 .SH DESCRIPTION
 This manual page explains the how to configure and run FlexiProxy
 .B flexiproxy
-program. This program takes ISDOC files from one given file or input directory
-and parse it for unkown invoice items.
+program. This program takes input or output of FlexiBee and modify
+it somehow
+
 .PP
-\fBflexiproxy\fP import all unknown invoice items to FlexiBee pricelist and storage
+\fBflexiproxy\fP Modify FlexiBee web interface
 
 
