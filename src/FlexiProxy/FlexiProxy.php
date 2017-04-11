@@ -245,7 +245,15 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     {
         $this->doCurlRequest($this->url . $this->uriRequested, $this->requestMethod, $this->suffixToFormat($this->uriRequested));
         $this->proxyHttpHeaders();
-        $this->outputData = $this->fixURLs(self::getCurlResponseBody($this->lastCurlResponse));
+        if ($this->lastResponseCode == 0) {
+            header("HTTP/1.0 502 Bad Gateway");
+            $this->outputData = new HttpStatusPage(502);
+            $this->outputData->container->addItem(_('Please Check').' ');
+            $this->outputData->container->addItem(new \Ease\Html\ATag($this->url.$this->uriRequested,
+                $this->url.$this->uriRequested));
+        } else {
+            $this->outputData = $this->fixURLs(self::getCurlResponseBody($this->lastCurlResponse));
+        }
         $this->addStatusMessage(sprintf(_('Serving URL: %s'), $this->url . $this->uriRequested));
     }
 
