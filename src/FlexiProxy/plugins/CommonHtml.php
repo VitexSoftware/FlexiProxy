@@ -44,7 +44,7 @@ class CommonHtml extends Common
     public function includeCss($css)
     {
         return $this->addBefore('</head>',
-                "\n<link rel=\"stylesheet\" type=\"text/css\" href=\"$css\" media=\"all\" />\n");
+                "\n<link rel=\"stylesheet\" type=\"text/css\" href=\"".$this->flexiProxy->baseUrl.$css."\" media=\"all\" />\n");
     }
 
     public function addJavaScript($code)
@@ -56,7 +56,7 @@ class CommonHtml extends Common
     public function includeJavaScript($url)
     {
         $this->addBefore('</body>',
-            "\n<script type=\"text/javascript\" src=\"$url\" ></script>\n");
+            "\n<script type=\"text/javascript\" src=\"".$this->flexiProxy->baseUrl.$url."\" ></script>\n");
     }
 
     public function addToBodyEnd($content)

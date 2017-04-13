@@ -23,15 +23,16 @@ class StatusMessages extends CommonHtml implements CommonPluginInterface
 
         $statusMessages = $this->webPage->getStatusMessagesAsHtml();
         if ($statusMessages) {
-            $this->includeCss('css/flexiproxy.css');
-            $this->includeJavaScript('js/slideupnessages.js');
+            $this->includeCss('/css/flexiproxy.css');
+            $this->includeJavaScript('/js/slideupmessages.js');
             $messagesBar = new \Ease\Html\Div($statusMessages,
                 ['id' => 'StatusMessages', 'class' => 'well', 'title' => _('Click to hide messages'),
                 'data-state' => 'down']).
                 new \Ease\Html\Div(null, ['id' => 'smdrag'])
             ;
             $this->webPage->cleanMessages();
-            $this->addToPageTop($messagesBar);
+            $this->addAfter('<div class="flexibee-application-content column " role="main">',
+                $messagesBar);
         }
 
 
