@@ -254,7 +254,8 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         } else {
             $this->outputData = $this->fixURLs(self::getCurlResponseBody($this->lastCurlResponse));
         }
-        $this->addStatusMessage(sprintf(_('Serving URL: %s'), $this->url . $this->uriRequested));
+        $this->addStatusMessage(sprintf(_('%s: %s'), $this->requestMethod,
+                $this->url.$this->uriRequested));
     }
 
     /**
