@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: flexiproxy\n"
 "Report-Msgid-Bugs-To: flexiproxy@packages.debian.org\n"
-"POT-Creation-Date: 2017-01-23 13:06+0100\n"
+"POT-Creation-Date: 2017-04-14 01:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,7 +71,7 @@ msgstr ""
 #. Type: string
 #. Default
 #: ../templates:4001
-msgid "adminit_s_r_o_"
+msgid "demo"
 msgstr ""
 
 #. Type: string
@@ -82,40 +82,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. Type: string
-#. Description
-#: ../templates:4002 ../templates:6002
+#: ../templates:4002
 msgid "First company opened by default"
 msgstr ""
 
 #. Type: string
 #. Default
 #: ../templates:5001
-msgid "SKLAD"
+msgid "http://flexiproxy.localhost/"
 msgstr ""
 
 #. Type: string
 #. Description
 #: ../templates:5002
-msgid "Used storag code:"
+msgid "AppUrl"
 msgstr ""
 
 #. Type: string
 #. Description
 #: ../templates:5002
-msgid ""
-"Go to /c/adminit_s_r_o_/sklad on your FlexiBee server to see availble "
-"storages"
-msgstr ""
-
-#. Type: string
-#. Default
-#: ../templates:6001
-msgid "/usr/share/flexiproxy/isdoc"
-msgstr ""
-
-#. Type: string
-#. Description
-#: ../templates:6002
-msgid "input files location:"
+msgid "FlexiProxy Web Interface URL"
 msgstr ""

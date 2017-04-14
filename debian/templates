@@ -18,7 +18,7 @@ _Description: FlexiBee API password:
 
 Template: flexiproxy/FLEXIBEE_COMPANY
 Type: string
-_Default: adminit_s_r_o_
+_Default: demo
 _Description: Selected company:
  First company opened by default
 

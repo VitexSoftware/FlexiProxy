@@ -1,0 +1,37 @@
+#!/bin/sh
+# postinst script for flexplorer
+
+set -e
+
+    if [ "$1" = "configure" ]; then
+
+    . /usr/share/debconf/confmodule
+
+#      db_get flexiproxy/URL
+#      ${RET}
+
+	a2ensite flexiproxy
+
+
+            if [ -f /etc/init.d/apache2 ] ; then
+                if [ -x /usr/sbin/invoke-rc.d ]; then
+                    invoke-rc.d apache2 reload 3>/dev/null || true
+                else
+                    /etc/init.d/apache2 reload 3>/dev/null || true
+                fi
+            fi
+
+            if [ -f /etc/init.d/avahi ] ; then
+                if [ -x /usr/sbin/invoke-rc.d ]; then
+                    invoke-rc.d avahi reload 3>/dev/null || true
+                else
+                    /etc/init.d/avahi reload 3>/dev/null || true
+                fi
+            fi
+
+    fi
+
+
+#DEBHELPER#
+
+exit 0

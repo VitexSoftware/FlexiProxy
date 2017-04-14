@@ -6,8 +6,17 @@ Uploaders: Vitex <info@vitexsoftware.cz>
 Priority: optional
 Homepage: https://github.com/VitexSoftware/FlexiProxy
 
+Package: flexiproxy
+Depends: ${misc:Depends},flexiproxy-core,flexiproxy-logochanger,flexiproxy-pricelist-images
+Recommends: flexibee
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiProxy metapackage
+ Install this package to get full application
+
 Package: flexiproxy-core
-Depends: ${misc:Depends},flexipeehp,composer,php5-intl | php7.1-intl 
+Depends: ${misc:Depends},flexipeehp,composer,php5-intl | php7.0-intl | php7.1-intl
 Recommends: flexibee
 Architecture: all
 Section: web
@@ -15,6 +24,14 @@ Priority: optional
 Description: Communtcate with FlexiBee and modify its input/output
  Take FlexiBee web interface or api Request or response and modify it
  somehow using additional modules.
+
+Package: flexiproxy-apache
+Depends: ${misc:Depends},flexiproxy-core,apache2
+Architecture: all
+Section: web
+Priority: optional
+Description: Apache Configuration for FlexiProxy
+ Prepare FlexiProxy virtualhost
 
 Package: flexiproxy-logochanger
 Depends: ${misc:Depends},flexiproxy-core

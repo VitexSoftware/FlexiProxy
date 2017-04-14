@@ -9,3 +9,17 @@
 /debian/flexiproxy.substvars
 /ubuntu-xenial-16.04-cloudimg-console.log
 /nbproject/private/
+/debian/flexiproxy-core/
+/debian/flexiproxy-logochanger/
+/debian/flexiproxy-pricelist-images/
+/debian/flexiproxy-apache/
+/debian/flexiproxy-apache.substvars
+/debian/flexiproxy-core.debhelper.log
+/debian/flexiproxy-core.postrm.debhelper
+/debian/flexiproxy-logochanger.debhelper.log
+/debian/flexiproxy-core.substvars
+/debian/flexiproxy-logochanger.substvars
+/debian/flexiproxy-pricelist-images.debhelper.log
+/debian/flexiproxy-pricelist-images.substvars
+/debian/flexiproxy-apache.debhelper.log
+/.vagrant/

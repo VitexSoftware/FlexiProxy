@@ -1,0 +1,10 @@
+README.md			usr/share/doc/flexiproxy/
+src/*.php                       usr/share/flexiproxy/
+src/js/*                        usr/share/flexiproxy/js/
+src/css/*                       usr/share/flexiproxy/css/
+src/images/*                    usr/share/flexiproxy/images/
+src/FlexiProxy/*.php		usr/share/flexiproxy/FlexiProxy/
+src/FlexiProxy/plugins/Common*.php		usr/share/flexiproxy/FlexiProxy/plugins/
+src/FlexiProxy/plugins/StatusMessages.php		usr/share/flexiproxy/FlexiProxy/plugins/
+debian/conf/config.json         etc/flexiproxy/
+debian/conf/composer.json       usr/share/flexiproxy/

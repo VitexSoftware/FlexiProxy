@@ -1,7 +1,7 @@
 {
     "name": "vitxsoftware/flexiproxy",
     "description": "Advanced Access privileges for FlexiBee",
-    "version": "0.1.0",
+    "version": "0.1.8",
     "type": "project",
     "authors": [
         {

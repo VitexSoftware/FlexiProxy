@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: flexiproxy\n"
 "Report-Msgid-Bugs-To: flexiproxy@packages.debian.org\n"
-"POT-Creation-Date: 2017-01-23 13:06+0100\n"
+"POT-Creation-Date: 2017-04-14 01:23+0200\n"
 "PO-Revision-Date: 2016-11-18 13:25+0100\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: \n"
@@ -73,8 +73,8 @@ msgstr "Heslo uživatele s právem používat REST api"
 #. Type: string
 #. Default
 #: ../templates:4001
-msgid "adminit_s_r_o_"
-msgstr "adminit_s_r_o_"
+msgid "demo"
+msgstr "demo"
 
 #. Type: string
 #. Description
@@ -84,54 +84,49 @@ msgstr "Zvolená firma:"
 
 #. Type: string
 #. Description
-#. Type: string
-#. Description
-#: ../templates:4002 ../templates:6002
+#: ../templates:4002
 msgid "First company opened by default"
 msgstr "Výchozí firma"
 
 #. Type: string
 #. Default
 #: ../templates:5001
-msgid "SKLAD"
+msgid "http://flexiproxy.localhost/"
 msgstr ""
 
 #. Type: string
 #. Description
 #: ../templates:5002
-msgid "Used storag code:"
-msgstr "Kód použitého skladu:"
+msgid "AppUrl"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../templates:5002
-msgid ""
-"Go to /c/adminit_s_r_o_/sklad on your FlexiBee server to see availble "
-"storages"
+msgid "FlexiProxy Web Interface URL"
 msgstr ""
-"Jdi do /c/adminit_s_r_o_/sklad na FlexiBee serveru pro přehled dostupných "
-"skladů"
 
-#. Type: string
-#. Default
-#: ../templates:6001
-msgid "/usr/share/flexiproxy/isdoc"
-msgstr "/usr/share/flexiproxy/isdoc"
+#~ msgid "adminit_s_r_o_"
+#~ msgstr "adminit_s_r_o_"
 
-#. Type: string
-#. Description
-#: ../templates:6002
-msgid "input files location:"
-msgstr ""
+#~ msgid "Used storag code:"
+#~ msgstr "Kód použitého skladu:"
+
+#~ msgid ""
+#~ "Go to /c/adminit_s_r_o_/sklad on your FlexiBee server to see availble "
+#~ "storages"
+#~ msgstr ""
+#~ "Jdi do /c/adminit_s_r_o_/sklad na FlexiBee serveru pro přehled dostupných "
+#~ "skladů"
+
+#~ msgid "/usr/share/flexiproxy/isdoc"
+#~ msgstr "/usr/share/flexiproxy/isdoc"
 
 #~ msgid "SKALD"
 #~ msgstr "SKALD"
 
 #~ msgid "Where to get input files:"
 #~ msgstr "Odkud načítat vstupní soubory:"
-
-#~ msgid "demo"
-#~ msgstr "demo"
 
 #~ msgid "winstorm"
 #~ msgstr "winstorm"
