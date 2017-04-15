@@ -15,7 +15,7 @@ namespace FlexiProxy\plugins;
  */
 class PricelistItemImages extends CommonHtml implements CommonPluginInterface
 {
-    public $myPathRegex = 'cenik\/';
+    public $myPathRegex = 'cenik\/(\d)$';
     public $myDirection = 'output';
 
     public function process()

@@ -5,14 +5,14 @@
  * and open the template in the editor.
  */
 
-namespace FlexiProxy;
+namespace FlexiProxy\ui;
 
 /**
  * Description of ErrorPage
  *
  * @author vitex
  */
-class HttpStatusPage extends \Ease\TWB\WebPage
+class HttpStatusPage extends ui\WebPage
 { /**
  * Obtain status code message for given code
  *

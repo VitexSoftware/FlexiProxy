@@ -66,8 +66,13 @@ class CommonHtml extends Common
 
     public function addBefore($before, $content)
     {
-        $parts = explode($before, $this->content);
-        $this->content = $parts[0] . "\n$content\n$before\n" . $parts['1'];
+        if (strstr($this->content, $before)) {
+            $parts         = explode($before, $this->content);
+            $this->content = $parts[0]."\n$content\n$before\n".$parts['1'];
+        } else {
+            $this->flexiProxy->addStatusMessage(sprintf(_('AddBefore: pattern "%s" not found on %s'),
+                    $before, $this->flexiProxy->url), 'warning');
+        }
     }
 
     public function addAfter($after, $content)

@@ -6,14 +6,14 @@
  * @copyright 2016-2017 VitexSoftware (G)
  */
 
-namespace FlexiProxy\plugins;
+namespace FlexiProxy\ui;
 
 /**
  * Description of PricelistImages
  *
  * @author vitex
  */
-class StatusMessages extends CommonHtml implements CommonPluginInterface
+class StatusMessages extends \FlexiProxy\plugins\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
     public $myDirection = 'output';
 
@@ -32,9 +32,5 @@ class StatusMessages extends CommonHtml implements CommonPluginInterface
             $this->addAfter('<div class="flexibee-application-content column " role="main">',
                 $messagesBar);
         }
-
-
-//        $this->includeJavaScript($processed, 'js/PricelistImages.js');
-//        $this->addJavaScript($processed, 'alert("listing images");');
     }
 }

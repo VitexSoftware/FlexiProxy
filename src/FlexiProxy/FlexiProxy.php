@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FlexiProxy.
  *
@@ -16,7 +15,6 @@ namespace FlexiProxy;
  */
 class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
 {
-
     /**
      * Configuration
      * @var array
@@ -77,14 +75,27 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         $this->loadConfig($this->configFile);
         parent::__construct($init, $options);
         $this->uriRequested = empty($_SERVER['REQUEST_URI']) ? '/' : $_SERVER['REQUEST_URI'];
+        $this->parseFlexiBeeURI($this->uriRequested);
 
         $parsed = parse_url(\Ease\Page::phpSelf());
-        $dest = $parsed['scheme'] . '://' . $parsed['host'];
+        $dest   = $parsed['scheme'].'://'.$parsed['host'];
         if (isset($parsed['port'])) {
-            $dest .= ':' . $parsed['port'];
+            $dest .= ':'.$parsed['port'];
         }
         $this->baseUrl = $dest;
-        $this->input();
+    }
+
+    public function parseFlexiBeeURI($uri)
+    {
+        $pattern = '\/c\/([a-z_]+)\/([a-z]+)\/(\d+)(($|\/(([a-z]+)($|;([a-z]+)$)))|\?.*$)';
+        if (preg_match('/'.$pattern.'/', $uri, $matches)) {
+            $this->setCompany($matches[1]);
+            $this->setEvidence($matches[2]);
+            $this->setMyKey($matches[3]);
+            $this->urlParams = isset($matches[4]) ? $matches[4] : null;
+            $this->section   = isset($matches[7]) ? $matches[7] : null;
+            $this->operation = isset($matches[9]) ? $matches[9] : null;
+        }
     }
 
     /**
@@ -118,7 +129,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     static public function getHeadersFromCurlResponse($response)
     {
-        $headers = array();
+        $headers  = array();
         $response = str_replace("HTTP/1.1 100 Continue\r\n\r\n", '', $response);
 
         $header_text = substr($response, 0, strpos($response, "\r\n\r\n"));
@@ -141,7 +152,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function loadConfig($configFile)
     {
-        $this->shared = \Ease\Shared::instanced();
+        $this->shared        = \Ease\Shared::instanced();
         $this->configuration = json_decode(file_get_contents($configFile), true);
         foreach ($this->configuration as $configKey => $configValue) {
             if ((strtoupper($configKey) == $configKey) && (!defined($configKey))) {
@@ -159,12 +170,13 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function suffixToFormat($uri)
     {
-        $format = null;
-        $url_parts = parse_url($uri);
+        $format     = null;
+        $url_parts  = parse_url($uri);
         $path_parts = pathinfo($url_parts['path']);
         if (isset($path_parts['extension'])) {
             $extensions = self::reindexArrayBy(self::$formats, 'suffix');
-            $format = array_key_exists($path_parts['extension'], $extensions) ? $path_parts['extension'] : null;
+            $format     = array_key_exists($path_parts['extension'], $extensions)
+                    ? $path_parts['extension'] : null;
         }
         return $format;
     }
@@ -182,7 +194,8 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
             $contentType = current(explode(';', $contentType));
         }
         $contentTypes = self::reindexArrayBy(self::$formats, 'content-type');
-        $format = array_key_exists($contentType, $contentTypes) ? $contentTypes[$contentType]['suffix'] : null;
+        $format       = array_key_exists($contentType, $contentTypes) ? $contentTypes[$contentType]['suffix']
+                : null;
         return $format;
     }
 
@@ -197,12 +210,12 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
                 case 'Transfer-Encoding':
                     break; //Skip Header
                 case 'Location':
-                    $hValue = $this->fixURLs($hValue);
+                    $hValue       = $this->fixURLs($hValue);
                     break;
                 case 'Content-Type':
                     $this->format = $this->contentTypeToFormat($hValue);
                 default:
-                    header($hName . ': ' . $hValue);
+                    header($hName.': '.$hValue);
                     break;
             }
         }
@@ -225,7 +238,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     public function inputPrepare()
     {
         $this->requestMethod = $_SERVER['REQUEST_METHOD'];
-        $this->inputData = file_get_contents('php://input');
+        $this->inputData     = file_get_contents('php://input');
     }
 
     /**
@@ -243,11 +256,12 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function outputPrepare()
     {
-        $this->doCurlRequest($this->url . $this->uriRequested, $this->requestMethod, $this->suffixToFormat($this->uriRequested));
+        $this->doCurlRequest($this->url.$this->uriRequested,
+            $this->requestMethod, $this->suffixToFormat($this->uriRequested));
         $this->proxyHttpHeaders();
         if ($this->lastResponseCode == 0) {
             header("HTTP/1.0 502 Bad Gateway");
-            $this->outputData = new HttpStatusPage(502);
+            $this->outputData = new ui\HttpStatusPage(502);
             $this->outputData->container->addItem(_('Please Check').' ');
             $this->outputData->container->addItem(new \Ease\Html\ATag($this->url.$this->uriRequested,
                 $this->url.$this->uriRequested));
@@ -275,16 +289,25 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function applyPlugins($direction)
     {
-        $dir = __DIR__ . "/plugins/*";
+        $dir = __DIR__."/plugins/*";
         foreach (glob($dir) as $file) {
             if (!is_dir($file) && !strstr($file, 'Common')) {
-                $className = "FlexiProxy\\plugins\\" . basename(str_replace('.php', '', $file));
-                $plugin = new $className($this);
-                if ($plugin->isThisMyDirection($direction) && $plugin->isThisMyFormat($this->format) && $plugin->isThisMyPath($this->uriRequested)) {
+                $className = "FlexiProxy\\plugins\\".basename(str_replace('.php',
+                            '', $file));
+                $plugin    = new $className($this);
+                if ($plugin->isThisMyDirection($direction) && $plugin->isThisMyFormat($this->format)
+                    && $plugin->isThisMyPath($this->uriRequested)) {
+                    $this->addStatusMessage(sprintf(_('ApplyPlugin: %s'),
+                            $className), 'debug');
                     $plugin->apply();
                 }
             }
         }
+        $messager = new ui\StatusMessages($this);
+        if ($messager->isThisMyDirection($direction) && $messager->isThisMyFormat($this->format)) {
+            $this->addStatusMessage(sprintf(_('ApplyPlugin: %s'), $className,
+                    'debug'));
+            $messager->apply();
+        }
     }
-
 }
