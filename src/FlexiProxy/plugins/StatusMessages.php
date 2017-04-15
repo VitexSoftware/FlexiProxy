@@ -19,8 +19,6 @@ class StatusMessages extends CommonHtml implements CommonPluginInterface
 
     public function process()
     {
-
-
         $statusMessages = $this->webPage->getStatusMessagesAsHtml();
         if ($statusMessages) {
             $this->includeCss('/css/flexiproxy.css');

@@ -37,25 +37,24 @@ class CommonHtml extends Common
 
     public function addCss($code)
     {
-        $this->content = $parts[0]."\n<script type=\"text/javascript\">\n$code\n</script>\n".'</body>'.$parts['1'];
-        return $this->addBefore($before, $content);
+        $this->addBefore('<!--FLEXIBEE:CSS:END-->', $code);
     }
 
     public function includeCss($css)
     {
-        return $this->addBefore('</head>',
+        return $this->addBefore('<!--FLEXIBEE:CSS:END-->',
                 "\n<link rel=\"stylesheet\" type=\"text/css\" href=\"".$this->flexiProxy->baseUrl.$css."\" media=\"all\" />\n");
     }
 
     public function addJavaScript($code)
     {
-        $parts         = explode('</body>', $this->content);
-        $this->content = $parts[0]."\n<script type=\"text/javascript\">\n$code\n</script>\n".'</body>'.$parts['1'];
+        $this->addBefore('<!--FLEXIBEE:JS:END-->',
+            "\n<script type=\"text/javascript\">\n$code\n</script>\n");
     }
 
     public function includeJavaScript($url)
     {
-        $this->addBefore('</body>',
+        $this->addBefore('<!--FLEXIBEE:JS:END-->',
             "\n<script type=\"text/javascript\" src=\"".$this->flexiProxy->baseUrl.$url."\" ></script>\n");
     }
 
@@ -73,8 +72,13 @@ class CommonHtml extends Common
 
     public function addAfter($after, $content)
     {
-        $parts = explode($after, $this->content);
-        $this->content = $parts[0] . "\n$content\n$after" . $parts['1'];
+        if (strstr($this->content, $after)) {
+            $parts         = explode($after, $this->content);
+            $this->content = $parts[0]."\n$content\n$after".$parts['1'];
+        } else {
+            $this->flexiProxy->addStatusMessage(sprintf(_('AddAfter: pattern "%s" not found on %s'),
+                    $after, $this->flexiProxy->url));
+        }
     }
 
     public function addToPageTop($content)
