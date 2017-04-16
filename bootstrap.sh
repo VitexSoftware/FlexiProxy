@@ -4,7 +4,10 @@ echo deb http://v.s.cz/ stable main > /etc/apt/sources.list.d/vitexsoftware.list
 
 export DEBIAN_FRONTEND="noninteractive"
 apt-get update
-apt-get install -y php7.0 php7.0-curl php-pear php7.0-intl composer unzip php7.0-zip devscripts
+apt-get install -y php7.0 php7.0-curl php-pear php7.0-intl composer unzip php7.0-zip devscripts php7.0-xdebug
+sed -i '/^error_reporting/c\error_reporting = E_ALL' /etc/php/7.0/apache2/php.ini
+sed -i '/^display_errors/c\display_errors = On' /etc/php/7.0/apache2/php.ini
+sed -i '/^display_startup_errors/c\display_startup_errors = On' /etc/php/7.0/apache2/php.ini
 cd /vagrant
 composer update
 cd debian
