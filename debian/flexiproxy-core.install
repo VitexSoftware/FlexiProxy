@@ -5,6 +5,6 @@ src/css/*                       usr/share/flexiproxy/css/
 src/images/*                    usr/share/flexiproxy/images/
 src/FlexiProxy/*.php		usr/share/flexiproxy/FlexiProxy/
 src/FlexiProxy/plugins/Common*.php		usr/share/flexiproxy/FlexiProxy/plugins/
-src/FlexiProxy/plugins/StatusMessages.php		usr/share/flexiproxy/FlexiProxy/plugins/
+src/FlexiProxy/ui/*.php		usr/share/flexiproxy/FlexiProxy/ui/
 debian/conf/config.json         etc/flexiproxy/
 debian/conf/composer.json       usr/share/flexiproxy/

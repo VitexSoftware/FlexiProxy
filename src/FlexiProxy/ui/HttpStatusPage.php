@@ -12,7 +12,7 @@ namespace FlexiProxy\ui;
  *
  * @author vitex
  */
-class HttpStatusPage extends ui\WebPage
+class HttpStatusPage extends WebPage
 { /**
  * Obtain status code message for given code
  *

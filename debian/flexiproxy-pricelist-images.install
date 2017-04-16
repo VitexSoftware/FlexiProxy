@@ -1,1 +1,1 @@
-src/FlexiProxy/plugins/Pricelist*.php		usr/share/flexiproxy/FlexiProxy/plugins/
+src/FlexiProxy/plugins/*Pricelist*.php		usr/share/flexiproxy/FlexiProxy/plugins/

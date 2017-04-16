@@ -62,6 +62,18 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     public $requestMethod = null;
 
     /**
+     * Read Data from upstream FlexiBee
+     * @var boolean 
+     */
+    public $readFromUpstream = true;
+
+    /**
+     * Data to show
+     * @var string
+     */
+    public $outputData = null;
+
+    /**
      * FelexiProxy worker
      *
      * @param mixed $init default record id or initial data
@@ -89,9 +101,9 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     {
         $pattern = '\/c\/([a-z_]+)\/([a-z]+)\/(\d+)(($|\/(([a-z]+)($|;([a-z]+)$)))|\?.*$)';
         if (preg_match('/'.$pattern.'/', $uri, $matches)) {
+            $this->setMyKey(intval($matches[3]));
             $this->setCompany($matches[1]);
             $this->setEvidence($matches[2]);
-            $this->setMyKey($matches[3]);
             $this->urlParams = isset($matches[4]) ? $matches[4] : null;
             $this->section   = isset($matches[7]) ? $matches[7] : null;
             $this->operation = isset($matches[9]) ? $matches[9] : null;
@@ -159,6 +171,8 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
                 define($configKey, $configValue);
             }
         }
+        $this->debug  = (isset($this->configuration['debug']) && ($this->configuration['debug']
+            == 'true') );
         $this->apiurl = $this->configuration['FLEXIBEE_URL'];
     }
 
@@ -269,7 +283,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
             $this->outputData = $this->fixURLs(self::getCurlResponseBody($this->lastCurlResponse));
         }
         $this->addStatusMessage(sprintf(_('%s: %s'), $this->requestMethod,
-                $this->url.$this->uriRequested));
+                $this->url.$this->uriRequested), 'debug');
     }
 
     /**
@@ -277,7 +291,9 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function output()
     {
-        $this->outputPrepare();
+        if ($this->readFromUpstream === true) {
+            $this->outputPrepare();
+        }
         $this->applyPlugins('output');
         echo $this->outputData;
     }
@@ -305,9 +321,16 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         }
         $messager = new ui\StatusMessages($this);
         if ($messager->isThisMyDirection($direction) && $messager->isThisMyFormat($this->format)) {
-            $this->addStatusMessage(sprintf(_('ApplyPlugin: %s'), $className,
-                    'debug'));
+            $this->addStatusMessage(sprintf(_('ApplyPlugin: %s'),
+                    get_class($messager)), 'debug');
             $messager->apply();
+        }
+    }
+
+    public function addStatusMessage($message, $type = 'info', $addIcons = true)
+    {
+        if (($type != 'debug') && ($this->debug !== true )) {
+            return parent::addStatusMessage($message, $type, $addIcons);
         }
     }
 }

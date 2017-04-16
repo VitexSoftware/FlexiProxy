@@ -15,16 +15,18 @@ namespace FlexiProxy\plugins;
  */
 class PricelistItemImages extends CommonHtml implements CommonPluginInterface
 {
-    public $myPathRegex = 'cenik\/(\d)$';
+    public $myPathRegex = 'cenik\/(\d+)$';
     public $myDirection = 'output';
 
     public function process()
     {
-        if (preg_match('/cenik\/(\d)/', $this->flexiProxy->uriRequested,
+        if (preg_match('/cenik\/(\d+)/', $this->flexiProxy->uriRequested,
                 $matches)) {
             $recordID = intval($matches[1]);
 
-            $pricelister = new \FlexiPeeHP\Cenik($recordID);
+            $pricelister = new \FlexiPeeHP\Cenik($recordID,
+                ['company' => $this->flexiProxy->company]);
+            $pricelister->ignore404(true);
 
             $images = \FlexiPeeHP\Priloha::getAttachmentsList($pricelister);
 
@@ -35,7 +37,9 @@ class PricelistItemImages extends CommonHtml implements CommonPluginInterface
             if (count($images) && ($pricelister->lastResponseCode == 200)) {
                 $gallery = '<div style="padding: 10px">';
                 foreach ($images as $image) {
-                    $gallery .= '<img width="300" src="'.$this->flexiProxy->fixURLs($image['url']).'/content">';
+                    if (strstr($image['contentType'], 'image')) {
+                        $gallery .= '<img width="300" src="'.$this->flexiProxy->fixURLs($image['url']).'/content">';
+                    }
                 }
                 $gallery .= '</div>';
                 $this->addBefore('</div> <!-- flexibee-application-content -->',

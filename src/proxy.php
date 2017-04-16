@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FlexiProxy.
  *
@@ -9,9 +8,7 @@
 
 namespace FlexiProxy;
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$flexi = new FlexiProxy(null, ['config' => 'config.json']);
+require_once 'includes/Init.php';
 $flexi->input();
 $flexi->output();
 

@@ -17,14 +17,14 @@ namespace FlexiProxy\plugins;
 class PricelistImages extends CommonHtml implements CommonPluginInterface
 {
 
-    public $myPathRegex = '(cenik|cenik.html)($|\?)';
+    public $myPathRegex = '(cenik|cenik.html)($|\?.*$)';
     public $myDirection = 'output';
 
     public function process()
     {
         $this->replaceContent('a href', 'a title="link" href');
-        $this->includeJavaScript($processed, 'js/PricelistImages.js');
-        $this->addJavaScript($processed, 'alert("listing images");');
+//        $this->includeJavaScript($processed, 'js/PricelistImages.js');
+//        $this->addJavaScript($processed, 'alert("listing images");');
     }
 
 }
