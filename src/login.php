@@ -90,23 +90,7 @@ $loginPanel->body->setTagCss(['margin' => '20px']);
 $loginColumn->addItem($loginPanel);
 
 $featureList = new \Ease\Html\UlTag(null, ['class' => 'list-group']);
-$featureList->addItemSmart(_('display the contents of all the available records in all companies'),
-    ['class' => 'list-group-item']);
-$featureList->addItemSmart(_('show the structure of evidence'),
-    ['class' => 'list-group-item']);
-$featureList->addItemSmart(_('send direct requests to the server and display results'),
-    ['class' => 'list-group-item']);
-$featureList->addItemSmart(_('set up ChangesAPI and add WebHooks'),
-    ['class' => 'list-group-item']);
-$featureList->addItemSmart(_('Test WebHook script processing changes from FlexiBee answers'),
-    ['class' => 'list-group-item']);
-$featureList->addItemSmart(_('Collectively establish and abolish the accounting period'),
-    ['class' => 'list-group-item']);
-$featureList->addItemSmart(_('Evidnece distinguish which are inaccessible because of the license'),
-    ['class' => 'list-group-item']);
-$featureList->addItemSmart(_('Shown next to json result of the request and page FlexiBee'),
-    ['class' => 'list-group-item']);
-$featureList->addItemSmart(_('Edit External ID numbers'),
+$featureList->addItemSmart(_('Show product images'),
     ['class' => 'list-group-item']);
 
 $featuresPanel = new \Ease\TWB\Panel(_('Features'), 'info');

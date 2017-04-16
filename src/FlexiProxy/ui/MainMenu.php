@@ -60,7 +60,7 @@ class MainMenu extends \Ease\Html\Div
                 $term = null;
             }
 
-            $nav->addMenuItem(new NavBarSearchBox('search', 'search.php', $term));
+//            $nav->addMenuItem(new NavBarSearchBox('search', 'search.php', $term));
             $companer = new \FlexiPeeHP\Company();
 
             $companiesToMenu = [];

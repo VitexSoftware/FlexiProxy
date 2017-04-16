@@ -4,13 +4,13 @@
  * FlexiProxy.
  *
  * @author    Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright 2016-2017 VitexSoftware (G)
+ * @copyright 2017 VitexSoftware (G)
  */
 
 namespace FlexiProxy\plugins;
 
 /**
- * Description of PricelistImages
+ * Add Images to Pricelits item Attachments List
  *
  * @author vitex
  */

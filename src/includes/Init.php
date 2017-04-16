@@ -51,4 +51,14 @@ if (!\Ease\Shared::isCli()) {
     $oPage = new ui\WebPage();
 }
 
-$flexi = new FlexiProxy(null, ['config' => 'config.json']);
+$options = ['config' => 'config.json'];
+
+if (isset($_SESSION['user'])) {
+    $options['user'] = $_SESSION['user'];
+}
+if (isset($_SESSION['password'])) {
+    $options['password'] = $_SESSION['password'];
+}
+
+
+$flexi = new FlexiProxy(null, $options);

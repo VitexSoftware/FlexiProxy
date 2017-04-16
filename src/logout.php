@@ -9,8 +9,6 @@ namespace FlexiProxy;
  * @copyright  2017 Vitex Software
  */
 
-namespace Flexplorer;
-
 require_once 'includes/Init.php';
 
 unset($_SESSION['user']);
