@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FlexiProxy.
  *
@@ -16,8 +15,8 @@ namespace FlexiProxy\plugins;
  */
 class CommonHtml extends Common
 {
-
     public $myFormat = 'html';
+
     /**
      * WebPage helper
      * @var \Ease\TWB\WebPage 
@@ -46,10 +45,21 @@ class CommonHtml extends Common
                 "\n<link rel=\"stylesheet\" type=\"text/css\" href=\"".$this->flexiProxy->baseUrl.$css."\" media=\"all\" />\n");
     }
 
-    public function addJavaScript($code)
+    public function addJavaScript($code, $onDocumentReady = true)
     {
-        $this->addBefore('<!--FLEXIBEE:JS:END-->',
-            "\n<script type=\"text/javascript\">\n$code\n</script>\n");
+        if ($onDocumentReady === true) {
+            $docready = '$(document).ready(function() {';
+            if (strstr($this->content, $docready)) {
+                $result = $this->addAfter($docready, $code);
+            } else {
+                $result = $this->addBefore('<!--FLEXIBEE:JS:END-->',
+                    "\n<script type=\"text/javascript\">\n$docready\n$code\n}\n</script>\n");
+            }
+        } else {
+            $result = $this->addBefore('<!--FLEXIBEE:JS:END-->',
+                "\n<script type=\"text/javascript\">\n$code\n</script>\n");
+        }
+        return $result;
     }
 
     public function includeJavaScript($url)
@@ -60,8 +70,8 @@ class CommonHtml extends Common
 
     public function addToBodyEnd($content)
     {
-        $parts = explode('</body>', $this->content);
-        $this->content = $parts[0] . "\n$content\n</body>" . $parts['1'];
+        $parts         = explode('</body>', $this->content);
+        $this->content = $parts[0]."\n$content\n</body>".$parts['1'];
     }
 
     public function addBefore($before, $content)
