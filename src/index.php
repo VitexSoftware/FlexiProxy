@@ -14,6 +14,7 @@ $oPage->onlyForLogged();
 
 $oPage->addItem(new ui\PageTop(_('FlexiProxy')));
 
+$oPage->container->addItem(new ui\ApplicationMenu($flexi->company));
 
 $oPage->addItem(new ui\PageBottom());
 

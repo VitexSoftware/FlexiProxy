@@ -44,10 +44,34 @@ Description: Modify default logo on FlexiBee
 
 Package: flexiproxy-pricelist-images
 Depends: ${misc:Depends},flexiproxy-core
-Recommends: flexibee
 Architecture: all
 Section: web
 Priority: optional
-Description: Modify default logo on FlexiBee
- Allow you to show your own logo on FlexiBee web interface
+Description: Add Images to FlexiBee Pricelist
+ Show and upload images
 
+Package: flexiproxy-database
+Depends: ${misc:Depends},flexiproxy-core, php7.0-pdo,php7.1-pdo-pgsql | php7.1-pdo-mysql
+Recommends: mysql-server,postgresql
+Suggests: flexiproxy-history,flexiproxy-custom-columns
+Architecture: all
+Section: web
+Priority: optional
+Description: Add Database Support for FlexiPeehp
+ External Memory for FlexiBee
+
+Package: flexiproxy-history
+Depends: ${misc:Depends},flexiproxy-database
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee histroy
+ Use WebHook to save all Evidenece changes to database
+
+Package: flexiproxy-custom-columns
+Depends: ${misc:Depends},flexiproxy-database
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee custom columns
+ Define and Use your own custom columns in web interface and API

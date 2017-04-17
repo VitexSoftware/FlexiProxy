@@ -3,7 +3,7 @@
  * FlexiProxy.
  *
  * @author    Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright 2016-2017 VitexSoftware (G)
+ * @copyright 2017 VitexSoftware (G)
  */
 
 namespace FlexiProxy;
@@ -25,7 +25,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      * Where do i get configuration ?
      * @var string
      */
-    public $configFile = './config.json';
+    public $configDir = './';
 
     /**
      * Local FlexiBee Url
@@ -74,6 +74,12 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     public $outputData = null;
 
     /**
+     * Shared utility class object
+     * @var \Ease\Shared
+     */
+    public $shared;
+
+    /**
      * FelexiProxy worker
      *
      * @param mixed $init default record id or initial data
@@ -81,10 +87,10 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function __construct($init = null, $options = [])
     {
-        if (!is_null($options['config'])) {
-            $this->configFile = $options['config'];
+        if (!is_null($options['confdir'])) {
+            $this->confDir = $options['confdir'];
         }
-        $this->loadConfig($this->configFile);
+        $this->loadConfigs($this->confDir);
         parent::__construct($init, $options);
         $this->uriRequested = empty($_SERVER['REQUEST_URI']) ? '/' : $_SERVER['REQUEST_URI'];
         $this->parseFlexiBeeURI($this->uriRequested);
@@ -160,17 +166,38 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     }
 
     /**
-     * Load Configuration values from json file $this->configFile and define UPPERCASE keys
+     * Load Configuration values from json files in $this->confDir and define UPPERCASE keys
+     *
+     * @param string $configFile path
+     * @return array
      */
     public function loadConfig($configFile)
     {
-        $this->shared        = \Ease\Shared::instanced();
-        $this->configuration = json_decode(file_get_contents($configFile), true);
-        foreach ($this->configuration as $configKey => $configValue) {
+
+        $configuration = json_decode(file_get_contents($configFile), true);
+        foreach ($configuration as $configKey => $configValue) {
+            $this->shared->setConfigValue($configKey, $configValue);
             if ((strtoupper($configKey) == $configKey) && (!defined($configKey))) {
                 define($configKey, $configValue);
             }
         }
+        return $configuration;
+    }
+
+    /**
+     * Load all config files in config dir
+     */
+    public function loadConfigs()
+    {
+        if (!is_object($this->shared)) {
+            $this->shared = \Ease\Shared::instanced();
+        }
+
+        foreach (glob($this->configDir.'*.json') as $configFile) {
+            $this->configuration = array_merge($this->configuration,
+                $this->loadConfig($configFile));
+        }
+
         $this->debug  = (isset($this->configuration['debug']) && ($this->configuration['debug']
             == 'true') );
         $this->apiurl = $this->configuration['FLEXIBEE_URL'];

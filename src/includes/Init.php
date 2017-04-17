@@ -46,15 +46,15 @@ session_start();
 $oUser                 = \Ease\Shared::user();
 $oUser->settingsColumn = 'settings';
 
-if (!\Ease\Shared::isCli()) {
-    /* @var $oPage \Sys\WebPage */
-    $oPage = new ui\WebPage();
-}
+$oPage = new ui\WebPage();
 
-$options = ['config' => 'config.json'];
+$options = ['confdir' => './'];
 
 if (isset($_SESSION['user'])) {
     $options['user'] = $_SESSION['user'];
+}
+if (isset($_SESSION['company'])) {
+    $options['company'] = $_SESSION['company'];
 }
 if (isset($_SESSION['password'])) {
     $options['password'] = $_SESSION['password'];

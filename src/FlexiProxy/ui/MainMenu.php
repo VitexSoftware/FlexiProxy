@@ -75,7 +75,7 @@ class MainMenu extends \Ease\Html\Div
 
             if (isset($companies['company']) && count($companies['company'])) {
                 foreach ($companies['company'] as $company) {
-                    $companiesToMenu['?company='.$company['dbNazev']] = $company['nazev'];
+                    $companiesToMenu['/c/'.$company['dbNazev']] = $company['nazev'];
                 }
                 asort($companiesToMenu);
 

@@ -23,3 +23,13 @@
 /debian/flexiproxy-pricelist-images.substvars
 /debian/flexiproxy-apache.debhelper.log
 /.vagrant/
+/debian/flexiproxy-custom-columns/
+/debian/flexiproxy-database/
+/debian/flexiproxy-history/
+/debian/flexiproxy-custom-columns.debhelper.log
+/debian/flexiproxy-custom-columns.substvars
+/debian/flexiproxy-database.debhelper.log
+/debian/flexiproxy-database.substvars
+/debian/flexiproxy-history.debhelper.log
+/debian/flexiproxy-history.substvars
+/debian/revision

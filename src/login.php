@@ -84,6 +84,31 @@ $loginPanel->addItem(new \Ease\TWB\FormGroup(_('Password'),
     '',
     _('User\'s password')));
 
+            $companer = new \FlexiPeeHP\Company();
+
+$companiesToMenu = [];
+$companer        = new \FlexiPeeHP\Company();
+$companies       = $companer->getFlexiData();
+
+if (!isset($companies['company'][0])) {
+    $cmpInfo                 = $companies['company'];
+    unset($companies['company']);
+    $companies['company'][0] = $cmpInfo;
+}
+
+if (isset($companies['company']) && count($companies['company'])) {
+    foreach ($companies['company'] as $company) {
+        $companiesToMenu['/c/'.$company['dbNazev']] = $company['nazev'];
+    }
+    asort($companiesToMenu);
+}
+
+
+$loginPanel->addItem(new \Ease\TWB\FormGroup(_('Company'),
+    new \Ease\Html\Select('company', $companiesToMenu, $company ? $company : ''
+    ), '', _('Company')));
+
+
 
 $loginPanel->body->setTagCss(['margin' => '20px']);
 

@@ -17,9 +17,7 @@
   background-color: #ccc;
   background-repeat: no-repeat;
   background-position: top center;
-  cursor: ns-resize; 
-  width: available;
-}
+  cursor: ns-resize; }
 
 #smdrag:hover {
   background-color: #f5ad66; }
