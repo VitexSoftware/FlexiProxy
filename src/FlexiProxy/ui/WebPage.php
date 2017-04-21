@@ -78,6 +78,9 @@ class WebPage extends \Ease\TWB\WebPage
      */
     public function onlyForLogged($loginPage = 'login.php')
     {
-        return parent::onlyForLogged($loginPage.'?backurl='.urlencode($_SERVER['REQUEST_URI']));
+        if (\Ease\Shared::instanced()->getConfigValue('access_policy') == 'login') {
+            parent::onlyForLogged($loginPage.'?backurl='.urlencode($_SERVER['REQUEST_URI']));
+        }
     }
 }
+    

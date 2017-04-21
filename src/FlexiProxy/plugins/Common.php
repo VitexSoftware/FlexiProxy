@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FlexiProxy.
  *
@@ -16,7 +15,6 @@ namespace FlexiProxy\plugins;
  */
 class Common
 {
-
     /**
      * My URL path regex
      * @var string
@@ -65,7 +63,7 @@ class Common
      */
     public function isThisMyDirection($direction)
     {
-        return preg_match('/' . $this->myDirection . '/', $direction);
+        return preg_match('/'.$this->myDirection.'/', $direction);
     }
 
     /**
@@ -76,7 +74,7 @@ class Common
      */
     public function isThisMyPath($path)
     {
-        return preg_match('/' . $this->myPathRegex . '/', $path);
+        return preg_match('/'.$this->myPathRegex.'/', $path);
     }
 
     /**
@@ -87,7 +85,7 @@ class Common
      */
     public function isThisMyFormat($format)
     {
-        return preg_match('/^' . $this->myFormat . '$/', $format);
+        return preg_match('/^'.$this->myFormat.'$/', $format);
     }
 
     /**
@@ -97,14 +95,14 @@ class Common
     {
         switch ($this->myDirection) {
             case 'output':
-                $this->content = $this->flexiProxy->outputData;
+                $this->content                = $this->flexiProxy->outputData;
                 $this->process();
                 $this->flexiProxy->outputData = $this->content;
                 break;
             case 'input':
-                $this->content = $this->flexiProxy->inputData;
+                $this->content                = $this->flexiProxy->inputData;
                 $this->process();
-                $this->flexiProxy->inputData = $this->content;
+                $this->flexiProxy->inputData  = $this->content;
                 break;
         }
     }
@@ -118,7 +116,8 @@ class Common
     {
         $replaced = preg_replace($what, $to, $this->content);
         if (is_null($replaced)) {
-            $this->flexiProxy->addStatusMessage(get_class($this) . ': ' . sprintf(_('Replace %s to %s on %s failed'), $what, $to, $this->flexiProxy->uriRequested), 'warning');
+            $this->flexiProxy->addStatusMessage(get_class($this).': '.sprintf(_('Replace %s to %s on %s failed'),
+                    $what, $to, $this->flexiProxy->uriRequested), 'warning');
         } else {
             $this->content = $replaced;
         }
@@ -126,7 +125,7 @@ class Common
 
     public function process()
     {
-
+        $this->flexiProxy->addStatusMessage(sprintf(_('Plugin with undefined process()'),
+                addslashes(get_class($this))), 'warning');
     }
-
 }

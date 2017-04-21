@@ -23,6 +23,19 @@ class PageBottom extends \Ease\TWB\Container
         $appInfo = json_decode(file_get_contents($composer));
 
 
+//
+//$version = 'development';
+//if (file_exists('/usr/share/flexiproxy/composer.json')) {
+//    $composerInfo = json_decode(file_get_contents('/usr/share/flexiproxy/composer.json'));
+//    $version = $composerInfo->version;
+//}
+//
+//$flexi->addStatusMessage('Flexiproxy v.'.$version.' FlexiPeeHP v'.\FlexiPeeHP\FlexiBeeRO::$libVersion.' (FlexiBee '.\FlexiPeeHP\EvidenceList::$version.') EasePHP Framework v'.\Ease\Atom::$frameworkVersion,
+//    'debug');
+
+
+
+
         $rowFluid1 = new \Ease\TWB\Row();
         $colA      = $rowFluid1->addItem(new \Ease\TWB\Col(2));
         $listA1    = $colA->addItem(new \Ease\Html\UlTag(_('Sources'),

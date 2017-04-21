@@ -1,0 +1,4 @@
+src/FlexiProxy/plugins/*CustomColumn*.php		usr/share/flexiproxy/FlexiProxy/plugins/
+src/FlexiProxy/CustomColumns.php                        usr/share/flexiproxy/FlexiProxy/
+src/customcolumns.php                                   usr/share/flexiproxy/
+src/FlexiProxy/ui/CustomColumnForm.php                  usr/share/flexiproxy/FlexiProxy/ui/

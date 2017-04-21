@@ -53,14 +53,19 @@ Konfigurace
 Ten si načte obsah konfiguračního souboru config.json 
 
     {
-        "FLEXIBEE_URL": "",
-        "FLEXIBEE_LOGIN": "",
-        "FLEXIBEE_PASSWORD": "",
-        "FLEXIBEE_COMPANY": "",
         "EASE_APPNAM": "FlexiProxy",
         "EASE_LOGGER": "syslog|console",
         "EMAIL_FROM": "flexiproxy@localhost",
+        "FLEXIBEE_URL": "https://localhost:5434",
+        "FLEXIBEE_LOGIN": "admin",
+        "FLEXIBEE_PASSWORD": "admin123",
+        "FLEXIBEE_COMPANY": "adminit_s_r_o_4",
+        "access_policy": "login",
+        "debug": "true"
     }
+
+access_policy: **public** - zpřístupní vše pod uživatelem z natavení; **login** - je nutné se přihlásit
+debug: vypisuje dodatečné ladící ingormace
 
 
 Logování
@@ -76,4 +81,46 @@ Testování
 
 Skript obsahuje i PHPUnit testy
 
+
+Databaze
+--------
+
+    vendor/bin/phinx create CustomColumns -c phinx-adapter.php
+    vendor/bin/phinx migrate -c phinx-adapter.php
+
+Testing
+-------
+
+At first you need initialise create sql user & database with login and password 
+from testing/phinx.yml and initialise testing database by **phinx migrate** 
+command:
+
+```
+composer update
+cd tests
+mysqladmin -u root -p create flexiproxy
+mysql -u root -p -e "GRANT ALL PRIVILEGES ON flexiproxy.* TO flexiproxy@localhost IDENTIFIED BY 'flexiproxy'"
+sudo -u postgres bash -c "psql -c \"CREATE USER flexiproxy WITH PASSWORD 'flexiproxy';\""
+sudo -u postgres bash -c "psql -c \"create database flexiproxy with owner flexiproxy encoding='utf8' template template0;\""
+../vendor/bin/phinx migrate -e development 
+../vendor/bin/phinx migrate -e testing  
+```
+
+Building
+--------
+
+Simply run debian/deb-package.sh
+
+For Docker:
+
+    docker build -t vitexus/flexiproxy .
+    docker push vitexus/flexiproxy
+
+
+Links
+=====
+
+Homepage: https://www.vitexsoftware.cz/flexiproxy.php
+
+GitHub: https://github.com/VitexSoftware/FlexiProxy
 

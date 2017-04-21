@@ -1,5 +1,10 @@
 README.md			usr/share/doc/flexiproxy/
-src/*.php                       usr/share/flexiproxy/
+src/about.php                   usr/share/flexiproxy/
+src/index.php                   usr/share/flexiproxy/
+src/keepAlive.php               usr/share/flexiproxy/
+src/login.php                   usr/share/flexiproxy/
+src/logout.php                  usr/share/flexiproxy/
+src/proxy.php                   usr/share/flexiproxy/
 src/includes/*.php              usr/share/flexiproxy/includes/
 src/js/*                        usr/share/flexiproxy/js/
 src/css/*                       usr/share/flexiproxy/css/
@@ -8,6 +13,16 @@ src/FlexiProxy/*.php		usr/share/flexiproxy/FlexiProxy/
 src/FlexiProxy/plugins/Common*.php		usr/share/flexiproxy/FlexiProxy/plugins/
 src/FlexiProxy/plugins/MainPage.php		usr/share/flexiproxy/FlexiProxy/plugins/
 src/FlexiProxy/plugins/Logout.php		usr/share/flexiproxy/FlexiProxy/plugins/
-src/FlexiProxy/ui/*.php		usr/share/flexiproxy/FlexiProxy/ui/
+src/FlexiProxy/plugins/Login.php		usr/share/flexiproxy/FlexiProxy/plugins/
+
+src/FlexiProxy/ui/ApplicationMenu.php		usr/share/flexiproxy/FlexiProxy/ui/
+src/FlexiProxy/ui/BootstrapMenu.php             usr/share/flexiproxy/FlexiProxy/ui/                                                                                                                                                   
+src/FlexiProxy/ui/HttpStatusPage.php            usr/share/flexiproxy/FlexiProxy/ui/                                                                                                                                                   
+src/FlexiProxy/ui/MainMenu.php                  usr/share/flexiproxy/FlexiProxy/ui/                                                                                                                                                   
+src/FlexiProxy/ui/MainPageMenu.php              usr/share/flexiproxy/FlexiProxy/ui/                                                                                                                                                   
+src/FlexiProxy/ui/PageBottom.php                usr/share/flexiproxy/FlexiProxy/ui/                                                                                                                                                   
+src/FlexiProxy/ui/PageTop.php                   usr/share/flexiproxy/FlexiProxy/ui/                                                                                                                                                   
+src/FlexiProxy/ui/WebPage.php                   usr/share/flexiproxy/FlexiProxy/ui/
+
 debian/conf/config.json         etc/flexiproxy/
 debian/conf/composer.json       usr/share/flexiproxy/

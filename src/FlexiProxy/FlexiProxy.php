@@ -92,27 +92,37 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         }
         $this->loadConfigs($this->confDir);
         parent::__construct($init, $options);
-        $this->uriRequested = empty($_SERVER['REQUEST_URI']) ? '/' : $_SERVER['REQUEST_URI'];
-        $this->parseFlexiBeeURI($this->uriRequested);
+        if (constant('PHP_SAPI') != 'cli') {
+            $this->uriRequested = empty($_SERVER['REQUEST_URI']) ? '/' : $_SERVER['REQUEST_URI'];
+            $this->parseFlexiBeeURI($this->uriRequested);
 
-        $parsed = parse_url(\Ease\Page::phpSelf());
-        $dest   = $parsed['scheme'].'://'.$parsed['host'];
-        if (isset($parsed['port'])) {
-            $dest .= ':'.$parsed['port'];
+            $parsed = parse_url(\Ease\Page::phpSelf());
+            $dest   = $parsed['scheme'].'://'.$parsed['host'];
+            if (isset($parsed['port'])) {
+                $dest .= ':'.$parsed['port'];
+            }
+            $this->baseUrl = $dest;
         }
-        $this->baseUrl = $dest;
     }
 
     public function parseFlexiBeeURI($uri)
     {
-        $pattern = '\/c\/([a-z_]+)\/([a-z]+)\/(\d+)(($|\/(([a-z]+)($|;([a-z]+)$)))|\?.*$)';
+        $pattern = '\/c\/([a-z_]+)\/([a-z]+)($|\/(\d+)(($|\/(([a-z]+)($|;([a-z]+)$)))|\?.*$)|\?(.*)$)';
         if (preg_match('/'.$pattern.'/', $uri, $matches)) {
-            $this->setMyKey(intval($matches[3]));
+            $this->addStatusMessage(implode(',', $matches), 'debug');
+            if (isset($matches[3][0]) && ($matches[3][0] == '?')) {
+                $this->urlParams = isset($matches[11]) ? $matches[11] : null;
+            } else {
+                $this->setMyKey(intval($matches[3]));
+                $this->urlParams = isset($matches[4]) ? $matches[4] : null;
+            }
             $this->setCompany($matches[1]);
             $this->setEvidence($matches[2]);
-            $this->urlParams = isset($matches[4]) ? $matches[4] : null;
             $this->section   = isset($matches[7]) ? $matches[7] : null;
             $this->operation = isset($matches[9]) ? $matches[9] : null;
+        } else {
+            $this->addStatusMessage(sprintf(_('URI %s was not parsed'), $uri),
+                'warning');
         }
     }
 
@@ -187,13 +197,13 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     /**
      * Load all config files in config dir
      */
-    public function loadConfigs()
+    public function loadConfigs($confdir = null)
     {
         if (!is_object($this->shared)) {
             $this->shared = \Ease\Shared::instanced();
         }
 
-        foreach (glob($this->configDir.'*.json') as $configFile) {
+        foreach (glob($confdir.'/*.json') as $configFile) {
             $this->configuration = array_merge($this->configuration,
                 $this->loadConfig($configFile));
         }
@@ -341,22 +351,24 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
                 if ($plugin->isThisMyDirection($direction) && $plugin->isThisMyFormat($this->format)
                     && $plugin->isThisMyPath($this->uriRequested)) {
                     $this->addStatusMessage(sprintf(_('ApplyPlugin: %s'),
-                            $className), 'debug');
+                            addslashes($className)), 'debug');
                     $plugin->apply();
                 }
             }
         }
-        $messager = new ui\StatusMessages($this);
+        $messager = new plugins\CommonStatusMessages($this);
         if ($messager->isThisMyDirection($direction) && $messager->isThisMyFormat($this->format)) {
             $this->addStatusMessage(sprintf(_('ApplyPlugin: %s'),
-                    get_class($messager)), 'debug');
+                    addslashes(get_class($messager))), 'debug');
             $messager->apply();
         }
     }
 
     public function addStatusMessage($message, $type = 'info', $addIcons = true)
     {
-        if (($type != 'debug') && ($this->debug !== true )) {
+        if (($this->debug !== true) && ($type == 'debug')) {
+            
+        } else {
             return parent::addStatusMessage($message, $type, $addIcons);
         }
     }

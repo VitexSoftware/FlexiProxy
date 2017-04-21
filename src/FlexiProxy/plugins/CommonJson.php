@@ -17,6 +17,6 @@ namespace FlexiProxy\plugins;
 class CommonJson extends Common
 {
 
-    public static $myFormat = 'json';
+    public $myFormat = 'json';
 
 }

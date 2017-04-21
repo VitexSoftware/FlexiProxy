@@ -1,7 +1,7 @@
 <?php
 
 /**
- * FlexiProxy main page plugin.
+ * FlexiProxy Custom Columns.
  *
  * @author    Vítězslav Dvořák <info@vitexsoftware.cz>
  * @copyright 2017 VitexSoftware (G)
@@ -10,11 +10,11 @@
 namespace FlexiProxy\plugins;
 
 /**
- * Redirect to mainpage
+ * Add Custom Columns to evidence item form
  *
  * @author vitex
  */
-class MainPage extends CommonHtml implements CommonPluginInterface
+class CustomColumnsHTML extends CommonHtml implements CommonPluginInterface
 {
 
     public $myPathRegex = '\/$';
@@ -22,6 +22,5 @@ class MainPage extends CommonHtml implements CommonPluginInterface
 
     public function process()
     {
-        header('Location: '.$this->flexiProxy->baseUrl.'/index.php');
     }
 }

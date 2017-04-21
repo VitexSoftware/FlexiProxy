@@ -1,19 +1,19 @@
 <?php
 /**
- * FlexiProxy.
+ * FlexiProxy Status Messages
  *
  * @author    Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright 2016-2017 VitexSoftware (G)
+ * @copyright 2017 VitexSoftware (G)
  */
 
-namespace FlexiProxy\ui;
+namespace FlexiProxy\plugins;
 
 /**
  * Description of PricelistImages
  *
  * @author vitex
  */
-class StatusMessages extends \FlexiProxy\plugins\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
+class CommonStatusMessages extends CommonHtml implements CommonPluginInterface
 {
     public $myDirection = 'output';
 
@@ -29,8 +29,13 @@ class StatusMessages extends \FlexiProxy\plugins\CommonHtml implements \FlexiPro
                 new \Ease\Html\Div(null, ['id' => 'smdrag'])
             ;
             $this->webPage->cleanMessages();
-            $this->addAfter('<div class="flexibee-application-content column " role="main">',
-                $messagesBar);
+
+            $content = '<div class="flexibee-application-content column " role="main">';
+            if (strstr($this->content, $content)) {
+                $this->addAfter($content, $messagesBar);
+            } else {
+                $this->addToPageTop($messagesBar);
+            }
         }
     }
 }

@@ -92,7 +92,7 @@ class CommonHtml extends Common
             $this->content = $parts[0]."\n$content\n$after".$parts['1'];
         } else {
             $this->flexiProxy->addStatusMessage(sprintf(_('AddAfter: pattern "%s" not found on %s'),
-                    $after, $this->flexiProxy->url), 'warning');
+            htmlentities($after), $this->flexiProxy->url), 'warning');
         }
     }
 
@@ -104,5 +104,10 @@ class CommonHtml extends Common
     public function addToPageBottom($content)
     {
         return $this->addAfter('</div> <!-- flexibee-article-view -->', $content);
+    }
+
+    public function addToToolbar($content)
+    {
+        return $this->addBefore('<!--FLEXIBEE:TOOLBAR:END-->', $content);
     }
 }
