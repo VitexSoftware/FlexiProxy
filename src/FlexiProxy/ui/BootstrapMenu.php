@@ -38,8 +38,11 @@ class BootstrapMenu extends \Ease\TWB\Navbar
                 $this->addMenuItem(new \Ease\Html\ATag('about.php', _('About')),
                     'right');
 
-                $this->addMenuItem(
-                    '
+                if (\Ease\Shared::instanced()->getConfigValue('access_policy') == 'login') {
+
+
+                    $this->addMenuItem(
+                        '
 <li class="divider-vertical"></li>
 <li class="dropdown">
 <a class="dropdown-toggle" href="login.php" data-toggle="dropdown"><i class="icon-circle-arrow-left"></i> '._('Sign in').'<strong class="caret"></strong></a>
@@ -53,7 +56,12 @@ class BootstrapMenu extends \Ease\TWB\Navbar
 <input class="btn btn-primary btn-block" type="submit" id="sign-in" value="'._('Sign in').'">
 </form>
 </div>', 'right'
-                );
+                    );
+                } else {
+                    $this->addMenuItem(new \Ease\TWB\Label('success',
+                        _('Public Access')
+                        ), 'right');
+                }
             }
         } else {
             $userMenu = '<li class="dropdown" style="width: 120px; text-align: right;"><a href="#" class="dropdown-toggle" data-toggle="dropdown">'.$_SESSION['user'].' <b class="caret"></b></a>
@@ -86,5 +94,4 @@ class BootstrapMenu extends \Ease\TWB\Navbar
         }
         parent::draw();
     }
-
 }

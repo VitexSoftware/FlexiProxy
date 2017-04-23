@@ -14,11 +14,14 @@ namespace FlexiProxy\ui;
 class CustomColumnForm extends \Ease\TWB\Form
 {
 
-    public function __construct($evidence)
+    public function __construct($company, $evidence)
     {
         parent::__construct('customColumn');
-        $this->addItem(new \Ease\Html\InputHiddenTag($evidence, $evidence));
-        $this->addInput(new \Ease\Html\InputTextTag('name'), _('Column Name'));
+
+        $this->addItem(new \Ease\Html\InputHiddenTag('evidence', $evidence));
+        $this->addItem(new \Ease\Html\InputHiddenTag('company', $company));
+        $this->addInput(new \Ease\Html\InputTextTag('name'),
+            _('New Column Name'));
         $this->addItem(new \Ease\TWB\SubmitButton(_('Create'), 'success'));
     }
 }

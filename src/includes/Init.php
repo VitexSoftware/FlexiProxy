@@ -62,3 +62,4 @@ if (isset($_SESSION['password'])) {
 
 
 $flexi = new FlexiProxy(null, $options);
+$oPage->flexi = $flexi;

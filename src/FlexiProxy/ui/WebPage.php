@@ -9,6 +9,12 @@ namespace FlexiProxy\ui;
 class WebPage extends \Ease\TWB\WebPage
 {
     /**
+     * FlexiProxy Engine
+     * @var \FlexiProxy\FlexiProxy
+     */
+    public $flexi     = null;
+
+    /**
      * Main block of page.
      *
      * @var \Ease\Html\DivTag

@@ -75,3 +75,12 @@ Section: web
 Priority: optional
 Description: FlexiBee custom columns
  Define and Use your own custom columns in web interface and API
+
+Package: flexiproxy-developer
+Depends: ${misc:Depends},flexiproxy
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee enhancements for Developers
+ Add Links to XML & Json Formats of evidencies
+

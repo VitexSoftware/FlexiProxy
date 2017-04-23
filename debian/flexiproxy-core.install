@@ -10,10 +10,11 @@ src/js/*                        usr/share/flexiproxy/js/
 src/css/*                       usr/share/flexiproxy/css/
 src/images/*                    usr/share/flexiproxy/images/
 src/FlexiProxy/*.php		usr/share/flexiproxy/FlexiProxy/
-src/FlexiProxy/plugins/Common*.php		usr/share/flexiproxy/FlexiProxy/plugins/
-src/FlexiProxy/plugins/MainPage.php		usr/share/flexiproxy/FlexiProxy/plugins/
-src/FlexiProxy/plugins/Logout.php		usr/share/flexiproxy/FlexiProxy/plugins/
-src/FlexiProxy/plugins/Login.php		usr/share/flexiproxy/FlexiProxy/plugins/
+src/FlexiProxy/plugins/Common.php		usr/share/flexiproxy/FlexiProxy/plugins/
+src/FlexiProxy/plugins/html/CommonHtml.php	usr/share/flexiproxy/FlexiProxy/plugins/html/
+src/FlexiProxy/plugins/html/MainPage.php	usr/share/flexiproxy/FlexiProxy/plugins/html/
+src/FlexiProxy/plugins/html/Logout.php		usr/share/flexiproxy/FlexiProxy/plugins/html/
+src/FlexiProxy/plugins/html/Login.php		usr/share/flexiproxy/FlexiProxy/plugins/html/
 
 src/FlexiProxy/ui/ApplicationMenu.php		usr/share/flexiproxy/FlexiProxy/ui/
 src/FlexiProxy/ui/BootstrapMenu.php             usr/share/flexiproxy/FlexiProxy/ui/                                                                                                                                                   

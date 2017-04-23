@@ -53,7 +53,8 @@ class MainMenu extends \Ease\Html\Div
         $nav = $this->addItem(new BootstrapMenu());
 
         $userID = \Ease\Shared::user()->getUserID();
-        if ($userID) { //Authenticated user
+        if ($userID || (\Ease\Shared::instanced()->getConfigValue('access_policy')
+            == 'public')) { //Authenticated user
             if (isset($_SESSION['searchQuery'])) {
                 $term = $_SESSION['searchQuery'];
             } else {
@@ -78,31 +79,27 @@ class MainMenu extends \Ease\Html\Div
                     $companiesToMenu['/c/'.$company['dbNazev']] = $company['nazev'];
                 }
                 asort($companiesToMenu);
+                $companiesToMenu[]                        = '';
+                $companiesToMenu['/admin/zalozeni-firmy'] = \Ease\TWB\Part::GlyphIcon('plus').' '._('Create Company');
 
-                $nav->addDropDownMenu(_('Company'), $companiesToMenu);
+                $nav->addDropDownMenu(isset($this->webPage->flexi->company) ? $companiesToMenu['/c/'.$this->webPage->flexi->company]
+                            : _('Company'), $companiesToMenu);
 
                 if (!isset($_SESSION['company'])) { //Auto choose first company
                     $_SESSION['company'] = $companies['company'][0]['dbNazev'];
                     define('FLEXIBEE_COMPANY', $_SESSION['company']);
                 }
-
-                $evidenciesToMenu = array_merge(['evidences.php' => _('Overview')],
-                    [''], $_SESSION['evidence-menu']);
-
-                if (count($evidenciesToMenu)) {
-                    $nav->addDropDownMenu(_('Evidence'), $evidenciesToMenu);
-                }
             }
 
 
-            $nav->addDropDownMenu(_('Tools'),
-                [
-                'query.php' => _('Query'),
-                'changesapi.php' => _('Changes API'),
-                'changes.php' => _('Changes Recieved'),
-                'fakechange.php' => _('WebHook test'),
-                'ucetniobdobi.php' => _('Accounting period')
-            ]);
+//            $nav->addDropDownMenu(_('Tools'),
+//                [
+//                'query.php' => _('Query'),
+//                'changesapi.php' => _('Changes API'),
+//                'changes.php' => _('Changes Recieved'),
+//                'fakechange.php' => _('WebHook test'),
+//                'ucetniobdobi.php' => _('Accounting period')
+//            ]);
         }
     }
 

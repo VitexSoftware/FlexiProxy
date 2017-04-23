@@ -104,25 +104,70 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
             $this->baseUrl = $dest;
         }
     }
+    public $suffixPattern   = '\.json|\.xml|\.html|\.js';
+    public $comanyPattern   = '[a-z_]+';
+    public $evidencePattern = '[a-z\-]+';
+    public $recordIdPattern = '\d+';
 
-    public function parseFlexiBeeURI($uri)
+    public function parseFlexiBeeUriCompany($uri)
     {
-        $pattern = '\/c\/([a-z_]+)\/([a-z]+)($|\/(\d+)(($|\/(([a-z]+)($|;([a-z]+)$)))|\?.*$)|\?(.*)$)';
-        if (preg_match('/'.$pattern.'/', $uri, $matches)) {
-            $this->addStatusMessage(implode(',', $matches), 'debug');
-            if (isset($matches[3][0]) && ($matches[3][0] == '?')) {
-                $this->urlParams = isset($matches[11]) ? $matches[11] : null;
-            } else {
-                $this->setMyKey(intval($matches[3]));
-                $this->urlParams = isset($matches[4]) ? $matches[4] : null;
+        $pattern = '\/c\/('.$this->comanyPattern.')('.$this->suffixPattern.'|$|\?.*)';
+        $matched = preg_match('/'.$pattern.'/', $uri, $matches);
+        if ($matched > 0) {
+            $this->setCompany($matches[1]);
+        }
+        return $matched;
+    }
+
+    public function parseFlexiBeeUriCompanyEvidence($uri)
+    {
+        $pattern = '\/c\/('.$this->comanyPattern.')\/('.$this->evidencePattern.')('.$this->suffixPattern.'|$|;new|\?.*)';
+        $matched = preg_match('/'.$pattern.'/', $uri, $matches);
+        if ($matched > 0) {
+            $this->setCompany($matches[1]);
+            $this->setEvidence($matches[2]);
+            if (isset($matches[3])) {
+                if ($matches[3][0] == '?') {
+                    $this->urlParams = substr($matches[3], 1);
+                }
+                if ($matches[3][0] == ';') {
+                    $this->operation = substr($matches[3], 1);
+                }
             }
+//            $this->section   = isset($matches[7]) ? $matches[7] : null;
+        }
+        return $matched;
+    }
+
+    public function parseFlexiBeeUriCompanyEvidenceItem($uri)
+    {
+        $pattern = '\/c\/('.$this->comanyPattern.')\/('.$this->evidencePattern.')\/('.$this->recordIdPattern.')('.$this->suffixPattern.'|$|;edit|\?.*)';
+        $matched = preg_match('/'.$pattern.'/', $uri, $matches);
+        if ($matched > 0) {
+            $this->setCompany($matches[1]);
+
+            $this->setMyKey(intval($matches[3]));
+            $this->urlParams = isset($matches[5]) ? $matches[5] : null;
             $this->setCompany($matches[1]);
             $this->setEvidence($matches[2]);
             $this->section   = isset($matches[7]) ? $matches[7] : null;
             $this->operation = isset($matches[9]) ? $matches[9] : null;
-        } else {
-            $this->addStatusMessage(sprintf(_('URI %s was not parsed'), $uri),
-                'warning');
+        }
+        return $matched;
+    }
+
+    public function parseFlexiBeeURI($uri)
+    {
+
+        if (!$this->parseFlexiBeeUriCompanyEvidenceItem($uri)) {
+            if (!$this->parseFlexiBeeUriCompanyEvidence($uri)) {
+                if (!$this->parseFlexiBeeUriCompany($uri)) {
+                    if (!strstr($uri, '/flexibee-static/')) {
+                        $this->addStatusMessage(sprintf(_('URI %s was not parsed'),
+                                $uri), 'warning');
+                    }
+                }
+            }
         }
     }
 
@@ -307,8 +352,11 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function outputPrepare()
     {
-        $this->doCurlRequest($this->url.$this->uriRequested,
-            $this->requestMethod, $this->suffixToFormat($this->uriRequested));
+        $wantUrl = str_replace('XDEBUG_SESSION_START=netbeans-xdebug', '',
+            $this->url.$this->uriRequested);
+
+        $this->doCurlRequest($wantUrl, $this->requestMethod,
+            $this->suffixToFormat($this->uriRequested));
         $this->proxyHttpHeaders();
         if ($this->lastResponseCode == 0) {
             header("HTTP/1.0 502 Bad Gateway");
@@ -342,10 +390,10 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function applyPlugins($direction)
     {
-        $dir = __DIR__."/plugins/*";
+        $dir = __DIR__.'/plugins/'.$this->format.'/*';
         foreach (glob($dir) as $file) {
             if (!is_dir($file) && !strstr($file, 'Common')) {
-                $className = "FlexiProxy\\plugins\\".basename(str_replace('.php',
+                $className = "FlexiProxy\\plugins\\".$this->format."\\".basename(str_replace('.php',
                             '', $file));
                 $plugin    = new $className($this);
                 if ($plugin->isThisMyDirection($direction) && $plugin->isThisMyFormat($this->format)
@@ -356,7 +404,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
                 }
             }
         }
-        $messager = new plugins\CommonStatusMessages($this);
+        $messager = new plugins\html\CommonStatusMessages($this);
         if ($messager->isThisMyDirection($direction) && $messager->isThisMyFormat($this->format)) {
             $this->addStatusMessage(sprintf(_('ApplyPlugin: %s'),
                     addslashes(get_class($messager))), 'debug');
