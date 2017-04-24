@@ -14,13 +14,11 @@ $evidence      = $oPage->getRequestValue('evidence');
 $company       = $oPage->getRequestValue('company');
 $customColumer = new CustomColumns(1, null, null);
 $customColumer->setUpCompany($company);
-$customColumer->setUpTable($evidence);
+$customColumer->setEvidence($evidence);
 
 $name = $oPage->getRequestValue('name');
 if (strlen($evidence) && strlen($name)) {
     $customColumer->addColumn($name);
-    $oPage->addStatusMessage(sprintf(_('Created column %s in evidence %s'),
-            $name, $evidence), 'success');
 }
 
 $remove = $oPage->getRequestValue('remove');

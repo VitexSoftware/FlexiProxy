@@ -19,7 +19,7 @@ namespace FlexiProxy\plugins\html;
 class NewCustomColumnButton extends CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
 
-    public $myPathRegex = '\/c\/([a-z_]+)\/([a-z]+)($|\?)';
+    public $myPathRegex = '\/c\/([a-z_]+)\/([a-z\-]+)($|\?)';
     public $myDirection = 'output';
 
     public function process()

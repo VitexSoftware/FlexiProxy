@@ -126,7 +126,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         if ($matched > 0) {
             $this->setCompany($matches[1]);
             $this->setEvidence($matches[2]);
-            if (isset($matches[3])) {
+            if (isset($matches[3]) && strlen($matches[3])) {
                 if ($matches[3][0] == '?') {
                     $this->urlParams = substr($matches[3], 1);
                 }

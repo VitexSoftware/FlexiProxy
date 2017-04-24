@@ -37,16 +37,6 @@ textdomain('flexiproxy');
 
 session_start();
 
-/**
- * User class object User or Anonym
- * Objekt uživatele User nebo Anonym
- *
- * @global User|Anonym
- */
-$oUser                 = \Ease\Shared::user();
-$oUser->settingsColumn = 'settings';
-
-$oPage = new ui\WebPage();
 
 $options = ['confdir' => './'];
 
@@ -59,7 +49,19 @@ if (isset($_SESSION['company'])) {
 if (isset($_SESSION['password'])) {
     $options['password'] = $_SESSION['password'];
 }
-
-
-$flexi = new FlexiProxy(null, $options);
+$flexi        = new FlexiProxy(null, $options);
+/**
+ * @var ui\WebPage WebPage Object
+ */
+$oPage        = new ui\WebPage();
 $oPage->flexi = $flexi;
+
+
+/**
+ * User class object User or Anonym
+ * Objekt uživatele User nebo Anonym
+ *
+ * @global User|Anonym
+ */
+$oUser                 = \Ease\Shared::user();
+$oUser->settingsColumn = 'settings';

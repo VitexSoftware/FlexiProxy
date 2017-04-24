@@ -22,7 +22,7 @@ class CustomColumnsJSON extends CommonJson implements \FlexiProxy\plugins\Common
 
     public function process()
     {
-        $customColumer = new \FlexiProxy\CustomColumns(1, null, null);
+        $customColumer = new \FlexiProxy\CustomColumns();
         $customColumer->setUpCompany($this->flexiProxy->company);
         $customColumer->setUpTable($this->flexiProxy->evidence);
         $columns       = $customColumer->getColumns();

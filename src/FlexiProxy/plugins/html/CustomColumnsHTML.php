@@ -26,7 +26,7 @@ class CustomColumnsHTML extends CommonHtml implements \FlexiProxy\plugins\Common
     {
         $customColumer = new \FlexiProxy\CustomColumns(1, null, null);
         $customColumer->setUpCompany($this->flexiProxy->company);
-        $customColumer->setUpTable($this->flexiProxy->evidence);
+        $customColumer->setEvidence($this->flexiProxy->evidence);
         $columns       = $customColumer->getColumns();
         if (count($columns) > 1) {
             $data         = $customColumer->getRecordData($this->flexiProxy->getMyKey());

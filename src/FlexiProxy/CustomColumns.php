@@ -1,16 +1,14 @@
 <?php
+
 namespace FlexiProxy;
 
-use Phinx\Migration\AbstractMigration;
-
-class CustomColumns extends AbstractMigration
+class CustomColumns extends \Ease\Brick
 {
     /**
-     * Current table
-     * 
-     * @var \Phinx\Db\Table
+     * DB Structure Modifier
+     * @var PhinxCustomColumns
      */
-    public $tabler  = null;
+    public $phinx = null;
 
     /**
      * Columns List
@@ -28,58 +26,75 @@ class CustomColumns extends AbstractMigration
      * Table - tablename suffix
      * @var string
      */
-    public $tablename = null;
+    public $evidence = null;
 
     /**
-     * Prepare
+     * Table - tablename suffix
+     * @var string
      */
-    public function init()
-    {
-        //$pdoFactory = new \Phinx\Db\Adapter\AdapterFactory();
-        $dbtype = \Ease\Shared::instanced()->getConfigValue('DB_TYPE');
-        switch ($dbtype) {
-            case 'pgsql':
-                $this->adapter = new \Phinx\Db\Adapter\PostgresAdapter(['connection' => \Ease\Shared::db()->sqlLink]);
-                break;
-            case 'mysql':
-                $this->adapter = new \Phinx\Db\Adapter\MysqlAdapter(['connection' => \Ease\Shared::db()->sqlLink]);
-                break;
+    public $evidenceName = null;
 
-            default:
-                break;
-        }
+    /**
+     * CustomColumns manager
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->phinx = new PhinxCustomColumns(1, null, null);
     }
 
     public function refreshColumnsList()
     {
-        $this->columns = $this->tabler->getColumns();
+        $this->columns = $this->phinx->tabler->getColumns();
     }
-
 
     public function setUpCompany($company)
     {
         $this->company = $company;
     }
 
-    public function setUpTable($tableName)
+    public function setEvidence($evidence)
     {
-        $this->tablename = str_replace('-', '_', $tableName);
-        $this->tabler    = $this->table($this->company.$this->tablename);
-        $this->tabler->save();
+        $this->evidence     = $evidence;
+        $this->evidenceName = \FlexiPeeHP\EvidenceList::$evidences[$evidence]['evidenceName'];
+
+        $evidenceTableName = str_replace('-', '_', $evidence);
+        $this->setmyTable($this->company.$evidenceTableName);
         $this->refreshColumnsList();
+    }
+
+    public function setmyTable($myTable)
+    {
+        $this->phinx->tabler = $this->phinx->table($myTable);
+//        $this->phinx->tabler->save();
+        return parent::setmyTable($myTable);
     }
 
     public function addColumn($colname)
     {
-        $result = $this->tabler->addColumn($colname, 'string')->update();
+        $result = $this->phinx->tabler->addColumn($colname, 'string')->update();
         $this->refreshColumnsList();
+        if (array_key_exists($colname, $this->columns)) {
+            $this->addStatusMessage(sprintf(_('Column %s was added to evidence %s'),
+                    $colname, $this->evidenceName), 'success');
+        } else {
+            $this->addStatusMessage(sprintf(_('Column %s was not added from evidence %s'),
+                    $colname, $this->evidenceName), 'error');
+        }
         return $result;
     }
 
     public function removeColumn($colname)
     {
-        $result = $this->tabler->removeColumn($colname)->save();
+        $result = $this->phinx->tabler->removeColumn($colname)->save();
         $this->refreshColumnsList();
+        if (array_key_exists($colname, $this->columns)) {
+            $this->addStatusMessage(sprintf(_('Column %s was removed from evidence %s'),
+                    $colname, $this->evidenceName), 'success');
+        } else {
+            $this->addStatusMessage(sprintf(_('Column %s was not removed from evidence %s'),
+                    $colname, $this->evidenceName), 'error');
+        }
         return $result;
     }
 
@@ -90,6 +105,6 @@ class CustomColumns extends AbstractMigration
 
     public function getRecordData($recordID)
     {
-        return $this->fetchRow('SELECT * FROM "'.$this->tabler->getName().'" WHERE id='.$recordID);
+        return $this->phinx->fetchRow('SELECT * FROM "'.$this->phinx->tabler->getName().'" WHERE id='.$recordID);
     }
 }
