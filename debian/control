@@ -74,7 +74,15 @@ Architecture: all
 Section: web
 Priority: optional
 Description: FlexiBee custom columns
- Define and Use your own custom columns in web interface and API
+ Define and Use your own custom columns in web interface
+
+Package: flexiproxy-custom-columns-api
+Depends: ${misc:Depends},flexiproxy-custom-columns
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee custom columns
+ Define and Use your own custom columns in API
 
 Package: flexiproxy-developer
 Depends: ${misc:Depends},flexiproxy

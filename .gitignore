@@ -33,3 +33,9 @@
 /debian/flexiproxy-history.debhelper.log
 /debian/flexiproxy-history.substvars
 /debian/revision
+/debian/flexiproxy-custom-columns-api/
+/debian/flexiproxy-developer/
+/debian/flexiproxy-custom-columns-api.debhelper.log
+/debian/flexiproxy-custom-columns-api.substvars
+/debian/debhelper-build-stamp
+tests/_output/*

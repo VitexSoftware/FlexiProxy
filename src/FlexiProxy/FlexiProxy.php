@@ -390,10 +390,10 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      */
     public function applyPlugins($direction)
     {
-        $dir = __DIR__.'/plugins/'.$this->format.'/*';
+        $dir = __DIR__.'/plugins/'.$direction.'/'.$this->format.'/*';
         foreach (glob($dir) as $file) {
             if (!is_dir($file) && !strstr($file, 'Common')) {
-                $className = "FlexiProxy\\plugins\\".$this->format."\\".basename(str_replace('.php',
+                $className = "FlexiProxy\\plugins\\$direction\\".$this->format."\\".basename(str_replace('.php',
                             '', $file));
                 $plugin    = new $className($this);
                 if ($plugin->isThisMyDirection($direction) && $plugin->isThisMyFormat($this->format)
@@ -404,7 +404,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
                 }
             }
         }
-        $messager = new plugins\html\CommonStatusMessages($this);
+        $messager = new \FlexiProxy\plugins\output\html\CommonStatusMessages($this);
         if ($messager->isThisMyDirection($direction) && $messager->isThisMyFormat($this->format)) {
             $this->addStatusMessage(sprintf(_('ApplyPlugin: %s'),
                     addslashes(get_class($messager))), 'debug');

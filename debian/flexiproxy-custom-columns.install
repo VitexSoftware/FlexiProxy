@@ -1,6 +1,6 @@
-src/FlexiProxy/plugins/html/*CustomColumn*.php		usr/share/flexiproxy/FlexiProxy/plugins/html/
-src/FlexiProxy/plugins/json/*CustomColumn*.php		usr/share/flexiproxy/FlexiProxy/plugins/json/
-src/FlexiProxy/plugins/js/*CustomColumn*.php		usr/share/flexiproxy/FlexiProxy/plugins/js/
+src/FlexiProxy/plugins/output/html/*CustomColumn*.php		usr/share/flexiproxy/FlexiProxy/plugins/output/html/
+src/FlexiProxy/plugins/output/json/*CustomColumn*.php		usr/share/flexiproxy/FlexiProxy/plugins/output/json/
+src/FlexiProxy/plugins/output/js/*CustomColumn*.php		usr/share/flexiproxy/FlexiProxy/plugins/output/js/
 src/FlexiProxy/CustomColumns.php                        usr/share/flexiproxy/FlexiProxy/
 src/customcolumns.php                                   usr/share/flexiproxy/
 src/FlexiProxy/ui/CustomColumnForm.php                  usr/share/flexiproxy/FlexiProxy/ui/
