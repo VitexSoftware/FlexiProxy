@@ -22,6 +22,14 @@ class CustomColumnForm extends \Ease\TWB\Form
         $this->addItem(new \Ease\Html\InputHiddenTag('company', $company));
         $this->addInput(new \Ease\Html\InputTextTag('name'),
             _('New Column Name'));
-        $this->addItem(new \Ease\TWB\SubmitButton(_('Create'), 'success'));
+
+        $buttonsRow = new \Ease\TWB\Row();
+        $buttonsRow->addColumn(4,
+            new \Ease\TWB\SubmitButton(_('Create'), 'success'));
+        $buttonsRow->addColumn(4);
+        $buttonsRow->addColumn(4,
+            new \Ease\TWB\LinkButton($_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/c/'.$company.'/'.$evidence,
+            \FlexiPeeHP\EvidenceList::$name[$evidence], 'info'));
+        $this->addItem($buttonsRow);
     }
 }

@@ -11,7 +11,8 @@ namespace FlexiProxy;
 require_once 'includes/Init.php';
 
 $evidence      = $oPage->getRequestValue('evidence');
-$company       = $oPage->getRequestValue('company');
+$company       = !empty($oPage->getRequestValue('company')) ? $oPage->getRequestValue('company')
+        : $_SESSION['company'];
 $customColumer = new CustomColumns(1, null, null);
 $customColumer->setUpCompany($company);
 $customColumer->setEvidence($evidence);

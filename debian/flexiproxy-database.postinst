@@ -3,7 +3,6 @@
 
 set -e
 
-#Replace Key Value in PhinX Config File
 replaceJSON() {
     cfg="/etc/flexiproxy/config.json"
     sed -i "/${1}/c\        \"${1}\": \"${2}\"," $cfg
@@ -12,7 +11,6 @@ replaceJSON() {
 case "$1" in
     install|reconfigure)
     . /usr/share/debconf/confmodule
-
 
     db_get flexiproxy/FLEXIBEE_URL
     replaceJSON "FLEXIBEE_URL" ${RET}
@@ -46,6 +44,8 @@ if [ -f composer.lock ] ; then
     rm -f composer.lock
 fi
 composer --no-dev -o install
+
+phinx migrate -e production -c phinx-adapter.php
 
 #DEBHELPER#
 

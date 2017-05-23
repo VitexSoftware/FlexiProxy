@@ -1,2 +1,3 @@
 src/FlexiProxy/PhinxCustomColumns.php       usr/share/flexiproxy/FlexiProxy/
 debian/conf/database.json                   etc/flexiproxy/
+phinx-adapter.php                           var/lib/flexiproxy

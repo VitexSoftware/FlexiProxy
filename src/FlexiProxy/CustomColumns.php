@@ -43,16 +43,27 @@ class CustomColumns extends \Ease\Brick
         $this->phinx = new PhinxCustomColumns(1, null, null);
     }
 
+    /**
+     *
+     */
     public function refreshColumnsList()
     {
         $this->columns = $this->phinx->tabler->getColumns();
     }
-
+    /**
+     * Set Company code we use
+     * 
+     * @param string $company
+     */
     public function setUpCompany($company)
     {
         $this->company = $company;
     }
 
+    /**
+     *
+     * @param type $evidence
+     */
     public function setEvidence($evidence)
     {
         $this->evidence     = $evidence;
@@ -63,13 +74,23 @@ class CustomColumns extends \Ease\Brick
         $this->refreshColumnsList();
     }
 
+    /**
+     *
+     * @param type $myTable
+     * @return type
+     */
     public function setmyTable($myTable)
     {
         $this->phinx->tabler = $this->phinx->table($myTable);
-//        $this->phinx->tabler->save();
+        $this->phinx->tabler->save();
         return parent::setmyTable($myTable);
     }
 
+    /**
+     *
+     * @param type $colname
+     * @return type
+     */
     public function addColumn($colname)
     {
         $result = $this->phinx->tabler->addColumn($colname, 'string')->update();
@@ -84,6 +105,11 @@ class CustomColumns extends \Ease\Brick
         return $result;
     }
 
+    /**
+     *
+     * @param type $colname
+     * @return type
+     */
     public function removeColumn($colname)
     {
         $result = $this->phinx->tabler->removeColumn($colname)->save();
