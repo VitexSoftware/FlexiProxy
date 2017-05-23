@@ -7,15 +7,16 @@
  * @copyright 2017 VitexSoftware (G)
  */
 
-namespace FlexiProxy\plugins\output\json;
+namespace FlexiProxy\plugins\input\json;
 
 /**
- * Add Custom Columns to Json Results
+ * Process Custom Columns to save in Database
  *
  * @author vitex
  */
 class CustomColumnsJSON extends \FlexiProx\plugins\CommonJson implements \FlexiProxy\plugins\CommonPluginInterface
 {
+
     public $myPathRegex = '\/c\/([a-z_]+)\/([a-z\-]+)\/(\d+)\.json$';
     public $myDirection = 'output';
 

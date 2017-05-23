@@ -13,7 +13,7 @@ namespace FlexiProxy\plugins\output\html;
  *
  * @author vitex
  */
-class NewPricelistAttachment extends CommonHtml implements \FlexiProxy\plugins\output\CommonPluginInterface
+class NewPricelistAttachment extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
     public $myPathRegex = '(\d+)\/prilohy;new$';
     public $myDirection = 'output';
@@ -32,9 +32,10 @@ class NewPricelistAttachment extends CommonHtml implements \FlexiProxy\plugins\o
         $allAttachments = \FlexiPeeHP\Priloha::getAttachmentsList($informer);
         if (count($allAttachments)) {
             $lastAttachment = end($allAttachments);
-            $columnA = $row->addColumn(6,
-            new \Ease\TWB\Panel(_('Latest attachment'), 'info', new \Ease\Html\ImgTag($informer->getFlexiBeeURL().'/prilohy/'.$lastAttachment['id'].'/content',
-            $lastAttachment['nazSoub'], ['style' => 'width: 300px;'])));
+            $columnA        = $row->addColumn(6,
+                new \Ease\TWB\Panel(_('Latest attachment'), 'info',
+                new \Ease\Html\ImgTag($informer->getFlexiBeeURL().'/prilohy/'.$lastAttachment['id'].'/content',
+                $lastAttachment['nazSoub'], ['style' => 'width: 300px;'])));
         }
 
         $uploadForm = new \Ease\TWB\Form('Attach',
@@ -62,5 +63,6 @@ class NewPricelistAttachment extends CommonHtml implements \FlexiProxy\plugins\o
             'success'));
 
         $this->content->addItem(new \FlexiProxy\ui\PageBottom());
+        $this->flexiProxy->applyPlugins = '~';
     }
 }

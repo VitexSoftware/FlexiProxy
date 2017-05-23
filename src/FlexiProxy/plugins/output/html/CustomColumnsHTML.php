@@ -16,7 +16,7 @@ namespace FlexiProxy\plugins\output\html;
  *
  * @author vitex
  */
-class CustomColumnsHTML extends CommonHtml implements \FlexiProxy\plugins\output\CommonPluginInterface
+class CustomColumnsHTML extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
 
     public $myPathRegex = '\/c\/([a-z_]+)\/([a-z\-]+)\/(\d+)$';

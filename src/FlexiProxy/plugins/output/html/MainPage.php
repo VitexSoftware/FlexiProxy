@@ -14,7 +14,7 @@ namespace FlexiProxy\plugins\output\html;
  *
  * @author vitex
  */
-class MainPage extends CommonHtml implements \FlexiProxy\plugins\output\CommonPluginInterface
+class MainPage extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
 
     public $myPathRegex = '\/$';

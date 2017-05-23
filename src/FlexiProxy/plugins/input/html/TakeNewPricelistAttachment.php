@@ -6,14 +6,14 @@
  * @copyright 2016-2017 VitexSoftware (G)
  */
 
-namespace FlexiProxy\plugins\output\html;
+namespace FlexiProxy\plugins\input\html;
 
 /**
  * Description of PricelistImages
  *
  * @author vitex
  */
-class TakeNewPricelistAttachment extends CommonHtml implements \FlexiProxy\plugins\output\CommonPluginInterface
+class TakeNewPricelistAttachment extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
     public $myPathRegex = '(\d+)\/prilohy;new$';
     public $myDirection = 'input';

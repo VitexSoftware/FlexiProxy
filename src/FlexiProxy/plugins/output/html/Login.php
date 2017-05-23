@@ -14,7 +14,7 @@ namespace FlexiProxy\plugins\output\html;
  *
  * @author vitex
  */
-class Login extends CommonHtml implements \FlexiProxy\plugins\output\CommonPluginInterface
+class Login extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
 
     public $myPathRegex = 'login-logout\/login-form$';

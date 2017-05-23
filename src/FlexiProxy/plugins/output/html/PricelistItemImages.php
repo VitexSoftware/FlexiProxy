@@ -13,7 +13,7 @@ namespace FlexiProxy\plugins\output\html;
  *
  * @author vitex
  */
-class PricelistItemImages extends CommonHtml implements \FlexiProxy\plugins\output\CommonPluginInterface
+class PricelistItemImages extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
     public $myPathRegex = 'cenik\/(\d+)$';
     public $myDirection = 'output';

@@ -39,3 +39,4 @@
 /debian/flexiproxy-custom-columns-api.substvars
 /debian/debhelper-build-stamp
 tests/_output/*
+/debian/flexiproxy-database.postrm.debhelper

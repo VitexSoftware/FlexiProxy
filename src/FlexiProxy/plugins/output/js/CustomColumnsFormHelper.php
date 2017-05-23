@@ -15,7 +15,7 @@ namespace FlexiProxy\plugins\output\js;
  *
  * @author vitex
  */
-class CustomColumnsFormHelper extends \FlexiProxy\plugins\output\Common implements \FlexiProxy\plugins\output\CommonPluginInterface
+class CustomColumnsFormHelper extends \FlexiProxy\plugins\Common implements \FlexiProxy\plugins\CommonPluginInterface
 {
     public $myPathRegex = '\/js\/jq\/flexibee\-formhelper.js';
     public $myDirection = 'output';

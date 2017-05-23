@@ -51,7 +51,7 @@ Description: Add Images to FlexiBee Pricelist
  Show and upload images
 
 Package: flexiproxy-database
-Depends: ${misc:Depends},flexiproxy-core, php7.0-pdo,php7.1-pdo-pgsql | php7.1-pdo-mysql
+Depends: ${misc:Depends},flexiproxy-core, php-pdo | php5-pdo | php7.0-pdo | php7.1-pdo, php5-pdo-pgsql | php7.0-pdo-pgsql | php7.0-pdo-mysql | php5-pdo-mysql | php7.1-pdo-pgsql | php7.1-pdo-mysql | php-mysql | php-pgsql
 Recommends: mysql-server,postgresql
 Suggests: flexiproxy-history,flexiproxy-custom-columns
 Architecture: all

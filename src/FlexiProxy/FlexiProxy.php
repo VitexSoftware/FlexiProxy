@@ -104,14 +104,51 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
             $this->baseUrl = $dest;
         }
     }
-    public $suffixPattern   = '\.json|\.xml|\.html|\.js';
-    public $comanyPattern   = '[a-z_]+';
+    /**
+     * Which plugins apply ?
+     * @var string regex
+     */
+    public $applyPlugins = '.*';
+
+    /**
+     * File type suffix
+     * @var string regex
+     */
+    public $suffixPattern = '\.json|\.xml|\.html|\.js';
+
+    /**
+     * How to recognize company in uri
+     * @var string regex
+     */
+    public $companyPattern = '[a-z_]+';
+
+    /**
+     * How to recognize evidence in uri
+     * @var string regex
+     */
     public $evidencePattern = '[a-z\-]+';
+
+    /**
+     * How to recognize record ID in uri
+     * @var string regex
+     */
     public $recordIdPattern = '\d+';
 
+    /**
+     * How to recognize operation in uri
+     * @var string regex
+     */
+    public $operationPattern = '[a-z_]+';
+
+    /**
+     * Parase Company from URI and set company if present
+     *
+     * @param string $uri
+     * @return boolean
+     */
     public function parseFlexiBeeUriCompany($uri)
     {
-        $pattern = '\/c\/('.$this->comanyPattern.')('.$this->suffixPattern.'|$|\?.*)';
+        $pattern = '\/c\/('.$this->companyPattern.')('.$this->suffixPattern.'|$|\?.*)';
         $matched = preg_match('/'.$pattern.'/', $uri, $matches);
         if ($matched > 0) {
             $this->setCompany($matches[1]);
@@ -119,13 +156,21 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         return $matched;
     }
 
+    /**
+     * Prase URI requested
+     *
+     * @param string $uri
+     * @return array
+     */
     public function parseFlexiBeeUriCompanyEvidence($uri)
     {
-        $pattern = '\/c\/('.$this->comanyPattern.')\/('.$this->evidencePattern.')('.$this->suffixPattern.'|$|;new|\?.*)';
+        $pattern = '\/c\/('.$this->companyPattern.')\/('.$this->evidencePattern.')('.$this->suffixPattern.'|$|;new|\?.*)';
         $matched = preg_match('/'.$pattern.'/', $uri, $matches);
         if ($matched > 0) {
             $this->setCompany($matches[1]);
-            $this->setEvidence($matches[2]);
+            if ($matches[2] != 'session-keep-alive') {
+                $this->setEvidence($matches[2]);
+            }
             if (isset($matches[3]) && strlen($matches[3])) {
                 if ($matches[3][0] == '?') {
                     $this->urlParams = substr($matches[3], 1);
@@ -139,9 +184,14 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         return $matched;
     }
 
-    public function parseFlexiBeeUriCompanyEvidenceItem($uri)
+    /**
+     *
+     * @param string $uri
+     * @return array
+     */
+    public function parseFlexiBeeUriCompanyEvidenceItemOperation($uri)
     {
-        $pattern = '\/c\/('.$this->comanyPattern.')\/('.$this->evidencePattern.')\/('.$this->recordIdPattern.')('.$this->suffixPattern.'|$|;edit|\?.*)';
+        $pattern = '\/c\/('.$this->companyPattern.')\/('.$this->evidencePattern.')\/('.$this->recordIdPattern.')\/('.$this->operationPattern.')($|;edit|;new|\?.*)';
         $matched = preg_match('/'.$pattern.'/', $uri, $matches);
         if ($matched > 0) {
             $this->setCompany($matches[1]);
@@ -150,21 +200,48 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
             $this->urlParams = isset($matches[5]) ? $matches[5] : null;
             $this->setCompany($matches[1]);
             $this->setEvidence($matches[2]);
+            $this->section   = isset($matches[4]) ? $matches[4] : null;
+            $this->operation = isset($matches[5]) ? str_replace(';', '',
+                    $matches[5]) : null;
+        }
+        return $matched;
+    }
+
+    /**
+     *
+     * @param string $uri
+     * @return array
+     */
+    public function parseFlexiBeeUriCompanyEvidenceItem($uri)
+    {
+        $pattern = '\/c\/('.$this->companyPattern.')\/('.$this->evidencePattern.')\/('.$this->recordIdPattern.')('.$this->suffixPattern.'|$|;edit|\?.*)';
+        $matched = preg_match('/'.$pattern.'/', $uri, $matches);
+        if ($matched > 0) {
+            $this->setCompany($matches[1]);
+            $this->setMyKey(intval($matches[3]));
+            $this->urlParams = isset($matches[5]) ? $matches[5] : null;
+            $this->setEvidence($matches[2]);
             $this->section   = isset($matches[7]) ? $matches[7] : null;
             $this->operation = isset($matches[9]) ? $matches[9] : null;
         }
         return $matched;
     }
 
+    /**
+     * 
+     * @param string $uri
+     */
     public function parseFlexiBeeURI($uri)
     {
 
         if (!$this->parseFlexiBeeUriCompanyEvidenceItem($uri)) {
             if (!$this->parseFlexiBeeUriCompanyEvidence($uri)) {
-                if (!$this->parseFlexiBeeUriCompany($uri)) {
-                    if (!strstr($uri, '/flexibee-static/')) {
-                        $this->addStatusMessage(sprintf(_('URI %s was not parsed'),
-                                $uri), 'warning');
+                if (!$this->parseFlexiBeeUriCompanyEvidenceItemOperation($uri)) {
+                    if (!$this->parseFlexiBeeUriCompany($uri)) {
+                        if (!strstr($uri, '/flexibee-static/')) {
+                            $this->addStatusMessage(sprintf(_('URI %s was not parsed'),
+                                    $uri), 'warning');
+                        }
                     }
                 }
             }
@@ -392,9 +469,10 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     {
         $dir = __DIR__.'/plugins/'.$direction.'/'.$this->format.'/*';
         foreach (glob($dir) as $file) {
-            if (!is_dir($file) && !strstr($file, 'Common')) {
-                $className = "FlexiProxy\\plugins\\$direction\\".$this->format."\\".basename(str_replace('.php',
-                            '', $file));
+            $plugin = basename(str_replace('.php', '', $file));
+            if (!is_dir($file) && !strstr($file, 'Common') && preg_match('/'.$this->applyPlugins.'/',
+                    $plugin)) {
+                $className = "FlexiProxy\\plugins\\$direction\\".$this->format."\\".$plugin;
                 $plugin    = new $className($this);
                 if ($plugin->isThisMyDirection($direction) && $plugin->isThisMyFormat($this->format)
                     && $plugin->isThisMyPath($this->uriRequested)) {
@@ -404,14 +482,23 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
                 }
             }
         }
-        $messager = new \FlexiProxy\plugins\output\html\CommonStatusMessages($this);
-        if ($messager->isThisMyDirection($direction) && $messager->isThisMyFormat($this->format)) {
-            $this->addStatusMessage(sprintf(_('ApplyPlugin: %s'),
-                    addslashes(get_class($messager))), 'debug');
-            $messager->apply();
+        if (preg_match('/'.$this->applyPlugins.'/', 'CommonStatusMessages')) {
+            $messager = new \FlexiProxy\plugins\output\html\CommonStatusMessages($this);
+            if ($messager->isThisMyDirection($direction) && $messager->isThisMyFormat($this->format)) {
+                $this->addStatusMessage(sprintf(_('ApplyPlugin: %s'),
+                        addslashes(get_class($messager))), 'debug');
+                $messager->apply();
+            }
         }
     }
 
+    /**
+     * Přidá zprávu do zásobníku pro zobrazení uživateli.
+     *
+     * @param string $message  zprava
+     * @param string $type     Fronta zprav (warning|info|error|success)
+     * @param bool   $addIcons prida UTF8 ikonky na zacatek zprav
+     */
     public function addStatusMessage($message, $type = 'info', $addIcons = true)
     {
         if (($this->debug !== true) && ($type == 'debug')) {

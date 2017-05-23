@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: flexiproxy\n"
 "Report-Msgid-Bugs-To: flexiproxy@packages.debian.org\n"
-"POT-Creation-Date: 2017-04-14 01:23+0200\n"
+"POT-Creation-Date: 2017-04-29 23:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,4 +102,22 @@ msgstr ""
 #. Description
 #: ../templates:5002
 msgid "FlexiProxy Web Interface URL"
+msgstr ""
+
+#. Type: string
+#. Default
+#: ../templates:6001
+msgid "public"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../templates:6002
+msgid "Access policy"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../templates:6002
+msgid "Open the FlexiBee as user in settings"
 msgstr ""

@@ -14,7 +14,7 @@ namespace FlexiProxy\plugins\output\html;
  *
  * @author vitex
  */
-class PricelistImagesShow extends CommonHtml implements \FlexiProxy\plugins\output\CommonPluginInterface
+class PricelistImagesShow extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
 
     public $myPathRegex = 'cenik\/(\d+)\/prilohy';

@@ -25,6 +25,20 @@ _Description: Selected company:
 Template: flexiproxy/URL
 Type: string
 _Default: http://flexiproxy.localhost/
-_Description: AppUrl
+_Description: Application Url
  FlexiProxy Web Interface URL
+
+Template: flexiproxy/access_policy
+Type: select
+Choices: public, login
+_Default: public
+_Description: Access policy
+ Public: Open the FlexiBee as user in config.json
+ Login: Only user authenticated by FlexiBee can use App
+
+Template: flexiproxy/debug
+Type: boolean
+_Default: false
+_Description: Debug mode
+ Write aditional debugging informations int log
 

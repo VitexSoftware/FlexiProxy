@@ -10,6 +10,7 @@ set -e
 #      db_get flexiproxy/URL
 #      ${RET}
 
+        a2enmod  dir
 	a2ensite flexiproxy
 
 

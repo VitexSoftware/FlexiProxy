@@ -1,9 +1,11 @@
 {
-    "FLEXIBEE_URL": "",
-    "FLEXIBEE_LOGIN": "",
-    "FLEXIBEE_PASSWORD": "",
-    "FLEXIBEE_COMPANY": "",
-    "EASE_APPNAM": "FlexiProxy",
-    "EASE_LOGGER": "syslog|console",
-    "EMAIL_FROM": "flexiproxy@localhost"
-}
+    "FLEXIBEE_URL": "https://demo.flexibee.eu/",
+    "FLEXIBEE_LOGIN": "winstrom",
+    "FLEXIBEE_PASSWORD": "winstrom",
+    "FLEXIBEE_COMPANY": "demo",
+    "EASE_APPNAME": "FlexiProxy",
+    "EMAIL_FROM": "flexiproxy@localhost",
+    "access_policy": "public",
+    "debug": "false",
+    "EASE_LOGGER": "syslog"
+ }

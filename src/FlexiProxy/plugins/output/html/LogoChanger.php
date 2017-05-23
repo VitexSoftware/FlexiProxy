@@ -14,7 +14,7 @@ namespace FlexiProxy\plugins\output\html;
  *
  * @author vitex
  */
-class LogoChanger extends CommonHtml implements \FlexiProxy\plugins\output\CommonPluginInterface
+class LogoChanger extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
 
     public $myPathRegex = '.*';

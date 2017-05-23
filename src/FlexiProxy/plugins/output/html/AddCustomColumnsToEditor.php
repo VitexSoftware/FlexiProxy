@@ -15,7 +15,7 @@ namespace FlexiProxy\plugins\output\html;
  *
  * @author vitex
  */
-class AddCustomColumnsToEditor extends CommonHtml implements \FlexiProxy\plugins\output\CommonPluginInterface
+class AddCustomColumnsToEditor extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
     public $myPathRegex = ';(edit|new)$';
     public $myDirection = 'output';
@@ -24,7 +24,7 @@ class AddCustomColumnsToEditor extends CommonHtml implements \FlexiProxy\plugins
     {
         $customColumer = new \FlexiProxy\CustomColumns(1, null, null);
         $customColumer->setUpCompany($this->flexiProxy->company);
-        $customColumer->setUpTable($this->flexiProxy->evidence);
+        $customColumer->setEvidence($this->flexiProxy->evidence);
         $columns       = $customColumer->getColumns();
         if (count($columns) > 1) {
             $data = $customColumer->getRecordData($this->flexiProxy->getMyKey());

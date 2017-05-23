@@ -59,7 +59,7 @@ Ten si načte obsah konfiguračního souboru config.json
         "FLEXIBEE_URL": "https://localhost:5434",
         "FLEXIBEE_LOGIN": "admin",
         "FLEXIBEE_PASSWORD": "admin123",
-        "FLEXIBEE_COMPANY": "adminit_s_r_o_4",
+        "FLEXIBEE_COMPANY": "spoje_net_s_r_o_4",
         "access_policy": "login",
         "debug": "true"
     }
@@ -80,6 +80,20 @@ Testování
 ---------
 
 Skript obsahuje i PHPUnit testy
+
+Vagrant
+-------
+
+pro vyzkoušení aplikace je třeba zadat  tyto příkazy
+
+    sudo sed -i '/^127.0.0.1/ s/$/ flexiproxy.vagrant/' /etc/hosts
+    sudo a2enmod proxy
+    sudo ln -s `realpath testing/localapache.conf` /etc/apache2/sites-available/
+    sudo a2ensite localapache
+    sudo service apache2 restart
+    vagrant up
+    
+Aplikace pak bude dostupná na adrese http://flexiproxy.vagrant/ 
 
 
 Databaze

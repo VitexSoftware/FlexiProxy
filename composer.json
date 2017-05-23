@@ -2,7 +2,7 @@
     "name": "vitexsoftware/flexiproxy",
     "description": "Advanced Access privileges for FlexiBee",
     "license": "proprietary",
-    "version": "0.1",
+    "version": "0.2",
     "authors": [
         {
             "name": "vitex",
@@ -27,7 +27,9 @@
             "FlexiProxy\\plugins\\output\\": "src/FlexiProxy/plugins/output/",
             "FlexiProxy\\plugins\\output\\html\\": "src/FlexiProxy/plugins/output/html/",
             "FlexiProxy\\plugins\\output\\js\\": "src/FlexiProxy/plugins/output/js/",
-            "FlexiProxy\\plugins\\output\\json\\": "src/FlexiProxy/plugins/output/json/"
+            "FlexiProxy\\plugins\\output\\json\\": "src/FlexiProxy/plugins/output/json/",
+            "FlexiProxy\\plugins\\input\\": "src/FlexiProxy/plugins/input/",
+            "FlexiProxy\\plugins\\input\\json\\": "src/FlexiProxy/plugins/input/json/"
         }
     },
     "autoload-dev": {

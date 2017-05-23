@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FlexiProxy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-25 19:32+0100\n"
-"PO-Revision-Date: 2017-04-25 19:46+0100\n"
+"POT-Creation-Date: 2017-04-29 17:50+0100\n"
+"PO-Revision-Date: 2017-04-29 17:50+0100\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: cs_CZ\n"
@@ -46,29 +46,28 @@ msgid "Column %s was not removed from evidence %s"
 msgstr "Sloupec %s nebyl odstraněn z evidence %s"
 
 #: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:166
-#: src/FlexiProxy/FlexiProxy.php:166
+#: src/FlexiProxy/FlexiProxy.php:242
 #, php-format
 msgid "URI %s was not parsed"
 msgstr "URI %s nebylo rozparsováno"
 
 #: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:364
-#: src/FlexiProxy/FlexiProxy.php:364
-#, fuzzy
+#: src/FlexiProxy/FlexiProxy.php:441
 msgid "Please Check"
-msgstr "Prosím vlož nové heslo"
+msgstr "Prosím zkontroluj"
 
 #: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:370
-#: src/FlexiProxy/FlexiProxy.php:370
-#, fuzzy, php-format
+#: src/FlexiProxy/FlexiProxy.php:447
+#, php-format
 msgid "%s: %s"
-msgstr "Chyba deserializace %s #%s "
+msgstr "%s: %s"
 
 #: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:401
 #: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:409
-#: src/FlexiProxy/FlexiProxy.php:401 src/FlexiProxy/FlexiProxy.php:409
-#, fuzzy, php-format
+#: src/FlexiProxy/FlexiProxy.php:479 src/FlexiProxy/FlexiProxy.php:488
+#, php-format
 msgid "ApplyPlugin: %s"
-msgstr "Chyba deserializace %s #%s "
+msgstr "Aplikován Plugin: %s "
 
 #: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/User.php:64
 #: src/FlexiProxy/User.php:64
@@ -94,14 +93,14 @@ msgstr "Chyba deserializace %s #%s "
 msgid "Plugin with undefined process()"
 msgstr "Plugin bez definované metody process()"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/html/output/CommonHtml.php:83
-#: src/FlexiProxy/plugins/output/html/CommonHtml.php:83
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/output/CommonHtml.php:83
+#: src/FlexiProxy/plugins/output/CommonHtml.php:83
 #, php-format
 msgid "AddBefore: pattern \"%s\" not found on %s"
 msgstr "Přidej před: vzorek \"%s\" nebyl nalezen v %s"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/html/output/CommonHtml.php:94
-#: src/FlexiProxy/plugins/output/html/CommonHtml.php:94
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/output/CommonHtml.php:94
+#: src/FlexiProxy/plugins/output/CommonHtml.php:94
 #, php-format
 msgid "AddAfter: pattern \"%s\" not found on %s"
 msgstr "Přidej za: vzorek \"%s\" nebyl nalezen v %s"
@@ -349,19 +348,24 @@ msgstr "Odstraněn sloupec %s z evidence %s"
 #: src/customcolumns.php:39
 #, fuzzy, php-format
 msgid "Custom Columns for %s"
-msgstr "Sloupečky"
+msgstr "Uživatelské sloupečky"
 
-#: debian/flexiproxy-developer/usr/share/flexiproxy/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:28
-#: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:28
+#: debian/flexiproxy-developer/usr/share/flexiproxy/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:31
+#: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:31
 #, fuzzy
 msgid "JSON"
 msgstr "Json"
 
-#: debian/flexiproxy-developer/usr/share/flexiproxy/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:30
-#: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:30
+#: debian/flexiproxy-developer/usr/share/flexiproxy/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:33
+#: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:33
 #, fuzzy
 msgid "XML"
 msgstr "XML"
+
+#: src/FlexiProxy/plugins/input/html/TakeNewPricelistAttachment.php:37
+#, php-format
+msgid "File %s was attached"
+msgstr "Byl přiložen soubor %s"
 
 #: src/FlexiProxy/plugins/output/html/Attachments.php:27
 #: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:28
@@ -376,28 +380,23 @@ msgstr "Nová příloha ceníku"
 msgid "Latest attachment"
 msgstr "Poslední příloha"
 
-#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:45
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:46
 msgid "Attachment File"
 msgstr "Soubor přílohy"
 
-#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:46
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:47
 msgid "image or other record related document"
 msgstr "Obrázek nebo jiný dokument k záznamu"
 
-#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:51
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:52
 #, php-format
 msgid "New %s attachment"
 msgstr "Nová příloha na %s"
 
-#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:61
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:62
 #, php-format
 msgid "Back to %s"
 msgstr "Zpět na %s "
-
-#: src/FlexiProxy/plugins/output/html/TakeNewPricelistAttachment.php:37
-#, php-format
-msgid "File %s was attached"
-msgstr "Byl přiložen soubor %s"
 
 #: src/FlexiProxy/ui/CustomColumnWidget.php:31
 msgid "Remove Column"

@@ -6,4 +6,5 @@
     "FLEXIBEE_LOGIN": "admin",
     "FLEXIBEE_PASSWORD": "admin123",
     "FLEXIBEE_COMPANY": "adminit_s_r_o_4",
+    "debug": "true"
 }

@@ -1,7 +1,7 @@
 {
     "name": "vitxsoftware/flexiproxy",
     "description": "Advanced Access privileges for FlexiBee",
-    "version": "0.1.",
+    "version": "0.2.8",
     "type": "project",
     "authors": [
         {
@@ -21,7 +21,15 @@
     },
     "autoload": {
         "psr-4": {
-            "FlexiProxy\\": "FlexiProxy/"
+            "FlexiProxy\\": "FlexiProxy/",
+            "FlexiProxy\\ui\\": "FlexiProxy/ui/",
+            "FlexiProxy\\plugins\\": "FlexiProxy/plugins/",
+            "FlexiProxy\\plugins\\output\\": "FlexiProxy/plugins/output/",
+            "FlexiProxy\\plugins\\output\\html\\": "FlexiProxy/plugins/output/html/",
+            "FlexiProxy\\plugins\\output\\js\\": "FlexiProxy/plugins/output/js/",
+            "FlexiProxy\\plugins\\output\\json\\": "FlexiProxy/plugins/output/json/",
+            "FlexiProxy\\plugins\\input\\": "FlexiProxy/plugins/input/",
+            "FlexiProxy\\plugins\\input\\json\\": "FlexiProxy/plugins/input/json/"
         }
     },
     "repositories": [

@@ -16,7 +16,7 @@ namespace FlexiProxy\plugins\output\html;
  *
  * @author vitex
  */
-class NewCustomColumnButton extends CommonHtml implements \FlexiProxy\plugins\output\CommonPluginInterface
+class NewCustomColumnButton extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
 
     public $myPathRegex = '\/c\/([a-z_]+)\/([a-z\-]+)($|\?)';
