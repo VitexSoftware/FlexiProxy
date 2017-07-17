@@ -8,7 +8,7 @@ Homepage: https://github.com/VitexSoftware/FlexiProxy
 
 Package: flexiproxy
 Depends: ${misc:Depends},flexiproxy-core,flexiproxy-logochanger,flexiproxy-pricelist-images
-Recommends: flexibee
+Recommends: flexibee-server
 Architecture: all
 Section: web
 Priority: optional
@@ -16,7 +16,7 @@ Description: FlexiProxy metapackage
  Install this package to get full application
 
 Package: flexiproxy-core
-Depends: ${misc:Depends},flexipeehp,composer,php5-intl | php7.0-intl | php7.1-intl
+Depends: ${misc:Depends},flexipeehp (>= 1.8.1),composer,php5-intl | php7.0-intl | php7.1-intl | php7.2-intl
 Recommends: flexibee
 Architecture: all
 Section: web

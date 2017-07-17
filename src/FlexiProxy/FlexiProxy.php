@@ -347,7 +347,8 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         $url_parts  = parse_url($uri);
         $path_parts = pathinfo($url_parts['path']);
         if (isset($path_parts['extension'])) {
-            $extensions = self::reindexArrayBy(self::$formats, 'suffix');
+            $extensions = self::reindexArrayBy(\FlexiPeeHP\Formats::$formats,
+                    'suffix');
             $format     = array_key_exists($path_parts['extension'], $extensions)
                     ? $path_parts['extension'] : null;
         }
@@ -366,7 +367,8 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         if (strstr($contentType, ';')) {
             $contentType = current(explode(';', $contentType));
         }
-        $contentTypes = self::reindexArrayBy(self::$formats, 'content-type');
+        $contentTypes = self::reindexArrayBy(\FlexiPeeHP\Formats::$formats,
+                'content-type');
         $format       = array_key_exists($contentType, $contentTypes) ? $contentTypes[$contentType]['suffix']
                 : null;
         return $format;

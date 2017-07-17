@@ -40,11 +40,19 @@ case "$1" in
 esac
 
 
+mkdir -p /usr/lib/flexiproxy/tmp
+chown www-data:www-data /var/lib/flexiproxy/ -R
+
+mkdir -p /usr/share/flexiproxy
+chown www-data:www-data /usr/share/flexiproxy/ -R
 cd /usr/share/flexiproxy
 if [ -f composer.lock ] ; then
     rm -f composer.lock
 fi
-composer --no-dev -o install
+mkdir -p /var/lib/composer
+chown www-data:www-data /var/lib/composer
+su - www-data -s /bin/bash -c 'COMPOSER_HOME="/var/lib/composer" composer --no-dev -o install -d /usr/share/flexiproxy/'
+
 
 #DEBHELPER#
 
