@@ -68,14 +68,14 @@ class MainMenu extends \Ease\Html\Div
             $companer        = new \FlexiPeeHP\Company();
             $companies       = $companer->getFlexiData();
 
-            if (!isset($companies['company'][0])) {
-                $cmpInfo                 = $companies['company'];
-                unset($companies['company']);
-                $companies['company'][0] = $cmpInfo;
+            if (!isset($companies[0])) {
+                $cmpInfo      = $companies;
+                unset($companies);
+                $companies[0] = $cmpInfo;
             }
 
-            if (isset($companies['company']) && count($companies['company'])) {
-                foreach ($companies['company'] as $company) {
+            if (isset($companies) && count($companies)) {
+                foreach ($companies as $company) {
                     $companiesToMenu['/c/'.$company['dbNazev']] = $company['nazev'];
                 }
                 asort($companiesToMenu);
@@ -85,9 +85,9 @@ class MainMenu extends \Ease\Html\Div
                 $nav->addDropDownMenu(isset($this->webPage->flexi->company) ? $companiesToMenu['/c/'.$this->webPage->flexi->company]
                             : _('Company'), $companiesToMenu);
 
-                if (!isset($_SESSION['company'])) { //Auto choose first company
-                    $_SESSION['company'] = $companies['company'][0]['dbNazev'];
-                    define('FLEXIBEE_COMPANY', $_SESSION['company']);
+                if (!isset($_SESSION)) { //Auto choose first company
+                    $_SESSION = $companies[0]['dbNazev'];
+                    define('FLEXIBEE_COMPANY', $_SESSION);
                 }
             }
 
