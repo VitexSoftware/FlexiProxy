@@ -1,6 +1,8 @@
 FlexiProxy
 =======================================
 
+![FlexiProxy Logo](https://github.com/VitexSoftware/FlexiProxy/blob/master/doc/flexiproxy-square-logo.png "Project Logo")
+
  * author    Vítězslav Dvořák <info@vitexsoftware.cz>
  * copyright 2017 VitexSoftware (c)
 
@@ -8,11 +10,17 @@ Co aplikace umí
 ---------------
 
  * Proxy mezi FlexiBee a klientem
+ * Měnit Logo
+ * Přidává práci s obrázky v ceníku
+ * Rozšíření pro vývojáře 
+
+![Obrázky produktů](https://raw.githubusercontent.com/VitexSoftware/FlexiProxy/master/doc/new-attachment.png "Obrázek")
+
 
 Co aplikace neumí
 -----------------
 
- * Všechon
+ * Uvidíme
 
 Instalace
 ---------
@@ -24,8 +32,8 @@ Pro Debian či Ubuntu prosím použijte [repozitář](http://vitexsoftware.cz/re
 
     wget -O - http://v.s.cz/info@vitexsoftware.cz.gpg.key|sudo apt-key add -
     echo deb http://v.s.cz/ stable main > /etc/apt/sources.list.d/vitexsoftware.list
-    apt-get update
-    gdebi flexiproxy_0.1-7_all.deb
+    apt update
+    apt install flexiproxy
 
 během instalace bude proveden dotaz na přihlašovací údaje do FlexiBee a umístění složky se vstupními soubory
 
@@ -34,8 +42,8 @@ během instalace bude proveden dotaz na přihlašovací údaje do FlexiBee a um�
 
 Pro jiné systémy je třeba 
 
-    git clone  ssh://git@www.vitexsoftware.cz/vitex-software/flexiproxy/flexprox.git
-    cd flexiprox
+    git clone  https://github.com/VitexSoftware/FlexiProxy.git
+    cd FlexyProxy
     composer install
         
 a poté upravit __config.json__
@@ -66,8 +74,8 @@ Ten si načte obsah konfiguračního souboru config.json
     }
 
   * access_policy: **public** - zpřístupní vše pod uživatelem z natavení; **login** - je nutné se přihlásit
-  * debug: vypisuje dodatečné ladící ingormace
-  * logo:  jiný než výchozí obrázek pro modul logochanger
+  * debug: vypisuje dodatečné ladící ingormace (nepovinné)
+  * logo:  jiný než výchozí obrázek pro modul logochanger (nepovinné)
 
 Logování
 --------
