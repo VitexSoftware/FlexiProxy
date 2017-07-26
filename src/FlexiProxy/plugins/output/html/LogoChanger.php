@@ -23,7 +23,10 @@ class LogoChanger extends \FlexiProxy\plugins\output\CommonHtml implements \Flex
 
     public function process()
     {
-        $this->preg_replaceContent('/\/flexibee-static\/\d{4}\.(\d|\d{2})\.(\d|\d{2})\/img\/logo-abraflexibee.png/', '/images/logo-flexiproxy.png');
+        $cfglogo = \Ease\Shared::instanced()->getConfigValue('logo');
+        $newLogo = is_null($cfglogo) ? '/images/logo-flexiproxy.png' : $cfglogo;
+        $this->preg_replaceContent('/\/flexibee-static\/\d{4}\.(\d|\d{2})\.(\d|\d{2})\/img\/logo-abraflexibee.png/',
+            $newLogo);
     }
 
 }

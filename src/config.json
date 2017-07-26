@@ -5,7 +5,8 @@
     "FLEXIBEE_URL": "https://localhost:5434",
     "FLEXIBEE_LOGIN": "admin",
     "FLEXIBEE_PASSWORD": "admin123",
-    "FLEXIBEE_COMPANY": "adminit_s_r_o_4",
+    "FLEXIBEE_COMPANY": "spoje_net_s_r_o_",
     "access_policy": "public",
+    "logo": "https://system.spoje.net/images/spoje-net_logo.gif",
     "debug": "true"
 }

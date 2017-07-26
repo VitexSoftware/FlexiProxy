@@ -61,12 +61,13 @@ Ten si načte obsah konfiguračního souboru config.json
         "FLEXIBEE_PASSWORD": "admin123",
         "FLEXIBEE_COMPANY": "spoje_net_s_r_o_4",
         "access_policy": "login",
-        "debug": "true"
+        "debug": "true",
+        "logo": "/images/yourlogo.png"
     }
 
-access_policy: **public** - zpřístupní vše pod uživatelem z natavení; **login** - je nutné se přihlásit
-debug: vypisuje dodatečné ladící ingormace
-
+  * access_policy: **public** - zpřístupní vše pod uživatelem z natavení; **login** - je nutné se přihlásit
+  * debug: vypisuje dodatečné ladící ingormace
+  * logo:  jiný než výchozí obrázek pro modul logochanger
 
 Logování
 --------
