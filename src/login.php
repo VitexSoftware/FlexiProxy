@@ -90,14 +90,14 @@ $companiesToMenu = [];
 $companer        = new \FlexiPeeHP\Company();
 $companies       = $companer->getFlexiData();
 
-if (!isset($companies['company'][0])) {
-    $cmpInfo                 = $companies['company'];
-    unset($companies['company']);
-    $companies['company'][0] = $cmpInfo;
+if (!isset($companies[0])) {
+    $cmpInfo      = $companies;
+    unset($companies);
+    $companies[0] = $cmpInfo;
 }
 
-if (isset($companies['company']) && count($companies['company'])) {
-    foreach ($companies['company'] as $company) {
+if (isset($companies) && count($companies)) {
+    foreach ($companies as $company) {
         $companiesToMenu['/c/'.$company['dbNazev']] = $company['nazev'];
     }
     asort($companiesToMenu);

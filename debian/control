@@ -48,7 +48,15 @@ Architecture: all
 Section: web
 Priority: optional
 Description: Add Images to FlexiBee Pricelist
- Show and upload images
+ Show pricelist images
+
+Package: flexiproxy-pricelist-attachment
+Depends: ${misc:Depends},flexiproxy-core
+Architecture: all
+Section: web
+Priority: optional
+Description: Attach fiels to Pricelist
+ Upload images or any other files to FlexiBee pricelist item
 
 Package: flexiproxy-database
 Depends: ${misc:Depends},flexiproxy-core, php-pdo | php5-pdo | php7.0-pdo | php7.1-pdo, php5-pdo-pgsql | php7.0-pdo-pgsql | php7.0-pdo-mysql | php5-pdo-mysql | php7.1-pdo-pgsql | php7.1-pdo-mysql | php-mysql | php-pgsql, php-phinx

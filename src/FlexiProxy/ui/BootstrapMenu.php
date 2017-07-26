@@ -27,9 +27,13 @@ class BootstrapMenu extends \Ease\TWB\Navbar
     public function __construct($name = null, $content = null,
                                 $properties = null)
     {
+        $cfglogo = \Ease\Shared::instanced()->getConfigValue('logo');
+        $newLogo = is_null($cfglogo) ? '/images/logo-flexiproxy.png' : $cfglogo;
+
         parent::__construct('Menu',
-            new \Ease\Html\ImgTag('/images/logo-flexiproxy.png', 'FlexiProxy',
-            ['class' => 'img-rounded']), ['class' => 'navbar-fixed-top']);
+            new \Ease\Html\ImgTag($newLogo, 'FlexiProxy',
+            ['class' => 'img-rounded', 'height' => '20px']),
+            ['class' => 'navbar-fixed-top']);
 
         $user = \Ease\Shared::user();
         \Ease\TWB\Part::twBootstrapize();
@@ -94,4 +98,5 @@ class BootstrapMenu extends \Ease\TWB\Navbar
         }
         parent::draw();
     }
+
 }

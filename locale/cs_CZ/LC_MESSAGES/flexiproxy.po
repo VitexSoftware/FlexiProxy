@@ -2,375 +2,119 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FlexiProxy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-29 17:50+0100\n"
-"PO-Revision-Date: 2017-04-29 17:50+0100\n"
-"Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
+"POT-Creation-Date: 2017-07-26 15:19+0200\n"
+"PO-Revision-Date: 2017-07-26 15:23+0200\n"
+"Last-Translator: Vítězslav Dvořák <vitex@arachne.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: /home/vitex/Projects/VitexSoftware/FlexiProxy/\n"
+"X-Poedit-Basepath: /home/vitex/Projects/VitexSoftware/FlexiProxy\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: vendor\n"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:78
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:78
-#: src/FlexiProxy/CustomColumns.php:78
+#: src/FlexiProxy/CustomColumns.php:99
 #, php-format
 msgid "Column %s was added to evidence %s"
 msgstr "Sloupec %s byl přidán do evidence %s"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:81
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:81
-#: src/FlexiProxy/CustomColumns.php:81
+#: src/FlexiProxy/CustomColumns.php:102
 #, php-format
 msgid "Column %s was not added from evidence %s"
 msgstr "Sloupec %s nebyl přidán do evidence %s"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:92
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:92
-#: src/FlexiProxy/CustomColumns.php:92
+#: src/FlexiProxy/CustomColumns.php:118
 #, php-format
 msgid "Column %s was removed from evidence %s"
 msgstr "Sloupec  %s byl odstraněn z evidence  %s"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:95
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:95
-#: src/FlexiProxy/CustomColumns.php:95
+#: src/FlexiProxy/CustomColumns.php:121
 #, php-format
 msgid "Column %s was not removed from evidence %s"
 msgstr "Sloupec %s nebyl odstraněn z evidence %s"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:166
 #: src/FlexiProxy/FlexiProxy.php:242
 #, php-format
 msgid "URI %s was not parsed"
 msgstr "URI %s nebylo rozparsováno"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:364
-#: src/FlexiProxy/FlexiProxy.php:441
+#: src/FlexiProxy/FlexiProxy.php:443
 msgid "Please Check"
 msgstr "Prosím zkontroluj"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:370
-#: src/FlexiProxy/FlexiProxy.php:447
+#: src/FlexiProxy/FlexiProxy.php:449
 #, php-format
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:401
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:409
-#: src/FlexiProxy/FlexiProxy.php:479 src/FlexiProxy/FlexiProxy.php:488
+#: src/FlexiProxy/FlexiProxy.php:481 src/FlexiProxy/FlexiProxy.php:490
 #, php-format
 msgid "ApplyPlugin: %s"
 msgstr "Aplikován Plugin: %s "
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/User.php:64
 #: src/FlexiProxy/User.php:64
-#, fuzzy
 msgid "Login Failed"
 msgstr "Chyba přihlášení"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/User.php:97
 #: src/FlexiProxy/User.php:97
-#, fuzzy
 msgid "Loading evidence list failed"
-msgstr "Načítání evidence se nezdařilo"
+msgstr "Načítání seznamu evidencí se nezdařilo"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/Common.php:119
 #: src/FlexiProxy/plugins/Common.php:119
-#, fuzzy, php-format
+#, php-format
 msgid "Replace %s to %s on %s failed"
-msgstr "Chyba deserializace %s #%s "
+msgstr "Přepsání %s na %s v %s selhalo"
 
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/Common.php:128
 #: src/FlexiProxy/plugins/Common.php:128
 #, php-format
 msgid "Plugin with undefined process()"
 msgstr "Plugin bez definované metody process()"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/output/CommonHtml.php:83
-#: src/FlexiProxy/plugins/output/CommonHtml.php:83
-#, php-format
-msgid "AddBefore: pattern \"%s\" not found on %s"
-msgstr "Přidej před: vzorek \"%s\" nebyl nalezen v %s"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/output/CommonHtml.php:94
-#: src/FlexiProxy/plugins/output/CommonHtml.php:94
-#, php-format
-msgid "AddAfter: pattern \"%s\" not found on %s"
-msgstr "Přidej za: vzorek \"%s\" nebyl nalezen v %s"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:38
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:73
-#: src/FlexiProxy/ui/BootstrapMenu.php:38
-#: src/FlexiProxy/ui/BootstrapMenu.php:73
-#, fuzzy
-msgid "About"
-msgstr "O Aplikaci"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:48
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:56
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:51
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:75
-#: src/FlexiProxy/ui/BootstrapMenu.php:48
-#: src/FlexiProxy/ui/BootstrapMenu.php:56 src/login.php:51 src/login.php:75
-#, fuzzy
-msgid "Sign in"
-msgstr "Přihlášení"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:51
-#: src/FlexiProxy/ui/BootstrapMenu.php:51
-#, fuzzy
-msgid "Server"
-msgstr "Server"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:52
-#: src/FlexiProxy/ui/BootstrapMenu.php:52
-#, fuzzy
-msgid "login"
-msgstr "Přihlašovací jeméno"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:53
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:82
-#: src/FlexiProxy/ui/BootstrapMenu.php:53 src/login.php:82
-#, fuzzy
-msgid "Password"
-msgstr "Heslo"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:55
-#: src/FlexiProxy/ui/BootstrapMenu.php:55
-#, fuzzy
-msgid "Remeber me"
-msgstr "Pamatuj si mne"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:62
-#: src/FlexiProxy/ui/BootstrapMenu.php:62
-msgid "Public Access"
-msgstr "Veřejný přístup"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:69
-#: src/FlexiProxy/ui/BootstrapMenu.php:69
-#, fuzzy
-msgid "Settings"
-msgstr "Nastavení"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:75
-#: src/FlexiProxy/ui/BootstrapMenu.php:75
-#, fuzzy
-msgid "Sign off"
-msgstr "Odhlášení"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:90
-#: src/FlexiProxy/plugins/output/html/CommonStatusMessages.php:27
-#: src/FlexiProxy/ui/BootstrapMenu.php:90
-#, fuzzy
-msgid "Click to hide messages"
-msgstr "Klikni pro skrytí zpráv"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/MainMenu.php:83
-#: src/FlexiProxy/ui/MainMenu.php:83
-msgid "Create Company"
-msgstr "Založ firmu"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/MainMenu.php:86
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:107
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:109
-#: src/FlexiProxy/ui/MainMenu.php:86 src/login.php:107 src/login.php:109
-#, fuzzy
-msgid "Company"
-msgstr "Firma"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:41
-#: src/FlexiProxy/ui/PageBottom.php:41
-#, fuzzy
-msgid "Sources"
-msgstr "Zdrojáky"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:51
-#: src/FlexiProxy/ui/PageBottom.php:51
-#, fuzzy
-msgid "Support"
-msgstr "Podpora"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:59
-#: src/FlexiProxy/ui/PageBottom.php:59
-#, fuzzy
-msgid "Services"
-msgstr "Služby"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:67
-#: src/FlexiProxy/ui/PageBottom.php:67
-#, fuzzy
-msgid "Docs"
-msgstr "Dokumentace"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:73
-#: src/FlexiProxy/ui/PageBottom.php:73
-#, fuzzy
-msgid "Author"
-msgstr "Autor"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:76
-#: src/FlexiProxy/ui/PageBottom.php:76
-#, fuzzy
-msgid "Vitex Software"
-msgstr "Vitex Software"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:79
-#: src/FlexiProxy/ui/PageBottom.php:79
-#, fuzzy
-msgid "Sponsored by"
-msgstr "Sponzorováno"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:82
-#: src/FlexiProxy/ui/PageBottom.php:82
-#, fuzzy
-msgid "Spoje.Net"
-msgstr "Spoje.Net"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:92
-#: src/FlexiProxy/ui/PageBottom.php:92
-#, fuzzy
-msgid "&copy; 2017 Vítězslav \"Vitex\" Dvořák"
-msgstr "&copy; 2016 Vítězslav \"Vitex\" Dvořák"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/WebPage.php:74
-#: src/FlexiProxy/ui/WebPage.php:74
-#, fuzzy
-msgid "Please sign in as admin first"
-msgstr "Nejprve se prosím přihlaš jako admin"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/about.php:15 src/about.php:15
-#, fuzzy
-msgid "About application"
-msgstr "O Aplikaci"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/about.php:17 src/about.php:17
-#, fuzzy
-msgid "Used Libraries"
-msgstr "Použité knihovny"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/index.php:15
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/customcolumns.php:34
-#: src/customcolumns.php:34 src/index.php:15
-msgid "FlexiProxy"
-msgstr "FlexiProxy"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:24 src/login.php:24
-#, fuzzy
-msgid "Server added to bookmarks"
-msgstr "Server byl přidán do záložek"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:37 src/login.php:37
-#, fuzzy
-msgid "Signed in as: "
-msgstr "Přihlášen jako: "
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:47 src/login.php:47
-#, fuzzy
-msgid "Please confirm your login credentials"
-msgstr "Prosím potvrď své přihlašovací údaje"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:61 src/login.php:61
-#, fuzzy
-msgid "Login History"
-msgstr "Historie přihlášení"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:79 src/login.php:79
-#, fuzzy
-msgid "User name"
-msgstr "Uživatelké Jméno"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:81 src/login.php:81
-#, fuzzy
-msgid "Login name"
-msgstr "Přihlašovací Jméno"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:85 src/login.php:85
-#, fuzzy
-msgid "User's password"
-msgstr "Heslo uživatele"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:118 src/login.php:118
-#, fuzzy
-msgid "Show product images"
-msgstr "Zobraz v editoru"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:121 src/login.php:121
-#, fuzzy
-msgid "Features"
-msgstr "Schopnosti"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/logout.php:28 src/logout.php:28
-#, fuzzy
-msgid "Sign out"
-msgstr "Odhlášení"
-
-#: debian/flexiproxy-core/usr/share/flexiproxy/logout.php:32 src/logout.php:32
-#, fuzzy
-msgid "Thank you for your patronage and look forward to another visit"
-msgstr "Díky za váš zájem a těším se na další návštěvu"
-
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/plugins/output/html/AddCustomColumnsToEditor.php:31
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/plugins/output/html/CustomColumnsHTML.php:33
-#: src/FlexiProxy/plugins/output/html/AddCustomColumnsToEditor.php:31
-#: src/FlexiProxy/plugins/output/html/CustomColumnsHTML.php:33
-msgid "Custom Columns"
-msgstr "Uživatelské sloupečky"
-
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/plugins/output/html/NewCustomColumnButton.php:28
-#: src/FlexiProxy/plugins/output/html/NewCustomColumnButton.php:28
-msgid "New Custom Column"
-msgstr "Nový uživatelský sloupec"
-
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/ui/CustomColumnForm.php:24
-#: src/FlexiProxy/ui/CustomColumnForm.php:24
-msgid "New Column Name"
-msgstr "Jméno nového sloupečku"
-
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/ui/CustomColumnForm.php:25
-#: src/FlexiProxy/ui/CustomColumnForm.php:25
-msgid "Create"
-msgstr "Založ"
-
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/customcolumns.php:27
-#: src/customcolumns.php:27
-#, php-format
-msgid "Removed column %s from evidence %s"
-msgstr "Odstraněn sloupec %s z evidence %s"
-
-#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/customcolumns.php:39
-#: src/customcolumns.php:39
-#, fuzzy, php-format
-msgid "Custom Columns for %s"
-msgstr "Uživatelské sloupečky"
-
-#: debian/flexiproxy-developer/usr/share/flexiproxy/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:31
-#: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:31
-#, fuzzy
-msgid "JSON"
-msgstr "Json"
-
-#: debian/flexiproxy-developer/usr/share/flexiproxy/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:33
-#: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:33
-#, fuzzy
-msgid "XML"
-msgstr "XML"
 
 #: src/FlexiProxy/plugins/input/html/TakeNewPricelistAttachment.php:37
 #, php-format
 msgid "File %s was attached"
 msgstr "Byl přiložen soubor %s"
 
+#: src/FlexiProxy/plugins/output/CommonHtml.php:83
+#, php-format
+msgid "AddBefore: pattern \"%s\" not found on %s"
+msgstr "Přidej před: vzorek \"%s\" nebyl nalezen v %s"
+
+#: src/FlexiProxy/plugins/output/CommonHtml.php:94
+#, php-format
+msgid "AddAfter: pattern \"%s\" not found on %s"
+msgstr "Přidej za: vzorek \"%s\" nebyl nalezen v %s"
+
+#: src/FlexiProxy/plugins/output/html/AddCustomColumnsToEditor.php:31
+#: src/FlexiProxy/plugins/output/html/CustomColumnsHTML.php:33
+msgid "Custom Columns"
+msgstr "Uživatelské sloupečky"
+
 #: src/FlexiProxy/plugins/output/html/Attachments.php:27
 #: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:28
 msgid "New Attachment"
 msgstr "Nová příloha"
+
+#: src/FlexiProxy/plugins/output/html/CommonStatusMessages.php:27
+#: src/FlexiProxy/ui/BootstrapMenu.php:94
+msgid "Click to hide messages"
+msgstr "Klikněte pro skrytí zpráv"
+
+#: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:31
+msgid "JSON"
+msgstr "Json"
+
+#: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:33
+msgid "XML"
+msgstr "XML"
+
+#: src/FlexiProxy/plugins/output/html/NewCustomColumnButton.php:28
+msgid "New Custom Column"
+msgstr "Nový uživatelský sloupec"
 
 #: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:27
 msgid "New pricelist Attachment"
@@ -398,9 +142,169 @@ msgstr "Nová příloha na %s"
 msgid "Back to %s"
 msgstr "Zpět na %s "
 
+#: src/FlexiProxy/ui/BootstrapMenu.php:42
+#: src/FlexiProxy/ui/BootstrapMenu.php:77
+msgid "About"
+msgstr "O aplikaci"
+
+#: src/FlexiProxy/ui/BootstrapMenu.php:52
+#: src/FlexiProxy/ui/BootstrapMenu.php:60 src/login.php:51 src/login.php:75
+msgid "Sign in"
+msgstr "Přihlášení"
+
+#: src/FlexiProxy/ui/BootstrapMenu.php:55
+msgid "Server"
+msgstr "Server"
+
+#: src/FlexiProxy/ui/BootstrapMenu.php:56
+msgid "login"
+msgstr "Přihlašovací jméno"
+
+#: src/FlexiProxy/ui/BootstrapMenu.php:57 src/login.php:82
+msgid "Password"
+msgstr "Heslo"
+
+#: src/FlexiProxy/ui/BootstrapMenu.php:59
+msgid "Remeber me"
+msgstr "Pamatuj si mne"
+
+#: src/FlexiProxy/ui/BootstrapMenu.php:66
+msgid "Public Access"
+msgstr "Veřejný přístup"
+
+#: src/FlexiProxy/ui/BootstrapMenu.php:73
+msgid "Settings"
+msgstr "Nastavení"
+
+#: src/FlexiProxy/ui/BootstrapMenu.php:79
+msgid "Sign off"
+msgstr "Odhlášení"
+
+#: src/FlexiProxy/ui/CustomColumnForm.php:24
+msgid "New Column Name"
+msgstr "Jméno nového sloupečku"
+
+#: src/FlexiProxy/ui/CustomColumnForm.php:28
+msgid "Create"
+msgstr "Založ"
+
 #: src/FlexiProxy/ui/CustomColumnWidget.php:31
 msgid "Remove Column"
 msgstr "Odstranit sloupec"
+
+#: src/FlexiProxy/ui/MainMenu.php:83
+msgid "Create Company"
+msgstr "Založ firmu"
+
+#: src/FlexiProxy/ui/MainMenu.php:86 src/login.php:107 src/login.php:109
+msgid "Company"
+msgstr "Firma"
+
+#: src/FlexiProxy/ui/PageBottom.php:41
+msgid "Sources"
+msgstr "Zdrojáky"
+
+#: src/FlexiProxy/ui/PageBottom.php:51
+msgid "Support"
+msgstr "Podpora"
+
+#: src/FlexiProxy/ui/PageBottom.php:59
+msgid "Services"
+msgstr "Služby"
+
+#: src/FlexiProxy/ui/PageBottom.php:67
+msgid "Docs"
+msgstr "Dokumentace"
+
+#: src/FlexiProxy/ui/PageBottom.php:73
+msgid "Author"
+msgstr "Autor"
+
+#: src/FlexiProxy/ui/PageBottom.php:76
+msgid "Vitex Software"
+msgstr "Vitex Software"
+
+#: src/FlexiProxy/ui/PageBottom.php:79
+msgid "Sponsored by"
+msgstr "Sponzorováno"
+
+#: src/FlexiProxy/ui/PageBottom.php:82
+msgid "Spoje.Net"
+msgstr "Spoje.Net"
+
+#: src/FlexiProxy/ui/PageBottom.php:92
+msgid "&copy; 2017 Vítězslav \"Vitex\" Dvořák"
+msgstr "&copy; 2016 Vítězslav \"Vitex\" Dvořák"
+
+#: src/FlexiProxy/ui/WebPage.php:74
+msgid "Please sign in as admin first"
+msgstr "Nejprve se prosím přihlaš jako admin"
+
+#: src/about.php:15
+msgid "About application"
+msgstr "O Aplikaci"
+
+#: src/about.php:17
+msgid "Used Libraries"
+msgstr "Použité knihovny"
+
+#: src/customcolumns.php:28
+#, php-format
+msgid "Removed column %s from evidence %s"
+msgstr "Odstraněn sloupec %s z evidence %s"
+
+#: src/customcolumns.php:35 src/index.php:15
+msgid "FlexiProxy"
+msgstr "FlexiProxy"
+
+#: src/customcolumns.php:40
+#, php-format
+msgid "Custom Columns for %s"
+msgstr "Uživatelské sloupečky pro %s"
+
+#: src/login.php:24
+msgid "Server added to bookmarks"
+msgstr "Server byl přidán do záložek"
+
+#: src/login.php:37
+msgid "Signed in as: "
+msgstr "Přihlášen jako: "
+
+#: src/login.php:47
+msgid "Please confirm your login credentials"
+msgstr "Prosím potvrď své přihlašovací údaje"
+
+#: src/login.php:61
+msgid "Login History"
+msgstr "Historie přihlášení"
+
+#: src/login.php:79
+msgid "User name"
+msgstr "Uživatelské Jméno"
+
+#: src/login.php:81
+msgid "Login name"
+msgstr "Přihlašovací Jméno"
+
+#: src/login.php:85
+msgid "User's password"
+msgstr "Heslo uživatele"
+
+#: src/login.php:118
+msgid "Show product images"
+msgstr "Zobraz obrázky produktu"
+
+#: src/login.php:121
+msgid "Features"
+msgstr "Schopnosti"
+
+#: src/logout.php:28
+msgid "Sign out"
+msgstr "Odhlášení"
+
+#: src/logout.php:32
+msgid "Thank you for your patronage and look forward to another visit"
+msgstr "Díky za váš zájem a těším se na další návštěvu"
 
 #, fuzzy
 #~ msgid "Url allready registered"
@@ -476,11 +380,7 @@ msgstr "Odstranit sloupec"
 
 #, fuzzy
 #~ msgid "Informace"
-#~ msgstr ""
-#~ "Po zadání alespoň jednoho vstupního údaje si tento průvodce dohledá "
-#~ "ostatní a provede sken na některé základní služby.<br>Pokud budou tyto "
-#~ "nalezeny aktivují se jejich testy. Informace o stavu bude odesílána na "
-#~ "první zadaný kontakt"
+#~ msgstr "Po zadání alespoň jednoho vstupního údaje si tento průvodce dohledá ostatní a provede sken na některé základní služby.<br>Pokud budou tyto nalezeny aktivují se jejich testy. Informace o stavu bude odesílána na první zadaný kontakt"
 
 #, fuzzy
 #~ msgid "System log"
@@ -792,9 +692,7 @@ msgstr "Odstranit sloupec"
 
 #, fuzzy
 #~ msgid "Optional"
-#~ msgstr ""
-#~ "URL s protokolem, jménem hostu a volitelně i portem ( https://"
-#~ "localhost:5434 )"
+#~ msgstr "URL s protokolem, jménem hostu a volitelně i portem ( https://localhost:5434 )"
 
 #~ msgid "Jedno povinné políčko zůstalo nevyplněné"
 #~ msgstr "Jedno povinné políčko zůstalo nevyplněné"
@@ -940,11 +838,7 @@ msgstr "Odstranit sloupec"
 
 #, fuzzy
 #~ msgid "informace"
-#~ msgstr ""
-#~ "Po zadání alespoň jednoho vstupního údaje si tento průvodce dohledá "
-#~ "ostatní a provede sken na některé základní služby.<br>Pokud budou tyto "
-#~ "nalezeny aktivují se jejich testy. Informace o stavu bude odesílána na "
-#~ "první zadaný kontakt"
+#~ msgstr "Po zadání alespoň jednoho vstupního údaje si tento průvodce dohledá ostatní a provede sken na některé základní služby.<br>Pokud budou tyto nalezeny aktivují se jejich testy. Informace o stavu bude odesílána na první zadaný kontakt"
 
 #, fuzzy
 #~ msgid "Regenerate All"
@@ -1411,23 +1305,19 @@ msgstr "Odstranit sloupec"
 #~ msgstr "Toto není platné telefoní číslo"
 
 #, fuzzy
-#~ msgid ""
-#~ "Kontakt <strong>%s</strong> byl odebrán ze skupiny <strong>%s</strong>"
+#~ msgid "Kontakt <strong>%s</strong> byl odebrán ze skupiny <strong>%s</strong>"
 #~ msgstr "Kontakt %s byl odebrán ze služby %s"
 
 #, fuzzy
-#~ msgid ""
-#~ "Kontakt <strong>%s</strong> nebyl odebrán ze skupiny <strong>%s</strong>"
+#~ msgid "Kontakt <strong>%s</strong> nebyl odebrán ze skupiny <strong>%s</strong>"
 #~ msgstr "Kontakt %s byl odebrán ze služby %s"
 
 #, fuzzy
-#~ msgid ""
-#~ "Kontakt <strong>%s</strong> byl odebrán ze služby <strong>%s</strong>"
+#~ msgid "Kontakt <strong>%s</strong> byl odebrán ze služby <strong>%s</strong>"
 #~ msgstr "Kontakt %s byl odebrán ze služby %s"
 
 #, fuzzy
-#~ msgid ""
-#~ "Kontakt <strong>%s</strong> nebyl odebrán ze služby <strong>%s</strong>"
+#~ msgid "Kontakt <strong>%s</strong> nebyl odebrán ze služby <strong>%s</strong>"
 #~ msgstr "Kontakt %s byl odebrán ze služby %s"
 
 #~ msgid "Kontakt nelze přejmenovat"
@@ -1752,10 +1642,8 @@ msgstr "Odstranit sloupec"
 #~ msgid "importovat konfiguraci"
 #~ msgstr "importovat konfiguraci"
 
-#~ msgid ""
-#~ "Tato akce nevratně smaže veškerou konfiguraci. Opravdu to chcete udělat ?"
-#~ msgstr ""
-#~ "Tato akce nevratně smaže veškerou konfiguraci. Opravdu to chcete udělat ?"
+#~ msgid "Tato akce nevratně smaže veškerou konfiguraci. Opravdu to chcete udělat ?"
+#~ msgstr "Tato akce nevratně smaže veškerou konfiguraci. Opravdu to chcete udělat ?"
 
 #~ msgid "Vím co dělám"
 #~ msgstr "Vím co dělám"
@@ -2005,40 +1893,26 @@ msgstr "Odstranit sloupec"
 #~ msgid "prodleva varování"
 #~ msgstr "prodleva varování"
 
-#~ msgid ""
-#~ "Čas v milisekundách, po jehož překročení při testu bude hlášeno varování"
-#~ msgstr ""
-#~ "Čas v milisekundách, po jehož překročení při testu bude hlášeno varování"
+#~ msgid "Čas v milisekundách, po jehož překročení při testu bude hlášeno varování"
+#~ msgstr "Čas v milisekundách, po jehož překročení při testu bude hlášeno varování"
 
 #~ msgid "ztráta varování"
 #~ msgstr "ztráta varování"
 
-#~ msgid ""
-#~ "Procento ztracených paketů, po jehož překročení při testu bude hlášeno "
-#~ "varování"
-#~ msgstr ""
-#~ "Procento ztracených paketů, po jehož překročení při testu bude hlášeno "
-#~ "varování"
+#~ msgid "Procento ztracených paketů, po jehož překročení při testu bude hlášeno varování"
+#~ msgstr "Procento ztracených paketů, po jehož překročení při testu bude hlášeno varování"
 
 #~ msgid "prodleva kritické chyby"
 #~ msgstr "prodleva kritické chyby"
 
-#~ msgid ""
-#~ "Čas v milisekundách, po jehož překročení při testu bude hlášena kritická "
-#~ "chyba"
-#~ msgstr ""
-#~ "Čas v milisekundách, po jehož překročení při testu bude hlášena kritická "
-#~ "chyba"
+#~ msgid "Čas v milisekundách, po jehož překročení při testu bude hlášena kritická chyba"
+#~ msgstr "Čas v milisekundách, po jehož překročení při testu bude hlášena kritická chyba"
 
 #~ msgid "ztráta kritické chyby"
 #~ msgstr "ztráta kritické chyby"
 
-#~ msgid ""
-#~ "Procento ztracených paketů, po jehož překročení při testu bude hlášena "
-#~ "kritická chyba"
-#~ msgstr ""
-#~ "Procento ztracených paketů, po jehož překročení při testu bude hlášena "
-#~ "kritická chyba"
+#~ msgid "Procento ztracených paketů, po jehož překročení při testu bude hlášena kritická chyba"
+#~ msgstr "Procento ztracených paketů, po jehož překročení při testu bude hlášena kritická chyba"
 
 #~ msgid "Vše v pořádku"
 #~ msgstr "Vše v pořádku"
@@ -2077,33 +1951,25 @@ msgstr "Odstranit sloupec"
 #~ msgid ""
 #~ "<br>\n"
 #~ "Nagstamon je monitor Nagiosu pro desktopové operační systémy.\n"
-#~ "Běží v systémové liště, nebo jako plovoucí aplikace, či ve stavovém řádku "
-#~ "na\n"
+#~ "Běží v systémové liště, nebo jako plovoucí aplikace, či ve stavovém řádku na\n"
 #~ "ploše a ukazuje stručný přehled stavy hostitelů či služeb tzn:\n"
-#~ "kritický, varovný, neznámý, nedosažitelný či vypnuto  a ukazuje podrobný "
-#~ "přehled\n"
+#~ "kritický, varovný, neznámý, nedosažitelný či vypnuto  a ukazuje podrobný přehled\n"
 #~ "stavu při pohybu ukazatele myši nad ním.\n"
-#~ "Připojení k zobrazeným hostitelům a službám je snadné z kontextové "
-#~ "nabídky přes\n"
+#~ "Připojení k zobrazeným hostitelům a službám je snadné z kontextové nabídky přes\n"
 #~ "SSH, RDP a VNC nebo jakýchkoli jiných definovaných akcí.\n"
 #~ "Uživatelé mohou být upozorněni zvukem.\n"
-#~ "Hostitelé a služby mohou být filtrovány podle kategorií a regulárních "
-#~ "výrazů.\n"
+#~ "Hostitelé a služby mohou být filtrovány podle kategorií a regulárních výrazů.\n"
 #~ msgstr ""
 #~ "<br>\n"
 #~ "Nagstamon je monitor Nagiosu pro desktopové operační systémy. \n"
-#~ "Běží v systémové liště, nebo jako plovoucí aplikace, či ve stavovém řádku "
-#~ "na \n"
+#~ "Běží v systémové liště, nebo jako plovoucí aplikace, či ve stavovém řádku na \n"
 #~ "ploše a ukazuje stručný přehled stavy hostitelů či služeb tzn: \n"
-#~ "kritický, varovný, neznámý, nedosažitelný či vypnuto  a ukazuje podrobný "
-#~ "přehled \n"
+#~ "kritický, varovný, neznámý, nedosažitelný či vypnuto  a ukazuje podrobný přehled \n"
 #~ "stavu při pohybu ukazatele myši nad ním. \n"
-#~ "Připojení k zobrazeným hostitelům a službám je snadné z kontextové "
-#~ "nabídky přes \n"
+#~ "Připojení k zobrazeným hostitelům a službám je snadné z kontextové nabídky přes \n"
 #~ "SSH, RDP a VNC nebo jakýchkoli jiných definovaných akcí. \n"
 #~ "Uživatelé mohou být upozorněni zvukem. \n"
-#~ "Hostitelé a služby mohou být filtrovány podle kategorií a regulárních "
-#~ "výrazů. \n"
+#~ "Hostitelé a služby mohou být filtrovány podle kategorií a regulárních výrazů. \n"
 
 #~ msgid "Domovská stránka programu"
 #~ msgstr "Domovská stránka programu"
@@ -2593,12 +2459,8 @@ msgstr "Odstranit sloupec"
 #~ msgid "Hostname serveru"
 #~ msgstr "Hostname serveru"
 
-#~ msgid ""
-#~ "Název hostu, tedy to co následuje po http:// ve webové adrese až k "
-#~ "prvnímu lomítku, nebo otazníku."
-#~ msgstr ""
-#~ "Název hostu, tedy to co následuje po http:// ve webové adrese až k "
-#~ "prvnímu lomítku, nebo otazníku."
+#~ msgid "Název hostu, tedy to co následuje po http:// ve webové adrese až k prvnímu lomítku, nebo otazníku."
+#~ msgstr "Název hostu, tedy to co následuje po http:// ve webové adrese až k prvnímu lomítku, nebo otazníku."
 
 #~ msgid "IPv4 Adresa"
 #~ msgstr "IPv4 Adresa"
@@ -2610,22 +2472,13 @@ msgstr "Odstranit sloupec"
 #~ msgstr "IPv6 Adresa"
 
 #~ msgid "nejvíce osm skupin čtyř hexadecimálních číslic oddělených dvojtečkou"
-#~ msgstr ""
-#~ "nejvíce osm skupin čtyř hexadecimálních číslic oddělených dvojtečkou"
+#~ msgstr "nejvíce osm skupin čtyř hexadecimálních číslic oddělených dvojtečkou"
 
 #~ msgid "Přidej host"
 #~ msgstr "Přidej host"
 
-#~ msgid ""
-#~ "Po zadání alespoň jednoho vstupního údaje si tento průvodce dohledá "
-#~ "ostatní a provede sken na některé základní služby.<br>Pokud budou tyto "
-#~ "nalezeny aktivují se jejich testy. Informace o stavu bude odesílána na "
-#~ "první zadaný kontakt"
-#~ msgstr ""
-#~ "Po zadání alespoň jednoho vstupního údaje si tento průvodce dohledá "
-#~ "ostatní a provede sken na některé základní služby.<br>Pokud budou tyto "
-#~ "nalezeny aktivují se jejich testy. Informace o stavu bude odesílána na "
-#~ "první zadaný kontakt"
+#~ msgid "Po zadání alespoň jednoho vstupního údaje si tento průvodce dohledá ostatní a provede sken na některé základní služby.<br>Pokud budou tyto nalezeny aktivují se jejich testy. Informace o stavu bude odesílána na první zadaný kontakt"
+#~ msgstr "Po zadání alespoň jednoho vstupního údaje si tento průvodce dohledá ostatní a provede sken na některé základní služby.<br>Pokud budou tyto nalezeny aktivují se jejich testy. Informace o stavu bude odesílána na první zadaný kontakt"
 
 #, fuzzy
 #~ msgid "Služba byla založena"
@@ -3082,12 +2935,8 @@ msgstr "Odstranit sloupec"
 #~ msgid "odhlasit twitter"
 #~ msgstr "odhlasit twitter"
 
-#~ msgid ""
-#~ "Další sledovatelné služby budou nabídnuty po nastavení platformy hosta a "
-#~ "vzdáleného senzoru."
-#~ msgstr ""
-#~ "Další sledovatelné služby budou nabídnuty po nastavení platformy hosta a "
-#~ "vzdáleného senzoru."
+#~ msgid "Další sledovatelné služby budou nabídnuty po nastavení platformy hosta a vzdáleného senzoru."
+#~ msgstr "Další sledovatelné služby budou nabídnuty po nastavení platformy hosta a vzdáleného senzoru."
 
 #, fuzzy
 #~ msgid "Uložit jako předlohu"
@@ -3219,10 +3068,8 @@ msgstr "Odstranit sloupec"
 #~ msgid "kontrola hesla nesouhlasí"
 #~ msgstr "kontrola hesla nesouhlasí"
 
-#~ msgid ""
-#~ "Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
-#~ msgstr ""
-#~ "Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
+#~ msgid "Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
+#~ msgstr "Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
 
 #~ msgid "Administrátirský účet byl vytvořen"
 #~ msgstr "Administrátirský účet byl vytvořen"
@@ -3271,22 +3118,14 @@ msgstr "Odstranit sloupec"
 #~ msgid "Vítejte v registraci"
 #~ msgstr "Vítejte v registraci"
 
-#~ msgid ""
-#~ "Po zaregistování budete rovnou vyzváni k zadání prvního sledovaného hosta."
-#~ msgstr ""
-#~ "Po zaregistování budete rovnou vyzváni k zadání prvního sledovaného hosta."
+#~ msgid "Po zaregistování budete rovnou vyzváni k zadání prvního sledovaného hosta."
+#~ msgstr "Po zaregistování budete rovnou vyzváni k zadání prvního sledovaného hosta."
 
-#~ msgid ""
-#~ "Veškeré notifikace o výsledcích testů vám budou přicházet na zadaný email."
-#~ msgstr ""
-#~ "Veškeré notifikace o výsledcích testů vám budou přicházet na zadaný email."
+#~ msgid "Veškeré notifikace o výsledcích testů vám budou přicházet na zadaný email."
+#~ msgstr "Veškeré notifikace o výsledcích testů vám budou přicházet na zadaný email."
 
-#~ msgid ""
-#~ "Pro zasílání notifikací pomocí XMPP (jabber) či SMS, zadejte tyto v "
-#~ "nastavení vašeho kontaktu."
-#~ msgstr ""
-#~ "Pro zasílání notifikací pomocí XMPP (jabber) či SMS, zadejte tyto v "
-#~ "nastavení vašeho kontaktu."
+#~ msgid "Pro zasílání notifikací pomocí XMPP (jabber) či SMS, zadejte tyto v nastavení vašeho kontaktu."
+#~ msgstr "Pro zasílání notifikací pomocí XMPP (jabber) či SMS, zadejte tyto v nastavení vašeho kontaktu."
 
 #, fuzzy
 #~ msgid "Příjmení"
@@ -3426,10 +3265,8 @@ msgstr "Odstranit sloupec"
 #~ msgid "Nechtěný obsah"
 #~ msgstr "Nechtěný obsah"
 
-#~ msgid ""
-#~ "Neočekávaný text, např. \"Error\" nebo jiný fragment chybového hlášení"
-#~ msgstr ""
-#~ "Neočekávaný text, např. \"Error\" nebo jiný fragment chybového hlášení"
+#~ msgid "Neočekávaný text, např. \"Error\" nebo jiný fragment chybového hlášení"
+#~ msgstr "Neočekávaný text, např. \"Error\" nebo jiný fragment chybového hlášení"
 
 #, fuzzy
 #~ msgid "Nové heslo pro"
@@ -3444,12 +3281,8 @@ msgstr "Odstranit sloupec"
 #~ msgid "Obnova zapomenutého hesla"
 #~ msgstr "Obnova zapomenutého hesla"
 
-#~ msgid ""
-#~ "Zapoměl jste heslo? Vložte svou e-mailovou adresu, kterou jste zadal při "
-#~ "registraci a my Vám pošleme nové."
-#~ msgstr ""
-#~ "Zapoměl jste heslo? Vložte svou e-mailovou adresu, kterou jste zadal při "
-#~ "registraci a my Vám pošleme nové."
+#~ msgid "Zapoměl jste heslo? Vložte svou e-mailovou adresu, kterou jste zadal při registraci a my Vám pošleme nové."
+#~ msgstr "Zapoměl jste heslo? Vložte svou e-mailovou adresu, kterou jste zadal při registraci a my Vám pošleme nové."
 
 #~ msgid "Zaslat nové heslo"
 #~ msgstr "Zaslat nové heslo"
