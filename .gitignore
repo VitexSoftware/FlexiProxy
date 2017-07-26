@@ -40,3 +40,6 @@
 /debian/debhelper-build-stamp
 tests/_output/*
 /debian/flexiproxy-database.postrm.debhelper
+/debian/flexiproxy-pricelist-attachment/
+/debian/flexiproxy-pricelist-attachment.substvars
+/debian/flexiproxy-pricelist-attachment.debhelper.log

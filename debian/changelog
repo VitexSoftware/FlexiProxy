@@ -1,6 +1,11 @@
-flexiproxy (0.1-8) UNRELEASED; urgency=medium
+flexiproxy (0.2-2) UNRELEASED; urgency=medium
 
   [ Vítězslav Dvořák ]
   * Status Messages seems to be done
 
- -- Vítězslav Dvořák <info@vitexsoftware.cz>  Fri, 14 Apr 2017 02:59:27 +0200
+  [ vitex ]
+  * New debian Package for Attachment upload
+  * New debian Package for Attachment upload
+  * New debian Package for Attachment upload
+
+ -- vitex <vitex@118-23-ip.patockova77.brevnov.czf>  Wed, 26 Jul 2017 15:43:50 +0200
