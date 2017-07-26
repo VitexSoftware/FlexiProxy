@@ -45,6 +45,9 @@ chown www-data:www-data /var/lib/flexiproxy/ -R
 
 mkdir -p /usr/share/flexiproxy
 chown www-data:www-data /usr/share/flexiproxy/ -R
+mkdir -p /var/lib/flexiproxy
+chown www-data:www-data /var/lib/flexiproxy/ -R
+
 cd /usr/share/flexiproxy
 if [ -f composer.lock ] ; then
     rm -f composer.lock
