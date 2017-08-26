@@ -85,9 +85,17 @@ class MainMenu extends \Ease\Html\Div
                 $nav->addDropDownMenu(isset($this->webPage->flexi->company) ? $companiesToMenu['/c/'.$this->webPage->flexi->company]
                             : _('Company'), $companiesToMenu);
 
+<<<<<<< HEAD
+                if (!isset($_SESSION['company'])) { //Auto choose first company
+                    $_SESSION['company'] = $companies[0]['dbNazev'];
+                    if (!defined('FLEXIBEE_COMPANY')) {
+                        define('FLEXIBEE_COMPANY', $_SESSION['company']);
+                    }
+=======
                 if (!isset($_SESSION)) { //Auto choose first company
                     $_SESSION = $companies[0]['dbNazev'];
                     define('FLEXIBEE_COMPANY', $_SESSION);
+>>>>>>> c1e066d516a58d6207c34d7e7c746181727d889a
                 }
             }
 

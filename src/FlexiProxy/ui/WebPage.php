@@ -82,10 +82,11 @@ class WebPage extends \Ease\TWB\WebPage
      *
      * @param string $loginPage adresa přihlašovací stránky
      */
-    public function onlyForLogged($loginPage = 'login.php')
+    public function onlyForLogged($loginPage = 'login.php', $message = null)
     {
         if (\Ease\Shared::instanced()->getConfigValue('access_policy') == 'login') {
-            parent::onlyForLogged($loginPage.'?backurl='.urlencode($_SERVER['REQUEST_URI']));
+            parent::onlyForLogged($loginPage.'?backurl='.urlencode($_SERVER['REQUEST_URI']),
+                $message);
         }
     }
 }

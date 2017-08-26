@@ -112,7 +112,13 @@ class Common
         $this->content = str_replace($what, $to, $this->content);
     }
 
-    public function preg_replaceContent($what, $to)
+    /**
+     * Regular Replace
+     *
+     * @param string $what find
+     * @param string $to   replace
+     */
+    public function pregReplaceContent($what, $to)
     {
         $replaced = preg_replace($what, $to, $this->content);
         if (is_null($replaced)) {
@@ -123,9 +129,42 @@ class Common
         }
     }
 
+    /**
+     * Process page content by plugin
+     */
     public function process()
     {
         $this->flexiProxy->addStatusMessage(sprintf(_('Plugin with undefined process()'),
                 addslashes(get_class($this))), 'warning');
+    }
+
+    /**
+     * Check if string is Regular Expression
+     *
+     * @param string $str0
+     *
+     * @return boolean
+     */
+    public static function isRegex($str0)
+    {
+        $regex = "/^\/[\s\S]+\/$/";
+        return preg_match($regex, $str0);
+    }
+
+    /**
+     * Find Substring by regexp
+     *
+     * @param string $regexp
+     * @param string $subject
+     *
+     * @return string | null
+     */
+    public static function pregFind($regexp, $subject)
+    {
+        $matches = null;
+        if (preg_match($regexp, $subject, $matches)) {
+            $matches = current($matches);
+        }
+        return $matches;
     }
 }

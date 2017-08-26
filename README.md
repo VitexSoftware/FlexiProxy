@@ -12,6 +12,10 @@ Co aplikace umí
  * Proxy mezi FlexiBee a klientem
  * Měnit Logo
  * Přidává práci s obrázky v ceníku
+<<<<<<< HEAD
+ * Přidává položky do menu
+=======
+>>>>>>> c1e066d516a58d6207c34d7e7c746181727d889a
  * Rozšíření pro vývojáře 
 
 ![Obrázky produktů](https://raw.githubusercontent.com/VitexSoftware/FlexiProxy/master/doc/new-attachment.png "Obrázek")
