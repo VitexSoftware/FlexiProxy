@@ -331,6 +331,9 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     {
 
         $configuration = json_decode(file_get_contents($configFile), true);
+        if (empty($configuration)) {
+            throw new Exception('Empty config file: '.$configFile);
+        }
         foreach ($configuration as $configKey => $configValue) {
             $this->shared->setConfigValue($configKey, $configValue);
             if ((strtoupper($configKey) == $configKey) && (!defined($configKey))) {

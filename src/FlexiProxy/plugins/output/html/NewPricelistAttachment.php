@@ -34,7 +34,7 @@ class NewPricelistAttachment extends \FlexiProxy\plugins\output\CommonHtml imple
             $lastAttachment = end($allAttachments);
             $columnA        = $row->addColumn(6,
                 new \Ease\TWB\Panel(_('Latest attachment'), 'info',
-                new \Ease\Html\ImgTag($informer->getFlexiBeeURL().'/prilohy/'.$lastAttachment['id'].'/content',
+                new \Ease\Html\ImgTag($this->flexiProxy->fixURLs($informer->getFlexiBeeURL().'/prilohy/'.$lastAttachment['id'].'/content'),
                 $lastAttachment['nazSoub'], ['style' => 'width: 300px;'])));
         }
 

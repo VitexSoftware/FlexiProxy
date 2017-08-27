@@ -23,8 +23,8 @@ class Attachments extends \FlexiProxy\plugins\output\CommonHtml implements \Flex
     public function process()
     {
         $destination = $this->flexiProxy->apiURL.'/prilohy'.htmlentities(';').'new';
-        $this->addToPageBottom(new \Ease\TWB\LinkButton('prilohy;new',
-            _('New Attachment'), 'success',
+        $this->addBefore('<!--FLEXIBEE:CONTENT:HEADER-->',
+            new \Ease\TWB\LinkButton('prilohy;new', _('New Attachment'), 'success',
             ['data-actionid' => "new", 'onlick' => 'window.location.replace(\''.$destination.'\');']));
     }
 }

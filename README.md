@@ -194,3 +194,4 @@ Homepage: https://www.vitexsoftware.cz/flexiproxy.php
 
 GitHub: https://github.com/VitexSoftware/FlexiProxy
 
+Demo: http://flexiproxy.vitexsoftware.cz/c/demo
