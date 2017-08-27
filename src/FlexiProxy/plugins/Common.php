@@ -206,7 +206,7 @@ class Common
      *
      * @return string | null
      */
-    public static function pregFind(string $regexp, string $subject)
+    public static function pregFind($regexp, $subject)
     {
         $matches = null;
         if (strlen($subject) && preg_match($regexp, $subject, $matches)) {
