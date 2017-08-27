@@ -135,7 +135,7 @@ class Common
      * @param string $before
      * @param string $add
      */
-    public function addBefore(string $before, string $add)
+    public function addBefore($before, $add)
     {
         if (self::isRegex($before)) {
             $regFound = self::pregFind($before, $this->content);
@@ -158,7 +158,7 @@ class Common
      * @param string $after
      * @param string $add
      */
-    public function addAfter(string $after, string $add)
+    public function addAfter($after, $add)
     {
         if (self::isRegex($after)) {
             $regFound = self::pregFind($after, $this->content);
