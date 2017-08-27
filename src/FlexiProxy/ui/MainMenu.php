@@ -97,14 +97,24 @@ class MainMenu extends \Ease\Html\Div
 
             if (count($leftMenu)) {
                 foreach ($leftMenu as $menuName => $menuItems) {
-                    $nav->addDropDownMenu($menuName, $menuItems);
+                    if (is_array($menuItems)) {
+                        $nav->addDropDownMenu($menuName, $menuItems);
+                    } else {
+                        $nav->addMenuItem(new \Ease\Html\ATag($menuName,
+                            $menuItems));
+                    }
                 }
             }
 
             $rightMenu = \Ease\Shared::instanced()->getConfigValue('right-menu');
             if (count($rightMenu)) {
                 foreach ($rightMenu as $menuName => $menuItems) {
-                    $nav->addDropDownMenu($menuName, $menuItems, 'right');
+                    if (is_array($menuItems)) {
+                        $nav->addDropDownMenu($menuName, $menuItems, 'right');
+                    } else {
+                        $nav->addMenuItem(new \Ease\Html\ATag($menuName,
+                            $menuItems), 'right');
+                    }
                 }
             }
         }
