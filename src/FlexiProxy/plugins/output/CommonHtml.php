@@ -80,45 +80,6 @@ class CommonHtml extends \FlexiProxy\plugins\Common
 
     /**
      *
-     * @param string $before
-     * @param string $add
-     */
-    public function addBefore($before, $add)
-    {
-        if (self::isRegex($before)) {
-            $before = self::pregFind($before, $this->content);
-        }
-        if (strstr($this->content, $before)) {
-            $parts         = explode($before, $this->content);
-            $this->content = $parts[0]."\n$add\n$before\n".$parts['1'];
-        } else {
-            $this->flexiProxy->addStatusMessage(sprintf(_('AddBefore: pattern "%s" not found on %s'),
-                    htmlentities($before), $this->flexiProxy->url), 'warning');
-        }
-    }
-
-    /**
-     *
-     * @param string $after
-     * @param string $add
-     */
-    public function addAfter($after, $add)
-    {
-        if (self::isRegex($after)) {
-            $after = self::pregFind($after, $this->content);
-        }
-
-        if (strstr($this->content, $after)) {
-            $parts         = explode($after, $this->content);
-            $this->content = $parts[0]."\n$after\n$add".$parts['1'];
-        } else {
-            $this->flexiProxy->addStatusMessage(sprintf(_('AddAfter: pattern "%s" not found on %s'),
-                    htmlentities($after), $this->flexiProxy->url), 'warning');
-        }
-    }
-
-    /**
-     *
      * @param type $content
      * @return type
      */

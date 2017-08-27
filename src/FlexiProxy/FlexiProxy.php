@@ -157,6 +157,26 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     }
 
     /**
+     * Obtain record/object identificator code: or id:
+     * Vrací identifikátor objektu code: nebo id:
+     *
+     * @link https://demo.flexibee.eu/devdoc/identifiers Identifikátory záznamů
+     * @return string|int indentifikátor záznamu reprezentovaného objektem
+     */
+    public function getRecordID()
+    {
+        $id = null;
+        switch ($this->format) {
+            case 'xml':
+            case 'json':
+            case 'csv':
+                $id = parent::getRecordID();
+                break;
+        }
+        return $id;
+    }
+
+    /**
      * Prase URI requested
      *
      * @param string $uri
@@ -351,7 +371,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         $url_parts  = parse_url($uri);
         $path_parts = pathinfo($url_parts['path']);
         if (isset($path_parts['extension'])) {
-            $extensions        = \FlexiPeeHP\Formats::bySuffix();
+            $extensions = \FlexiPeeHP\Formats::bySuffix();
             $format     = array_key_exists($path_parts['extension'], $extensions)
                     ? $path_parts['extension'] : null;
         }
@@ -453,8 +473,10 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         } else {
             $this->outputData = $this->fixURLs(self::getCurlResponseBody($this->lastCurlResponse));
         }
-        $this->addStatusMessage(sprintf(_('%s: %s'), $this->requestMethod,
-                $this->url.$this->uriRequested), 'debug');
+        if ($this->debug === true) {
+            $this->addStatusMessage(sprintf(_('%s: %s'), $this->requestMethod,
+                    $this->url.$this->uriRequested), 'success');
+        }
     }
 
     /**

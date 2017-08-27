@@ -130,6 +130,53 @@ class Common
     }
 
     /**
+     * Add Given String before found fragment
+     *
+     * @param string $before
+     * @param string $add
+     */
+    public function addBefore(string $before, string $add)
+    {
+        if (self::isRegex($before)) {
+            $regFound = self::pregFind($before, $this->content);
+            if (!empty($regFound)) {
+                $before = $regFound;
+            }
+        }
+        if (strstr($this->content, $before)) {
+            $parts         = explode($before, $this->content);
+            $this->content = $parts[0]."\n$add\n$before\n".$parts['1'];
+        } else {
+            $this->flexiProxy->addStatusMessage(sprintf(_('AddBefore: pattern "%s" not found on %s'),
+                    htmlentities($before), $this->flexiProxy->url), 'warning');
+        }
+    }
+
+    /**
+     * Add Given String after found fragment
+     *
+     * @param string $after
+     * @param string $add
+     */
+    public function addAfter(string $after, string $add)
+    {
+        if (self::isRegex($after)) {
+            $regFound = self::pregFind($after, $this->content);
+            if (!empty($regFound)) {
+                $after = $regFound;
+            }
+        }
+
+        if (strstr($this->content, $after)) {
+            $parts         = explode($after, $this->content);
+            $this->content = $parts[0]."\n$after\n$add".$parts['1'];
+        } else {
+            $this->flexiProxy->addStatusMessage(sprintf(_('AddAfter: pattern "%s" not found on %s'),
+                    htmlentities($after), $this->flexiProxy->url), 'warning');
+        }
+    }
+
+    /**
      * Process page content by plugin
      */
     public function process()
@@ -159,10 +206,10 @@ class Common
      *
      * @return string | null
      */
-    public static function pregFind($regexp, $subject)
+    public static function pregFind(string $regexp, string $subject)
     {
         $matches = null;
-        if (preg_match($regexp, $subject, $matches)) {
+        if (strlen($subject) && preg_match($regexp, $subject, $matches)) {
             $matches = current($matches);
         }
         return $matches;
