@@ -87,7 +87,7 @@ class PageBottom extends \Ease\TWB\Container
 
         $rowFluid2->addItem(new \Ease\TWB\Col(12,
             [new \Ease\TWB\Col(8,
-                'Flexi<strong>Proxy</strong> v.: '.$appInfo->version
+                'Flexi<strong>ProXY</strong> v.: '.$appInfo->version
             ), new \Ease\TWB\Col(4,
         _('&copy; 2017 Vítězslav "Vitex" Dvořák'))]));
 

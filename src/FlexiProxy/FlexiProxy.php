@@ -351,8 +351,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         $url_parts  = parse_url($uri);
         $path_parts = pathinfo($url_parts['path']);
         if (isset($path_parts['extension'])) {
-            $extensions = self::reindexArrayBy(\FlexiPeeHP\Formats::$formats,
-                    'suffix');
+            $extensions        = \FlexiPeeHP\Formats::bySuffix();
             $format     = array_key_exists($path_parts['extension'], $extensions)
                     ? $path_parts['extension'] : null;
         }
@@ -380,10 +379,13 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
 
     /**
      * Recycle incoming HTTP Headers
+     *
+     * @param array $override
      */
-    public function proxyHttpHeaders()
+    public function proxyHttpHeaders($override = [])
     {
-        foreach (self::getHeadersFromCurlResponse($this->lastCurlResponse) as $hName => $hValue) {
+        foreach (array_merge(self::getHeadersFromCurlResponse($this->lastCurlResponse),
+            $override) as $hName => $hValue) {
             switch ($hName) {
                 case 'Content-Encoding':
                 case 'Transfer-Encoding':
@@ -438,9 +440,10 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
         $wantUrl = str_replace('XDEBUG_SESSION_START=netbeans-xdebug', '',
             $this->url.$this->uriRequested);
 
-        $this->doCurlRequest($wantUrl, $this->requestMethod,
-            $this->suffixToFormat($this->uriRequested));
-        $this->proxyHttpHeaders();
+        $format = $this->suffixToFormat($this->uriRequested);
+        $this->doCurlRequest($wantUrl, $this->requestMethod, $format);
+        $this->proxyHttpHeaders($format == 'ttf' ? ['Content-Type' => 'application/x-font-truetype']
+                    : [] );
         if ($this->lastResponseCode == 0) {
             header("HTTP/1.0 502 Bad Gateway");
             $this->outputData = new ui\HttpStatusPage(502);
