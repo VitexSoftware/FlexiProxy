@@ -78,6 +78,52 @@ Ten si načte obsah konfiguračního souboru config.json
   * debug: vypisuje dodatečné ladící ingormace (nepovinné)
   * logo:  jiný než výchozí obrázek pro modul logochanger (nepovinné)
 
+Uživatelské položky v menu
+--------------------------
+
+Pokud potřebujeme do menu přidat nějaké další položky je zde k dispozici modul
+[[src/FlexiProxy/plugins/output/html/CustomMenu.php]](output/html/CustomMenu.php)
+(istaluje se jako balíček flexiproxy-custom-menu) a konfiguruje se pomocí JSON
+konfiguráku v konfigurační složce. 
+
+Obsahuje povinně alespoň jednu sekci "left-menu" nebo "right-menu" určující na
+kterou stranu menu se mají její podpoložky přidat. 
+
+Podpoložky mohou být buď odkaz nebo další podmenu jak je vidět v ukázkovém 
+konfiguráku:
+
+```json
+{
+    "left-menu": {
+        "http://v.s.cz/": "Autor",
+        "Left Menu 1": {
+            "a": "b",
+            "0": "",
+            "c": "d"
+        },
+        "Left menu 2": {
+            "e": "f",
+            "0": "",
+            "g": "h"
+        }
+    },
+    "right-menu": {
+        "Right Menu 1": {
+            "k": "l",
+            "0": "",
+            "m": "n"
+        },
+        "Right menu 2": {
+            "o": "p",
+            "0": "",
+            "q": "r"
+        }
+    }
+}
+```
+Prázdná položka **"0": ""** je rendrována jako oddělovač.
+
+
 Logování
 --------
 

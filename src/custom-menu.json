@@ -1,5 +1,6 @@
 {
     "left-menu": {
+        "http://v.s.cz/": "Autor",
         "Left Menu 1": {
             "a": "b",
             "0": "",
@@ -21,6 +22,7 @@
             "o": "p",
             "0": "",
             "q": "r"
-        }
+        },
+        "http://flexibee.eu/": "FlexiBee"
     }
 }

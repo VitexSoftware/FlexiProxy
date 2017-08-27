@@ -22,7 +22,7 @@ class CustomMenu extends \FlexiProxy\plugins\output\CommonHtml implements \Flexi
      * Name of default config file
      * @var string
      */
-    public $configFile  = 'custom-menu.json';
+    public $configFile = 'custom-menu.json';
 
     /**
      * Vloží rozbalovací menu.
@@ -74,14 +74,22 @@ class CustomMenu extends \FlexiProxy\plugins\output\CommonHtml implements \Flexi
 
         if (count($leftMenu)) {
             foreach ($leftMenu as $menuName => $menuItems) {
-                $this->addToMainMenu($this->addDropDownMenu($menuName,
-                        $menuItems));
+                $this->addToMainMenu(is_array($menuItems) ? $this->addDropDownMenu($menuName,
+                            $menuItems) : new \Ease\Html\LiTag(new \Ease\Html\ATag($menuName,
+                        $menuItems),
+                        strstr(\Ease\WebPage::getUri(), $menuName) ? ['class' => 'active']
+                                : [
+                        ] ));
             }
         }
         if (count($rightMenu)) {
             foreach (array_reverse($rightMenu) as $menuName => $menuItems) {
-                $this->addToMainMenu($this->addDropDownMenu($menuName,
-                        $menuItems), 'right');
+                $this->addToMainMenu(is_array($menuItems) ? $this->addDropDownMenu($menuName,
+                            $menuItems) : new \Ease\Html\LiTag(new \Ease\Html\ATag($menuName,
+                        $menuItems),
+                        strstr(\Ease\WebPage::getUri(), $menuName) ? ['class' => 'active']
+                                : [
+                            ] ), 'right');
             }
         }
     }
