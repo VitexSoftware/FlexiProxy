@@ -1,0 +1,26 @@
+{
+    "left-menu": {
+        "Left Menu 1": {
+            "a": "b",
+            "0": "",
+            "c": "d"
+        },
+        "Left menu 2": {
+            "e": "f",
+            "0": "",
+            "g": "h"
+        }
+    },
+    "right-menu": {
+        "Right Menu 1": {
+            "k": "l",
+            "0": "",
+            "m": "n"
+        },
+        "Right menu 2": {
+            "o": "p",
+            "0": "",
+            "q": "r"
+        }
+    }
+}

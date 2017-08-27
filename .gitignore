@@ -43,3 +43,6 @@ tests/_output/*
 /debian/flexiproxy-pricelist-attachment/
 /debian/flexiproxy-pricelist-attachment.substvars
 /debian/flexiproxy-pricelist-attachment.debhelper.log
+/debian/flexiproxy-custom-menu/
+/debian/flexiproxy-custom-menu.debhelper.log
+/debian/flexiproxy/

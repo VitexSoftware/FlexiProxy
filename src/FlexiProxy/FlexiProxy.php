@@ -185,8 +185,10 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     }
 
     /**
+     * Parse FlexiBee URI (recognize operation)
      *
      * @param string $uri
+     * 
      * @return array
      */
     public function parseFlexiBeeUriCompanyEvidenceItemOperation($uri)
@@ -208,8 +210,10 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
     }
 
     /**
+     * Parse FlexiBee URI
      *
      * @param string $uri
+     *
      * @return array
      */
     public function parseFlexiBeeUriCompanyEvidenceItem($uri)
@@ -500,6 +504,8 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
      * @param string $message  zprava
      * @param string $type     Fronta zprav (warning|info|error|success)
      * @param bool   $addIcons prida UTF8 ikonky na zacatek zprav
+     *
+     * @return boolean Status 
      */
     public function addStatusMessage($message, $type = 'info', $addIcons = true)
     {

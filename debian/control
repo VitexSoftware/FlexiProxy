@@ -60,7 +60,7 @@ Description: Attach fiels to Pricelist
 
 Package: flexiproxy-database
 Depends: ${misc:Depends},flexiproxy-core, php-pdo | php5-pdo | php7.0-pdo | php7.1-pdo, php5-pdo-pgsql | php7.0-pdo-pgsql | php7.0-pdo-mysql | php5-pdo-mysql | php7.1-pdo-pgsql | php7.1-pdo-mysql | php-mysql | php-pgsql, php-phinx
-Recommends: mysql-server,postgresql
+Recommends: default-mysql-server,postgresql
 Suggests: flexiproxy-history,flexiproxy-custom-columns
 Architecture: all
 Section: web
@@ -99,4 +99,12 @@ Section: web
 Priority: optional
 Description: FlexiBee enhancements for Developers
  Add Links to XML & Json Formats of evidencies
+
+Package: flexiproxy-custom-menu
+Depends: ${misc:Depends},flexiproxy
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee Custom menu items
+ Add submenus to main menu from custom-menu.json
 

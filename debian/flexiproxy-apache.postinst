@@ -14,21 +14,11 @@ set -e
 	a2ensite flexiproxy
 
 
-            if [ -f /etc/init.d/apache2 ] ; then
-                if [ -x /usr/sbin/invoke-rc.d ]; then
-                    invoke-rc.d apache2 reload 3>/dev/null || true
-                else
-                    /etc/init.d/apache2 reload 3>/dev/null || true
-                fi
-            fi
+        systemctl reload apache2 3>/dev/null || true
 
-            if [ -f /etc/init.d/avahi ] ; then
-                if [ -x /usr/sbin/invoke-rc.d ]; then
-                    invoke-rc.d avahi reload 3>/dev/null || true
-                else
-                    /etc/init.d/avahi reload 3>/dev/null || true
-                fi
-            fi
+        if [ -f /etc/init.d/avahi ] ; then
+                systemctl reload avahi 3>/dev/null || true
+        fi
 
     fi
 

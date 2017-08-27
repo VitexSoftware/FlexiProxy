@@ -85,29 +85,28 @@ class MainMenu extends \Ease\Html\Div
                 $nav->addDropDownMenu(isset($this->webPage->flexi->company) ? $companiesToMenu['/c/'.$this->webPage->flexi->company]
                             : _('Company'), $companiesToMenu);
 
-<<<<<<< HEAD
                 if (!isset($_SESSION['company'])) { //Auto choose first company
                     $_SESSION['company'] = $companies[0]['dbNazev'];
                     if (!defined('FLEXIBEE_COMPANY')) {
                         define('FLEXIBEE_COMPANY', $_SESSION['company']);
                     }
-=======
-                if (!isset($_SESSION)) { //Auto choose first company
-                    $_SESSION = $companies[0]['dbNazev'];
-                    define('FLEXIBEE_COMPANY', $_SESSION);
->>>>>>> c1e066d516a58d6207c34d7e7c746181727d889a
                 }
             }
 
+            $leftMenu = \Ease\Shared::instanced()->getConfigValue('left-menu');
 
-//            $nav->addDropDownMenu(_('Tools'),
-//                [
-//                'query.php' => _('Query'),
-//                'changesapi.php' => _('Changes API'),
-//                'changes.php' => _('Changes Recieved'),
-//                'fakechange.php' => _('WebHook test'),
-//                'ucetniobdobi.php' => _('Accounting period')
-//            ]);
+            if (count($leftMenu)) {
+                foreach ($leftMenu as $menuName => $menuItems) {
+                    $nav->addDropDownMenu($menuName, $menuItems);
+                }
+            }
+
+            $rightMenu = \Ease\Shared::instanced()->getConfigValue('right-menu');
+            if (count($rightMenu)) {
+                foreach ($rightMenu as $menuName => $menuItems) {
+                    $nav->addDropDownMenu($menuName, $menuItems, 'right');
+                }
+            }
         }
     }
 

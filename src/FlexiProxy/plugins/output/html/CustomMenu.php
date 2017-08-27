@@ -19,6 +19,12 @@ class CustomMenu extends \FlexiProxy\plugins\output\CommonHtml implements \Flexi
     public $myDirection = 'output';
 
     /**
+     * Name of default config file
+     * @var string
+     */
+    public $configFile  = 'custom-menu.json';
+
+    /**
      * Vloží rozbalovací menu.
      *
      * @param string       $label popisek menu
@@ -63,9 +69,20 @@ class CustomMenu extends \FlexiProxy\plugins\output\CommonHtml implements \Flexi
 
     public function process()
     {
-        $this->addToMainMenu($this->addDropDownMenu('Custom Menu',
-                ['a' => 'b', '', 'c' => 'd']));
-        $this->addToMainMenu($this->addDropDownMenu('Custom Right Menu',
-                ['e' => 'f', '', 'g' => 'h']), 'right');
+        $leftMenu  = \Ease\Shared::instanced()->getConfigValue('left-menu');
+        $rightMenu = \Ease\Shared::instanced()->getConfigValue('right-menu');
+
+        if (count($leftMenu)) {
+            foreach ($leftMenu as $menuName => $menuItems) {
+                $this->addToMainMenu($this->addDropDownMenu($menuName,
+                        $menuItems));
+            }
+        }
+        if (count($rightMenu)) {
+            foreach (array_reverse($rightMenu) as $menuName => $menuItems) {
+                $this->addToMainMenu($this->addDropDownMenu($menuName,
+                        $menuItems), 'right');
+            }
+        }
     }
 }
