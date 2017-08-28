@@ -5,11 +5,11 @@
 
 override_dh_install:
 	dh_install
-	sed -i -e 's/\/vendor\//\//g'                     debian/flexiproxy-core/usr/share/flexiproxy/about.php
-	sed -i -e 's/\.\.\//.\//g'                        debian/flexiproxy-database/var/lib/flexiproxy/phinx-adapter.php
-	sed -i -e 's/src/\/etc\/flexiproxy/g'             debian/flexiproxy-database/var/lib/flexiproxy/phinx-adapter.php
-	sed -i -e 's/..\/vendor/\/var\/lib\/flexiproxy/g' debian/flexiproxy-core/usr/share/flexiproxy/includes/Init.php
-	sed -i -e 's/..\/locale/\/usr\/share\/locale/g'   debian/flexiproxy-core/usr/share/flexiproxy/includes/Init.php
+	sed -i -e 's/\.\.\//usr\/share\/doc\/flexiproxy/g' debian/flexiproxy-core/usr/share/flexiproxy/about.php
+	sed -i -e 's/\.\.\//.\//g'                         debian/flexiproxy-database/var/lib/flexiproxy/phinx-adapter.php
+	sed -i -e 's/src/\/etc\/flexiproxy/g'              debian/flexiproxy-database/var/lib/flexiproxy/phinx-adapter.php
+	sed -i -e 's/..\/vendor/\/var\/lib\/flexiproxy/g'  debian/flexiproxy-core/usr/share/flexiproxy/includes/Init.php
+	sed -i -e 's/..\/locale/\/usr\/share\/locale/g'    debian/flexiproxy-core/usr/share/flexiproxy/includes/Init.php
 	sed -i "/confdir/c\\$$\options = ['confdir' => '/etc/flexiproxy/'];" debian/flexiproxy-core/usr/share/flexiproxy/includes/Init.php
 
 override_dh_clean:
