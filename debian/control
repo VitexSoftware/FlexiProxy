@@ -16,8 +16,8 @@ Description: FlexiProxy metapackage
  Install this package to get full application
 
 Package: flexiproxy-core
-Depends: ${misc:Depends},flexipeehp (>= 1.8.1),composer,php5-intl | php7.0-intl | php7.1-intl | php7.2-intl
-Recommends: flexibee
+Depends: ${misc:Depends},flexipeehp (>= 1.8.1),composer,php-intl | php5-intl | php7.0-intl | php7.1-intl | php7.2-intl, libjs-font-awesome
+Recommends: flexibee-server
 Architecture: all
 Section: web
 Priority: optional
