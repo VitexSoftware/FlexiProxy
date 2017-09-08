@@ -93,7 +93,7 @@ Description: FlexiBee custom columns
  Define and Use your own custom columns in API
 
 Package: flexiproxy-developer
-Depends: ${misc:Depends},flexiproxy
+Depends: ${misc:Depends},flexiproxy-core
 Architecture: all
 Section: web
 Priority: optional
@@ -101,10 +101,18 @@ Description: FlexiBee enhancements for Developers
  Add Links to XML & Json Formats of evidencies
 
 Package: flexiproxy-custom-menu
-Depends: ${misc:Depends},flexiproxy
+Depends: ${misc:Depends},flexiproxy-core
 Architecture: all
 Section: web
 Priority: optional
 Description: FlexiBee Custom menu items
  Add submenus to main menu from custom-menu.json
+
+Package: flexiproxy-invoicesend
+Depends: ${misc:Depends},flexiproxy-core
+Architecture: all
+Section: web
+Priority: optional
+Description: Send Invoice as mail
+ Send invoice in mail with isdoc and pdf attachment
 

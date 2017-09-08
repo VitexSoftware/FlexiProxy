@@ -1,0 +1,3 @@
+src/FlexiProxy/plugins/output/html/InvoiceSendButton.php		usr/share/flexiproxy/FlexiProxy/plugins/output/html/
+src/invoicesend.php                                                     usr/share/flexiproxy/
+src/images/sendmail.svg                                                 usr/share/flexiproxy/images/
