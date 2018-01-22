@@ -25,7 +25,7 @@ class LogoChanger extends \FlexiProxy\plugins\output\CommonHtml implements \Flex
     {
         $cfglogo = \Ease\Shared::instanced()->getConfigValue('logo');
         $newLogo = is_null($cfglogo) ? '/images/logo-flexiproxy.png' : $cfglogo;
-        $this->pregReplaceContent('/\/flexibee-static\/\d{4}\.(\d|\d{2})\.(\d|\d{2})\/img\/logo-abraflexibee.png/',
+        $this->pregReplaceContent('/\/flexibee-static\/(\d+\.)(\d+\.).*\/img\/logo-abraflexibee\.png/',
             $newLogo);
     }
 

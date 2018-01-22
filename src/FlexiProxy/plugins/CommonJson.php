@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FlexiProxy.
  *
@@ -20,7 +19,7 @@ class CommonJson extends \FlexiProxy\plugins\output\Common
      * Array of json data
      * @var array
      */
-    public $data     = null;
+    public $data = null;
 
     /**
      * We work only with

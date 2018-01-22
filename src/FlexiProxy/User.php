@@ -15,6 +15,10 @@ namespace FlexiProxy;
  */
 class User extends \Ease\User
 {
+    /**
+     * FlexiBee Helper
+     * @var \FlexiPeeHP\FlexiBeeRO 
+     */
     public $flexiBee = null;
 
     /**
@@ -51,7 +55,8 @@ class User extends \Ease\User
         $this->flexiBee->company  = null;
         $this->flexiBee->prefix   = null;
         $this->flexiBee->curlInit();
-        $companies                = $this->flexiBee->performRequest('c.json');
+        
+        $companies                = $this->flexiBee->performRequest('/c.json');
         if (isset($companies['companies'])) {
             if (isset($companies['companies']['company'][0]['dbNazev'])) {
                 $this->flexiBee->company = $companies['companies']['company'][0]['dbNazev'];

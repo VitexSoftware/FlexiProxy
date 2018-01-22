@@ -153,6 +153,29 @@ class Common
     }
 
     /**
+     * Delete All between
+     *
+     * @param string $beginning
+     * @param string $end
+     * @param string $string
+     * 
+     * @return string
+     */
+    function deleteAllBetween($beginning, $end, $string)
+    {
+        $beginningPos = strpos($string, $beginning);
+        $endPos       = strpos($string, $end);
+        if ($beginningPos === false || $endPos === false) {
+            return $string;
+        }
+
+        $textToDelete = substr($string, $beginningPos,
+            ($endPos + strlen($end)) - $beginningPos);
+
+        return str_replace($textToDelete, '', $string);
+    }
+
+    /**
      * Add Given String after found fragment
      *
      * @param string $after
