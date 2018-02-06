@@ -262,7 +262,7 @@ class FlexiProxy extends \FlexiPeeHP\FlexiBeeRW
             if (!$this->parseFlexiBeeUriCompanyEvidence($uri)) {
                 if (!$this->parseFlexiBeeUriCompanyEvidenceItemOperation($uri)) {
                     if (!$this->parseFlexiBeeUriCompany($uri)) {
-                        if (!strstr($uri, '/flexibee-static/')) {
+                        if (!strstr($uri, '/flexibee-static/') && (substr($uri,-4)!='.php') ) {
                             $this->addStatusMessage(sprintf(_('URI %s was not parsed'),
                                     $uri), 'warning');
                         }

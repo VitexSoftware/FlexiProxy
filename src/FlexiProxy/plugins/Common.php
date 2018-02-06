@@ -107,9 +107,24 @@ class Common
         }
     }
 
+    /**
+     * Simple replace on page
+     * 
+     * @param string $what
+     * @param string $to
+     * 
+     * @return boolean
+     */
     public function replaceContent($what, $to)
     {
-        $this->content = str_replace($what, $to, $this->content);
+        $replaced = false;
+        if(strstr($this->content, $what)){
+            $this->content = str_replace($what, $to, $this->content);
+            $replaced = true;
+        } else {
+            $this->flexiProxy->addStatusMessage( sprintf('replaceContent: %s not found ',$what),'warning');
+        }
+        return $replaced;
     }
 
     /**

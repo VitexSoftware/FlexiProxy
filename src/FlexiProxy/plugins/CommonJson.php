@@ -6,14 +6,14 @@
  * @copyright 2016-2017 VitexSoftware (G)
  */
 
-namespace FlexiProx\plugins;
+namespace FlexiProxy\plugins;
 
 /**
  * Description of CommonHtml
  *
  * @author vitex
  */
-class CommonJson extends \FlexiProxy\plugins\output\Common
+class CommonJson extends Common
 {
     /**
      * Array of json data

@@ -13,7 +13,7 @@ set -e
         a2enmod  dir
 	a2ensite flexiproxy
         a2enconf javascript-common.conf
-        a2enconf libjs-twitter-bootstrap.conf
+        a2enconf twitter-bootstrap.conf
 
         systemctl reload apache2 3>/dev/null || true
 

@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FlexiProxy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-26 15:19+0200\n"
-"PO-Revision-Date: 2017-07-26 15:23+0200\n"
-"Last-Translator: Vítězslav Dvořák <vitex@arachne.cz>\n"
+"POT-Creation-Date: 2018-02-06 22:40+0100\n"
+"PO-Revision-Date: 2018-02-06 22:42+0100\n"
+"Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
@@ -37,39 +37,49 @@ msgstr "Sloupec  %s byl odstraněn z evidence  %s"
 msgid "Column %s was not removed from evidence %s"
 msgstr "Sloupec %s nebyl odstraněn z evidence %s"
 
-#: src/FlexiProxy/FlexiProxy.php:242
+#: src/FlexiProxy/FlexiProxy.php:266
 #, php-format
 msgid "URI %s was not parsed"
 msgstr "URI %s nebylo rozparsováno"
 
-#: src/FlexiProxy/FlexiProxy.php:443
+#: src/FlexiProxy/FlexiProxy.php:473
 msgid "Please Check"
 msgstr "Prosím zkontroluj"
 
-#: src/FlexiProxy/FlexiProxy.php:449
+#: src/FlexiProxy/FlexiProxy.php:480
 #, php-format
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: src/FlexiProxy/FlexiProxy.php:481 src/FlexiProxy/FlexiProxy.php:490
+#: src/FlexiProxy/FlexiProxy.php:513 src/FlexiProxy/FlexiProxy.php:522
 #, php-format
 msgid "ApplyPlugin: %s"
 msgstr "Aplikován Plugin: %s "
 
-#: src/FlexiProxy/User.php:64
+#: src/FlexiProxy/User.php:69
 msgid "Login Failed"
 msgstr "Chyba přihlášení"
 
-#: src/FlexiProxy/User.php:97
+#: src/FlexiProxy/User.php:102
 msgid "Loading evidence list failed"
 msgstr "Načítání seznamu evidencí se nezdařilo"
 
-#: src/FlexiProxy/plugins/Common.php:119
+#: src/FlexiProxy/plugins/Common.php:140
 #, php-format
 msgid "Replace %s to %s on %s failed"
 msgstr "Přepsání %s na %s v %s selhalo"
 
-#: src/FlexiProxy/plugins/Common.php:128
+#: src/FlexiProxy/plugins/Common.php:165
+#, php-format
+msgid "AddBefore: pattern \"%s\" not found on %s"
+msgstr "Přidej před: vzorek \"%s\" nebyl nalezen v %s"
+
+#: src/FlexiProxy/plugins/Common.php:212
+#, php-format
+msgid "AddAfter: pattern \"%s\" not found on %s"
+msgstr "Přidej za: vzorek \"%s\" nebyl nalezen v %s"
+
+#: src/FlexiProxy/plugins/Common.php:222
 #, php-format
 msgid "Plugin with undefined process()"
 msgstr "Plugin bez definované metody process()"
@@ -78,16 +88,6 @@ msgstr "Plugin bez definované metody process()"
 #, php-format
 msgid "File %s was attached"
 msgstr "Byl přiložen soubor %s"
-
-#: src/FlexiProxy/plugins/output/CommonHtml.php:83
-#, php-format
-msgid "AddBefore: pattern \"%s\" not found on %s"
-msgstr "Přidej před: vzorek \"%s\" nebyl nalezen v %s"
-
-#: src/FlexiProxy/plugins/output/CommonHtml.php:94
-#, php-format
-msgid "AddAfter: pattern \"%s\" not found on %s"
-msgstr "Přidej za: vzorek \"%s\" nebyl nalezen v %s"
 
 #: src/FlexiProxy/plugins/output/html/AddCustomColumnsToEditor.php:31
 #: src/FlexiProxy/plugins/output/html/CustomColumnsHTML.php:33
@@ -111,6 +111,14 @@ msgstr "Json"
 #: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:33
 msgid "XML"
 msgstr "XML"
+
+#: src/FlexiProxy/plugins/output/html/InvoiceSendButton.php:27
+msgid "Send by mail"
+msgstr "Odešli mailem"
+
+#: src/FlexiProxy/plugins/output/html/InvoiceSendButton.php:27
+msgid "Send"
+msgstr "Odeslat"
 
 #: src/FlexiProxy/plugins/output/html/NewCustomColumnButton.php:28
 msgid "New Custom Column"
@@ -262,6 +270,30 @@ msgstr "FlexiProxy"
 msgid "Custom Columns for %s"
 msgstr "Uživatelské sloupečky pro %s"
 
+#: src/invoicesend.php:30
+#, php-format
+msgid "Invoice %s"
+msgstr "Faktura %s "
+
+#: src/invoicesend.php:31
+#, php-format
+msgid "Please pay %s,-"
+msgstr "Prosím zaplaťte %s,-"
+
+#: src/invoicesend.php:37 src/invoicesend.php:45
+#, php-format
+msgid "Error saving %s"
+msgstr "Chyba ukládání %s"
+
+#: src/invoicesend.php:49
+msgid "Message was not sent"
+msgstr "Zpráva nebyla odeslána"
+
+#: src/invoicesend.php:55
+#, php-format
+msgid "Missing email address for "
+msgstr "Chybějící emailová adresa pro"
+
 #: src/login.php:24
 msgid "Server added to bookmarks"
 msgstr "Server byl přidán do záložek"
@@ -329,10 +361,6 @@ msgstr "Díky za váš zájem a těším se na další návštěvu"
 #, fuzzy
 #~ msgid "ChangesAPI zakázáno"
 #~ msgstr "API Změn bylo povoleno"
-
-#, fuzzy
-#~ msgid "Invoice settle error"
-#~ msgstr "Chyba deserializace %s #%s "
 
 #, fuzzy
 #~ msgid "Invoice match error"
@@ -520,10 +548,6 @@ msgstr "Díky za váš zájem a těším se na další návštěvu"
 
 #~ msgid "Chybné volání"
 #~ msgstr "Chybné volání"
-
-#, fuzzy
-#~ msgid "Error saving file"
-#~ msgstr "Soubor"
 
 #, fuzzy
 #~ msgid "Password was changed"
@@ -1543,10 +1567,6 @@ msgstr "Díky za váš zájem a těším se na další návštěvu"
 #~ msgstr "Mailová adresa je krátka"
 
 #, fuzzy
-#~ msgid "invalid email address"
-#~ msgstr "Email"
-
-#, fuzzy
 #~ msgid "password is too short"
 #~ msgstr "Heslo je krátké"
 
@@ -1687,10 +1707,6 @@ msgstr "Díky za váš zájem a těším se na další návštěvu"
 #~ msgstr "Záznam  byl přidám"
 
 #, fuzzy
-#~ msgid "Host was not saved"
-#~ msgstr "Vzkaz byl uložen"
-
-#, fuzzy
 #~ msgid "Host was saved"
 #~ msgstr "Vzkaz byl uložen"
 
@@ -1709,10 +1725,6 @@ msgstr "Díky za váš zájem a těším se na další návštěvu"
 #, fuzzy
 #~ msgid "Scan and watch services"
 #~ msgstr "Služby"
-
-#, fuzzy
-#~ msgid "Sendor OK"
-#~ msgstr "OK"
 
 #, fuzzy
 #~ msgid "Actialize Sensor"
@@ -2193,10 +2205,6 @@ msgstr "Díky za váš zájem a těším se na další návštěvu"
 #, fuzzy
 #~ msgid "Script Editor"
 #~ msgstr "Editor"
-
-#, fuzzy
-#~ msgid "Send file"
-#~ msgstr "Odešli"
 
 #, fuzzy
 #~ msgid "Used by commands"

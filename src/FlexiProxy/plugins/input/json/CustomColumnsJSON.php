@@ -14,7 +14,7 @@ namespace FlexiProxy\plugins\input\json;
  *
  * @author vitex
  */
-class CustomColumnsJSON extends \FlexiProx\plugins\CommonJson implements \FlexiProxy\plugins\CommonPluginInterface
+class CustomColumnsJSON extends \FlexiProxy\plugins\CommonJson implements \FlexiProxy\plugins\CommonPluginInterface
 {
 
     public $myPathRegex = '\/c\/([a-z_]+)\/([a-z\-]+)\/(\d+)\.json$';

@@ -10,7 +10,7 @@ namespace FlexiProxy;
 
 require_once '../vendor/autoload.php';
 
-\Ease\Shared::initializeGetText('flexiproxy', 'cs_CZ', '../i18n');
+\Ease\Shared::initializeGetText('flexiproxy', 'cs_CZ', '../locale');
 
 session_start();
 

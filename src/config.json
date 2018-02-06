@@ -6,7 +6,7 @@
     "FLEXIBEE_LOGIN": "demo",
     "FLEXIBEE_PASSWORD": "Wrac1osImKens~",
     "FLEXIBEE_COMPANY": "demo",
-    "access_policy": "login",
+    "access_policy": "public",
     "logo": "https://system.spoje.net/images/spoje-net_logo.gif",
     "debug": "true"
 }
