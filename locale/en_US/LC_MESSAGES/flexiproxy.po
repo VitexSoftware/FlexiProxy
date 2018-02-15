@@ -1,0 +1,4088 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FlexiProxy\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-25 19:33+0100\n"
+"PO-Revision-Date: 2017-04-25 19:36+0100\n"
+"Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
+"Language-Team: Vitex Software <info@vitexsoftware.cz>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /home/vitex/Projects/VitexSoftware/FlexiProxy/\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:78
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:78
+#: src/FlexiProxy/CustomColumns.php:78
+#, php-format
+msgid "Column %s was added to evidence %s"
+msgstr "Column %s was added to evidence %s"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:81
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:81
+#: src/FlexiProxy/CustomColumns.php:81
+#, php-format
+msgid "Column %s was not added from evidence %s"
+msgstr "Column %s was not added from evidence %s"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:92
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:92
+#: src/FlexiProxy/CustomColumns.php:92
+#, php-format
+msgid "Column %s was removed from evidence %s"
+msgstr "Column %s was removed from evidence %s"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:95
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/CustomColumns.php:95
+#: src/FlexiProxy/CustomColumns.php:95
+#, php-format
+msgid "Column %s was not removed from evidence %s"
+msgstr "Column %s was not removed from evidence %s"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:166
+#: src/FlexiProxy/FlexiProxy.php:166
+#, php-format
+msgid "URI %s was not parsed"
+msgstr "URI %s was not parsed"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:364
+#: src/FlexiProxy/FlexiProxy.php:364
+msgid "Please Check"
+msgstr "Please Check"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:370
+#: src/FlexiProxy/FlexiProxy.php:370
+#, php-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:401
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/FlexiProxy.php:409
+#: src/FlexiProxy/FlexiProxy.php:401 src/FlexiProxy/FlexiProxy.php:409
+#, php-format
+msgid "ApplyPlugin: %s"
+msgstr "ApplyPlugin: %s"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/User.php:64
+#: src/FlexiProxy/User.php:64
+msgid "Login Failed"
+msgstr "Login Failed"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/User.php:97
+#: src/FlexiProxy/User.php:97
+msgid "Loading evidence list failed"
+msgstr "Loading evidence list failed"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/Common.php:119
+#: src/FlexiProxy/plugins/Common.php:119
+#, php-format
+msgid "Replace %s to %s on %s failed"
+msgstr "Replace %s to %s on %s failed"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/Common.php:128
+#: src/FlexiProxy/plugins/Common.php:128
+#, php-format
+msgid "Plugin with undefined process()"
+msgstr "Plugin with undefined process()"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/html/output/CommonHtml.php:83
+#: src/FlexiProxy/plugins/output/html/CommonHtml.php:83
+#, php-format
+msgid "AddBefore: pattern \"%s\" not found on %s"
+msgstr "AddBefore: pattern \"%s\" not found on %s"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/plugins/html/output/CommonHtml.php:94
+#: src/FlexiProxy/plugins/output/html/CommonHtml.php:94
+#, php-format
+msgid "AddAfter: pattern \"%s\" not found on %s"
+msgstr "AddAfter: pattern \"%s\" not found on %s"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:38
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:73
+#: src/FlexiProxy/ui/BootstrapMenu.php:38
+#: src/FlexiProxy/ui/BootstrapMenu.php:73
+msgid "About"
+msgstr "About"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:48
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:56
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:51
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:75
+#: src/FlexiProxy/ui/BootstrapMenu.php:48
+#: src/FlexiProxy/ui/BootstrapMenu.php:56 src/login.php:51 src/login.php:75
+msgid "Sign in"
+msgstr "Sign in"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:51
+#: src/FlexiProxy/ui/BootstrapMenu.php:51
+msgid "Server"
+msgstr "Server"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:52
+#: src/FlexiProxy/ui/BootstrapMenu.php:52
+msgid "login"
+msgstr "login"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:53
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:82
+#: src/FlexiProxy/ui/BootstrapMenu.php:53 src/login.php:82
+msgid "Password"
+msgstr "Password"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:55
+#: src/FlexiProxy/ui/BootstrapMenu.php:55
+msgid "Remeber me"
+msgstr "Remeber me"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:62
+#: src/FlexiProxy/ui/BootstrapMenu.php:62
+msgid "Public Access"
+msgstr "Public Access"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:69
+#: src/FlexiProxy/ui/BootstrapMenu.php:69
+msgid "Settings"
+msgstr "Settings"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:75
+#: src/FlexiProxy/ui/BootstrapMenu.php:75
+msgid "Sign off"
+msgstr "Sign off"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/BootstrapMenu.php:90
+#: src/FlexiProxy/plugins/output/html/CommonStatusMessages.php:27
+#: src/FlexiProxy/ui/BootstrapMenu.php:90
+msgid "Click to hide messages"
+msgstr "Click to hide messages"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/MainMenu.php:83
+#: src/FlexiProxy/ui/MainMenu.php:83
+msgid "Create Company"
+msgstr "Create Company"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/MainMenu.php:86
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:107
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:109
+#: src/FlexiProxy/ui/MainMenu.php:86 src/login.php:107 src/login.php:109
+msgid "Company"
+msgstr "Company"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:41
+#: src/FlexiProxy/ui/PageBottom.php:41
+msgid "Sources"
+msgstr "Sources"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:51
+#: src/FlexiProxy/ui/PageBottom.php:51
+msgid "Support"
+msgstr "Support"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:59
+#: src/FlexiProxy/ui/PageBottom.php:59
+msgid "Services"
+msgstr "Services"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:67
+#: src/FlexiProxy/ui/PageBottom.php:67
+msgid "Docs"
+msgstr "Docs"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:73
+#: src/FlexiProxy/ui/PageBottom.php:73
+msgid "Author"
+msgstr "Author"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:76
+#: src/FlexiProxy/ui/PageBottom.php:76
+msgid "Vitex Software"
+msgstr "Vitex Software"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:79
+#: src/FlexiProxy/ui/PageBottom.php:79
+msgid "Sponsored by"
+msgstr "Sponsored by"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:82
+#: src/FlexiProxy/ui/PageBottom.php:82
+msgid "Spoje.Net"
+msgstr "Spoje.Net"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/PageBottom.php:92
+#: src/FlexiProxy/ui/PageBottom.php:92
+msgid "&copy; 2017 Vítězslav \"Vitex\" Dvořák"
+msgstr "&copy; 2017 Vítězslav \"Vitex\" Dvořák"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/FlexiProxy/ui/WebPage.php:74
+#: src/FlexiProxy/ui/WebPage.php:74
+msgid "Please sign in as admin first"
+msgstr "Please sign in as admin first"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/about.php:15 src/about.php:15
+msgid "About application"
+msgstr "About application"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/about.php:17 src/about.php:17
+msgid "Used Libraries"
+msgstr "Used Libraries"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/index.php:15
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/customcolumns.php:34
+#: src/customcolumns.php:34 src/index.php:15
+msgid "FlexiProxy"
+msgstr "FlexiProxy"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:24 src/login.php:24
+msgid "Server added to bookmarks"
+msgstr "Server added to bookmarks"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:37 src/login.php:37
+msgid "Signed in as: "
+msgstr "Signed in as: "
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:47 src/login.php:47
+msgid "Please confirm your login credentials"
+msgstr "Please confirm your login credentials"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:61 src/login.php:61
+msgid "Login History"
+msgstr "Login History"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:79 src/login.php:79
+msgid "User name"
+msgstr "User name"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:81 src/login.php:81
+msgid "Login name"
+msgstr "Login name"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:85 src/login.php:85
+msgid "User's password"
+msgstr "User's password"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:118 src/login.php:118
+msgid "Show product images"
+msgstr "Show product images"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/login.php:121 src/login.php:121
+msgid "Features"
+msgstr "Features"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/logout.php:28 src/logout.php:28
+msgid "Sign out"
+msgstr "Sign out"
+
+#: debian/flexiproxy-core/usr/share/flexiproxy/logout.php:32 src/logout.php:32
+msgid "Thank you for your patronage and look forward to another visit"
+msgstr "Thank you for your patronage and look forward to another visit"
+
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/plugins/output/html/AddCustomColumnsToEditor.php:31
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/plugins/output/html/CustomColumnsHTML.php:33
+#: src/FlexiProxy/plugins/output/html/AddCustomColumnsToEditor.php:31
+#: src/FlexiProxy/plugins/output/html/CustomColumnsHTML.php:33
+msgid "Custom Columns"
+msgstr "Custom Columns"
+
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/plugins/output/html/NewCustomColumnButton.php:28
+#: src/FlexiProxy/plugins/output/html/NewCustomColumnButton.php:28
+msgid "New Custom Column"
+msgstr "New Custom Column"
+
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/ui/CustomColumnForm.php:24
+#: src/FlexiProxy/ui/CustomColumnForm.php:24
+msgid "New Column Name"
+msgstr "New Column Name"
+
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/FlexiProxy/ui/CustomColumnForm.php:25
+#: src/FlexiProxy/ui/CustomColumnForm.php:25
+msgid "Create"
+msgstr "Create"
+
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/customcolumns.php:27
+#: src/customcolumns.php:27
+#, php-format
+msgid "Removed column %s from evidence %s"
+msgstr "Removed column %s from evidence %s"
+
+#: debian/flexiproxy-custom-columns/usr/share/flexiproxy/customcolumns.php:39
+#: src/customcolumns.php:39
+#, php-format
+msgid "Custom Columns for %s"
+msgstr "Custom Columns for %s"
+
+#: debian/flexiproxy-developer/usr/share/flexiproxy/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:28
+#: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:28
+msgid "JSON"
+msgstr "JSON"
+
+#: debian/flexiproxy-developer/usr/share/flexiproxy/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:30
+#: src/FlexiProxy/plugins/output/html/DeveloperEnhancements.php:30
+msgid "XML"
+msgstr "XML"
+
+#: src/FlexiProxy/plugins/output/html/Attachments.php:27
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:28
+msgid "New Attachment"
+msgstr "New Attachment"
+
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:27
+msgid "New pricelist Attachment"
+msgstr "New pricelist Attachment"
+
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:36
+msgid "Latest attachment"
+msgstr "Latest attachment"
+
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:45
+msgid "Attachment File"
+msgstr "Attachment File"
+
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:46
+msgid "image or other record related document"
+msgstr "image or other record related document"
+
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:51
+#, php-format
+msgid "New %s attachment"
+msgstr "New %s attachment"
+
+#: src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php:61
+#, php-format
+msgid "Back to %s"
+msgstr "Back to %s"
+
+#: src/FlexiProxy/plugins/output/html/TakeNewPricelistAttachment.php:37
+#, php-format
+msgid "File %s was attached"
+msgstr "File %s was attached"
+
+#: src/FlexiProxy/ui/CustomColumnWidget.php:31
+msgid "Remove Column"
+msgstr "Remove Column"
+
+#~ msgid "Configuration Generation"
+#~ msgstr "Configuration Generation"
+
+#~ msgid "configuration file %s was created"
+#~ msgstr "configuration file %s was created"
+
+#~ msgid "configuration file  %s was not created"
+#~ msgstr "configuration file  %s was not created"
+
+#~ msgid "Chyba:"
+#~ msgstr "ERROR:"
+
+#~ msgid "Configuration control empty result"
+#~ msgstr "Configuration control empty result"
+
+#~ msgid "Please check if /etc/sudoers contains:"
+#~ msgstr "Please check if /etc/sudoers contains:"
+
+#~ msgid "Error:"
+#~ msgstr "Error:"
+
+#~ msgid "Notification period"
+#~ msgstr "Notification period"
+
+#~ msgid "is not defined anywhere"
+#~ msgstr "is not defined anywhere"
+
+#~ msgid "Chyba v konfiguračním souboru"
+#~ msgstr "Error in configuration file"
+
+#~ msgid "Varování:"
+#~ msgstr "Warning"
+
+#~ msgid "nemá přiřazené žádné služby"
+#~ msgstr "has no services asigned"
+
+#~ msgid "total %s warnings"
+#~ msgstr "total %s warnings"
+
+#~ msgid "test successfully done without warnings"
+#~ msgstr "test successfully done without warnings"
+
+#~ msgid "total %s errors"
+#~ msgstr "total %s errors"
+
+#~ msgid "test successfully done without errors"
+#~ msgstr "test successfully done without errors"
+
+#~ msgid "All your configuration files was regenerated"
+#~ msgstr "All your configuration files was regenerated"
+
+#~ msgid "Done"
+#~ msgstr "Done"
+
+#~ msgid "Configuration Confirmed"
+#~ msgstr "Configuration Confirmed"
+
+#~ msgid "Sensor Configuration Confirmed"
+#~ msgstr "Sensor Configuration Confirmed"
+
+#~ msgid "Configuration Confirmation Error"
+#~ msgstr "Configuration Confirmation Error"
+
+#~ msgid "Watch route to host"
+#~ msgstr "Watch route to host"
+
+#~ msgid "Chybné volání"
+#~ msgstr "Wrong call"
+
+#~ msgid "Error saving file"
+#~ msgstr "Error saving file"
+
+#~ msgid "Password was changed"
+#~ msgstr "Password was changed"
+
+#~ msgid "Changed monitoring password"
+#~ msgstr "Changed monitoring password"
+
+#~ msgid "Dear user %s, your monitoring password was changed to"
+#~ msgstr "Dear user %s, your monitoring password was changed to"
+
+#~ msgid "Current password"
+#~ msgstr "Current password"
+
+#~ msgid "New Password"
+#~ msgstr "New Password"
+
+#~ msgid "Password confirm"
+#~ msgstr "Password confirm"
+
+#~ msgid "Change password"
+#~ msgstr "Change password"
+
+#~ msgid "Password change"
+#~ msgstr "Password change"
+
+#~ msgid "Deleted"
+#~ msgstr "Deleted"
+
+#~ msgid "Record was added"
+#~ msgstr "Record was added"
+
+#~ msgid "Record was not added"
+#~ msgstr "Record was not added"
+
+#~ msgid "Record was updated"
+#~ msgstr "Record was updated"
+
+#~ msgid "Record was not updated"
+#~ msgstr "Record was not updated"
+
+#~ msgid "Unexistent host %s in service %s: fixing"
+#~ msgstr "Unexistent host %s in service %s: fixing"
+
+#~ msgid "Service %s was fixed"
+#~ msgstr "Service %s was fixed"
+
+#~ msgid "Service %s was not fixed"
+#~ msgstr "Service %s was not fixed"
+
+#, fuzzy
+#~ msgid "Smazané nepoužívané služby"
+#~ msgstr "Services"
+
+#~ msgid "<strong>%s</strong> : %s"
+#~ msgstr "<strong>%s</strong> : %s"
+
+#~ msgid "Parent <strong>%s</strong> of host %s with wrong id ID"
+#~ msgstr "Parent <strong>%s</strong> of host %s with wrong id ID"
+
+#~ msgid "Parent <strong>%s</strong> of hosta %s does not exist"
+#~ msgstr "Parent <strong>%s</strong> of hosta %s does not exist"
+
+#, fuzzy
+#~ msgid "Konfigurace hosta"
+#~ msgstr "of the host"
+
+#~ msgid "Host Configuration"
+#~ msgstr "Host Configuration"
+
+#~ msgid "Refresh sensor installation"
+#~ msgstr "Refresh sensor installation"
+
+#~ msgid "Start host downtime"
+#~ msgstr "Start host downtime"
+
+#~ msgid "End host downtime"
+#~ msgstr "End host downtime"
+
+#~ msgid "Confirm configurations"
+#~ msgstr "Confirm configurations"
+
+#~ msgid "Scripts"
+#~ msgstr "Scripts"
+
+#~ msgid "Confirm Configuration"
+#~ msgstr "Confirm Configuration"
+
+#~ msgid "Added watched services: %s"
+#~ msgstr "Added watched services: %s"
+
+#~ msgid "Script body"
+#~ msgstr "Script body"
+
+#~ msgid "Comand owner"
+#~ msgstr "Comand owner"
+
+#~ msgid "Publicity"
+#~ msgstr "Publicity"
+
+#~ msgid "Platform"
+#~ msgstr "Platform"
+
+#~ msgid "Script"
+#~ msgstr "Script"
+
+#~ msgid "Set sensor state manually"
+#~ msgstr "Set sensor state manually"
+
+#~ msgid "Windows NRPE"
+#~ msgstr "Windows NRPE"
+
+#~ msgid "Active NRPE for NSClient++"
+#~ msgstr "Active NRPE for NSClient++"
+
+#~ msgid "Oskenovat a sledovat služby"
+#~ msgstr "Scan and monitor services"
+
+#~ msgid "Windows NSCA"
+#~ msgstr "Windows NSCA"
+
+#~ msgid "Passive NSCA for NSClient++"
+#~ msgstr "Passive NSCA for NSClient++"
+
+#~ msgid "Deprecated BAT Configuration Script"
+#~ msgstr "Deprecated BAT Configuration Script"
+
+#~ msgid "Linux NRPE"
+#~ msgstr "Linux NRPE"
+
+#~ msgid "Active NRPE for NRPE Server"
+#~ msgstr "Active NRPE for NRPE Server"
+
+#~ msgid "Please install sensor first by this command"
+#~ msgstr "Please install sensor first by this command"
+
+#~ msgid "Scan & watch services"
+#~ msgstr "Scan & watch services"
+
+#~ msgid "Linux NSCA"
+#~ msgstr "Linux NSCA"
+
+#~ msgid "Passive NSCA for NSCP Sensor"
+#~ msgstr "Passive NSCA for NSCP Sensor"
+
+#~ msgid "Generic Active"
+#~ msgstr "Generic Active"
+
+#~ msgid "Scan & Watch services"
+#~ msgstr "Scan & Watch services"
+
+#~ msgid "Generic Passive"
+#~ msgstr "Generic Passive"
+
+#~ msgid "Download NSClient++"
+#~ msgstr "Download NSClient++"
+
+#~ msgid "Watched services preset name"
+#~ msgstr "Watched services preset name"
+
+#~ msgid "memeber services"
+#~ msgstr "memeber services"
+
+#~ msgid "member contacts"
+#~ msgstr "member contacts"
+
+#~ msgid "notes"
+#~ msgstr "notes"
+
+#~ msgid "Sign Up"
+#~ msgstr "Sign Up"
+
+#~ msgid "Sign In"
+#~ msgstr "Sign In"
+
+#~ msgid "Configuration overview"
+#~ msgstr "Configuration overview"
+
+#~ msgid "Value from template"
+#~ msgstr "Value from template"
+
+#~ msgid "Missing definiton"
+#~ msgstr "Missing definiton"
+
+#~ msgid "Default"
+#~ msgstr "Default"
+
+#~ msgid "vzdálený test"
+#~ msgstr "remote test"
+
+#~ msgid "Parametry"
+#~ msgstr "Parameters"
+
+#~ msgid "Unknown type of %s for column %s"
+#~ msgstr "Unknown type of %s for column %s"
+
+#~ msgid "More Options:"
+#~ msgstr "More Options:"
+
+#~ msgid "this record is not generated to icinga config file"
+#~ msgstr "this record is not generated to icinga config file"
+
+#~ msgid "this record is public"
+#~ msgstr "this record is public"
+
+#~ msgid "Column %s/%s without known severity"
+#~ msgstr "Column %s/%s without known severity"
+
+#~ msgid "Info missing"
+#~ msgstr "Info missing"
+
+#~ msgid "column without caption"
+#~ msgstr "column without caption"
+
+#~ msgid "Requied value is not set"
+#~ msgstr "Requied value is not set"
+
+#~ msgid "Advanced"
+#~ msgstr "Advanced"
+
+#~ msgid "Optional"
+#~ msgstr "Optional"
+
+#~ msgid "Jedno povinné políčko zůstalo nevyplněné"
+#~ msgstr "One mandatory field left blank"
+
+#~ msgid "Není vyplněno ' + errors + ' políček. Tyto byly označeny"
+#~ msgstr "Fields issing ' + errors + ' fields. They have been highlighted"
+
+#~ msgid "Children"
+#~ msgstr "Children"
+
+#~ msgid "Please save record firs"
+#~ msgstr "Please save record firs"
+
+#~ msgid "The item %s was added"
+#~ msgstr "The item %s was added"
+
+#~ msgid "The item %s was not added"
+#~ msgstr "The item %s was not added"
+
+#~ msgid "The item %s has been removed"
+#~ msgstr "The item %s has been removed"
+
+#~ msgid "The item %s not removed"
+#~ msgstr "The item %s not removed"
+
+#~ msgid "Actualise Sensor"
+#~ msgstr "Actualise Sensor"
+
+#~ msgid "Outdated Sensor <span class=\"badge\">%s</span>"
+#~ msgstr "Outdated Sensor <span class=\"badge\">%s</span>"
+
+#~ msgid "Sensor Deploy"
+#~ msgstr "Sensor Deploy"
+
+#~ msgid "Without sensor <span class=\"badge\">%s</span>"
+#~ msgstr "Without sensor <span class=\"badge\">%s</span>"
+
+#~ msgid "Assign parents"
+#~ msgstr "Assign parents"
+
+#~ msgid "Watch hosts on route"
+#~ msgstr "Watch hosts on route"
+
+#~ msgid "Without parents <span class=\"badge\">%s</span>"
+#~ msgstr "Without parents <span class=\"badge\">%s</span>"
+
+#~ msgid "Assign icon"
+#~ msgstr "Assign icon"
+
+#~ msgid "Without icon <span class=\"badge\">%s</span>"
+#~ msgstr "Without icon <span class=\"badge\">%s</span>"
+
+#~ msgid "Assign Contact"
+#~ msgstr "Assign Contact"
+
+#~ msgid "Without contacts <span class=\"badge\">%s</span>"
+#~ msgstr "Without contacts <span class=\"badge\">%s</span>"
+
+#~ msgid "Hosts by configuration state"
+#~ msgstr "Hosts by configuration state"
+
+#~ msgid "Overall %s hosts without actual configuration. (%s actual)"
+#~ msgstr "Overall %s hosts without actual configuration. (%s actual)"
+
+#~ msgid "Close"
+#~ msgstr "Close"
+
+#~ msgid "No"
+#~ msgstr "No"
+
+#~ msgid "Yes"
+#~ msgstr "Yes"
+
+#~ msgid "Contacts"
+#~ msgstr "Contacts"
+
+#~ msgid "Please saver record first"
+#~ msgstr "Please saver record first"
+
+#~ msgid "Edit"
+#~ msgstr "Edit"
+
+#~ msgid "Start notifing"
+#~ msgstr "Start notifing"
+
+#~ msgid "Stop notifing"
+#~ msgstr "Stop notifing"
+
+#~ msgid "Založeno"
+#~ msgstr "Established"
+
+#~ msgid "Kontaktní údaj %s %s byl přidán"
+#~ msgstr "Contact detail %s %s added"
+
+#~ msgid "Kontaktní údaj %s %s nebyl přidán"
+#~ msgstr "Contact detail %s %s not added"
+
+#~ msgid "Vlastnosti"
+#~ msgstr "Properties"
+
+#~ msgid "smazat"
+#~ msgstr "delete"
+
+#~ msgid "Kontakt"
+#~ msgstr "Contact"
+
+#~ msgid "telefonní číslo, email či jabberová adresa dle druhu kontaktu"
+#~ msgstr "Phone number, e-mail, XMPP uid (depends on type of contact)"
+
+#~ msgid "Uložit"
+#~ msgstr "Save"
+
+#~ msgid "Přidat kontaktní údaj"
+#~ msgstr "Add contact information"
+
+#~ msgid "K tomuto kontaktu již není možné přidávat další údaje."
+#~ msgstr "Not possible to add more details"
+
+#~ msgid "Add"
+#~ msgstr "Add"
+
+#~ msgid "Delete"
+#~ msgstr "Delete"
+
+#~ msgid "Title missing"
+#~ msgstr "Title missing"
+
+#~ msgid "Please select any rows"
+#~ msgstr "Please select any rows"
+
+#~ msgid "Save"
+#~ msgstr "Save"
+
+#~ msgid "Save record first"
+#~ msgstr "Save record first"
+
+#~ msgid "Assign"
+#~ msgstr "Assign"
+
+#~ msgid "Remove"
+#~ msgstr "Remove"
+
+#~ msgid "Editace"
+#~ msgstr "Edit"
+
+#~ msgid "Hosts checked for service"
+#~ msgstr "Hosts checked for service"
+
+#~ msgid "Start checking"
+#~ msgstr "Start checking"
+
+#~ msgid "Přestat sledovat"
+#~ msgstr "Stop monitoring"
+
+#~ msgid "Item %s was added"
+#~ msgstr "Item %s was added"
+
+#~ msgid "item %s was removed"
+#~ msgstr "item %s was removed"
+
+#~ msgid "item %s was not removed"
+#~ msgstr "item %s was not removed"
+
+#~ msgid "Choose icon"
+#~ msgstr "Choose icon"
+
+#~ msgid "Uload your own"
+#~ msgstr "Uload your own"
+
+#~ msgid "GIF,PNG or JPG image, best 40x40 px"
+#~ msgstr "GIF,PNG or JPG image, best 40x40 px"
+
+#~ msgid "Icon from file"
+#~ msgstr "Icon from file"
+
+#~ msgid "File on your disk"
+#~ msgstr "File on your disk"
+
+#~ msgid "Icon from URL"
+#~ msgstr "Icon from URL"
+
+#~ msgid "File on internet"
+#~ msgstr "File on internet"
+
+#~ msgid "Image title"
+#~ msgstr "Image title"
+
+#~ msgid "informace"
+#~ msgstr "informace"
+
+#~ msgid "Regenerate All"
+#~ msgstr "Regenerate All"
+
+#~ msgid "Apply changes"
+#~ msgstr "Apply changes"
+
+#~ msgid "Apply Changes"
+#~ msgstr "Apply Changes"
+
+#~ msgid "New Host wizard"
+#~ msgstr "New Host wizard"
+
+#~ msgid "New Active Host"
+#~ msgstr "New Active Host"
+
+#~ msgid "New hostgroup"
+#~ msgstr "New hostgroup"
+
+#~ msgid "Hostgroup Overview"
+#~ msgstr "Hostgroup Overview"
+
+#~ msgid "Detail host overview"
+#~ msgstr "Detail host overview"
+
+#~ msgid "Topology"
+#~ msgstr "Topology"
+
+#~ msgid "Hosts"
+#~ msgstr "Hosts"
+
+#~ msgid "Users"
+#~ msgstr "Users"
+
+#~ msgid "New User"
+#~ msgstr "New User"
+
+#~ msgid "Users Overview"
+#~ msgstr "Users Overview"
+
+#~ msgid "New Usergroup"
+#~ msgstr "New Usergroup"
+
+#~ msgid "Usergroup overview"
+#~ msgstr "Usergroup overview"
+
+#~ msgid "New Service Wizard"
+#~ msgstr "New Service Wizard"
+
+#~ msgid "New service"
+#~ msgstr "New service"
+
+#~ msgid "Services overview"
+#~ msgstr "Services overview"
+
+#~ msgid "New servicegroup"
+#~ msgstr "New servicegroup"
+
+#~ msgid "Servicegroups overview"
+#~ msgstr "Servicegroups overview"
+
+#~ msgid "New watched services set"
+#~ msgstr "New watched services set"
+
+#~ msgid "Watched services sets overview"
+#~ msgstr "Watched services sets overview"
+
+#~ msgid "Služby"
+#~ msgstr "Services"
+
+#~ msgid "Contacts overview"
+#~ msgstr "Contacts overview"
+
+#~ msgid "Contacts Overview"
+#~ msgstr "Contacts Overview"
+
+#~ msgid "Contactgroups overview"
+#~ msgstr "Contactgroups overview"
+
+#~ msgid "New contactgroup"
+#~ msgstr "New contactgroup"
+
+#~ msgid "Command"
+#~ msgstr "Command"
+
+#~ msgid "New command"
+#~ msgstr "New command"
+
+#~ msgid "Commands overview"
+#~ msgstr "Commands overview"
+
+#~ msgid "Import"
+#~ msgstr "Import"
+
+#~ msgid "New script"
+#~ msgstr "New script"
+
+#~ msgid "Scripts Overview"
+#~ msgstr "Scripts Overview"
+
+#~ msgid "Timeperioods overview"
+#~ msgstr "Timeperioods overview"
+
+#~ msgid "New Timeperiod"
+#~ msgstr "New Timeperiod"
+
+#~ msgid "Icinga Settings"
+#~ msgstr "Icinga Settings"
+
+#~ msgid "Regenerate All Config files"
+#~ msgstr "Regenerate All Config files"
+
+#~ msgid "Objects reset"
+#~ msgstr "Objects reset"
+
+#~ msgid "Reinicialise database"
+#~ msgstr "Reinicialise database"
+
+#~ msgid "Database fix"
+#~ msgstr "Database fix"
+
+#~ msgid "Configuration import"
+#~ msgstr "Configuration import"
+
+#~ msgid "PC Lin/Win/Mac"
+#~ msgstr "PC Lin/Win/Mac"
+
+#~ msgid "Android"
+#~ msgstr "Android"
+
+#~ msgid "Win Phone"
+#~ msgstr "Win Phone"
+
+#~ msgid "Icinga Web"
+#~ msgstr "Icinga Web"
+
+#~ msgid "Icinga Classic"
+#~ msgstr "Icinga Classic"
+
+#~ msgid "Tests results"
+#~ msgstr "Tests results"
+
+#~ msgid "Search"
+#~ msgstr "Search"
+
+#~ msgid "Host Parents"
+#~ msgstr "Host Parents"
+
+#~ msgid "IP or Hostname"
+#~ msgstr "IP or Hostname"
+
+#~ msgid "Add parent"
+#~ msgstr "Add parent"
+
+#~ msgid "Aassign parents"
+#~ msgstr "Aassign parents"
+
+#~ msgid "Remove parents"
+#~ msgstr "Remove parents"
+
+#~ msgid "Jméno"
+#~ msgstr "Name"
+
+#~ msgid "hostname"
+#~ msgstr "hostname"
+
+#~ msgid "DOMAIN\\machine"
+#~ msgstr "DOMAIN\\machine"
+
+#~ msgid "Watched host name"
+#~ msgstr "Watched host name"
+
+#~ msgid "Watched host platform"
+#~ msgstr "Watched host platform"
+
+#~ msgid "Still running"
+#~ msgstr "Still running"
+
+#~ msgid "Still running ?"
+#~ msgstr "Still running ?"
+
+#~ msgid ""
+#~ "<strong>Yes</strong> host is still Up. <br><strong>No</strong> device "
+#~ "every night down (notebook or PC etc.)"
+#~ msgstr ""
+#~ "<strong>Yes</strong> host is still Up. <br><strong>No</strong> device "
+#~ "every night down (notebook or PC etc.)"
+
+#~ msgid "Server IP address"
+#~ msgstr "Server IP address"
+
+#~ msgid ""
+#~ "Address where live Icinga itself. Here recieve NSCA tests and from here "
+#~ "allow NRPE access"
+#~ msgstr ""
+#~ "Address where live Icinga itself. Here recieve NSCA tests and from here "
+#~ "allow NRPE access"
+
+#~ msgid "nsca password"
+#~ msgstr "nsca password"
+
+#~ msgid "password used by NSCA "
+#~ msgstr "password used by NSCA "
+
+#, fuzzy
+#~ msgid "Senzor je nasazen"
+#~ msgstr "Save the record first"
+
+#~ msgid "Prosím potvrďte nastavení služby"
+#~ msgstr "Confirm the service settings"
+
+#, fuzzy
+#~ msgid "Původní služba byla upravena"
+#~ msgstr "Service saved"
+
+#, fuzzy
+#~ msgid "Klon"
+#~ msgstr "Clone"
+
+#, fuzzy
+#~ msgid "Služba byla uložena jako klon"
+#~ msgstr "Service saved"
+
+#, fuzzy
+#~ msgid "Sužba nebyla naklonována"
+#~ msgstr "Service not renamed"
+
+#~ msgid "Služba nebyla uložena"
+#~ msgstr "Service not saved"
+
+#~ msgid "Služba byla uložena"
+#~ msgstr "Service saved"
+
+#~ msgid "Formulář nebyl uložen"
+#~ msgstr "Form not saved"
+
+#, fuzzy
+#~ msgid "Služba"
+#~ msgstr "System service"
+
+#~ msgid "Uloženo"
+#~ msgstr "Saved"
+
+#, fuzzy
+#~ msgid "Toto je primární služba."
+#~ msgstr "Define first service"
+
+#~ msgid "Apply services Preset"
+#~ msgstr "Apply services Preset"
+
+#, fuzzy
+#~ msgid "Náhradní služba"
+#~ msgstr "System service"
+
+#, fuzzy
+#~ msgid "Jméno služby"
+#~ msgstr "Name"
+
+#, fuzzy
+#~ msgid "Vyměnit službu"
+#~ msgstr "Define first service"
+
+#~ msgid "Modul %s nebyl nalezen"
+#~ msgstr "Module %s was not found"
+
+#~ msgid "Watched machine platform"
+#~ msgstr "Watched machine platform"
+
+#~ msgid "Preset"
+#~ msgstr "Preset"
+
+#, fuzzy
+#~ msgid "Typ konfigurace"
+#~ msgstr "configuration generated"
+
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgid "Service or preset name "
+#~ msgstr "Service or preset name "
+
+#~ msgid "Use preset"
+#~ msgstr "Use preset"
+
+#~ msgid "Owner"
+#~ msgstr "Owner"
+
+#~ msgid "Show configuration dialog"
+#~ msgstr "Show configuration dialog"
+
+#~ msgid "Test service name"
+#~ msgstr "Test service name"
+
+#~ msgid "remote test"
+#~ msgstr "remote test"
+
+#~ msgid "Remote commands"
+#~ msgstr "Remote commands"
+
+#~ msgid "Search commands for: "
+#~ msgstr "Search commands for: "
+
+#~ msgid "Command executed by remote NRPE/NSCP.exe"
+#~ msgstr "Command executed by remote NRPE/NSCP.exe"
+
+#~ msgid "Parameters"
+#~ msgstr "Parameters"
+
+#~ msgid "Remote command params. (For nrpe divided by \"!\")"
+#~ msgstr "Remote command params. (For nrpe divided by \"!\")"
+
+#~ msgid "choose preset ..."
+#~ msgstr "choose preset ..."
+
+#~ msgid "Choose Host platform to choose from more services"
+#~ msgstr "Choose Host platform to choose from more services"
+
+#~ msgid "Services watched"
+#~ msgstr "Services watched"
+
+#~ msgid "Začít sledovat"
+#~ msgstr "Start monitoring"
+
+#~ msgid "Save selected services as Preset"
+#~ msgstr "Save selected services as Preset"
+
+#~ msgid "Stop watching"
+#~ msgstr "Stop watching"
+
+#~ msgid "item %s was added"
+#~ msgstr "item %s was added"
+
+#~ msgid "Please save service %s first"
+#~ msgstr "Please save service %s first"
+
+#~ msgid "item %s was assigned"
+#~ msgstr "item %s was assigned"
+
+#~ msgid "item %s was not assigned"
+#~ msgstr "item %s was not assigned"
+
+#, fuzzy
+#~ msgid "Název skupiny"
+#~ msgstr "Edit servicegroup"
+
+#, fuzzy
+#~ msgid "Založit"
+#~ msgstr "Create the first contact"
+
+#, fuzzy
+#~ msgid "Systémový uživatel"
+#~ msgstr "New User"
+
+#~ msgid "Nejprve se prosím přihlašte jako admin"
+#~ msgstr "Please log in first as admin"
+
+#~ msgid "Password for Icinga Web also changed"
+#~ msgstr "Password for Icinga Web also changed"
+
+#~ msgid "Password for icinga change error"
+#~ msgstr "Password for icinga change error"
+
+#~ msgid "Icinga Web user also created"
+#~ msgstr "Icinga Web user also created"
+
+#~ msgid "Icinga Web user not created"
+#~ msgstr "Icinga Web user not created"
+
+#~ msgid "Are you sure to delete %s ?"
+#~ msgstr "Are you sure to delete %s ?"
+
+#, fuzzy
+#~ msgid "Smazat"
+#~ msgstr "delete"
+
+#~ msgid "Configuration for %s was deleted"
+#~ msgstr "Configuration for %s was deleted"
+
+#~ msgid "Confinguration for %s was not deleted"
+#~ msgstr "Confinguration for %s was not deleted"
+
+#~ msgid "User %s was deleted"
+#~ msgstr "User %s was deleted"
+
+#~ msgid "Account canceled"
+#~ msgstr "Account canceled"
+
+#~ msgid "You were removed from IcingaEditor:"
+#~ msgstr "You were removed from IcingaEditor:"
+
+#~ msgid "Command name"
+#~ msgstr "Command name"
+
+#~ msgid "Command type"
+#~ msgstr "Command type"
+
+#~ msgid "local command"
+#~ msgstr "local command"
+
+#~ msgid "remote command NRPE/Nsc++"
+#~ msgstr "remote command NRPE/Nsc++"
+
+#~ msgid "Deploy"
+#~ msgstr "Deploy"
+
+#~ msgid "Save as template"
+#~ msgstr "Save as template"
+
+#~ msgid "Not an template"
+#~ msgstr "Not an template"
+
+#~ msgid "owner"
+#~ msgstr "owner"
+
+#~ msgid "template %s was not loaded"
+#~ msgstr "template %s was not loaded"
+
+#~ msgid "template %s was loaded"
+#~ msgstr "template %s was loaded"
+
+#~ msgid "Tabulka %s byla smazána"
+#~ msgstr "Table %s deleted"
+
+#~ msgid "Tabulka %s byla vytvořena"
+#~ msgstr "Table %s created"
+
+#~ msgid "Tabulka %s nebyla vytvořena"
+#~ msgstr "Table %s not created"
+
+#~ msgid "Teplate %s need name"
+#~ msgstr "Teplate %s need name"
+
+#~ msgid "Required value missing %s for %s"
+#~ msgstr "Required value missing %s for %s"
+
+#~ msgid "Template %s allready defined. Please use another name"
+#~ msgstr "Template %s allready defined. Please use another name"
+
+#~ msgid "%s %s allready defined. Please use another name."
+#~ msgstr "%s %s allready defined. Please use another name."
+
+#~ msgid "is template for"
+#~ msgstr "is template for"
+
+#~ msgid "Without owner"
+#~ msgstr "Without owner"
+
+#~ msgid " %s %s was deleted "
+#~ msgstr " %s %s was deleted "
+
+#~ msgid " %s %s was not deleted "
+#~ msgstr " %s %s was not deleted "
+
+#~ msgid " was not imported"
+#~ msgstr " was not imported"
+
+#~ msgid "was imported"
+#~ msgstr "was imported"
+
+#~ msgid " was imported"
+#~ msgstr " was imported"
+
+#~ msgid "I need filename"
+#~ msgstr "I need filename"
+
+#~ msgid "item %s added to %s/%s/%s"
+#~ msgstr "item %s added to %s/%s/%s"
+
+#~ msgid "Deserialization error"
+#~ msgstr "Deserialization error"
+
+#~ msgid "Klonovat"
+#~ msgstr "Clone"
+
+#, fuzzy
+#~ msgid "Předloha"
+#~ msgstr "Draft"
+
+#~ msgid "Unserialization error %s #%s "
+#~ msgstr "Unserialization error %s #%s "
+
+#~ msgid "Export target URL missing"
+#~ msgstr "Export target URL missing"
+
+#~ msgid "Transfer failed"
+#~ msgstr "Transfer failed"
+
+#~ msgid "Recursive import"
+#~ msgstr "Recursive import"
+
+#~ msgid "Export"
+#~ msgstr "Export"
+
+#~ msgid "Unknown item %s column %s within import"
+#~ msgstr "Unknown item %s column %s within import"
+
+#~ msgid "Unknown imported column  %s"
+#~ msgstr "Unknown imported column  %s"
+
+#~ msgid "Not yet modified"
+#~ msgstr "Not yet modified"
+
+#~ msgid "Last change"
+#~ msgstr "Last change"
+
+#~ msgid "Created"
+#~ msgstr "Created"
+
+#~ msgid "do not generate to configuration"
+#~ msgstr "do not generate to configuration"
+
+#~ msgid "record is public"
+#~ msgstr "record is public"
+
+#~ msgid "Toto není platná jabberová adresa"
+#~ msgstr "Not a valid XMPP address"
+
+#~ msgid "Toto není platná mailová adresa"
+#~ msgstr "Not a valid email address"
+
+#~ msgid "Toto není platné telefoní číslo"
+#~ msgstr "Not a valid phone number"
+
+#, fuzzy
+#~ msgid ""
+#~ "Kontakt <strong>%s</strong> byl odebrán ze skupiny <strong>%s</strong>"
+#~ msgstr "Contact %s removed from service %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Kontakt <strong>%s</strong> nebyl odebrán ze skupiny <strong>%s</strong>"
+#~ msgstr "Contact %s removed from service %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Kontakt <strong>%s</strong> byl odebrán ze služby <strong>%s</strong>"
+#~ msgstr "Contact %s removed from service %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Kontakt <strong>%s</strong> nebyl odebrán ze služby <strong>%s</strong>"
+#~ msgstr "Contact %s removed from service %s"
+
+#~ msgid "Kontakt nelze přejmenovat"
+#~ msgstr "Contact can not be renamed"
+
+#~ msgid "Hosta"
+#~ msgstr "of the host"
+
+#~ msgid "Unregister %s from service %s error"
+#~ msgstr "Unregister %s from service %s error"
+
+#~ msgid "%s not an parent of %s"
+#~ msgstr "%s not an parent of %s"
+
+#~ msgid "%s is still parent of %s"
+#~ msgstr "%s is still parent of %s"
+
+#~ msgid "Host without owner"
+#~ msgstr "Host without owner"
+
+#~ msgid "Error renaming %s within service %s"
+#~ msgstr "Error renaming %s within service %s"
+
+#~ msgid "Nalezena ikona %s"
+#~ msgstr "Found icon %s"
+
+#~ msgid "Alias"
+#~ msgstr "Alias"
+
+#~ msgid "Parent"
+#~ msgstr "Parent"
+
+#~ msgid "Sensor Configuration"
+#~ msgstr "Sensor Configuration"
+
+#~ msgid "Actual"
+#~ msgstr "Actual"
+
+#~ msgid "Obsolete"
+#~ msgstr "Obsolete"
+
+#~ msgid "Not installed"
+#~ msgstr "Not installed"
+
+#~ msgid "Host can not by its own parent"
+#~ msgstr "Host can not by its own parent"
+
+#~ msgid " %s byl odstraněn ze skupiny %s "
+#~ msgstr " %s removed from group %s"
+
+#~ msgid "skupinu hostů"
+#~ msgstr "hostgroup"
+
+#, fuzzy
+#~ msgid " %s byl přejmenován na %s ve skupině %s "
+#~ msgstr "Rename of %s in service %s unsuccessful"
+
+#, fuzzy
+#~ msgid "host %s byl odstraněn ze skupiny %s"
+#~ msgstr " %s removed from group %s"
+
+#, fuzzy
+#~ msgid "subgroup %s byl odstraněn ze skupiny %s"
+#~ msgstr " %s removed from group %s"
+
+#, fuzzy
+#~ msgid "%s lines of configuration read"
+#~ msgstr "configuration file %s was created"
+
+#~ msgid "configuration parsing failed"
+#~ msgstr "configuration parsing failed"
+
+#~ msgid "%s configurations imported"
+#~ msgstr "%s configurations imported"
+
+#~ msgid "None imported"
+#~ msgstr "None imported"
+
+#~ msgid "konfigurace byla vygenerována"
+#~ msgstr "configuration generated"
+
+#~ msgid "konfigurace nebyla vygenerována"
+#~ msgstr "Config not generated"
+
+#~ msgid "service hosts"
+#~ msgstr "service hosts"
+
+#~ msgid "service hostgroups"
+#~ msgstr "service hostgroups"
+
+#~ msgid "service description"
+#~ msgstr "service description"
+
+#~ msgid "display name"
+#~ msgstr "display name"
+
+#~ msgid "tcp service port"
+#~ msgstr "tcp service port"
+
+#~ msgid "service group"
+#~ msgstr "service group"
+
+#~ msgid "volatile"
+#~ msgstr "volatile"
+
+#~ msgid "check command"
+#~ msgstr "check command"
+
+#~ msgid "remote check command"
+#~ msgstr "remote check command"
+
+#~ msgid "check command parrams"
+#~ msgstr "check command parrams"
+
+#~ msgid "initial state"
+#~ msgstr "initial state"
+
+#~ msgid "max check attempts"
+#~ msgstr "max check attempts"
+
+#~ msgid "check interval"
+#~ msgstr "check interval"
+
+#~ msgid "retry interval"
+#~ msgstr "retry interval"
+
+#~ msgid "Active mode"
+#~ msgstr "Active mode"
+
+#~ msgid "Passive mode"
+#~ msgstr "Passive mode"
+
+#~ msgid "check period"
+#~ msgstr "check period"
+
+#~ msgid "paraelize check"
+#~ msgstr "paraelize check"
+
+#~ msgid "obsess over service"
+#~ msgstr "obsess over service"
+
+#~ msgid "check freshnes"
+#~ msgstr "check freshnes"
+
+#~ msgid "freshness treshold"
+#~ msgstr "freshness treshold"
+
+#~ msgid "event handler"
+#~ msgstr "event handler"
+
+#~ msgid "event handler enabled"
+#~ msgstr "event handler enabled"
+
+#~ msgid "low flap treshold"
+#~ msgstr "low flap treshold"
+
+#~ msgid "high flap treshold"
+#~ msgstr "high flap treshold"
+
+#~ msgid "flap detection enabled"
+#~ msgstr "flap detection enabled"
+
+#~ msgid "failure prediction enabled"
+#~ msgstr "failure prediction enabled"
+
+#~ msgid "process perf data"
+#~ msgstr "process perf data"
+
+#~ msgid "retain status information"
+#~ msgstr "retain status information"
+
+#~ msgid "retain nonstatus information"
+#~ msgstr "retain nonstatus information"
+
+#~ msgid "notification interval"
+#~ msgstr "notification interval"
+
+#~ msgid "first notification delay"
+#~ msgstr "first notification delay"
+
+#~ msgid "notification period"
+#~ msgstr "notification period"
+
+#~ msgid "notification options"
+#~ msgstr "notification options"
+
+#~ msgid "notifications enabled"
+#~ msgstr "notifications enabled"
+
+#~ msgid "contacts"
+#~ msgstr "contacts"
+
+#~ msgid "contactgroups"
+#~ msgstr "contactgroups"
+
+#~ msgid "stalking options"
+#~ msgstr "stalking options"
+
+#~ msgid "notes url"
+#~ msgstr "notes url"
+
+#~ msgid "action url"
+#~ msgstr "action url"
+
+#~ msgid "icon image "
+#~ msgstr "icon image "
+
+#~ msgid "icon image alt text"
+#~ msgstr "icon image alt text"
+
+#~ msgid "require additional configuration ?"
+#~ msgstr "require additional configuration ?"
+
+#~ msgid "Configuration plugin"
+#~ msgstr "Configuration plugin"
+
+#, fuzzy
+#~ msgid " %s nebyl přesunut z %s/%s do %s"
+#~ msgstr "item %s not added to %s/%s/%s"
+
+#~ msgid "Časovou periodu"
+#~ msgstr "Timeperiod"
+
+#, fuzzy
+#~ msgid "Přidat do skupiny"
+#~ msgstr "Add parrent(s)"
+
+#, fuzzy
+#~ msgid "členové skupiny"
+#~ msgstr "Edit servicegroup"
+
+#, fuzzy
+#~ msgid "Není zadán název"
+#~ msgstr "Not a valid XMPP address"
+
+#~ msgid "Příkaz nebyl uložen"
+#~ msgstr "Command not saved"
+
+#~ msgid "Příkaz byl uložen"
+#~ msgstr "Command saved"
+
+#~ msgid "Editace příkazu"
+#~ msgstr "editing command"
+
+#, fuzzy
+#~ msgid "Opravdu smazat ?"
+#~ msgstr "delete"
+
+#, fuzzy
+#~ msgid "Ano"
+#~ msgstr "Android"
+
+#~ msgid "Transfer"
+#~ msgstr "Transfer"
+
+#, fuzzy
+#~ msgid "Používající služby"
+#~ msgstr "Services"
+
+#, fuzzy
+#~ msgid "Používající kontakty"
+#~ msgstr "Contacts"
+
+#~ msgid "Příkaz"
+#~ msgstr "Command"
+
+#~ msgid "Přehled příkazů"
+#~ msgstr "Command overview"
+
+#, fuzzy
+#~ msgid "Příkazy"
+#~ msgstr "Commands import"
+
+#~ msgid "Kontakt nebyl uložen"
+#~ msgstr "Contact not saved"
+
+#~ msgid "Kontakt byl uložen"
+#~ msgstr "Contact saved"
+
+#~ msgid "Editace kontaktu"
+#~ msgstr "Contact edit"
+
+#, fuzzy
+#~ msgid "Používaný službami"
+#~ msgstr "New Service"
+
+#, fuzzy
+#~ msgid "Používaný hosty"
+#~ msgstr "Hosts"
+
+#~ msgid "Contactgroup"
+#~ msgstr "Contactgroup"
+
+#~ msgid "Contactgroup was not saved"
+#~ msgstr "Contactgroup was not saved"
+
+#~ msgid "Contactgroup saved"
+#~ msgstr "Contactgroup saved"
+
+#~ msgid "Tools"
+#~ msgstr "Tools"
+
+#, fuzzy
+#~ msgid "Kontaktní skupiny"
+#~ msgstr "Add contact information"
+
+#~ msgid "Přehled kontaktů"
+#~ msgstr "Contacts overview"
+
+#~ msgid "Kontakty"
+#~ msgstr "Contacts"
+
+#~ msgid "Contact was renamed"
+#~ msgstr "Contact was renamed"
+
+#~ msgid "Contact was not renamed"
+#~ msgstr "Contact was not renamed"
+
+#~ msgid "Contact editor"
+#~ msgstr "Contact editor"
+
+#~ msgid "Rename"
+#~ msgstr "Rename"
+
+#~ msgid "Renaming"
+#~ msgstr "Renaming"
+
+#~ msgid "Mail address is too short"
+#~ msgstr "Mail address is too short"
+
+#~ msgid "invalid email address"
+#~ msgstr "invalid email address"
+
+#~ msgid "Mail address %s is allready registered"
+#~ msgstr "Mail address %s is allready registered"
+
+#~ msgid "password is too short"
+#~ msgstr "password is too short"
+
+#~ msgid "Password control does not match"
+#~ msgstr "Password control does not match"
+
+#~ msgid "Username %s is used. Please choose another one"
+#~ msgstr "Username %s is used. Please choose another one"
+
+#~ msgid "Admin prvileges assigned"
+#~ msgstr "Admin prvileges assigned"
+
+#~ msgid "User account created"
+#~ msgstr "User account created"
+
+#~ msgid "Sign On info"
+#~ msgstr "Sign On info"
+
+#, fuzzy
+#~ msgid "Icinga Editor Account"
+#~ msgstr "Icinga Editor Account"
+
+#, fuzzy
+#~ msgid "New Icinga Editor account: %s"
+#~ msgstr "New Icinga Editor account: %s"
+
+#, fuzzy
+#~ msgid "New User:\n"
+#~ msgstr "New User"
+
+#~ msgid "Initial contact was created"
+#~ msgstr "Initial contact was created"
+
+#~ msgid "Initial contact was not created"
+#~ msgstr "Initial contact was not created"
+
+#~ msgid "email contact was created"
+#~ msgstr "email contact was created"
+
+#~ msgid "email contact was not created"
+#~ msgstr "email contact was not created"
+
+#~ msgid "Group"
+#~ msgstr "Group"
+
+#~ msgid "Initial contact group was created"
+#~ msgstr "Initial contact group was created"
+
+#~ msgid "Initial contact group was not created"
+#~ msgstr "Initial contact group was not created"
+
+#~ msgid "Initial Group"
+#~ msgstr "Initial Group"
+
+#~ msgid "Error writing to database"
+#~ msgstr "Error writing to database"
+
+#~ msgid "Sign On"
+#~ msgstr "Sign On"
+
+#~ msgid "Wellcome"
+#~ msgstr "Wellcome"
+
+#~ msgid ""
+#~ "After registering, you will be prompted to enter straight first host."
+#~ msgstr ""
+#~ "After registering, you will be prompted to enter straight first host."
+
+#~ msgid "All notifications target to your email"
+#~ msgstr "All notifications target to your email"
+
+#~ msgid "For XMPP (jabber) or SMS, add this on Contact edit page."
+#~ msgstr "For XMPP (jabber) or SMS, add this on Contact edit page."
+
+#~ msgid "First Name"
+#~ msgstr "First Name"
+
+#~ msgid "Last Name"
+#~ msgstr "Last Name"
+
+#~ msgid "Account"
+#~ msgstr "Account"
+
+#~ msgid "Requied"
+#~ msgstr "Requied"
+
+#~ msgid "Email Address"
+#~ msgstr "Email Address"
+
+#~ msgid "Singn On"
+#~ msgstr "Singn On"
+
+#~ msgid "Finish"
+#~ msgstr "Finish"
+
+#~ msgid "nejprve se prosím přihlaš"
+#~ msgstr "Please log in first"
+
+#~ msgid "Chyba ukládání do databáze: "
+#~ msgstr "Error saving to database"
+
+#~ msgid "Třída"
+#~ msgstr "Class"
+
+#~ msgid "Tabulka"
+#~ msgstr "Table"
+
+#~ msgid "Pole"
+#~ msgstr "Field"
+
+#~ msgid "Hodnota"
+#~ msgstr "Value"
+
+#, fuzzy
+#~ msgid "Icinga Editor - znovuvytvoření struktury databáze"
+#~ msgstr "Icinga Editor - Recreate database structure"
+
+#~ msgid "vytvořit konfiguraci"
+#~ msgstr "create configuration"
+
+#~ msgid "importovat konfiguraci"
+#~ msgstr "Import config"
+
+#~ msgid ""
+#~ "Tato akce nevratně smaže veškerou konfiguraci. Opravdu to chcete udělat ?"
+#~ msgstr ""
+#~ "This action will PURGE all the config. This can not be undone. Are you "
+#~ "sure? "
+
+#~ msgid "Vím co dělám"
+#~ msgstr "I know what I'm doing"
+
+#~ msgid "Budiž!"
+#~ msgstr "Let's go!"
+
+#~ msgid "Znovu vytvořit strukturu databáze"
+#~ msgstr "Re-create the database structure"
+
+#~ msgid "Unknown state %s."
+#~ msgstr "Unknown state %s."
+
+#~ msgid "State can be only start or stop"
+#~ msgstr "State can be only start or stop"
+
+#, fuzzy
+#~ msgid "Oprava databáze"
+#~ msgstr "Icinga editor - database init"
+
+#~ msgid "Service used in template (#%s: %s) not found"
+#~ msgstr "Service used in template (#%s: %s) not found"
+
+#~ msgid "Cannot download file %s"
+#~ msgstr "Cannot download file %s"
+
+#~ msgid "Icon file not selected"
+#~ msgstr "Icon file not selected"
+
+#~ msgid "this is not requied image file type"
+#~ msgstr "this is not requied image file type"
+
+#~ msgid "Icon was assigned"
+#~ msgstr "Icon was assigned"
+
+#~ msgid "Icon was not assigned"
+#~ msgstr "Icon was not assigned"
+
+#~ msgid "Host was renamed"
+#~ msgstr "Host was renamed"
+
+#~ msgid "Host was not renamed"
+#~ msgstr "Host was not renamed"
+
+#~ msgid "Parent not found"
+#~ msgstr "Parent not found"
+
+#~ msgid "Parent was not added"
+#~ msgstr "Parent was not added"
+
+#~ msgid "Parent was added"
+#~ msgstr "Parent was added"
+
+#~ msgid "Host was not saved"
+#~ msgstr "Host was not saved"
+
+#~ msgid "Host was saved"
+#~ msgstr "Host was saved"
+
+#~ msgid "Host Editor"
+#~ msgstr "Host Editor"
+
+#~ msgid "Common"
+#~ msgstr "Common"
+
+#, fuzzy
+#~ msgid "Configuration"
+#~ msgstr "Configuration Generation"
+
+#~ msgid "Are you sure to delete ?"
+#~ msgstr "Are you sure to delete ?"
+
+#~ msgid "Scan and watch services"
+#~ msgstr "Scan and watch services"
+
+#~ msgid "Change icon"
+#~ msgstr "Change icon"
+
+#~ msgid "Set icon"
+#~ msgstr "Set icon"
+
+#~ msgid "Watch the route"
+#~ msgstr "Watch the route"
+
+#, fuzzy
+#~ msgid "Sendor OK"
+#~ msgstr "Sign in %s all ok"
+
+#~ msgid "Actialize Sensor"
+#~ msgstr "Actialize Sensor"
+
+#~ msgid "Deploy sensor"
+#~ msgstr "Deploy sensor"
+
+#, fuzzy
+#~ msgid "<strong>%s</strong> was add to contacts <strong>%s</strong>"
+#~ msgstr "Contact %s removed from service %s"
+
+#, fuzzy
+#~ msgid "<strong>%s</strong> was not add to contacts <strong>%s</strong>"
+#~ msgstr "Contact %s removed from service %s"
+
+#~ msgid "Contact assigning error"
+#~ msgstr "Contact assigning error"
+
+#~ msgid "Hostgroup was not saved"
+#~ msgstr "Hostgroup was not saved"
+
+#~ msgid "Hostgroup was saved"
+#~ msgstr "Hostgroup was saved"
+
+#~ msgid "Hostgroup Editor"
+#~ msgstr "Hostgroup Editor"
+
+#~ msgid "Bulk operations"
+#~ msgstr "Bulk operations"
+
+#~ msgid "hostgroup"
+#~ msgstr "hostgroup"
+
+#~ msgid "hosts"
+#~ msgstr "hosts"
+
+#~ msgid "Apply to"
+#~ msgstr "Apply to"
+
+#~ msgid "Apply preset to several Hosts or hostgroup itself"
+#~ msgstr "Apply preset to several Hosts or hostgroup itself"
+
+#~ msgid "New Host in Group"
+#~ msgstr "New Host in Group"
+
+#~ msgid "Přehled skupin hostů"
+#~ msgstr "Hostgroup overview"
+
+#, fuzzy
+#~ msgid "Skupiny hostů"
+#~ msgstr "hostgroup"
+
+#~ msgid "Hosts Overview"
+#~ msgstr "Hosts Overview"
+
+#~ msgid "Paste configuration fragment or choose file"
+#~ msgstr "Paste configuration fragment or choose file"
+
+#, fuzzy
+#~ msgid "Configure"
+#~ msgstr "Configuraton import"
+
+#~ msgid "konfigurační fragment"
+#~ msgstr "Configuration fragment"
+
+#, fuzzy
+#~ msgid "configuration file"
+#~ msgstr "configuration file %s was created"
+
+#~ msgid "Import data as PUBLIC"
+#~ msgstr "Import data as PUBLIC"
+
+#, fuzzy
+#~ msgid "Generate to Configuration"
+#~ msgstr "do not generate to configuration"
+
+#, fuzzy
+#~ msgid "Import now"
+#~ msgstr "Import"
+
+#~ msgid "Perform now"
+#~ msgstr "Perform now"
+
+#~ msgid "Configuration Import"
+#~ msgstr "Configuration Import"
+
+#, fuzzy
+#~ msgid "Příkaz %s byl naimportován"
+#~ msgstr "Command saved"
+
+#, fuzzy
+#~ msgid "Příkaz nebyl naimportován"
+#~ msgstr "Command not saved"
+
+#~ msgid "Zadejte konfigurační fragment příkazu, nebo zvolte soubor k importu"
+#~ msgstr "Enter command configuration fragment, or choose fle for import"
+
+#~ msgid "Načtení příkazů ze souboru"
+#~ msgstr "Load commands from a file"
+
+#~ msgid "druh vkládaných příkazů"
+#~ msgstr "Command types"
+
+#~ msgid "importovat"
+#~ msgstr "import"
+
+#, fuzzy
+#~ msgid "Import příkazu do konfigurace"
+#~ msgstr "Configuraton import"
+
+#, fuzzy
+#~ msgid "Icinga Editor"
+#~ msgstr "Icinga Editor"
+
+#, fuzzy
+#~ msgid "Editor"
+#~ msgstr "Icinga Editor"
+
+#~ msgid "Watch the hosts"
+#~ msgstr "Watch the hosts"
+
+#~ msgid "Watch the services"
+#~ msgstr "Watch the services"
+
+#, fuzzy
+#~ msgid "Notifications on mail/jabber/sms/twitter"
+#~ msgstr "Notification mail/XMPP/sms/twitter"
+
+#, fuzzy
+#~ msgid "Icinga Editor - iniciace databáze"
+#~ msgstr "Icinga editor - database init"
+
+#~ msgid "hlavní soubor konfigurace"
+#~ msgstr "main configuration file"
+
+#~ msgid "Spustí proces importu"
+#~ msgstr "Starts the import process"
+
+#~ msgid "parametry inicializace"
+#~ msgstr "init parameters"
+
+#~ msgid "Cookies requied"
+#~ msgstr "Cookies requied"
+
+#~ msgid "Please enter your login name"
+#~ msgstr "Please enter your login name"
+
+#~ msgid "User Name"
+#~ msgstr "User Name"
+
+#~ msgid "Pasword"
+#~ msgstr "Pasword"
+
+#~ msgid "Password recovery"
+#~ msgstr "Password recovery"
+
+#~ msgid "Odhlášení"
+#~ msgstr "Logout"
+
+#~ msgid "Děkujeme za vaši přízeň a těšíme se na další návštěvu"
+#~ msgstr "Thanks for selecting icinga configuratror"
+
+#~ msgid "Monitoring"
+#~ msgstr "Monitoring"
+
+#~ msgid "Create first watched host"
+#~ msgstr "Create first watched host"
+
+#~ msgid "It is not yet registered any monitored host"
+#~ msgstr "It is not yet registered any monitored host"
+
+#~ msgid "Network map"
+#~ msgstr "Network map"
+
+#, fuzzy
+#~ msgid "Všechny disky"
+#~ msgstr "Všechny jednotky"
+
+#, fuzzy
+#~ msgid "Cesta v síti"
+#~ msgstr "Error in configuration file"
+
+#, fuzzy
+#~ msgid "Disk"
+#~ msgstr "File on your disk"
+
+#~ msgid "NetDrive"
+#~ msgstr "NetDrive"
+
+#, fuzzy
+#~ msgid "Cesta síťové jednotky"
+#~ msgstr "Všechny jednotky"
+
+#~ msgid "MaxWarn"
+#~ msgstr "MaxWarn"
+
+#~ msgid "Maximum value before a warning is returned."
+#~ msgstr "Maximum value before a warning is returned."
+
+#~ msgid "MaxCrit"
+#~ msgstr "MaxCrit"
+
+#~ msgid "Maximum value before a critical is returned."
+#~ msgstr "Maximum value before a critical is returned."
+
+#~ msgid "MinWarn"
+#~ msgstr "MinWarn"
+
+#~ msgid "Minimum value before a warning is returned."
+#~ msgstr "Minimum value before a warning is returned."
+
+#~ msgid "MinCrit"
+#~ msgstr "MinCrit"
+
+#~ msgid "Minimum value before a critical is returned."
+#~ msgstr "Minimum value before a critical is returned."
+
+#~ msgid "MaxWarnFree"
+#~ msgstr "MaxWarnFree"
+
+#~ msgid "MaxCritFree"
+#~ msgstr "MaxCritFree"
+
+#~ msgid "Maximum value before a critcal is returned."
+#~ msgstr "Maximum value before a critcal is returned."
+
+#~ msgid "MinWarnFree"
+#~ msgstr "MinWarnFree"
+
+#~ msgid "MinCritFree"
+#~ msgstr "MinCritFree"
+
+#~ msgid "Minimum value before a critcal is returned."
+#~ msgstr "Minimum value before a critcal is returned."
+
+#~ msgid "MaxWarnUsed"
+#~ msgstr "MaxWarnUsed"
+
+#~ msgid "MaxCritUsed"
+#~ msgstr "MaxCritUsed"
+
+#~ msgid "MinWarnUsed"
+#~ msgstr "MinWarnUsed"
+
+#~ msgid "MinCritUsed"
+#~ msgstr "MinCritUsed"
+
+#, fuzzy
+#~ msgid "Zobrazit vše"
+#~ msgstr "OK"
+
+#~ msgid ""
+#~ "Configures display format (if set shows all items not only failures, if "
+#~ "set to long shows all cores)."
+#~ msgstr ""
+#~ "Configures display format (if set shows all items not only failures, if "
+#~ "set to long shows all cores)."
+
+#~ msgid "Všechny jednotky"
+#~ msgstr "Všechny jednotky"
+
+#~ msgid "NetDisk"
+#~ msgstr "NetDisk"
+
+#~ msgid "Physical memory (RAM)"
+#~ msgstr "Physical memory (RAM)"
+
+#~ msgid "total memory (RAM+PAGE)"
+#~ msgstr "total memory (RAM+PAGE)"
+
+#~ msgid "warn"
+#~ msgstr "warn"
+
+#~ msgid "crit"
+#~ msgstr "crit"
+
+#, fuzzy
+#~ msgid "Disk %s: "
+#~ msgstr "File on your disk"
+
+#, fuzzy
+#~ msgid "Volba sledované diskové jednotky"
+#~ msgstr "URL of monitored page"
+
+#~ msgid "prodleva varování"
+#~ msgstr "warning timeout"
+
+#~ msgid ""
+#~ "Čas v milisekundách, po jehož překročení při testu bude hlášeno varování"
+#~ msgstr "RTT treshold till warning (miliseconds)"
+
+#~ msgid "ztráta varování"
+#~ msgstr "warning lost"
+
+#~ msgid ""
+#~ "Procento ztracených paketů, po jehož překročení při testu bude hlášeno "
+#~ "varování"
+#~ msgstr "Packetloss treshold till warning (percent)"
+
+#~ msgid "prodleva kritické chyby"
+#~ msgstr "delay of critical"
+
+#~ msgid ""
+#~ "Čas v milisekundách, po jehož překročení při testu bude hlášena kritická "
+#~ "chyba"
+#~ msgstr "Time treshold till critical (miliseconds)"
+
+#~ msgid "ztráta kritické chyby"
+#~ msgstr "Loss of critical"
+
+#~ msgid ""
+#~ "Procento ztracených paketů, po jehož překročení při testu bude hlášena "
+#~ "kritická chyba"
+#~ msgstr "Packetloss treshold till critical (percent)"
+
+#~ msgid "Vše v pořádku"
+#~ msgstr "OK"
+
+#, fuzzy
+#~ msgid "Watched URL"
+#~ msgstr "Services watched"
+
+#, fuzzy
+#~ msgid "Web Page Address"
+#~ msgstr "Example Web Page"
+
+#, fuzzy
+#~ msgid "Content needed"
+#~ msgstr "Content unneeded"
+
+#, fuzzy
+#~ msgid "Text on healthy page"
+#~ msgstr "Text"
+
+#~ msgid "Content unneeded"
+#~ msgstr "Content unneeded"
+
+#~ msgid "Unwanted text, ex. \"Error\" ord another fragment of error message"
+#~ msgstr "Unwanted text, ex. \"Error\" ord another fragment of error message"
+
+#, fuzzy
+#~ msgid "Invalid URL"
+#~ msgstr "invalid password"
+
+#~ msgid "Nagstamon"
+#~ msgstr "Nagstamon"
+
+#~ msgid "Multiplatformní klient"
+#~ msgstr "Multiplatform client"
+
+#, fuzzy
+#~ msgid ""
+#~ "<br>\n"
+#~ "Nagstamon je monitor Nagiosu pro desktopové operační systémy.\n"
+#~ "Běží v systémové liště, nebo jako plovoucí aplikace, či ve stavovém řádku "
+#~ "na\n"
+#~ "ploše a ukazuje stručný přehled stavy hostitelů či služeb tzn:\n"
+#~ "kritický, varovný, neznámý, nedosažitelný či vypnuto  a ukazuje podrobný "
+#~ "přehled\n"
+#~ "stavu při pohybu ukazatele myši nad ním.\n"
+#~ "Připojení k zobrazeným hostitelům a službám je snadné z kontextové "
+#~ "nabídky přes\n"
+#~ "SSH, RDP a VNC nebo jakýchkoli jiných definovaných akcí.\n"
+#~ "Uživatelé mohou být upozorněni zvukem.\n"
+#~ "Hostitelé a služby mohou být filtrovány podle kategorií a regulárních "
+#~ "výrazů.\n"
+#~ msgstr ""
+#~ "<br>\n"
+#~ "Nagstamon is Nagios monitor for desktop OS \n"
+#~ "able to display states of services and hosts. \n"
+
+#~ msgid "Domovská stránka programu"
+#~ msgstr "Program homepage"
+
+#~ msgid "Nastavení"
+#~ msgstr "Settings"
+
+#~ msgid "Změna hesla"
+#~ msgstr "Changing the password"
+
+#~ msgid "Kontakt nebyl založen"
+#~ msgstr "Contact not created"
+
+#~ msgid "Kontakt byl založen"
+#~ msgstr "Contact was saved"
+
+#~ msgid "Založení kontaktu"
+#~ msgstr "Create new contact"
+
+#~ msgid "<i class=\"icon-list\"></i>"
+#~ msgstr "<i class=\"icon-list\"></i>"
+
+#~ msgid "Definováno %s časových period"
+#~ msgstr "%s timeperiods defined"
+
+#~ msgid "Nemáte definovaný žádné časové periody"
+#~ msgstr "No timeperiods defined"
+
+#~ msgid "Založit první časovou periodu <i class=\"icon-edit\"></i>"
+#~ msgstr "Define a first timeperiod <i class=\"icon-edit\"></i>"
+
+#~ msgid "Definováno %s kontaktů"
+#~ msgstr "%s contacts defined"
+
+#~ msgid "Nemáte definovaný kontakt"
+#~ msgstr "No command defined"
+
+#~ msgid "Založit první kontakt "
+#~ msgstr "Create the first contact"
+
+#~ msgid "Kontakty vyžadují časovou periodu"
+#~ msgstr "Contacts require time period"
+
+#~ msgid "Definováno %s skupin kontaktů"
+#~ msgstr "%s contactgroups defined"
+
+#~ msgid "Nemáte definovanou skupinu kontaktů"
+#~ msgstr "No contactgroup defined"
+
+#~ msgid "Založit první skupinu kontaktů "
+#~ msgstr "Create first contactgroup"
+
+#~ msgid "Definováno %s hostů"
+#~ msgstr "%s hosts defined"
+
+#~ msgid "Nemáte definovaný žádný host"
+#~ msgstr "No hosts defined"
+
+#~ msgid "Založit první host"
+#~ msgstr "Create first host"
+
+#~ msgid "Hosty vyžadují časovou periodu .."
+#~ msgstr "Hosts requires timeperiod"
+
+#~ msgid "Definováno %s skupin hostů"
+#~ msgstr "%s hostgroups defined"
+
+#~ msgid "Nemáte definovaný žádnou skupinu hostů"
+#~ msgstr "You do not have any defined group of hosts"
+
+#~ msgid "Založit první skupinu hostů <i class=\"icon-edit\"></i>"
+#~ msgstr "Define first hostgroup <i class=\"icon-edit\"></i>"
+
+#~ msgid "Definováno %s příkazů"
+#~ msgstr "%s commands defined"
+
+#~ msgid "Nemáte definovaný žádné příkazy"
+#~ msgstr "No commands defined"
+
+#~ msgid "Importovat příkazy"
+#~ msgstr "Commands import"
+
+#~ msgid "Definováno %s služeb"
+#~ msgstr "%s services defined"
+
+#~ msgid "Nemáte definovaný žádné služby"
+#~ msgstr "No services defined"
+
+#~ msgid "Založit první službu"
+#~ msgstr "Define first service"
+
+#~ msgid "Služby vyžadují časovou periodu .."
+#~ msgstr "Services require timperiod ..."
+
+#~ msgid "Služby vyžadují příkazy .."
+#~ msgstr "Services require commands ..."
+
+#~ msgid "Definováno %s skupin služeb"
+#~ msgstr "%s service groups defined"
+
+#~ msgid "Nemáte definovaný žádné skupiny služeb"
+#~ msgstr "No service groups defined"
+
+#~ msgid "Založit první skupinu služeb"
+#~ msgstr "Create default servicegroup"
+
+#~ msgid "New password for %s"
+#~ msgstr "New password for %s"
+
+#~ msgid "Sign On informations was changed:\n"
+#~ msgstr "Sign On informations was changed:\n"
+
+#~ msgid "Your new password was sent to %s"
+#~ msgstr "Your new password was sent to %s"
+
+#~ msgid "unknown email address %s"
+#~ msgstr "unknown email address %s"
+
+#~ msgid "Please enter your email."
+#~ msgstr "Please enter your email."
+
+#~ msgid "Lost password recovery"
+#~ msgstr "Lost password recovery"
+
+#~ msgid ""
+#~ "Forgot your password? Enter your e-mail address you entered during the "
+#~ "registration and we will send you a new one."
+#~ msgstr ""
+#~ "Forgot your password? Enter your e-mail address you entered during the "
+#~ "registration and we will send you a new one."
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Send New Password"
+#~ msgstr "Send New Password"
+
+#~ msgid "Please check your mailbox for new password"
+#~ msgstr "Please check your mailbox for new password"
+
+#~ msgid "and"
+#~ msgstr "and"
+
+#, fuzzy
+#~ msgid "Předvolby byly uloženy"
+#~ msgstr "Command saved"
+
+#, fuzzy
+#~ msgid "Předvolby nebyly uloženy"
+#~ msgstr "Command not saved"
+
+#, fuzzy
+#~ msgid "Předvolby"
+#~ msgstr "Templates"
+
+#, fuzzy
+#~ msgid "Regenerate all configuration files"
+#~ msgstr "Regenerate All Config files"
+
+#~ msgid "Configuration file %s was created"
+#~ msgstr "Configuration file %s was created"
+
+#~ msgid "Configuration file %s was not created"
+#~ msgstr "Configuration file %s was not created"
+
+#~ msgid "config file"
+#~ msgstr "config file"
+
+#~ msgid "starting on line"
+#~ msgstr "starting on line"
+
+#~ msgid "Warning"
+#~ msgstr "Warning"
+
+#~ msgid "without services asigned"
+#~ msgstr "without services asigned"
+
+#~ msgid "Hosts Removed"
+#~ msgstr "Hosts Removed"
+
+#~ msgid "Hostgroups removed"
+#~ msgstr "Hostgroups removed"
+
+#~ msgid "Contacts removed"
+#~ msgstr "Contacts removed"
+
+#~ msgid "Contactgroups removed"
+#~ msgstr "Contactgroups removed"
+
+#~ msgid "Services removed"
+#~ msgstr "Services removed"
+
+#~ msgid "Servicegroups removed"
+#~ msgstr "Servicegroups removed"
+
+#~ msgid "Sensors unsynced"
+#~ msgstr "Sensors unsynced"
+
+#~ msgid "%s sensor states was set"
+#~ msgstr "%s sensor states was set"
+
+#~ msgid "Objects Database Reset"
+#~ msgstr "Objects Database Reset"
+
+#~ msgid "Hosti"
+#~ msgstr "Hosts"
+
+#~ msgid "Remove hosts, but keep templates"
+#~ msgstr "Remove hosts, but keep templates"
+
+#~ msgid "Hostgroups"
+#~ msgstr "Hostgroups"
+
+#~ msgid "Remove hostgroups"
+#~ msgstr "Remove hostgroups"
+
+#~ msgid "Contactgroups"
+#~ msgstr "Contactgroups"
+
+#~ msgid "Remove Contactgroups"
+#~ msgstr "Remove Contactgroups"
+
+#~ msgid "Remove Services"
+#~ msgstr "Remove Services"
+
+#~ msgid "Servicegroups"
+#~ msgstr "Servicegroups"
+
+#~ msgid "Remove Servicegroups"
+#~ msgstr "Remove Servicegroups"
+
+#~ msgid "Remove all Data"
+#~ msgstr "Remove all Data"
+
+#~ msgid "Unsync Hash"
+#~ msgstr "Unsync Hash"
+
+#~ msgid "Make all configurations obsolete"
+#~ msgstr "Make all configurations obsolete"
+
+#~ msgid "Sync Hash"
+#~ msgstr "Sync Hash"
+
+#~ msgid "Make all configurations actual"
+#~ msgstr "Make all configurations actual"
+
+#~ msgid "Perform operation"
+#~ msgstr "Perform operation"
+
+#~ msgid "Database cleaning"
+#~ msgstr "Database cleaning"
+
+#~ msgid "Script was uploaded to server"
+#~ msgstr "Script was uploaded to server"
+
+#~ msgid "Script name missing"
+#~ msgstr "Script name missing"
+
+#~ msgid "Skript was not saved"
+#~ msgstr "Skript was not saved"
+
+#~ msgid "Skript was saved"
+#~ msgstr "Skript was saved"
+
+#, fuzzy
+#~ msgid "Script Editor"
+#~ msgstr "Script"
+
+#~ msgid "Script removal: Are you sure ?"
+#~ msgstr "Script removal: Are you sure ?"
+
+#~ msgid "Send file"
+#~ msgstr "Send file"
+
+#~ msgid "Textarea will overwriten"
+#~ msgstr "Textarea will overwriten"
+
+#~ msgid "Used by commands"
+#~ msgstr "Used by commands"
+
+#, fuzzy
+#~ msgid "Přehled skriptů"
+#~ msgstr "Command overview"
+
+#, fuzzy
+#~ msgid "Vyheldávaný řetězec je příliš krátký"
+#~ msgstr "Password is too short"
+
+#, fuzzy
+#~ msgid "Výsledky hledání"
+#~ msgstr "Test results"
+
+#~ msgid "Sensor"
+#~ msgstr "Sensor"
+
+#~ msgid "Host byl přejmenován"
+#~ msgstr "Host renamed"
+
+#~ msgid "Host nebyl přejmenován"
+#~ msgstr "Host not renamed"
+
+#~ msgid "Cloned"
+#~ msgstr "Clonned"
+
+#~ msgid "Služba byla zklonovana"
+#~ msgstr "Service clonned"
+
+#~ msgid "Služba nebyla zklonovana"
+#~ msgstr "Service not clonned"
+
+#~ msgid "Služba %s byla odvozena"
+#~ msgstr "Service %s derived"
+
+#~ msgid "Služba nebyla odvozena"
+#~ msgstr "Service not derived"
+
+#~ msgid "Editace služby"
+#~ msgstr "Service Edit"
+
+#, fuzzy
+#~ msgid "Výměna služby"
+#~ msgstr "Services"
+
+#~ msgid "Systémová služba"
+#~ msgstr "System service"
+
+#, fuzzy
+#~ msgid "Service swap"
+#~ msgstr "Service"
+
+#~ msgid "Skupina služeb nebyla uložena"
+#~ msgstr "Servicegroup not saved"
+
+#~ msgid "Skupina služeb byla uložena"
+#~ msgstr "Sercvice group created"
+
+#~ msgid "Editace skupiny služeb"
+#~ msgstr "Edit servicegroup"
+
+#~ msgid "Přehled skupin služeb"
+#~ msgstr "Servicegroup overview"
+
+#, fuzzy
+#~ msgid "Skupiny služeb"
+#~ msgstr "Edit servicegroup"
+
+#~ msgid "Přehled služeb"
+#~ msgstr "Services overview"
+
+#, fuzzy
+#~ msgid "Služba byla naklonována"
+#~ msgstr "Service saved"
+
+#~ msgid "Služba byla přejmenována"
+#~ msgstr "Service renamed"
+
+#~ msgid "Sužba nebyla přejmenována"
+#~ msgstr "Service not renamed"
+
+#, fuzzy
+#~ msgid "Service Edit"
+#~ msgstr "Edit"
+
+#~ msgid "Admin privileges was supressed"
+#~ msgstr "Admin privileges was supressed"
+
+#~ msgid "User settings"
+#~ msgstr "User settings"
+
+#~ msgid "Click to change icon"
+#~ msgstr "Click to change icon"
+
+#, fuzzy
+#~ msgid "Email address"
+#~ msgstr "Email Address"
+
+#~ msgid "Supress admin privileges"
+#~ msgstr "Supress admin privileges"
+
+#~ msgid "Service Migration"
+#~ msgstr "Service Migration"
+
+#, fuzzy
+#~ msgid "Nová předloha"
+#~ msgstr "Not a template"
+
+#, fuzzy
+#~ msgid "Vytvořena nová předloha sledovaných služeb: %s"
+#~ msgstr "Monitored service added"
+
+#, fuzzy
+#~ msgid "Nebyla vytvořena nová předloha"
+#~ msgstr "Table %s not created"
+
+#, fuzzy
+#~ msgid "Editace předvolby sledovaných služeb"
+#~ msgstr "Edit servicegroup"
+
+#, fuzzy
+#~ msgid "Přehled předloh sledovaných služeb"
+#~ msgstr "Services overview"
+
+#, fuzzy
+#~ msgid "Předlohy sledovaných služeb"
+#~ msgstr "Services overview"
+
+#~ msgid "timeperiod saving failed"
+#~ msgstr "timeperiod saving failed"
+
+#~ msgid "timeperiod saved"
+#~ msgstr "timeperiod saved"
+
+#~ msgid "item was not removed"
+#~ msgstr "item was not removed"
+
+#~ msgid "item was removed"
+#~ msgstr "item was removed"
+
+#~ msgid "Editace časové periody"
+#~ msgstr "Timeperiod Edit"
+
+#~ msgid "Label"
+#~ msgstr "Label"
+
+#, fuzzy
+#~ msgid "Interval(s)"
+#~ msgstr "check interval"
+
+#~ msgid "Přehled časových period"
+#~ msgstr "Timeperiod overview"
+
+#~ msgid "Nemáte definované časové periody"
+#~ msgstr "No timeperiods defined"
+
+#~ msgid "Založit časovou periodu "
+#~ msgstr "Create timeperiod"
+
+#, fuzzy
+#~ msgid "člen byl přidán do skupiny"
+#~ msgstr "Parent added"
+
+#, fuzzy
+#~ msgid "člen nebyl přidán do skupiny"
+#~ msgstr "Parent not added"
+
+#, fuzzy
+#~ msgid "člen byl odstraněn ze skupiny"
+#~ msgstr " %s removed from group %s"
+
+#, fuzzy
+#~ msgid "člen nbyl odstraněn ze skupiny"
+#~ msgstr " %s removed from group %s"
+
+#, fuzzy
+#~ msgid "skupina byla uložena"
+#~ msgstr "Sercvice group created"
+
+#, fuzzy
+#~ msgid "skupina nebyla uložena"
+#~ msgstr "Servicegroup not saved"
+
+#, fuzzy
+#~ msgid "Uživatelská skupina"
+#~ msgstr "Servicegroup not saved"
+
+#, fuzzy
+#~ msgid "Skupina uživatelů"
+#~ msgstr "Servicegroup not saved"
+
+#, fuzzy
+#~ msgid "Přehled uživatelských skupin"
+#~ msgstr "Hostgroup overview"
+
+#, fuzzy
+#~ msgid "Uživatelské skupiny"
+#~ msgstr "Edit servicegroup"
+
+#, fuzzy
+#~ msgid "Vlastnictví byla předána"
+#~ msgstr "Service saved"
+
+#~ msgid "Přihlásit se jako uživatel <i class=\"icon-refresh\"></i>"
+#~ msgstr "Log-in as user <i class=\"icon-refresh\"></i>"
+
+#, fuzzy
+#~ msgid "Nový vlastník"
+#~ msgstr "Load custom"
+
+#, fuzzy
+#~ msgid "Předat"
+#~ msgstr "Templates"
+
+#~ msgid "Administrator"
+#~ msgstr "Administrator"
+
+#~ msgid "User"
+#~ msgstr "User"
+
+#~ msgid "Regenerate configuration"
+#~ msgstr "Regenerate configuration"
+
+#~ msgid "Create user"
+#~ msgstr "Create user"
+
+#~ msgid "Add all hosts on route to watched"
+#~ msgstr "Add all hosts on route to watched"
+
+#~ msgid "Gateway"
+#~ msgstr "Gateway"
+
+#~ msgid "Choose allready defined gateway or enter an address."
+#~ msgstr "Choose allready defined gateway or enter an address."
+
+#~ msgid "IP Address"
+#~ msgstr "IP Address"
+
+#~ msgid "First pingable pubic IP address on route to monitoring server"
+#~ msgstr "First pingable pubic IP address on route to monitoring server"
+
+#~ msgid "Watch route"
+#~ msgstr "Watch route"
+
+#~ msgid "Watch target route select"
+#~ msgstr "Watch target route select"
+
+#~ msgid "Choose host or enter an IP address"
+#~ msgstr "Choose host or enter an IP address"
+
+#~ msgid "New host %s %s created"
+#~ msgstr "New host %s %s created"
+
+#~ msgid "Hostgroup %s filled"
+#~ msgstr "Hostgroup %s filled"
+
+#~ msgid "Hostgroup %s was not filled"
+#~ msgstr "Hostgroup %s was not filled"
+
+#~ msgid "Host Save failed"
+#~ msgstr "Host Save failed"
+
+#~ msgid "No contact defined"
+#~ msgstr "No contact defined"
+
+#~ msgid "Create initial contact"
+#~ msgstr "Create initial contact"
+
+#~ msgid "%s hosts defined"
+#~ msgstr "%s hosts defined"
+
+#~ msgid "Hostname serveru"
+#~ msgstr "Server Hostname"
+
+#~ msgid ""
+#~ "Název hostu, tedy to co následuje po http:// ve webové adrese až k "
+#~ "prvnímu lomítku, nebo otazníku."
+#~ msgstr "Host name"
+
+#~ msgid "IPv4 Adresa"
+#~ msgstr "IPv4 Address"
+
+#~ msgid "čtyři číslice od 0 do 255 oddělené tečkou"
+#~ msgstr "four digits from 0 to 255 separated by dots"
+
+#~ msgid "IPv6 Adresa"
+#~ msgstr "IPv6 Address"
+
+#~ msgid "nejvíce osm skupin čtyř hexadecimálních číslic oddělených dvojtečkou"
+#~ msgstr "eight groups of four hexadecimal digits separated by colons"
+
+#~ msgid "Přidej host"
+#~ msgstr "Add host"
+
+#~ msgid ""
+#~ "Po zadání alespoň jednoho vstupního údaje si tento průvodce dohledá "
+#~ "ostatní a provede sken na některé základní služby.<br>Pokud budou tyto "
+#~ "nalezeny aktivují se jejich testy. Informace o stavu bude odesílána na "
+#~ "první zadaný kontakt"
+#~ msgstr ""
+#~ "After filling at least one initial detail, the wizard will scan the "
+#~ "rest<br>and scan for some basic services"
+
+#, fuzzy
+#~ msgid "Služba byla založena"
+#~ msgstr "Service saved"
+
+#, fuzzy
+#~ msgid "Není zvolen vzdálený příkaz testu"
+#~ msgstr "Remote commads"
+
+#, fuzzy
+#~ msgid "Prosím zastejte název služby"
+#~ msgstr "Confirm the service settings"
+
+#, fuzzy
+#~ msgid "Průvodce založením pasivně sledované služby"
+#~ msgstr "New host wizard"
+
+#, fuzzy
+#~ msgid "Aktivně sledovaná služba"
+#~ msgstr "System service"
+
+#~ msgid "This hostname allready exists"
+#~ msgstr "This hostname allready exists"
+
+#~ msgid "Host name is required"
+#~ msgstr "Host name is required"
+
+#~ msgid "New Host Wizard"
+#~ msgstr "New Host Wizard"
+
+#~ msgid "Host Name"
+#~ msgstr "Host Name"
+
+#~ msgid "Unique identificator"
+#~ msgstr "Unique identificator"
+
+#~ msgid "Active"
+#~ msgstr "Active"
+
+#~ msgid "Passive"
+#~ msgstr "Passive"
+
+#~ msgid "Watch method"
+#~ msgstr "Watch method"
+
+#~ msgid "Host watch method"
+#~ msgstr "Host watch method"
+
+#~ msgid ""
+#~ "<strong>Active</strong> tracked guests require Icinga to be able to reach "
+#~ "tested machine. <br>Hosts checked <strong>Passive</strong> sends its "
+#~ "tests results to Icinga server "
+#~ msgstr ""
+#~ "<strong>Active</strong> tracked guests require Icinga to be able to reach "
+#~ "tested machine. <br>Hosts checked <strong>Passive</strong> sends its "
+#~ "tests results to Icinga server "
+
+#~ msgid "Hostgroup"
+#~ msgstr "Hostgroup"
+
+#~ msgid "Initial hostgroup for Host"
+#~ msgstr "Initial hostgroup for Host"
+
+#~ msgid "New host"
+#~ msgstr "New host"
+
+#~ msgid "Please enter name of Host to watch"
+#~ msgstr "Please enter name of Host to watch"
+
+#~ msgid "New Passive Host wizard"
+#~ msgstr "New Passive Host wizard"
+
+#~ msgid "New Passive Host"
+#~ msgstr "New Passive Host"
+
+#~ msgid "Service created"
+#~ msgstr "Service created"
+
+#~ msgid "Please enter the Service name"
+#~ msgstr "Please enter the Service name"
+
+#~ msgid "New passive service wizzard"
+#~ msgstr "New passive service wizzard"
+
+#~ msgid ""
+#~ "Passive checks are initiated and performed external applications/processes"
+#~ msgstr ""
+#~ "Passive checks are initiated and performed external applications/processes"
+
+#~ msgid "Passive checked Service"
+#~ msgstr "Passive checked Service"
+
+#~ msgid "Passive check service results are submitted to Icinga for processing"
+#~ msgstr ""
+#~ "Passive check service results are submitted to Icinga for processing"
+
+#, fuzzy
+#~ msgid "Průvodce založením hosta"
+#~ msgstr "of the host"
+
+#~ msgid "Hosty"
+#~ msgstr "Hosts"
+
+#~ msgid "Host"
+#~ msgstr "Host"
+
+#~ msgid "debug"
+#~ msgstr "debug"
+
+#~ msgid "info"
+#~ msgstr "info"
+
+#~ msgid "warning"
+#~ msgstr "warning"
+
+#~ msgid "error"
+#~ msgstr "error"
+
+#~ msgid "You enter: %s as text."
+#~ msgstr "You enter: %s as text."
+
+#~ msgid "Please enter any text"
+#~ msgstr "Please enter any text"
+
+#~ msgid "You enter: %s as number."
+#~ msgstr "You enter: %s as number."
+
+#~ msgid "Please enter any number"
+#~ msgstr "Please enter any number"
+
+#~ msgid "Text"
+#~ msgstr "Text"
+
+#~ msgid "Default text"
+#~ msgstr "Default text"
+
+#~ msgid "Text hint"
+#~ msgstr "Text hint"
+
+#~ msgid "Number"
+#~ msgstr "Number"
+
+#~ msgid "Number hint"
+#~ msgstr "Number hint"
+
+#~ msgid "Modal Example"
+#~ msgstr "Modal Example"
+
+#~ msgid "caution"
+#~ msgstr "caution"
+
+#~ msgid "Twitter Bootstrap"
+#~ msgstr "Twitter Bootstrap"
+
+#~ msgid "Homepage"
+#~ msgstr "Homepage"
+
+#~ msgid "System"
+#~ msgstr "System"
+
+#~ msgid "Shutdown"
+#~ msgstr "Shutdown"
+
+#, fuzzy
+#~ msgid "Informace"
+#~ msgstr "informace"
+
+#~ msgid "System log"
+#~ msgstr "System log"
+
+#, fuzzy
+#~ msgid "Hosting"
+#~ msgstr "Hosts"
+
+#~ msgid "Example Web Page"
+#~ msgstr "Example Web Page"
+
+#~ msgid "Status messages"
+#~ msgstr "Status messages"
+
+#~ msgid "Ul One"
+#~ msgstr "Ul One"
+
+#~ msgid "Ul Two"
+#~ msgstr "Ul Two"
+
+#~ msgid "Ul Three"
+#~ msgstr "Ul Three"
+
+#~ msgid "Ol One"
+#~ msgstr "Ol One"
+
+#~ msgid "Ol Two"
+#~ msgstr "Ol Two"
+
+#~ msgid "Ol Three"
+#~ msgstr "Ol Three"
+
+#~ msgid "UpdateToSQL: Missing data"
+#~ msgstr "UpdateToSQL: Missing data"
+
+#~ msgid "Confirmation"
+#~ msgstr "Confirmation"
+
+#~ msgid "Really"
+#~ msgstr "Really"
+
+#~ msgid " not an folder. Current directory:"
+#~ msgstr " not an folder. Current directory:"
+
+#~ msgid " not an readable folder. Current directory:"
+#~ msgstr " not an readable folder. Current directory:"
+
+#~ msgid " not an writeable folder. Current directory:"
+#~ msgstr " not an writeable folder. Current directory:"
+
+#, fuzzy
+#~ msgid "Zpráva %s byla odeslána na adresu %s"
+#~ msgstr "item %s removed from %s/%s/%s"
+
+#, fuzzy
+#~ msgid "Nejprve se prosím přihlašte"
+#~ msgstr "Please log in first as admin"
+
+#~ msgid "Unimplemented Database"
+#~ msgstr "Unimplemented Database"
+
+#~ msgid "Previous"
+#~ msgstr "Previous"
+
+#~ msgid "Next"
+#~ msgstr "Next"
+
+#~ msgid "Switch navigation"
+#~ msgstr "Switch navigation"
+
+#~ msgid "kliknutím skryjete zprávy"
+#~ msgstr "click to hide messages"
+
+#~ msgid "missing login"
+#~ msgstr "missing login"
+
+#~ msgid "missing password"
+#~ msgstr "missing password"
+
+#~ msgid "invalid password"
+#~ msgstr "invalid password"
+
+#~ msgid "user %s does not exist"
+#~ msgstr "user %s does not exist"
+
+#~ msgid "Sign in denied by administrator"
+#~ msgstr "Sign in denied by administrator"
+
+#~ msgid "Sign in %s all ok"
+#~ msgstr "Sign in %s all ok"
+
+#, fuzzy
+#~ msgid "Odhlášení proběhlo uspěšně"
+#~ msgstr "Logout"
+
+#~ msgid "Status message add test"
+#~ msgstr "Status message add test"
+
+#~ msgid "Windows Files conversion"
+#~ msgstr "Windows Files conversion"
+
+#~ msgid "Unix File Conversion"
+#~ msgstr "Unix File Conversion"
+
+#~ msgid "FlexiProxy Account"
+#~ msgstr "FlexiProxy Account"
+
+#, fuzzy
+#~ msgid "IP adresa serveru"
+#~ msgstr "Server Hostname"
+
+#, fuzzy
+#~ msgid "nsca heslo"
+#~ msgstr "Windows NSCA"
+
+#, fuzzy
+#~ msgid "Platforma sledovaného stroje"
+#~ msgstr "URL of monitored page"
+
+#, fuzzy
+#~ msgid "Predloha"
+#~ msgstr "Draft"
+
+#, fuzzy
+#~ msgid "Vlastnik"
+#~ msgstr "Properties"
+
+#, fuzzy
+#~ msgid "Název služby testu"
+#~ msgstr "Services"
+
+#, fuzzy
+#~ msgid "Vzdálený Příkaz"
+#~ msgstr "command"
+
+#, fuzzy
+#~ msgid "Hledej příkazy pro: "
+#~ msgstr "Commands import"
+
+#, fuzzy
+#~ msgid "Přiřadit"
+#~ msgstr "Assign parents"
+
+#~ msgid "Nejprve je potřeba uložit záznam"
+#~ msgstr "Save the record first"
+
+#, fuzzy
+#~ msgid "Potvrzení konfigurace"
+#~ msgstr "configuration generated"
+
+#, fuzzy
+#~ msgid "Přidána sledovaná služba: %s"
+#~ msgstr "Service %s derived"
+
+#~ msgid "Přidání sledované služby: %s se nezdařilo"
+#~ msgstr "Addition of monitored service %s failed"
+
+#~ msgid "příkaz"
+#~ msgstr "command"
+
+#, fuzzy
+#~ msgid "Záznam byl přidán"
+#~ msgstr "Parent added"
+
+#, fuzzy
+#~ msgid "Záznam nebyl přidám"
+#~ msgstr "Parent not added"
+
+#~ msgid "rodiče hostu"
+#~ msgstr "host parents"
+
+#~ msgid "Přidat rodiče"
+#~ msgstr "Add parrent(s)"
+
+#~ msgid "Přiřadit rodiče"
+#~ msgstr "Assign parents"
+
+#, fuzzy
+#~ msgid "Odstranit rodiče"
+#~ msgstr "Add parrent(s)"
+
+#~ msgid "Vyber Ikonu"
+#~ msgstr "Choose icon"
+
+#~ msgid "Nahraj vlastní"
+#~ msgstr "Load custom"
+
+#~ msgid "Obrázek typu GIF,PNG nebo JPG, nejlépe 40x40 px"
+#~ msgstr "Image GIF, PNG or JPG, preferably 40x40 px"
+
+#~ msgid "Ikona ze souboru"
+#~ msgstr "Icon from file"
+
+#~ msgid "Soubor v počítači"
+#~ msgstr "The file on your computer"
+
+#~ msgid "Ikona z adresy"
+#~ msgstr "Icon from URL address"
+
+#~ msgid "Titulek obrázku"
+#~ msgstr "Image Title"
+
+#~ msgid "nepovinné"
+#~ msgstr "optional"
+
+#~ msgid "Odeslat"
+#~ msgstr "Send"
+
+#~ msgid "předloha"
+#~ msgstr "Draft"
+
+#~ msgid " byl naimportován"
+#~ msgstr " imported"
+
+#~ msgid "Načteno %s řádek konfigurace"
+#~ msgstr "%s rows of configuration was read"
+
+#~ msgid "konfigurace nebyla načtena"
+#~ msgstr "configuration not loaded"
+
+#~ msgid "Bylo naimportováno %s konfigurací"
+#~ msgstr "%s configurations imported"
+
+#, fuzzy
+#~ msgid "Nic se nenaimportovalo"
+#~ msgstr " not imported"
+
+#~ msgid "Sledované url"
+#~ msgstr "Monitored URLs"
+
+#~ msgid "Adresa sledované stránky"
+#~ msgstr "URL of monitored page"
+
+#~ msgid "Očekávaný obsah"
+#~ msgstr "Expected content"
+
+#~ msgid "Text očekávaný na stránce v rámci bezchybného obsahu"
+#~ msgstr "Text expected on page"
+
+#~ msgid "Nechtěný obsah"
+#~ msgstr "Unwanted content"
+
+#~ msgid ""
+#~ "Neočekávaný text, např. \"Error\" nebo jiný fragment chybového hlášení"
+#~ msgstr "Text not expected (e.g. \"error\" or other error statement"
+
+#~ msgid "Přejmenovat"
+#~ msgstr "Rename"
+
+#~ msgid "Přejmenování"
+#~ msgstr "Renaming"
+
+#~ msgid "Generování konfigurace"
+#~ msgstr "Generating configuration"
+
+#~ msgid "konfigurační soubor %s byl znovu vytvořen"
+#~ msgstr "config file %s recreated"
+
+#~ msgid "konfigurační soubor  %s nebyl znovu vytvořen"
+#~ msgstr "Config file %s not recreated"
+
+#~ msgid "Kontrola konfigurace nevrátila výsledek."
+#~ msgstr "Configuration check did not return any result."
+
+#~ msgid "Zkontroluj prosím zdlali nechybí potřebný fragment v /etc/sudoers:"
+#~ msgstr "Check /etc/sudoers for mising info:"
+
+#~ msgid "celkem %s varování"
+#~ msgstr "%s warnings"
+
+#~ msgid "test proběhl bez varování"
+#~ msgstr "test passed without errors"
+
+#~ msgid "celkem %s chyb"
+#~ msgstr "overall %s errors"
+
+#~ msgid "test proběhl bez chyb"
+#~ msgstr "test passed without errors"
+
+#~ msgid "Všechny vaše konfigurační soubory byly přegenerovány"
+#~ msgstr "All your config files has been regenerated"
+
+#~ msgid "Hotovo"
+#~ msgstr "Done"
+
+#, fuzzy
+#~ msgid "Konfigurace %s potvrzena"
+#~ msgstr "configuration not loaded"
+
+#, fuzzy
+#~ msgid "Chyba potvrzení konfigurace"
+#~ msgstr "main configuration file"
+
+#~ msgid "Změna hesla uživatele"
+#~ msgstr "User password change"
+
+#~ msgid "Heslo bylo změněno"
+#~ msgstr "Password changed"
+
+#~ msgid "Změněné heslo pro Monitoring"
+#~ msgstr "Change monitoring password"
+
+#~ msgid "Vážený zákazníku vaše přihlašovací údaje byly změněny"
+#~ msgstr "Login details changed"
+
+#~ msgid "Stávající heslo"
+#~ msgstr "Current Pasword"
+
+#~ msgid "Nové heslo"
+#~ msgstr "New Password"
+
+#~ msgid "potvrzení hesla"
+#~ msgstr "password confirmation"
+
+#~ msgid "změna hesla"
+#~ msgstr "password change"
+
+#~ msgid "Registrace"
+#~ msgstr "Registration"
+
+#~ msgid "Přihlášení"
+#~ msgstr "Login"
+
+#~ msgid "Heslo"
+#~ msgstr "Password"
+
+#~ msgid "zapamatuj si mne"
+#~ msgstr "remember me"
+
+#~ msgid "přihlásit"
+#~ msgstr "Login"
+
+#~ msgid "Přehled konfigurací"
+#~ msgstr "Configuration overview"
+
+#~ msgid "Uživatelská podpora"
+#~ msgstr "User Support"
+
+#~ msgid "Chybi definice"
+#~ msgstr "Missing definiton"
+
+#~ msgid "Výchozí"
+#~ msgstr "Default"
+
+#~ msgid "Neznámý typ %s pro sloupec %s"
+#~ msgstr "type %s uknown for column %s"
+
+#, fuzzy
+#~ msgid "Více nastavení:"
+#~ msgstr "Settings"
+
+#~ msgid "tento záznam se nebude generovat do konfigurace"
+#~ msgstr "this record will not be generated into config"
+
+#~ msgid "tento záznam je veřejný"
+#~ msgstr "this record is public"
+
+#~ msgid "Info Chybí"
+#~ msgstr "Missing Info"
+
+#~ msgid "sloupec bez popisku"
+#~ msgstr "column without a label"
+
+#~ msgid "Není vyplněna povinná položka"
+#~ msgstr "Required item is missing"
+
+#~ msgid "Rozšířené"
+#~ msgstr "Extendeded"
+
+#~ msgid "položka %s byla přidána"
+#~ msgstr "item %s added"
+
+#~ msgid "položka %s nebyla přidána"
+#~ msgstr "item %s not added"
+
+#~ msgid "položka %s byla odebrána"
+#~ msgstr "item %s removed"
+
+#~ msgid "položka %s nebyla odebrána"
+#~ msgstr "ite %s removed"
+
+#, fuzzy
+#~ msgid "aktualizovat senzor"
+#~ msgstr "Apply sensor"
+
+#, fuzzy
+#~ msgid "nasadit senzor"
+#~ msgstr "Apply sensor"
+
+#, fuzzy
+#~ msgid "přiřadit rodiče"
+#~ msgstr "Assign parents"
+
+#, fuzzy
+#~ msgid "přiřadit ikonu"
+#~ msgstr "Assign parents"
+
+#, fuzzy
+#~ msgid "přiřadit kontakty"
+#~ msgstr "Contact edit"
+
+#, fuzzy
+#~ msgid "Hosty dle stavu konfigurace"
+#~ msgstr "Generate into config"
+
+#, fuzzy
+#~ msgid "Přiřadit kontakt"
+#~ msgstr "Add contact information"
+
+#~ msgid "Cíle notifikací"
+#~ msgstr "Notifications targets"
+
+#~ msgid "Začít obesílat"
+#~ msgstr "Start sending"
+
+#~ msgid "Přestat obesílat"
+#~ msgstr "Stop sending"
+
+#, fuzzy
+#~ msgid "Přidat"
+#~ msgstr "Add parrent(s)"
+
+#~ msgid "Nepodařilo se odregistrovat %s ze služby %s"
+#~ msgstr " %s unregister from service %s unsuccessful"
+
+#~ msgid "Nepodařilo se přejmenovat %s ve službě %s"
+#~ msgstr "Rename of %s in service %s unsuccessful"
+
+#~ msgid "Rodiče"
+#~ msgstr "Parents"
+
+#, fuzzy
+#~ msgid "Konfigurace senzoru"
+#~ msgstr "configuration file"
+
+#~ msgid "Sledované hosty služby"
+#~ msgstr "Hosts affected by service"
+
+#~ msgid "Uplatnit změny"
+#~ msgstr "Apply changes"
+
+#~ msgid "Průvodce založením hostu"
+#~ msgstr "New host wizard"
+
+#, fuzzy
+#~ msgid "Nový aktivní Host"
+#~ msgstr "New Host"
+
+#~ msgid "Nová skupina hostů"
+#~ msgstr "New Hostgroup"
+
+#~ msgid "Detailní přehled hostů"
+#~ msgstr "Detailed hosts overview "
+
+#~ msgid "Uživatelé"
+#~ msgstr "Users"
+
+#~ msgid "Nový uživatel"
+#~ msgstr "New User"
+
+#~ msgid "Přehled uživatelů"
+#~ msgstr "Users overview"
+
+#, fuzzy
+#~ msgid "Nová skupina uživatelů"
+#~ msgstr "New servicegroup"
+
+#, fuzzy
+#~ msgid "Přehled skupin uživatelů"
+#~ msgstr "Users overview"
+
+#, fuzzy
+#~ msgid "Průvodce založením služby"
+#~ msgstr "New host wizard"
+
+#~ msgid "Nová služba"
+#~ msgstr "New Service"
+
+#~ msgid "Nová skupina služeb"
+#~ msgstr "New servicegroup"
+
+#, fuzzy
+#~ msgid "Nová předloha sledované služby"
+#~ msgstr "Monitored services"
+
+#~ msgid "Přehled Kontaktů"
+#~ msgstr "Contacts overview"
+
+#~ msgid "Nový kontakt"
+#~ msgstr "New Contact"
+
+#~ msgid "Přehled skupin kontaktů"
+#~ msgstr "Contactgroup overview"
+
+#~ msgid "Nová skupina kontaktů"
+#~ msgstr "New contactgroup"
+
+#~ msgid "Nový příkaz"
+#~ msgstr "New command"
+
+#~ msgid "Nová časová perioda"
+#~ msgstr "New timeperiod"
+
+#, fuzzy
+#~ msgid "Nastavení icingy"
+#~ msgstr "Settings"
+
+#~ msgid "Přegenerovat všechny konfiguráky"
+#~ msgstr "Re-generate all config"
+
+#, fuzzy
+#~ msgid "Opravit databázi"
+#~ msgstr "Reinitialize the database"
+
+#~ msgid "Výsledky testů"
+#~ msgstr "Test results"
+
+#, fuzzy
+#~ msgid "Název sledovaného stroje"
+#~ msgstr "URL of monitored page"
+
+#~ msgid "přihlásit přez Twitter"
+#~ msgstr "Sign in with Twitter"
+
+#~ msgid "odhlasit twitter"
+#~ msgstr "logout twitter"
+
+#~ msgid ""
+#~ "Další sledovatelné služby budou nabídnuty po nastavení platformy hosta a "
+#~ "vzdáleného senzoru."
+#~ msgstr ""
+#~ "More services will be accessible after you set a platform for the host "
+#~ "and remote sensor"
+
+#, fuzzy
+#~ msgid "Uložit jako předlohu"
+#~ msgstr "Save as template named"
+
+#, fuzzy
+#~ msgid "Konfigurace uživatele %s byla smazána"
+#~ msgstr "User %s was deleted"
+
+#, fuzzy
+#~ msgid "Konfigurace uživatele %s nebyla smazána"
+#~ msgstr "User %s was deleted"
+
+#~ msgid "Uživatel %s byl smazán"
+#~ msgstr "User %s was deleted"
+
+#~ msgid "Uložit jako předlohu pod jménem"
+#~ msgstr "Save as template named"
+
+#~ msgid "Není předloha"
+#~ msgstr "Not a template"
+
+#, fuzzy
+#~ msgid "vlastník"
+#~ msgstr "Load custom"
+
+#~ msgid "předloha %s nebyla načtena"
+#~ msgstr "Template %s not loaded"
+
+#~ msgid "předloha %s byla načtena"
+#~ msgstr "template %s loaded"
+
+#~ msgid "Předloha %s není pojmenována"
+#~ msgstr "Template %s not named"
+
+#~ msgid "Chybí hodnota pro požadovanou položku %s pro %s"
+#~ msgstr "The value for mandatory field %s is missing for %s"
+
+#~ msgid "Předloha %s je již definována. Zvolte prosím jiný název."
+#~ msgstr "Name %s is alrady in use. Choose different name"
+
+#~ msgid "%s %s je již definováno. Zvolte prosím jiné."
+#~ msgstr "%s %s is defined already. Choose different name"
+
+#~ msgid "je předlohou pro"
+#~ msgstr "is a template for"
+
+#, fuzzy
+#~ msgid "Bez vlastníka"
+#~ msgstr "Load custom"
+
+#~ msgid " %s %s byl smazán "
+#~ msgstr "%s %s deleted"
+
+#~ msgid " %s %s nebyl smazán "
+#~ msgstr " %s %s not removed"
+
+#~ msgid " nebyl naimportován"
+#~ msgstr " not imported"
+
+#~ msgid "Očekávám název souboru"
+#~ msgstr "Expect filename"
+
+#~ msgid "položka %s nebyla přidána do %s/%s/%s"
+#~ msgstr "item %s not added to %s/%s/%s"
+
+#~ msgid "položka %s byla přidána do %s/%s/%s"
+#~ msgstr "item %s added to %s/%s/%s"
+
+#~ msgid "položka %s nebyla odebrána z %s/%s/%s"
+#~ msgstr "item %s was not removed from %s/%s/%s"
+
+#, fuzzy
+#~ msgid "Neznámá položka %s sloupec %s při importu"
+#~ msgstr "type %s uknown for column %s"
+
+#, fuzzy
+#~ msgid "Neznámý sloupec %s při importu"
+#~ msgstr "type %s uknown for column %s"
+
+#, fuzzy
+#~ msgid "tento záznam se nebude generovat"
+#~ msgstr "this record will not be generated into config"
+
+#~ msgid "Editace skupiny kontaktu"
+#~ msgstr "Contactgroup edit"
+
+#~ msgid "Skupina kontaktů nebyla uložena"
+#~ msgstr "Contactgroup was not saved"
+
+#~ msgid "Skupina kontaktů byla uložena"
+#~ msgstr "Contactgroup was saved"
+
+#, fuzzy
+#~ msgid "Skupina kontaktů"
+#~ msgstr "New contactgroup"
+
+#~ msgid "Kontakt byl přejmenován"
+#~ msgstr "Contact renamed"
+
+#~ msgid "Kontakt nebyl přejmenován"
+#~ msgstr "Contact not renamed"
+
+#~ msgid "mailová adresa je příliš krátká"
+#~ msgstr "email address too short"
+
+#~ msgid "chyba v mailové adrese"
+#~ msgstr "invaild email address"
+
+#~ msgid "heslo je příliš krátké"
+#~ msgstr "Password is too short"
+
+#~ msgid "kontrola hesla nesouhlasí"
+#~ msgstr "passwords do not match"
+
+#~ msgid ""
+#~ "Zadané uživatelské jméno %s je již v databázi použito. Zvolte prosím jiné."
+#~ msgstr "Username  %s already in use. Choose diffeent one."
+
+#~ msgid "Administrátirský účet byl vytvořen"
+#~ msgstr "Admin account was created"
+
+#~ msgid "Uživatelský účet byl vytvořen"
+#~ msgstr "User account was created"
+
+#~ msgid "Potvrzení registrace"
+#~ msgstr "Confirmation of registration"
+
+#, fuzzy
+#~ msgid "Nová registrace do Monitoringu: %s"
+#~ msgstr "New registration to VSmonitoring: %s"
+
+#~ msgid "Právě byl zaregistrován nový uživatel:\n"
+#~ msgstr "New user account has just been registered:\n"
+
+#~ msgid "Výchozí kontakt byl založen"
+#~ msgstr "Default contact created"
+
+#~ msgid "Výchozí kontakt nebyl založen"
+#~ msgstr "Default contact not created"
+
+#~ msgid "Mailový kontakt byl založen"
+#~ msgstr "Mail contact created"
+
+#~ msgid "Mailový kontakt nebyl založen"
+#~ msgstr "Mail contact not created"
+
+#~ msgid "Skupina"
+#~ msgstr "Group"
+
+#~ msgid "Prvotní kontaktní skupina byla založena"
+#~ msgstr "Default contactgroup saved"
+
+#~ msgid "Prvotní kontaktní skupina nebyla založena"
+#~ msgstr "Default contactgroup not saved"
+
+#, fuzzy
+#~ msgid "Výchozí skupina"
+#~ msgstr "Default"
+
+#~ msgid "Zápis do databáze se nezdařil!"
+#~ msgstr "Database write fail!"
+
+#~ msgid "Vítejte v registraci"
+#~ msgstr "Welcome to the registration"
+
+#~ msgid ""
+#~ "Po zaregistování budete rovnou vyzváni k zadání prvního sledovaného hosta."
+#~ msgstr ""
+#~ "You will be taken directly to registration of your first host after the "
+#~ "registration."
+
+#~ msgid ""
+#~ "Veškeré notifikace o výsledcích testů vám budou přicházet na zadaný email."
+#~ msgstr "Any notification of test results will arrive on specified email"
+
+#~ msgid ""
+#~ "Pro zasílání notifikací pomocí XMPP (jabber) či SMS, zadejte tyto v "
+#~ "nastavení vašeho kontaktu."
+#~ msgstr "You have to add XMPP or Phone number in your contact info"
+
+#, fuzzy
+#~ msgid "Příjmení"
+#~ msgstr "Renaming"
+
+#~ msgid "Účet"
+#~ msgstr "Account"
+
+#~ msgid "přihlašovací jméno"
+#~ msgstr "login name"
+
+#~ msgid "heslo"
+#~ msgstr "Password"
+
+#~ msgid " (pouze malými písmeny)"
+#~ msgstr " (only lowercase)"
+
+#~ msgid "Registrovat"
+#~ msgstr "Register"
+
+#~ msgid "dokončit registraci"
+#~ msgstr "complete registration"
+
+#~ msgid "Načítání souboru: classes/"
+#~ msgstr "Loading file: classes/"
+
+#~ msgid "Soubor %s se nepodařilo stahnout"
+#~ msgstr "Download of %s not successful"
+
+#~ msgid "Nebyl vybrán soubor s ikonou hosta"
+#~ msgstr "Host icon not selected"
+
+#~ msgid "toto není obrázek požadovaného typu"
+#~ msgstr "this format is not supported"
+
+#~ msgid "Ikona byla přiřazena"
+#~ msgstr "Icon assigned"
+
+#~ msgid "Ikona nebyla přiřazena"
+#~ msgstr "Icon not assigned"
+
+#~ msgid "Rodič nebyl nalezen"
+#~ msgstr "Parent not found"
+
+#~ msgid "Rodič nebyl přidán"
+#~ msgstr "Parent not added"
+
+#~ msgid "Rodič byl přidán"
+#~ msgstr "Parent added"
+
+#~ msgid "Host nebyl uložen"
+#~ msgstr "Host not saved"
+
+#~ msgid "Host byl uložen"
+#~ msgstr "Host saved"
+
+#~ msgid "Změnit ikonu"
+#~ msgstr "Icon change"
+
+#, fuzzy
+#~ msgid "Sledovat cestu"
+#~ msgstr "Monitored URLs"
+
+#~ msgid "Nasadit senzor"
+#~ msgstr "Apply sensor"
+
+#, fuzzy
+#~ msgid "Chyba přiřazení kontaktu"
+#~ msgstr "Create new contact"
+
+#~ msgid "Skupina hostů nebyla uložena"
+#~ msgstr "Hostgroup not saved"
+
+#~ msgid "Skupina hostů byla uložena"
+#~ msgstr "Hostgroup saved"
+
+#~ msgid "Editace skupiny hostů"
+#~ msgstr "Edit hostgroup"
+
+#~ msgid "Přehled hostů"
+#~ msgstr "Hosts overview"
+
+#~ msgid "konfigurační soubor"
+#~ msgstr "configuration file"
+
+#~ msgid "Importovat data jako veřejná"
+#~ msgstr "Import data as public"
+
+#~ msgid "zahájí import konfigurace"
+#~ msgstr "begin import of configuration"
+
+#~ msgid "Monitoring služeb"
+#~ msgstr "Monitoring of Services"
+
+#~ msgid "Sledování hostů"
+#~ msgstr "Host monitoring"
+
+#~ msgid "Sledování služeb"
+#~ msgstr "Service monitoring"
+
+#~ msgid "Cookies jsou vyžadovány"
+#~ msgstr "Cookies are required"
+
+#~ msgid "Přihlášen jako: "
+#~ msgstr "Logged in as:"
+
+#~ msgid "Prosím zadejte vaše přihlašovací udaje"
+#~ msgstr "Please enter your login details"
+
+#~ msgid "Přihlaš se"
+#~ msgstr "Log in"
+
+#~ msgid "Zadejte, prosím, Vaše přihlašovací údaje:"
+#~ msgstr "Your login info:"
+
+#~ msgid "Uživatelské jméno"
+#~ msgstr "User name"
+
+#~ msgid "Obnova hesla"
+#~ msgstr "Password recovery"
+
+#~ msgid "Založte si první sledovaný host"
+#~ msgstr "Create first monitored host"
+
+#~ msgid "Zatím není zaregistrovaný žádný sledovaný host"
+#~ msgstr "No monitord hosts registered"
+
+#, fuzzy
+#~ msgid "Nové heslo pro"
+#~ msgstr "New password for"
+
+#~ msgid "Tvoje přihlašovací údaje byly změněny:\n"
+#~ msgstr "Your login details changed"
+
+#~ msgid "Zadejte prosím váš eMail."
+#~ msgstr "Enter you email"
+
+#~ msgid "Obnova zapomenutého hesla"
+#~ msgstr "Lost password recovery"
+
+#~ msgid ""
+#~ "Zapoměl jste heslo? Vložte svou e-mailovou adresu, kterou jste zadal při "
+#~ "registraci a my Vám pošleme nové."
+#~ msgstr ""
+#~ "Forgot your password? Enter your e-mail address you entered when "
+#~ "registering and we will send you a new one."
+
+#~ msgid "Zaslat nové heslo"
+#~ msgstr "Send new password"
+
+#~ msgid "Pokračovat"
+#~ msgstr "Continue"
+
+#~ msgid "Přegenerování veškeré konfigurace"
+#~ msgstr "Regenerate all config"
+
+#~ msgid "Reload icingy"
+#~ msgstr "Reload Icinga "
+
+#, fuzzy
+#~ msgid "Skupiny hostů  byly odstraněny"
+#~ msgstr "Hostgroup saved"
+
+#, fuzzy
+#~ msgid "Skupiny kontaktů  byly odstraněny"
+#~ msgstr "Contactgroup was saved"
+
+#, fuzzy
+#~ msgid "Skupiny služeb byly odstraněny"
+#~ msgstr "Sercvice group created"
+
+#, fuzzy
+#~ msgid "Smaže skupiny hostů"
+#~ msgstr "Edit hostgroup"
+
+#, fuzzy
+#~ msgid "Smaže kontakty"
+#~ msgstr "Create new contact"
+
+#, fuzzy
+#~ msgid "Skupiny kontaktů"
+#~ msgstr "New contactgroup"
+
+#, fuzzy
+#~ msgid "Smaže skupiny kontaktů"
+#~ msgstr "Contactgroup overview"
+
+#, fuzzy
+#~ msgid "Smaže služby"
+#~ msgstr "Service Edit"
+
+#, fuzzy
+#~ msgid "Smaže skupiny služeb"
+#~ msgstr "Edit servicegroup"
+
+#, fuzzy
+#~ msgid "Editace skriptu"
+#~ msgstr "Edit host"
+
+#, fuzzy
+#~ msgid "Používající příkazy"
+#~ msgstr "Local commands"
+
+#~ msgid "Adminská oprávnění byla potlačena"
+#~ msgstr "Admin permission supressed"
+
+#~ msgid "Twitter byl odvázán od aktuálního účtu"
+#~ msgstr "Twitter un-linked from the account"
+
+#~ msgid "Profil uživatele"
+#~ msgstr "User profile"
+
+#~ msgid "nastavení"
+#~ msgstr "Settings"
+
+#~ msgid "Zahodit adminská oprávnění"
+#~ msgstr "Drop admin permission"
+
+#, fuzzy
+#~ msgid "Migrace služby"
+#~ msgstr "Service Edit"
+
+#~ msgid "časová perioda nebyl uložena"
+#~ msgstr "timeperiod not saved"
+
+#~ msgid "časová byla uložena"
+#~ msgstr "timeperiod was saved"
+
+#~ msgid "položka nebyla odebrána"
+#~ msgstr "item not removed"
+
+#~ msgid "položka byla odebrána"
+#~ msgstr "item removed"
+
+#~ msgid "Označení"
+#~ msgstr "Label"
+
+#~ msgid "Účet twitteru, bayl přiřazen"
+#~ msgstr "Twitter account was linked"
+
+#~ msgid "Založit uživatele"
+#~ msgstr "Create user"
+
+#, fuzzy
+#~ msgid "Hostgrupa %s nebyla naplněna"
+#~ msgstr "Template %s not loaded"
+
+#~ msgid "Založit výchozí kontakt"
+#~ msgstr "Create default contact"
+
+#, fuzzy
+#~ msgid "Název sledovaného hostu"
+#~ msgstr "Hosts affected by service"
+
+#, fuzzy
+#~ msgid "Metoda sledování hostu"
+#~ msgstr "Host monitoring"
+
+#, fuzzy
+#~ msgid "Nový pasivně sledovaný host"
+#~ msgstr "Create first monitored host"
+
+#, fuzzy
+#~ msgid "Pasivně sledovaná služba"
+#~ msgstr "Monitored service added"
+
+#~ msgid "Předloha služby %s není použita. Negeneruji do konfigurace"
+#~ msgstr "Template of service %s not in use, not generating config"
+
+#~ msgid "Služba %s není použita. Negeneruji do konfigurace"
+#~ msgstr "Service %s not used, not generating config"
+
+#~ msgid "Nemáte definovou skupinu hostů"
+#~ msgstr "Hostgroup not defined"
+
+#~ msgid "Nemáte definovou skupinu služeb"
+#~ msgstr "no servicegroup defined"
+
+#~ msgid "Založit skupinu služeb"
+#~ msgstr "Create new servicegroup"
+
+#~ msgid "neurčené příkazy"
+#~ msgstr "Other commands"
+
+#~ msgid "Nemáte definovaný příkaz"
+#~ msgstr "Command not defined"
+
+#~ msgid "Založit příkaz"
+#~ msgstr "Create command"
+
+#~ msgid "zahájí import příkazů"
+#~ msgstr "initiate command import"
+
+#~ msgid "Odvodit <i class=\"icon-edit\"></i>"
+#~ msgstr "Deduct <i class=\"icon-edit\"></i>"
+
+#~ msgid "Nemáte definovanou žádnou službu"
+#~ msgstr "You have not any service defined"
+
+#~ msgid "Založit službu <i class=\"icon-edit\"></i>"
+#~ msgstr "Start a service <i class=\"icon-edit\"></i>"
+
+#~ msgid "Služba byla odvozena"
+#~ msgstr "Service was derived"
+
+#~ msgid "Nemáte definovou skupinu kontaktů"
+#~ msgstr "No contactgroup defined"
+
+#~ msgid "Založit skupinu kontaktů <i class=\"icon-edit\"></i>"
+#~ msgstr "Define a contactgroup <i class=\"icon-edit\"></i>"
+
+#~ msgid "Nemáte definovaný žádný contact"
+#~ msgstr "No contact defined"
+
+#~ msgid "Založit výchozí kontakt <i class=\"icon-edit\"></i>"
+#~ msgstr "Define default contact <i class=\"icon-edit\"></i>"
+
+#~ msgid "Založit kontakt <i class=\"icon-edit\"></i>"
+#~ msgstr "Define contact <i class=\"icon-edit\"></i>"

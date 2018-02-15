@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FlexiProxy.
  *
@@ -16,7 +15,24 @@ namespace FlexiProxy\plugins;
  */
 class CommonJson extends Common
 {
+    /**
+     * Array of json data
+     * @var array
+     */
+    public $data = null;
 
-    public static $myFormat = 'json';
+    /**
+     * We work only with
+     * @var string
+     */
+    public $myFormat = 'json';
 
+    /**
+     * Mangage Json content
+     * @param \FlexiProxy\FlexiProxy $flexiProxy
+     */
+    public function __construct($flexiProxy)
+    {
+        parent::__construct($flexiProxy);
+    }
 }

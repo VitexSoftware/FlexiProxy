@@ -1,0 +1,29 @@
+#!/bin/sh
+# postinst script for flexplorer
+
+set -e
+
+    if [ "$1" = "configure" ]; then
+
+    . /usr/share/debconf/confmodule
+
+#      db_get flexiproxy/URL
+#      ${RET}
+
+        a2enmod  dir
+	a2ensite flexiproxy
+        a2enconf javascript-common.conf
+        a2enconf twitter-bootstrap.conf
+
+        systemctl reload apache2 3>/dev/null || true
+
+        if [ -f /etc/init.d/avahi ] ; then
+                systemctl reload avahi 3>/dev/null || true
+        fi
+
+    fi
+
+
+#DEBHELPER#
+
+exit 0

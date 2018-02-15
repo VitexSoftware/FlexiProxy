@@ -1,0 +1,62 @@
+#!/bin/sh
+# postinst script for flexiproxy
+
+set -e
+
+#Replace Key Value in PhinX Config File
+replaceJSON() {
+    cfg="/etc/flexiproxy/config.json"
+    sed -i "/${1}/c\        \"${1}\": \"${2}\"," $cfg
+}
+
+case "$1" in
+    install|reconfigure)
+    . /usr/share/debconf/confmodule
+
+    db_get flexiproxy/FLEXIBEE_URL
+    replaceJSON "FLEXIBEE_URL" ${RET}
+
+    db_get flexiproxy/FLEXIBEE_LOGIN
+    replaceJSON "FLEXIBEE_LOGIN" ${RET}
+
+    db_get flexiproxy/FLEXIBEE_PASSWORD
+    replaceJSON "FLEXIBEE_PASSWORD" ${RET}
+
+    db_get flexiproxy/FLEXIBEE_COMPANY
+    replaceJSON "FLEXIBEE_COMPANY" ${RET}
+
+    db_get flexiproxy/STORAGE
+    replaceJSON "storage" ${RET}
+
+        ;;
+
+    upgrade|abort-upgrade|configure)
+        ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 0
+        ;;
+esac
+
+
+mkdir -p /usr/lib/flexiproxy/tmp
+chown www-data:www-data /var/lib/flexiproxy/ -R
+
+mkdir -p /usr/share/flexiproxy
+chown www-data:www-data /usr/share/flexiproxy/ -R
+mkdir -p /var/lib/flexiproxy
+chown www-data:www-data /var/lib/flexiproxy/ -R
+
+cd /usr/share/flexiproxy
+if [ -f composer.lock ] ; then
+    rm -f composer.lock
+fi
+mkdir -p /var/lib/composer
+chown www-data:www-data /var/lib/composer
+su - www-data -s /bin/bash -c 'COMPOSER_HOME="/var/lib/composer" composer --no-dev -o install -d /usr/share/flexiproxy/'
+
+
+#DEBHELPER#
+
+exit 0

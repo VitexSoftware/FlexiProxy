@@ -1,62 +1,11 @@
-flexiproxy (1.1-3) UNRELEASED; urgency=medium
+flexiproxy (0.2-2) UNRELEASED; urgency=medium
 
   [ Vítězslav Dvořák ]
-    Initial pack
+  * Status Messages seems to be done
 
   [ vitex ]
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - debian package
-  * #251 - added testing ISDOC files bootstrap.sh composer.json
-    composer.lock debian input nbproject README.md src testing ubuntu-
-    xenial-16.04-cloudimg-console.log Vagrantfile vendor Addeed Vagrant
-    For TEST RUN
-  * #251 - added testing ISDOC files bootstrap.sh composer.json
-    composer.lock debian input nbproject README.md src testing ubuntu-
-    xenial-16.04-cloudimg-console.log Vagrantfile vendor Addeed Vagrant
-    For TEST RUN
-  * #251 - added testing ISDOC files bootstrap.sh composer.json
-    composer.lock debian input nbproject README.md src testing ubuntu-
-    xenial-16.04-cloudimg-console.log Vagrantfile vendor Addeed Vagrant
-    For TEST RUN
-  * #241 - EAN and PartNumber processing
-  * UnitTests updated
+  * New debian Package for Attachment upload
+  * New debian Package for Attachment upload
+  * New debian Package for Attachment upload
 
-  [ Vítězslav Dvořák ]
-  * Invoice company assigment fixed
-  * Invoice company assigment fixed
-  * Added acounting accounts defaults
-  * Version 1.0 release
-  * Version 1.0 release
-
-  [ vitex ]
-  * Use lightools/xml for php5 in debian package
-  * Use lightools/xml for php5 in debian package
-  * Use lightools/xml for php5 in debian package
-  * Use lightools/xml for php5 in debian package
-  * Blaclist for non storage invoice items
-  * Defaults for rounding invoice items
-  * FS#15605 - naskladnovat neskladove polozky do vedlejsich nakladu
-  * Better Parsing of config file
-  * Warnigs fixed for text-only intems
-  * Warnigs fixed for text-only intems
-
-  [ Vítězslav Dvořák ]
-  * Control message about price recounting
-  * FS#16298 - Import faktury se zápornými položkami - slevami
-
- -- Vítězslav Dvořák <info@vitexsoftware.cz>  Wed, 29 Mar 2017 00:34:35 +0200
+ -- vitex <vitex@118-23-ip.patockova77.brevnov.czf>  Wed, 26 Jul 2017 15:43:50 +0200

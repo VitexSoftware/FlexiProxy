@@ -4,7 +4,28 @@ echo deb http://v.s.cz/ stable main > /etc/apt/sources.list.d/vitexsoftware.list
 
 export DEBIAN_FRONTEND="noninteractive"
 apt-get update
-apt-get install -y php7.0 php7.0-curl php-pear php7.0-intl
-cd /vagrant
-composer update
+apt-get install -y php php-curl php-pear php-intl composer unzip php-zip devscripts php-xdebug php-mbstring mc screen aptitude postgresql php-pgsql
+sed -i '/^error_reporting/c\error_reporting = E_ALL' /etc/php/7.0/apache2/php.ini
+sed -i '/^display_errors/c\display_errors = On' /etc/php/7.0/apache2/php.ini
+sed -i '/^display_startup_errors/c\display_startup_errors = On' /etc/php/7.0/apache2/php.ini
 
+sudo -u postgres bash -c "psql -c \"CREATE USER flexiproxy WITH PASSWORD 'flexiproxy';\""
+sudo -u postgres bash -c "psql -c \"create database flexiproxy with owner flexiproxy encoding='utf8' template template0;\""
+
+
+cd /vagrant
+#composer update
+cd debian
+./deb-package.sh
+mkdir -p /vagrant/deb
+mv /*.deb /vagrant/deb
+cd /vagrant/deb
+dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
+echo "deb file:/vagrant/deb ./" > /etc/apt/sources.list.d/local.list
+apt-get update
+export DEBCONF_DEBUG="developer"
+apt-get -y --allow-unauthenticated install flexiproxy flexiproxy-apache flexiproxy-custom-columns-api flexiproxy-developer flexiproxy-history
+a2dissite 000-default
+a2enmod rewrite
+systemctl restart apache2
+apt search flexiproxy

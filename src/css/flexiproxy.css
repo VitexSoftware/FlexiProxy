@@ -1,0 +1,25 @@
+/* 
+    Created on : 13.4.2017, 1:40:23
+    Author     : vitex
+*/
+#StatusMessages.well .alert {
+  margin: 2px;
+  padding: 2px; }
+
+#StatusMessages {
+  margin: 2px;
+  padding: 2px;
+  overflow-y: auto; }
+
+#smdrag {
+  height: 8px;
+  background-image: url(../images/slidehandle.png);
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: top center;
+  cursor: ns-resize; }
+
+#smdrag:hover {
+  background-color: #f5ad66; }
+
+/*# sourceMappingURL=flexiproxy.css.map */

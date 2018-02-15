@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: flexiproxy\n"
 "Report-Msgid-Bugs-To: flexiproxy@packages.debian.org\n"
-"POT-Creation-Date: 2017-01-23 13:06+0100\n"
+"POT-Creation-Date: 2017-07-26 15:41+0200\n"
 "PO-Revision-Date: 2016-11-18 13:25+0100\n"
 "Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: \n"
@@ -73,8 +73,8 @@ msgstr "Heslo uživatele s právem používat REST api"
 #. Type: string
 #. Default
 #: ../templates:4001
-msgid "adminit_s_r_o_"
-msgstr "adminit_s_r_o_"
+msgid "demo"
+msgstr "demo"
 
 #. Type: string
 #. Description
@@ -84,54 +84,87 @@ msgstr "Zvolená firma:"
 
 #. Type: string
 #. Description
-#. Type: string
-#. Description
-#: ../templates:4002 ../templates:6002
+#: ../templates:4002
 msgid "First company opened by default"
 msgstr "Výchozí firma"
 
 #. Type: string
 #. Default
 #: ../templates:5001
-msgid "SKLAD"
+msgid "http://flexiproxy.localhost/"
 msgstr ""
 
 #. Type: string
 #. Description
 #: ../templates:5002
-msgid "Used storag code:"
-msgstr "Kód použitého skladu:"
+msgid "Application Url"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../templates:5002
-msgid ""
-"Go to /c/adminit_s_r_o_/sklad on your FlexiBee server to see availble "
-"storages"
+msgid "FlexiProxy Web Interface URL"
 msgstr ""
-"Jdi do /c/adminit_s_r_o_/sklad na FlexiBee serveru pro přehled dostupných "
-"skladů"
 
-#. Type: string
+#. Type: select
 #. Default
 #: ../templates:6001
-msgid "/usr/share/flexiproxy/isdoc"
-msgstr "/usr/share/flexiproxy/isdoc"
+msgid "public"
+msgstr ""
 
-#. Type: string
+#. Type: select
 #. Description
 #: ../templates:6002
-msgid "input files location:"
+msgid "Access policy"
 msgstr ""
+
+#. Type: select
+#. Description
+#: ../templates:6002
+msgid ""
+"Public: Open the FlexiBee as user in config.json Login: Only user "
+"authenticated by FlexiBee can use App"
+msgstr ""
+
+#. Type: boolean
+#. Default
+#: ../templates:7001
+msgid "false"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../templates:7002
+msgid "Debug mode"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../templates:7002
+msgid "Write aditional debugging informations int log"
+msgstr ""
+
+#~ msgid "adminit_s_r_o_"
+#~ msgstr "adminit_s_r_o_"
+
+#~ msgid "Used storag code:"
+#~ msgstr "Kód použitého skladu:"
+
+#~ msgid ""
+#~ "Go to /c/adminit_s_r_o_/sklad on your FlexiBee server to see availble "
+#~ "storages"
+#~ msgstr ""
+#~ "Jdi do /c/adminit_s_r_o_/sklad na FlexiBee serveru pro přehled dostupných "
+#~ "skladů"
+
+#~ msgid "/usr/share/flexiproxy/isdoc"
+#~ msgstr "/usr/share/flexiproxy/isdoc"
 
 #~ msgid "SKALD"
 #~ msgstr "SKALD"
 
 #~ msgid "Where to get input files:"
 #~ msgstr "Odkud načítat vstupní soubory:"
-
-#~ msgid "demo"
-#~ msgstr "demo"
 
 #~ msgid "winstorm"
 #~ msgstr "winstorm"

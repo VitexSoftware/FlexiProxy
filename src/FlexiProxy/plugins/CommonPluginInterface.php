@@ -4,7 +4,7 @@
  * FlexiProxy.
  *
  * @author    Vítězslav Dvořák <info@vitexsoftware.cz>
- * @copyright 2016-2017 VitexSoftware (G)
+ * @copyright 2017 VitexSoftware (G)
  */
 
 namespace FlexiProxy\plugins;

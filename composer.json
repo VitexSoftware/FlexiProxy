@@ -2,7 +2,7 @@
     "name": "vitexsoftware/flexiproxy",
     "description": "Advanced Access privileges for FlexiBee",
     "license": "proprietary",
-    "version": "0.1",
+    "version": "0.2",
     "authors": [
         {
             "name": "vitex",
@@ -11,15 +11,25 @@
     ],
     "require": {
         "spoje.net/flexipeehp": "dev-master",
-        "vitexsoftware/ease-framework": "dev-master"
+        "vitexsoftware/ease-framework": "dev-master",
+        "league/commonmark": "^0.15.0",
+        "robmorgan/phinx": "^0.8.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "5.5.*"
+        "phpunit/phpunit": "5.5.*",
+        "codeception/codeception": "^2.2"
     },    
     "autoload": {
         "psr-4": {
             "FlexiProxy\\": "src/FlexiProxy/",
-            "FlexiProxy\\plugins\\": "src/FlexiProxy/plugins/"
+            "FlexiProxy\\ui\\": "src/FlexiProxy/ui/",
+            "FlexiProxy\\plugins\\": "src/FlexiProxy/plugins/",
+            "FlexiProxy\\plugins\\output\\": "src/FlexiProxy/plugins/output/",
+            "FlexiProxy\\plugins\\output\\html\\": "src/FlexiProxy/plugins/output/html/",
+            "FlexiProxy\\plugins\\output\\js\\": "src/FlexiProxy/plugins/output/js/",
+            "FlexiProxy\\plugins\\output\\json\\": "src/FlexiProxy/plugins/output/json/",
+            "FlexiProxy\\plugins\\input\\": "src/FlexiProxy/plugins/input/",
+            "FlexiProxy\\plugins\\input\\json\\": "src/FlexiProxy/plugins/input/json/"
         }
     },
     "autoload-dev": {

@@ -1,7 +1,0 @@
-README.md			usr/share/doc/flexiproxy/
-src/*.php                       usr/share/flexiproxy/
-debian/conf/config.json         etc/flexiproxy/
-src/FlexiProxy/*.php		usr/share/flexiproxy/FlexiProxy/
-debian/conf/composer.json       usr/share/flexiproxy/
-debian/bin/flexiproxy             usr/bin/
-debian/flexiproxy.1               usr/share/man/man1

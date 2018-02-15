@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FlexiProxy.
  *
@@ -9,21 +8,12 @@
 
 namespace FlexiProxy;
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once 'includes/Init.php';
 
-$flexi = new FlexiProxy(null, ['config' => 'config.json']);
-$flexi->output();
+$oPage->onlyForLogged($flexi->baseUrl.'/login.php');
 
-
-
-//
-//$version = 'development';
-//if (file_exists('/usr/share/flexiproxy/composer.json')) {
-//    $composerInfo = json_decode(file_get_contents('/usr/share/flexiproxy/composer.json'));
-//    $version = $composerInfo->version;
-//}
-//
-//$flexi->addStatusMessage('Flexiproxy v.'.$version.' FlexiPeeHP v'.\FlexiPeeHP\FlexiBeeRO::$libVersion.' (FlexiBee '.\FlexiPeeHP\EvidenceList::$version.') EasePHP Framework v'.\Ease\Atom::$frameworkVersion,
-//    'debug');
-
+if ($oPage->pageClosed === false) {
+    $flexi->input();
+    $flexi->output();
+}
 

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * FlexiProxy.
  *
@@ -16,7 +15,6 @@ namespace FlexiProxy\plugins;
  */
 class Common
 {
-
     /**
      * My URL path regex
      * @var string
@@ -65,7 +63,7 @@ class Common
      */
     public function isThisMyDirection($direction)
     {
-        return preg_match('/' . $this->myDirection . '/', $direction);
+        return preg_match('/'.$this->myDirection.'/', $direction);
     }
 
     /**
@@ -76,7 +74,7 @@ class Common
      */
     public function isThisMyPath($path)
     {
-        return preg_match('/' . $this->myPathRegex . '/', $path);
+        return preg_match('/'.$this->myPathRegex.'/', $path);
     }
 
     /**
@@ -87,7 +85,7 @@ class Common
      */
     public function isThisMyFormat($format)
     {
-        return preg_match('/^' . $this->myFormat . '$/', $format);
+        return preg_match('/^'.$this->myFormat.'$/', $format);
     }
 
     /**
@@ -97,36 +95,161 @@ class Common
     {
         switch ($this->myDirection) {
             case 'output':
-                $this->content = $this->flexiProxy->outputData;
+                $this->content                = $this->flexiProxy->outputData;
                 $this->process();
                 $this->flexiProxy->outputData = $this->content;
                 break;
             case 'input':
-                $this->content = $this->flexiProxy->inputData;
+                $this->content                = $this->flexiProxy->inputData;
                 $this->process();
-                $this->flexiProxy->inputData = $this->content;
+                $this->flexiProxy->inputData  = $this->content;
                 break;
         }
     }
 
+    /**
+     * Simple replace on page
+     * 
+     * @param string $what
+     * @param string $to
+     * 
+     * @return boolean
+     */
     public function replaceContent($what, $to)
     {
-        $this->content = str_replace($what, $to, $this->content);
+        $replaced = false;
+        if(strstr($this->content, $what)){
+            $this->content = str_replace($what, $to, $this->content);
+            $replaced = true;
+        } else {
+            $this->flexiProxy->addStatusMessage( sprintf('replaceContent: %s not found ',$what),'warning');
+        }
+        return $replaced;
     }
 
-    public function preg_replaceContent($what, $to)
+    /**
+     * Regular Replace
+     *
+     * @param string $what find
+     * @param string $to   replace
+     */
+    public function pregReplaceContent($what, $to)
     {
         $replaced = preg_replace($what, $to, $this->content);
         if (is_null($replaced)) {
-            $this->flexiProxy->addStatusMessage(get_class($this) . ': ' . sprintf(_('Replace %s to %s on %s failed'), $what, $to, $this->flexiProxy->uriRequested), 'warning');
+            $this->flexiProxy->addStatusMessage(get_class($this).': '.sprintf(_('Replace %s to %s on %s failed'),
+                    $what, $to, $this->flexiProxy->uriRequested), 'warning');
         } else {
             $this->content = $replaced;
         }
     }
 
-    public function process()
+    /**
+     * Add Given String before found fragment
+     *
+     * @param string $before
+     * @param string $add
+     */
+    public function addBefore($before, $add)
     {
-
+        if (self::isRegex($before)) {
+            $regFound = self::pregFind($before, $this->content);
+            if (!empty($regFound)) {
+                $before = $regFound;
+            }
+        }
+        if (strstr($this->content, $before)) {
+            $parts         = explode($before, $this->content);
+            $this->content = $parts[0]."\n$add\n$before\n".$parts['1'];
+        } else {
+            $this->flexiProxy->addStatusMessage(sprintf(_('AddBefore: pattern "%s" not found on %s'),
+                    htmlentities($before), $this->flexiProxy->url), 'warning');
+        }
     }
 
+    /**
+     * Delete All between
+     *
+     * @param string $beginning
+     * @param string $end
+     * @param string $string
+     * 
+     * @return string
+     */
+    function deleteAllBetween($beginning, $end, $string)
+    {
+        $beginningPos = strpos($string, $beginning);
+        $endPos       = strpos($string, $end);
+        if ($beginningPos === false || $endPos === false) {
+            return $string;
+        }
+
+        $textToDelete = substr($string, $beginningPos,
+            ($endPos + strlen($end)) - $beginningPos);
+
+        return str_replace($textToDelete, '', $string);
+    }
+
+    /**
+     * Add Given String after found fragment
+     *
+     * @param string $after
+     * @param string $add
+     */
+    public function addAfter($after, $add)
+    {
+        if (self::isRegex($after)) {
+            $regFound = self::pregFind($after, $this->content);
+            if (!empty($regFound)) {
+                $after = $regFound;
+            }
+        }
+
+        if (strstr($this->content, $after)) {
+            $parts         = explode($after, $this->content);
+            $this->content = $parts[0]."\n$after\n$add".$parts['1'];
+        } else {
+            $this->flexiProxy->addStatusMessage(sprintf(_('AddAfter: pattern "%s" not found on %s'),
+                    htmlentities($after), $this->flexiProxy->url), 'warning');
+        }
+    }
+
+    /**
+     * Process page content by plugin
+     */
+    public function process()
+    {
+        $this->flexiProxy->addStatusMessage(sprintf(_('Plugin with undefined process()'),
+                addslashes(get_class($this))), 'warning');
+    }
+
+    /**
+     * Check if string is Regular Expression
+     *
+     * @param string $str0
+     *
+     * @return boolean
+     */
+    public static function isRegex($str0)
+    {
+        $regex = "/^\/[\s\S]+\/$/";
+        return preg_match($regex, $str0);
+    }
+
+    /**
+     * Find Substring by regexp
+     *
+     * @param string $regexp
+     * @param string $subject
+     *
+     * @return string | null
+     */
+    public static function pregFind($regexp, $subject)
+    {
+        $matches = null;
+        if (strlen($subject) && preg_match($regexp, $subject, $matches)) {
+            $matches = current($matches);
+        }
+        return $matches;
+    }
 }

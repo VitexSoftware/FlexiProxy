@@ -1,3 +1,4 @@
+
 Source: flexiproxy
 Build-Depends: debhelper (>= 7.0.50~),po-debconf
 Standards-Version: 3.8.4
@@ -7,11 +8,112 @@ Priority: optional
 Homepage: https://github.com/VitexSoftware/FlexiProxy
 
 Package: flexiproxy
-Depends: ${misc:Depends},flexipeehp,composer,php5-intl | php7.0-intl
+Depends: ${misc:Depends},flexiproxy-core,flexiproxy-logochanger,flexiproxy-pricelist-images
+Recommends: flexibee-server
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiProxy metapackage
+ Install this package to get full application
+
+Package: flexiproxy-core
+Depends: ${misc:Depends},flexipeehp (>= 1.8.1),composer,php-intl | php5-intl | php7.0-intl | php7.1-intl | php7.2-intl, libjs-font-awesome
+Recommends: flexibee-server
+Architecture: all
+Section: web
+Priority: optional
+Description: Communtcate with FlexiBee and modify its input/output
+ Take FlexiBee web interface or api Request or response and modify it
+ somehow using additional modules.
+
+Package: flexiproxy-apache
+Depends: ${misc:Depends},flexiproxy-core,apache2
+Architecture: all
+Section: web
+Priority: optional
+Description: Apache Configuration for FlexiProxy
+ Prepare FlexiProxy virtualhost
+
+Package: flexiproxy-logochanger
+Depends: ${misc:Depends},flexiproxy-core
 Recommends: flexibee
 Architecture: all
 Section: web
 Priority: optional
-Description: Import ISDOC items to FlexiBee storage
- Read all isdoc files in directory and already unknown invoice items import to
- FlexiBee pricelist and storage.
+Description: Modify default logo on FlexiBee
+ Allow you to show your own logo on FlexiBee web interface
+
+Package: flexiproxy-pricelist-images
+Depends: ${misc:Depends},flexiproxy-core
+Architecture: all
+Section: web
+Priority: optional
+Description: Add Images to FlexiBee Pricelist
+ Show pricelist images
+
+Package: flexiproxy-pricelist-attachment
+Depends: ${misc:Depends},flexiproxy-core
+Architecture: all
+Section: web
+Priority: optional
+Description: Attach fiels to Pricelist
+ Upload images or any other files to FlexiBee pricelist item
+
+Package: flexiproxy-database
+Depends: ${misc:Depends},flexiproxy-core, php-pdo | php5-pdo | php7.0-pdo | php7.1-pdo, php5-pdo-pgsql | php7.0-pdo-pgsql | php7.0-pdo-mysql | php5-pdo-mysql | php7.1-pdo-pgsql | php7.1-pdo-mysql | php-mysql | php-pgsql, php-phinx
+Recommends: default-mysql-server,postgresql
+Suggests: flexiproxy-history,flexiproxy-custom-columns
+Architecture: all
+Section: web
+Priority: optional
+Description: Add Database Support for FlexiPeehp
+ External Memory for FlexiBee
+
+Package: flexiproxy-history
+Depends: ${misc:Depends},flexiproxy-database
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee histroy
+ Use WebHook to save all Evidenece changes to database
+
+Package: flexiproxy-custom-columns
+Depends: ${misc:Depends},flexiproxy-database
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee custom columns
+ Define and Use your own custom columns in web interface
+
+Package: flexiproxy-custom-columns-api
+Depends: ${misc:Depends},flexiproxy-custom-columns
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee custom columns
+ Define and Use your own custom columns in API
+
+Package: flexiproxy-developer
+Depends: ${misc:Depends},flexiproxy-core
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee enhancements for Developers
+ Add Links to XML & Json Formats of evidencies
+
+Package: flexiproxy-custom-menu
+Depends: ${misc:Depends},flexiproxy-core
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee Custom menu items
+ Add submenus to main menu from custom-menu.json
+
+Package: flexiproxy-invoicesend
+Depends: ${misc:Depends},flexiproxy-core
+Architecture: all
+Section: web
+Priority: optional
+Description: Send Invoice as mail
+ Send invoice in mail with isdoc and pdf attachment
+

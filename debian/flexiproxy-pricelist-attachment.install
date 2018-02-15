@@ -1,0 +1,3 @@
+src/FlexiProxy/plugins/output/html/Attachments.php		 usr/share/flexiproxy/FlexiProxy/plugins/output/html/
+src/FlexiProxy/plugins/output/html/NewPricelistAttachment.php	 usr/share/flexiproxy/FlexiProxy/plugins/output/html/
+src/FlexiProxy/plugins/input/html/TakeNewPricelistAttachment.php usr/share/flexiproxy/FlexiProxy/plugins/input/html/
