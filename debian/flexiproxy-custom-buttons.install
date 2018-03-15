@@ -1,2 +1,2 @@
 src/FlexiProxy/plugins/output/html/*CustomButton*.php   usr/share/flexiproxy/FlexiProxy/plugins/output/html/
-src/FlexiProxy/js/toggleListingRow.js                   usr/share/flexiproxy/js/
+src/js/toggleListingRow.js                              usr/share/flexiproxy/js/
