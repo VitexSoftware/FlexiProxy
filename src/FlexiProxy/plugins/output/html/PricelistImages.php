@@ -17,7 +17,7 @@ namespace FlexiProxy\plugins\output\html;
 class PricelistImages extends \FlexiProxy\plugins\output\CommonHtml implements \FlexiProxy\plugins\CommonPluginInterface
 {
 
-    public $myPathRegex = '(cenik|cenik.html)($|\?.*$)';
+    public $myPathRegex = '(cenik|cenik\.html)($|\?.*$)';
     public $myDirection = 'output';
 
     public function process()

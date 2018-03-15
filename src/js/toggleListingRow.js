@@ -33,7 +33,7 @@ $(document).ready(function () {
         $('.choosen').each(function (index, value) {
             resultIDs.push(getRowRecordID($(this)));
         });
-        return resultIDs.join(',');
+        return resultIDs;
     }
 
     $(".custom-button").click(function (event) {
@@ -49,12 +49,29 @@ $(document).ready(function () {
         if (linkurl.search(/\${objectIds}/) != -1) {
             IDs = getChoosenIDs();
             if (IDs.length) {
-                $(this).attr('href', linkurl.replace(/\${objectIds}/g, IDs));
+                $(this).attr('href', linkurl.replace(/\${objectIds}/g, IDs.join(',')));
                 console.log($(this).attr('href'));
             } else {
                 alert('ID?');
                 return false;
             }
         }
+        
+        if (linkurl.search(/\${object\.id}/) != -1) {
+            IDs = getChoosenIDs();
+            if (IDs.length) {
+                if(IDs.length == 1){
+                    $(this).attr('href', linkurl.replace(/\${object\.id}/g, IDs[0]));
+                } else {
+                    alert('ID?');
+                    return false;
+                }
+                console.log($(this).attr('href'));
+            } else {
+                alert('ID?');
+                return false;
+            }
+        }
+        
     });
 });
