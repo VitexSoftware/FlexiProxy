@@ -4,14 +4,24 @@
 
 $(document).ready(function () {
 
-    $("tr.flexibee-clickable").click(function () {
-        $(this).toggleClass("choosen");
+    $("tr.flexibee-clickable").click(function (p) {
+        console.log(p, this);
+        $(p.currentTarget).toggleClass("choosen");
+    });
+
+    $("tr.flexibee-clickable").dblclick(function () {
+        var firstLink = $(this).find("a");
+        if (firstLink != undefined) {
+            var goto = firstLink.attr('href');
+            console.log(goto);
+            window.location.href = goto; 
+        }
     });
 
     function getRowRecordID(rowElement) {
         //Find First A Href
         var firstLink = rowElement.find("a");
-        if (firstLink != NaN) {
+        if (firstLink != undefined) {
             var firstLinkHref = firstLink.attr('href');
             var parts = firstLinkHref.split('/');
             return parts[parts.length - 1];
