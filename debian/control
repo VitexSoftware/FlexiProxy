@@ -117,3 +117,10 @@ Priority: optional
 Description: Send Invoice as mail
  Send invoice in mail with isdoc and pdf attachment
 
+Package: flexiproxy-custom-buttons
+Depends: ${misc:Depends},flexiproxy-core
+Architecture: all
+Section: web
+Priority: optional
+Description: FlexiBee custom Buttons
+ Show your own custom Buttons in web interface

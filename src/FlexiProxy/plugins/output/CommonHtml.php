@@ -39,12 +39,27 @@ class CommonHtml extends \FlexiProxy\plugins\Common
         $this->addBefore('<!--FLEXIBEE:CSS:END-->', $code);
     }
 
+    /**
+     * Include CSS to Page
+     * 
+     * @param string $css
+     * 
+     * @return null
+     */
     public function includeCss($css)
     {
         return $this->addBefore('<!--FLEXIBEE:CSS:END-->',
                 "\n<link rel=\"stylesheet\" type=\"text/css\" href=\"".$this->flexiProxy->baseUrl.$css."\" media=\"all\" />\n");
     }
 
+    /**
+     * Add Javascript To Page
+     * 
+     * @param string $code
+     * @param array  $onDocumentReady
+     * 
+     * @return type
+     */
     public function addJavaScript($code, $onDocumentReady = true)
     {
         if ($onDocumentReady === true) {
@@ -62,6 +77,11 @@ class CommonHtml extends \FlexiProxy\plugins\Common
         return $result;
     }
 
+    /**
+     * Include Javascript to webpage
+     * 
+     * @param string $url
+     */
     public function includeJavaScript($url)
     {
         $this->addBefore('<!--FLEXIBEE:JS:END-->',
@@ -79,9 +99,11 @@ class CommonHtml extends \FlexiProxy\plugins\Common
     }
 
     /**
-     *
-     * @param type $content
-     * @return type
+     * Add content to webpage top
+     * 
+     * @param string $content
+     * 
+     * @return null
      */
     public function addToPageTop($content)
     {

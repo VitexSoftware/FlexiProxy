@@ -22,4 +22,9 @@
 #smdrag:hover {
   background-color: #f5ad66; }
 
+.choosen {
+  border-left-color: red;
+  border-left-width: 5px;
+  border-left-style: solid; }
+
 /*# sourceMappingURL=flexiproxy.css.map */
