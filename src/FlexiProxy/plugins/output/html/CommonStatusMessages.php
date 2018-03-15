@@ -20,12 +20,12 @@ class CommonStatusMessages extends \FlexiProxy\plugins\output\CommonHtml impleme
     public function process()
     {
         $statusMessages = $this->webPage->getStatusMessagesAsHtml();
+        $this->includeCss('/css/flexiproxy.css');
         if ($statusMessages) {
-            $this->includeCss('/css/flexiproxy.css');
             $this->includeJavaScript('/js/slideupmessages.js');
             $messagesBar = new \Ease\Html\Div($statusMessages,
-                ['id' => 'StatusMessages', 'class' => 'well', 'title' => _('Click to hide messages'),
-                'data-state' => 'down']).
+                    ['id' => 'StatusMessages', 'class' => 'well', 'title' => _('Click to hide messages'),
+                    'data-state' => 'down']).
                 new \Ease\Html\Div(null, ['id' => 'smdrag'])
             ;
             $this->webPage->cleanMessages();
