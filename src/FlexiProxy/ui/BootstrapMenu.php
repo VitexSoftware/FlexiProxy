@@ -88,7 +88,7 @@ class BootstrapMenu extends \Ease\TWB\Navbar
      */
     public function draw()
     {
-        $statusMessages = $this->webPage->getStatusMessagesAsHtml();
+        $statusMessages = self::webPage()->getStatusMessagesAsHtml();
         if ($statusMessages) {
             $this->addItem(new \Ease\Html\DivTag($statusMessages,
                 ['id' => 'StatusMessages', 'class' => 'well', 'title' => _('Click to hide messages'),

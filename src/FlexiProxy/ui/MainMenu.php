@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FlexiProxy - Application Menu.
  *
@@ -8,14 +9,12 @@
 
 namespace FlexiProxy\ui;
 
-class MainMenu extends \Ease\Html\Div
-{
+class MainMenu extends \Ease\Html\DivTag {
 
     /**
      * Vytvoří hlavní menu.
      */
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct(null, ['id' => 'MainMenu']);
     }
 
@@ -27,18 +26,16 @@ class MainMenu extends \Ease\Html\Div
      *
      * @return string
      */
-    protected function getMenuList($source, $icon = '')
-    {
-        $keycolumn  = $source->getmyKeyColumn();
+    protected function getMenuList($source, $icon = '') {
+        $keycolumn = $source->getmyKeyColumn();
         $namecolumn = $source->nameColumn;
-        $lister     = $source->getColumnsFromSQL([$source->getmyKeyColumn(), $namecolumn],
-            [$keycolumn => true], $namecolumn, $keycolumn);
+        $lister = $source->getColumnsFromSQL([$source->getmyKeyColumn(), $namecolumn],
+                [$keycolumn => true], $namecolumn, $keycolumn);
 
         $itemList = [];
         if ($lister) {
             foreach ($lister as $uID => $uInfo) {
-                $itemList[$source->keyword.'.php?'.$keycolumn.'='.$uInfo[$keycolumn]]
-                    = \Ease\TWB\Part::GlyphIcon($icon).'&nbsp;'.$uInfo[$namecolumn];
+                $itemList[$source->keyword . '.php?' . $keycolumn . '=' . $uInfo[$keycolumn]] = \Ease\TWB\Part::GlyphIcon($icon) . '&nbsp;' . $uInfo[$namecolumn];
             }
         }
 
@@ -48,13 +45,11 @@ class MainMenu extends \Ease\Html\Div
     /**
      * Vložení menu.
      */
-    public function afterAdd()
-    {
+    public function afterAdd() {
         $nav = $this->addItem(new BootstrapMenu());
 
         $userID = \Ease\Shared::user()->getUserID();
-        if ($userID || (\Ease\Shared::instanced()->getConfigValue('access_policy')
-            == 'public')) { //Authenticated user
+        if ($userID || (\Ease\Shared::instanced()->getConfigValue('access_policy') == 'public')) { //Authenticated user
             if (isset($_SESSION['searchQuery'])) {
                 $term = $_SESSION['searchQuery'];
             } else {
@@ -62,28 +57,27 @@ class MainMenu extends \Ease\Html\Div
             }
 
 //            $nav->addMenuItem(new NavBarSearchBox('search', 'search.php', $term));
-            $companer = new \FlexiPeeHP\Company();
+            $companer = new \AbraFlexi\Company();
 
             $companiesToMenu = [];
-            $companer        = new \FlexiPeeHP\Company();
-            $companies       = $companer->getFlexiData();
+            $companer = new \AbraFlexi\Company();
+            $companies = $companer->getFlexiData();
 
             if (!isset($companies[0])) {
-                $cmpInfo      = $companies;
+                $cmpInfo = $companies;
                 unset($companies);
                 $companies[0] = $cmpInfo;
             }
 
-            if (isset($companies) && count($companies)) {
+            if (!empty($companies) && $companies[0] !== false ) {
                 foreach ($companies as $company) {
-                    $companiesToMenu['/c/'.$company['dbNazev']] = $company['nazev'];
+                    $companiesToMenu['/c/' . $company['dbNazev']] = $company['nazev'];
                 }
                 asort($companiesToMenu);
-                $companiesToMenu[]                        = '';
-                $companiesToMenu['/admin/zalozeni-firmy'] = \Ease\TWB\Part::GlyphIcon('plus').' '._('Create Company');
+                $companiesToMenu[] = '';
+                $companiesToMenu['/admin/zalozeni-firmy'] = \Ease\TWB\Part::GlyphIcon('plus') . ' ' . _('Create Company');
 
-                $nav->addDropDownMenu(isset($this->webPage->flexi->company) ? $companiesToMenu['/c/'.$this->webPage->flexi->company]
-                            : _('Company'), $companiesToMenu);
+                $nav->addDropDownMenu(isset($this->webPage->flexi->company) ? $companiesToMenu['/c/' . $this->webPage->flexi->company] : _('Company'), $companiesToMenu);
 
                 if (!isset($_SESSION['company'])) { //Auto choose first company
                     $_SESSION['company'] = $companies[0]['dbNazev'];
@@ -101,7 +95,7 @@ class MainMenu extends \Ease\Html\Div
                         $nav->addDropDownMenu($menuName, $menuItems);
                     } else {
                         $nav->addMenuItem(new \Ease\Html\ATag($menuName,
-                            $menuItems));
+                                        $menuItems));
                     }
                 }
             }
@@ -113,7 +107,7 @@ class MainMenu extends \Ease\Html\Div
                         $nav->addDropDownMenu($menuName, $menuItems, 'right');
                     } else {
                         $nav->addMenuItem(new \Ease\Html\ATag($menuName,
-                            $menuItems), 'right');
+                                        $menuItems), 'right');
                     }
                 }
             }
@@ -123,17 +117,16 @@ class MainMenu extends \Ease\Html\Div
     /**
      * Přidá do stránky javascript pro skrývání oblasti stavových zpráv.
      */
-    public function finalize()
-    {
+    public function finalize() {
         $this->addCss('body {
                 padding-top: 60px;
                 padding-bottom: 40px;
             }');
 
-        \Ease\JQuery\Part::jQueryze($this);
-        \Ease\Shared::webPage()->addCss('.dropdown-menu { overflow-y: auto } ');
-        \Ease\Shared::webPage()->addJavaScript("$('.dropdown-menu').css('max-height',$(window).height()-100);",
-            null, true);
+        $this->addCss('.dropdown-menu { overflow-y: auto } ');
+        $this->addJavaScript("$('.dropdown-menu').css('max-height',$(window).height()-100);",
+                null, true);
         $this->includeJavaScript('/js/slideupmessages.js');
     }
+
 }

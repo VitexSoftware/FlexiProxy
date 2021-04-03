@@ -45,14 +45,11 @@ class WebPage extends \Ease\TWB\WebPage
     /**
      * Základní objekt stránky.
      *
-     * @param VSUser $userObject
+     * @param string $pageTitle
      */
-    public function __construct($pageTitle = null, &$userObject = null)
+    public function __construct($pageTitle = null)
     {
-        if (is_null($userObject)) {
-            $userObject = \Ease\Shared::user();
-        }
-        parent::__construct($pageTitle, $userObject);
+        parent::__construct($pageTitle);
         $this->includeCss('/css/flexiproxy.css');
         $this->head->addItem('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
         $this->head->addItem('<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">');

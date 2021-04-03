@@ -21,7 +21,7 @@ class NewPricelistAttachment extends \FlexiProxy\plugins\output\CommonHtml imple
 
     public function process()
     {
-        $informer = new \FlexiPeeHP\FlexiBeeRO($this->flexiProxy->getMyKey(),
+        $informer = new \AbraFlexi\RO($this->flexiProxy->getMyKey(),
             ['evidence' => $this->flexiProxy->getEvidence(), 'company' => $this->flexiProxy->getCompany()]);
 
         $this->content = new \FlexiProxy\ui\WebPage(_('New pricelist Attachment'));
@@ -29,12 +29,12 @@ class NewPricelistAttachment extends \FlexiProxy\plugins\output\CommonHtml imple
 
         $row = new \Ease\TWB\Row();
 
-        $allAttachments = \FlexiPeeHP\Priloha::getAttachmentsList($informer);
+        $allAttachments = \AbraFlexi\Priloha::getAttachmentsList($informer);
         if (count($allAttachments)) {
             $lastAttachment = end($allAttachments);
             $columnA        = $row->addColumn(6,
                 new \Ease\TWB\Panel(_('Latest attachment'), 'info',
-                new \Ease\Html\ImgTag($this->flexiProxy->fixURLs($informer->getFlexiBeeURL().'/prilohy/'.$lastAttachment['id'].'/content'),
+                new \Ease\Html\ImgTag($this->flexiProxy->fixURLs($informer->getAbraFlexiURL().'/prilohy/'.$lastAttachment['id'].'/content'),
                 $lastAttachment['nazSoub'], ['style' => 'width: 300px;'])));
         }
 

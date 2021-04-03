@@ -22,7 +22,7 @@ class TakeNewPricelistAttachment extends \FlexiProxy\plugins\output\CommonHtml i
     public function process()
     {
         $this->flexiProxy->readFromUpstream = false;
-        $informer = new \FlexiPeeHP\FlexiBeeRO($this->flexiProxy->getMyKey(),
+        $informer = new \AbraFlexi\RO($this->flexiProxy->getMyKey(),
             ['evidence' => $this->flexiProxy->getEvidence(), 'company' => $this->flexiProxy->getCompany()]);
 
         if (isset($_FILES['upload']) && strlen($_FILES['upload']['tmp_name'])) {
@@ -31,13 +31,13 @@ class TakeNewPricelistAttachment extends \FlexiProxy\plugins\output\CommonHtml i
 
             move_uploaded_file($attachmentFile, $attachmentFileName);
 
-            $result = \FlexiPeeHP\Priloha::addAttachmentFromFile($informer,
+            $result = \AbraFlexi\Priloha::addAttachmentFromFile($informer,
                     $attachmentFileName);
             if ($result == 201) {
                $informer->addStatusMessage(sprintf(_('File %s was attached'),
                         basename($attachmentFileName)), 'success');
             } else {
-                $informer->addStatusMessage('Attachment '.$informer->getFlexiBeeURL().' Failed',
+                $informer->addStatusMessage('Attachment '.$informer->getAbraFlexiURL().' Failed',
                     'error');
             }
             unlink($attachmentFileName);

@@ -29,7 +29,7 @@ class CustomColumnForm extends \Ease\TWB\Form
         $buttonsRow->addColumn(4);
         $buttonsRow->addColumn(4,
             new \Ease\TWB\LinkButton($_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/c/'.$company.'/'.$evidence,
-            \FlexiPeeHP\EvidenceList::$name[$evidence], 'info'));
+            \AbraFlexi\EvidenceList::$name[$evidence], 'info'));
         $this->addItem($buttonsRow);
     }
 }

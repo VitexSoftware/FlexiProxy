@@ -11,7 +11,7 @@ namespace FlexiProxy\ui;
 /**
  * Page TOP.
  */
-class PageTop extends \Ease\Html\Div
+class PageTop extends \Ease\Html\DivTag
 {
     /**
      * Titulek stránky.
@@ -29,7 +29,7 @@ class PageTop extends \Ease\Html\Div
     {
         parent::__construct();
         if (!is_null($pageTitle)) {
-            \Ease\Shared::webPage()->setPageTitle($pageTitle);
+            self::webPage()->singleton()->setPageTitle($pageTitle);
         }
     }
 

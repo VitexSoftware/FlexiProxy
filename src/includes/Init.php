@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FlexiProxy - App inti.
  *
@@ -10,7 +11,7 @@ namespace FlexiProxy;
 
 require_once '../vendor/autoload.php';
 
-\Ease\Shared::initializeGetText('flexiproxy', 'cs_CZ', '../locale');
+\Ease\Locale::singleton('flexiproxy', 'cs_CZ', '../locale');
 
 session_start();
 
@@ -25,13 +26,12 @@ if (isset($_SESSION['company'])) {
 if (isset($_SESSION['password'])) {
     $options['password'] = $_SESSION['password'];
 }
-$flexi        = new FlexiProxy(null, $options);
+$flexi = new FlexiProxy(null, $options);
 /**
  * @var ui\WebPage WebPage Object
  */
-$oPage        = new ui\WebPage();
+$oPage = new ui\WebPage();
 $oPage->flexi = $flexi;
-
 
 /**
  * User class object User or Anonym
@@ -39,5 +39,5 @@ $oPage->flexi = $flexi;
  *
  * @global User|Anonym
  */
-$oUser                 = \Ease\Shared::user();
+$oUser = \Ease\Shared::user(null, 'FlexiProxy\User');
 $oUser->settingsColumn = 'settings';

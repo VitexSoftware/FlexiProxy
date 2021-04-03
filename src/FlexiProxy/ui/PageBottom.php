@@ -30,7 +30,7 @@ class PageBottom extends \Ease\TWB\Container
 //    $version = $composerInfo->version;
 //}
 //
-//$flexi->addStatusMessage('Flexiproxy v.'.$version.' FlexiPeeHP v'.\FlexiPeeHP\FlexiBeeRO::$libVersion.' (FlexiBee '.\FlexiPeeHP\EvidenceList::$version.') EasePHP Framework v'.\Ease\Atom::$frameworkVersion,
+//$flexi->addStatusMessage('Flexiproxy v.'.$version.' AbraFlexi v'.\AbraFlexi\RO::$libVersion.' (AbraFlexi '.\AbraFlexi\EvidenceList::$version.') EasePHP Framework v'.\Ease\Atom::$frameworkVersion,
 //    'debug');
 
 
@@ -42,8 +42,8 @@ class PageBottom extends \Ease\TWB\Container
             ['style' => 'list-style-type: none']));
         $listA1->addItemSmart(new \Ease\Html\ATag('https://github.com/VitexSoftware/FlexiProxy',
             'FlexiProxy'));
-        $listA1->addItemSmart(new \Ease\Html\ATag('https://github.com/Spoje-NET/FlexiPeeHP',
-            'FlexiPeeHP'));
+        $listA1->addItemSmart(new \Ease\Html\ATag('https://github.com/Spoje-NET/AbraFlexi',
+            'AbraFlexi'));
         $listA1->addItemSmart(new \Ease\Html\ATag('https://github.com/VitexSoftware/EaseFramework',
             'PHP Ease Framework'));
 
@@ -89,7 +89,7 @@ class PageBottom extends \Ease\TWB\Container
             [new \Ease\TWB\Col(8,
                 'Flexi<strong>ProXY</strong> v.: '.$appInfo->version
             ), new \Ease\TWB\Col(4,
-        _('&copy; 2017 Vítězslav "Vitex" Dvořák'))]));
+        _('&copy; 2017-2021 Vítězslav "Vitex" Dvořák'))]));
 
         $this->addItem($rowFluid2);
     }

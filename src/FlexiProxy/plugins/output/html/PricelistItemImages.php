@@ -24,13 +24,13 @@ class PricelistItemImages extends \FlexiProxy\plugins\output\CommonHtml implemen
                 $matches)) {
             $recordID = intval($matches[1]);
 
-            $pricelister = new \FlexiPeeHP\Cenik($recordID,
+            $pricelister = new \AbraFlexi\Cenik($recordID,
                 ['company' => $this->flexiProxy->company]);
             $pricelister->ignore404(true);
 
-            $images = \FlexiPeeHP\Priloha::getAttachmentsList($pricelister);
+            $images = \AbraFlexi\Priloha::getAttachmentsList($pricelister);
 
-//            $image = \FlexiPeeHP\Priloha::getFirstAttachment($pricelister);
+//            $image = \AbraFlexi\Priloha::getFirstAttachment($pricelister);
             //$this->includeJavaScript($processed, 'js/PricelistImages.js');
             //            $this->addJavaScript($processed, 'alert("' . $image . '");');
 

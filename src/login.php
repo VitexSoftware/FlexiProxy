@@ -84,10 +84,10 @@ $loginPanel->addItem(new \Ease\TWB\FormGroup(_('Password'),
     '',
     _('User\'s password')));
 
-            $companer = new \FlexiPeeHP\Company();
+            $companer = new \AbraFlexi\Company();
 
 $companiesToMenu = [];
-$companer        = new \FlexiPeeHP\Company();
+$companer        = new \AbraFlexi\Company();
 $companies       = $companer->getFlexiData();
 
 if (!isset($companies[0])) {

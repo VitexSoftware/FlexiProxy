@@ -11,7 +11,7 @@
 namespace FlexiProxy\plugins\output\html;
 
 /**
- * Add Custom Columns input fields to FlexiBee evidence item editor form
+ * Add Custom Columns input fields to AbraFlexi evidence item editor form
  *
  * @author vitex
  */

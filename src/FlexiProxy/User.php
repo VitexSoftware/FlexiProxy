@@ -16,8 +16,8 @@ namespace FlexiProxy;
 class User extends \Ease\User
 {
     /**
-     * FlexiBee Helper
-     * @var \FlexiPeeHP\FlexiBeeRO 
+     * AbraFlexi Helper
+     * @var \AbraFlexi\RO 
      */
     public $flexiBee = null;
 
@@ -35,7 +35,7 @@ class User extends \Ease\User
     public function __construct($userID = null)
     {
         parent::__construct();
-        $this->flexiBee = new \FlexiPeeHP\FlexiBeeRO();
+        $this->flexiBee = new \AbraFlexi\RO();
 //        $this->flexiBee->setEvidence('uzivatel');
     }
 
@@ -88,7 +88,7 @@ class User extends \Ease\User
         $licenseInfo         = $this->flexiBee->performRequest('default-license.json');
         $_SESSION['license'] = $licenseInfo['license'];
 
-        $lister    = new \FlexiPeeHP\EvidenceList(null, $_SESSION);
+        $lister    = new \AbraFlexi\EvidenceList(null, $_SESSION);
         $flexidata = $lister->getFlexiData();
 
         if (count($flexidata) && isset($flexidata['evidences']['evidence'])) {

@@ -343,8 +343,8 @@ msgstr "Díky za váš zájem a těším se na další návštěvu"
 #~ msgstr "Mailová adresa %s je již registrována"
 
 #, fuzzy
-#~ msgid "FlexiBee server info"
-#~ msgstr "FlexiBee info"
+#~ msgid "AbraFlexi server info"
+#~ msgstr "AbraFlexi info"
 
 #, fuzzy
 #~ msgid "Chyba komunikace"
@@ -643,7 +643,7 @@ msgstr "Díky za váš zájem a těším se na další návštěvu"
 
 #, fuzzy
 #~ msgid "Script"
-#~ msgstr "Test odpovědi WebHook skriptu zpracovávajícího změny z FlexiBee"
+#~ msgstr "Test odpovědi WebHook skriptu zpracovávajícího změny z AbraFlexi"
 
 #~ msgid "Oskenovat a sledovat služby"
 #~ msgstr "Oskenovat a sledovat služby"

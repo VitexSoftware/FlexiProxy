@@ -16,10 +16,10 @@ $company  = $oPage->getRequestValue('company');
 $evidence = $oPage->getRequestValue('evidence');
 $id       = $oPage->getRequestValue('id', 'int');
 
-$invoicer = new \FlexiPeeHP\FakturaVydana($id,
+$invoicer = new \AbraFlexi\FakturaVydana($id,
     ['company' => $company, 'evidence' => $evidence]);
 
-$firmer = new \FlexiPeeHP\Adresar($invoicer->getDataValue('firma'),
+$firmer = new \AbraFlexi\Adresar($invoicer->getDataValue('firma'),
     ['company' => $company]);
 
 $invoice = $invoicer->getData();

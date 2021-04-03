@@ -42,13 +42,13 @@ class CustomButtonsList extends \FlexiProxy\plugins\output\CommonHtml implements
     /**
      * List of buttons for Current Evidence
      * 
-     * @param \FlexiPeeHP\FlexiBeeRO $source
+     * @param \AbraFlexi\RO $source
      * 
      * @return array
      */
     public function getButtonsForEvidence($source)
     {
-        $buttoner = new \FlexiPeeHP\FlexiBeeRO(null,
+        $buttoner = new \AbraFlexi\RO(null,
             array_merge($source->getConnectionOptions(),
                 ['evidence' => 'custom-button']));
         return $buttoner->getColumnsFromFlexibee(['kod', 'url', 'title', 'description',

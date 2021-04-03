@@ -9,7 +9,7 @@ FlexiProxy
 Co aplikace umí
 ---------------
 
- * Proxy mezi FlexiBee a klientem
+ * Proxy mezi AbraFlexi a klientem
  * Měnit Logo
  * Přidává práci s obrázky v ceníku
  * Přidává položky do menu
@@ -36,7 +36,7 @@ Pro Debian či Ubuntu prosím použijte [repozitář](http://vitexsoftware.cz/re
     apt update
     apt install flexiproxy
 
-během instalace bude proveden dotaz na přihlašovací údaje do FlexiBee a umístění složky se vstupními soubory
+během instalace bude proveden dotaz na přihlašovací údaje do AbraFlexi a umístění složky se vstupními soubory
 
 
 ### Git
@@ -129,7 +129,7 @@ Logování
 
 Se provádí do systémového logu. Ten pak vypadá zhruba takto:
 
-    Nov  7 17:41:44 dellnik FlexiProxy:  `FlexiPeeHP\Adresar`   ❁ GET AddressBook item AT Computers a.s. as https://localhost:5434/c/firma_s_r_o_/adresar/641.json
+    Nov  7 17:41:44 dellnik FlexiProxy:  `AbraFlexi\Adresar`   ❁ GET AddressBook item AT Computers a.s. as https://localhost:5434/c/firma_s_r_o_/adresar/641.json
 
 
 Testování

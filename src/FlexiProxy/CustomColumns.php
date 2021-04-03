@@ -67,7 +67,7 @@ class CustomColumns extends \Ease\Brick
     public function setEvidence($evidence)
     {
         $this->evidence     = $evidence;
-        $this->evidenceName = \FlexiPeeHP\EvidenceList::$evidences[$evidence]['evidenceName'];
+        $this->evidenceName = \AbraFlexi\EvidenceList::$evidences[$evidence]['evidenceName'];
 
         $evidenceTableName = str_replace('-', '_', $evidence);
         $this->setmyTable($this->company.$evidenceTableName);

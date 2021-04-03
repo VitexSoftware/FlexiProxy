@@ -12,7 +12,7 @@ namespace FlexiProxy\ui;
  *
  * @author vitex
  */
-class ApplicationMenu extends \Ease\Html\Div
+class ApplicationMenu extends \Ease\Html\DivTag
 {
     //put your code here
     public function __construct($company)

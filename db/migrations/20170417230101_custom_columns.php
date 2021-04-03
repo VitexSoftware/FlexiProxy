@@ -28,8 +28,8 @@ class CustomColumns extends AbstractMigration
      */
     public function change()
     {
-        $fphp = new FlexiPeeHP\FlexiBeeRO();
-        foreach (array_keys(\FlexiPeeHP\EvidenceList::$name) as $evidence) {
+        $fphp = new AbraFlexi\RO();
+        foreach (array_keys(\AbraFlexi\EvidenceList::$name) as $evidence) {
             $fphp->addStatusMessage($evidence);
             $customcolumns = $this->table($evidence);
             $customcolumns->save();
